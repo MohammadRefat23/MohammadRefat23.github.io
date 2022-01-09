@@ -1,0 +1,6 @@
+theme: jekyll-theme-slate
+title: Mohammad Refat
+description: Research pages for Mohammad Refat
+url: mohammadrefat23.github.io
+plugins:
+  - jekyll-seo-tag
