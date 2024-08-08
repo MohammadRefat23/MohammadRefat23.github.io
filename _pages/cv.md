@@ -14,5 +14,4 @@ Education
 * M.S. in Astrophysics, City University of New York Graduate Center, 2025 (expected)
 * B.S. in Computational Astrophysics, Baccalaureate for Unique and Interdisciplinary Studies, 2022
 
-======
-[See my full CV here](https://github.com/MohammadRefat23/MohammadRefat23.github.io/files/CV.pdf)  
+[See my full CV here](files/CV.pdf)  
