@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a second year student at the [City University of New York’s Graduate Center’s](https://www.gc.cuny.edu/physics) [Master's in Astrophysics](https://www.gc.cuny.edu/astrophysics) program in New York City. My current research is in brown dwarf atmospheres and I am primarily interested in galactic archaeology and exoplanets. I am currently doing research with the BDNYC (Brown Dwarfs in New York City) group at the American Museum of Natural History.
+I am a second year student at the [City University of New York’s Graduate Center’s](https://www.gc.cuny.edu/physics) [Master's in Astrophysics](https://www.gc.cuny.edu/astrophysics) program in New York City. My current research is in brown dwarf atmospheres and I am primarily interested in galactic archaeology and exoplanets. I am currently doing research with [Dr. Lucy Lu](https://astronomy.osu.edu/people/lu.3234) for my Master's Thesis.
 
 You can see a list of my publications via [ADS](https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0003-3149-4501&sort=date%20desc%2C%20bibcode%20desc).
 
