@@ -7,8 +7,6 @@ redirect_from:
   - /research
 ---
 
-{% include base_path %}
-
 Here are some of the research projects that I have worked on through out my undergraduate and master's degree
 
 Starspot Inference Using Light Curve Inversion Techniques
