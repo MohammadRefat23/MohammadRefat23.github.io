@@ -9,9 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* M.S. in Astrophysics, City University of New York Graduate Center, 2025 (expected)
-* B.S. in Computational Astrophysics, Baccalaureate for Unique and Interdisciplinary Studies, 2022
-
-[See my full CV here](https://mohammadrefat23.github.io/files/CV.pdf)  
+You can view my full CV [here](https://mohammadrefat23.github.io/files/CV.pdf)
