@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a second year student at the [City University of New York’s Graduate Center’s](https://www.gc.cuny.edu/physics) [Master's in Astrophysics](https://www.gc.cuny.edu/astrophysics) program in New York City. My current research is in light curve inversion techniques and I am primarily interested in galactic archaeology and low mass stars. I am currently doing research with [Dr. Lucy Lu](https://astronomy.osu.edu/people/lu.3234) for my Master's Thesis.
+I am a graduate of the the [City University of New York’s Graduate Center’s](https://www.gc.cuny.edu/physics) [Master's in Astrophysics](https://www.gc.cuny.edu/astrophysics) program in New York City. My current research is in light curve inversion techniques and I am primarily interested in galactic archaeology and low mass stars. My master's thesis was with [Dr. Lucy Lu](https://astronomy.osu.edu/people/lu.3234) on [studying star spots using light curve inversion techniques.](https://academicworks.cuny.edu/gc_etds/6480/). I currently am an adjunct lecturer at [CUNY Baruch College's Natural Sciences department.](https://weissman.baruch.cuny.edu/weissman-academic-departments/the-department-of-natural-sciences/)
 
 You can see a list of my publications via [ADS](https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0003-3149-4501&sort=date%20desc%2C%20bibcode%20desc).
 
@@ -19,4 +19,4 @@ Previously, I have studied brown dwarf and exoplanet atmospheres, chemical taggi
 
 About me
 ======
-I started my undergraduate studies as a math major at [Baruch College](https://mfeapp.baruch.cuny.edu/math/). In 2019, I transfered into the [CUNY Baccalaureate for Unique and Interdisciplinary Studies](https://cunyba.cuny.edu/) program to major in astrophysics. After graduating, I enrolled in the Graduate Center's [Master's in Astrophysics program.](https://www.gc.cuny.edu/astrophysics)
+I started my undergraduate studies as a math major at [Baruch College](https://mfeapp.baruch.cuny.edu/math/). In 2019, I transfered into the [CUNY Baccalaureate for Unique and Interdisciplinary Studies](https://cunyba.cuny.edu/) program to major in astrophysics. After graduating, I enrolled in the Graduate Center's [Master's in Astrophysics program.](https://www.gc.cuny.edu/astrophysics). 
