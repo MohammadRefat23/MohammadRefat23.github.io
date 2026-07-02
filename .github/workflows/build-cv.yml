@@ -18,7 +18,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: cv.tex
-          working_directory: cv
+          working_directory: assets/cv
 
       - name: Commit updated PDF
         uses: stefanzweifel/git-auto-commit-action@v5
