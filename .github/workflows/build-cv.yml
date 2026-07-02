@@ -3,7 +3,7 @@ name: Build CV
 on:
   push:
     paths:
-      - '/assets/cv/**'
+      - 'assets/cv/**'
       - '.github/workflows/build-cv.yml'
   workflow_dispatch:
 
