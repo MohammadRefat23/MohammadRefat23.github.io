@@ -1,0 +1,173 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{2021}{article}{}{}
+      \name{author}{18}{}{%
+        {{un=0,uniquepart=base,hash=cbe9d26d24f6aae942e14ece7e553b8b}{%
+           family={Sheffield},
+           familyi={S\bibinitperiod},
+           given={Allyson\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53e2e984d344fccc59570ae8a7c36535}{%
+           family={Subrahimovic},
+           familyi={S\bibinitperiod},
+           given={Aidan\bibnamedelima Z.},
+           giveni={A\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a5054b0c0a74a74731f8f1a8a8779ac}{%
+           family={Refat},
+           familyi={R\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5cc04c4208d7b435fb55012f0b12e456}{%
+           family={Beaton},
+           familyi={B\bibinitperiod},
+           given={Rachael\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99d760cea5fd573278b3e5529c2e1817}{%
+           family={Hasselquist},
+           familyi={H\bibinitperiod},
+           given={Sten},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc14a95c033bcafda21d9374e8459069}{%
+           family={Hayes},
+           familyi={H\bibinitperiod},
+           given={Christian\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba2fed04c1b1eb42c03a00006c12f298}{%
+           family={Price-Whelan},
+           familyi={P\bibinithyphendelim W\bibinitperiod},
+           given={Adrian\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6aeb00f455a890f8320a8c0c73510921}{%
+           family={Horta},
+           familyi={H\bibinitperiod},
+           given={Danny},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4d660c670b12379968b5a09a10c3df5}{%
+           family={Majewski},
+           familyi={M\bibinitperiod},
+           given={Steven\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=effc228924c6907043988b3ece50298e}{%
+           family={Cunha},
+           familyi={C\bibinitperiod},
+           given={Katia},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7d85ee1ade6ae6e2e953dda0bcfe430}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Verne\bibnamedelima V.},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=82f025dc46afd962b1ee95349a210f4f}{%
+           family={Fernández-Trincado},
+           familyi={F\bibinithyphendelim T\bibinitperiod},
+           given={José\bibnamedelima G.},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e790c436c026362da82e12f4830483d}{%
+           family={Sobeck},
+           familyi={S\bibinitperiod},
+           given={Jennifer\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0d5dc7bd6dc5778896b57d639c7f197}{%
+           family={Muñoz},
+           familyi={M\bibinitperiod},
+           given={Ricardo\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ead73d0b7d75a8399b2a0654267ba20b}{%
+           family={García-Hernàndez},
+           familyi={G\bibinithyphendelim H\bibinitperiod},
+           given={D.\bibnamedelimi A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4fa6d675f5f7c170690c079ca2ea7675}{%
+           family={Lane},
+           familyi={L\bibinitperiod},
+           given={Richard\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c58fe50f781fee70aef2060c6b9673d9}{%
+           family={Nitschelm},
+           familyi={N\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ff76c90aceb7c355ba7100482f652b8}{%
+           family={Roman-Lopes},
+           familyi={R\bibinithyphendelim L\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Astronomical Society}%
+      }
+      \strng{namehash}{9b0ad27a3518216d4f33e79eef4e9ea5}
+      \strng{fullhash}{75d42daac0159ca1a7271fd88a36b2b5}
+      \strng{fullhashraw}{75d42daac0159ca1a7271fd88a36b2b5}
+      \strng{bibnamehash}{9b0ad27a3518216d4f33e79eef4e9ea5}
+      \strng{authorbibnamehash}{9b0ad27a3518216d4f33e79eef4e9ea5}
+      \strng{authornamehash}{9b0ad27a3518216d4f33e79eef4e9ea5}
+      \strng{authorfullhash}{75d42daac0159ca1a7271fd88a36b2b5}
+      \strng{authorfullhashraw}{75d42daac0159ca1a7271fd88a36b2b5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1538-4357}
+      \field{journaltitle}{The Astrophysical Journal}
+      \field{month}{5}
+      \field{number}{1}
+      \field{title}{Chemodynamically Characterizing the Jhelum Stellar Stream with APOGEE-2}
+      \field{volume}{913}
+      \field{year}{2021}
+      \true{nocite}
+      \field{pages}{39}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3847/1538-4357/abee93
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.3847/1538-4357/abee93
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.3847/1538-4357/abee93
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

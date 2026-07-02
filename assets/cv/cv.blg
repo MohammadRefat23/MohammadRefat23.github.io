@@ -1,0 +1,17 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'cv.blg'
+[92] biber:342> INFO - === Thu Jul  2, 2026, 21:42:03
+[108] Biber.pm:421> INFO - Reading 'cv.bcf'
+[235] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[247] Biber.pm:4487> INFO - Processing section 0
+[257] Biber.pm:4678> INFO - Looking for bibtex file 'ref.bib' for section 0
+[257] bibtex.pm:1713> INFO - LaTeX decoding ...
+[263] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
+[321] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[321] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[321] Biber.pm:4307> INFO - Sorting list 'ynt/global//global/global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[321] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[328] bbl.pm:676> INFO - Writing 'cv.bbl' with encoding 'UTF-8'
+[331] bbl.pm:779> INFO - Output to cv.bbl
+[331] Biber.pm:132> WARN - legacy month field 'May' in entry '2021' is not an integer - this will probably not sort properly.
+[331] Biber.pm:134> INFO - WARNINGS: 1
