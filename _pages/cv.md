@@ -9,4 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-You can view my full CV [here](https://mohammadrefat23.github.io/files/assets/cv/cv.pdf)
+You can view my full CV [here](https://mohammadrefat23.github.io/assets/cv/cv.pdf)
