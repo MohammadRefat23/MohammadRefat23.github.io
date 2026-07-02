@@ -17,11 +17,8 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex
+          root_file: CV.tex
           working_directory: cv
-
-      - name: Copy PDF
-        run: cp assets/main.pdf assets/CV.pdf
 
       - name: Commit updated PDF
         uses: stefanzweifel/git-auto-commit-action@v5
