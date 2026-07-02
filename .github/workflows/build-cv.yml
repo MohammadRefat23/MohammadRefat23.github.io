@@ -1,0 +1,29 @@
+name: Build CV
+
+on:
+  push:
+    paths:
+      - '/assets/cv/**'
+      - '.github/workflows/build-cv.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: cv
+
+      - name: Copy PDF
+        run: cp assets/main.pdf assets/CV.pdf
+
+      - name: Commit updated PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automatically update CV.pdf"
