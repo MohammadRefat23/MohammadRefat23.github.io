@@ -32,7 +32,7 @@ jobs:
       - name: Generate talk map
         run: python talkmap.py
 
-      - name: Commit updated talk map
+      - name: Commit updated map
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Automatically update talk map"
+          commit_message: "Update talk map"
