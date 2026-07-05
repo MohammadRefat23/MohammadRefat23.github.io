@@ -18,7 +18,7 @@ TIMEOUT = 5
 g = glob.glob("_talks/*.md")
 
 # Prepare to geolocate
-geocoder = Nominatim(user_agent="academicpages.github.io")
+geocoder = Nominatim(user_agent="mohammadrefat23-github-pages")
 location_dict = {}
 location = ""
 permalink = ""
@@ -42,8 +42,12 @@ for file in g:
 
     # Geocode the location and report the status
     try:
-        location_dict[description] = geocoder.geocode(location, timeout=TIMEOUT)
-        print(description, location_dict[description])
+        result = geocoder.geocode(location, timeout=TIMEOUT)
+        if result is not None:
+            location_dict[description] = result
+            print(description, result)
+        else:
+            print(f"Could not geocode: {location}")
     except ValueError as ex:
         print(f"Error: geocode failed on input {location} with message {ex}")
     except GeocoderTimedOut as ex:
