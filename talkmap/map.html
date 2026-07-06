@@ -1,49 +1,45 @@
-import glob
-import json
-import frontmatter
-from geopy.geocoders import Nominatim
-from geopy.exc import GeocoderTimedOut
 
-TIMEOUT = 10
+    <!DOCTYPE html>
+    <html>
+    <head>
+    	<title>Leaflet debug page</title>
 
-geocoder = Nominatim(user_agent="mohammadrefat23-github-pages")
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.css" />
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="stylesheet" href="leaflet_dist/screen.css" />
 
-addressPoints = []
+    	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.css" />
+    	<link rel="stylesheet" href="leaflet_dist/MarkerCluster.Default.css" />
+    	<script src="leaflet_dist/leaflet.markercluster-src.js"></script>
+    	<script src="org-locations.js"></script>
 
-for filename in glob.glob("_talks/*.md"):
+    </head>
+    <body>
 
-    post = frontmatter.load(filename)
-
-    if "location" not in post:
-        continue
-
-    title = post.get("title", "").strip()
-    venue = post.get("venue", "").strip()
-    location = post.get("location", "").strip()
-
-    try:
-        result = geocoder.geocode(location, timeout=TIMEOUT)
-
-        if result is None:
-            print(f"Could not geocode: {location}")
-            continue
-
-        popup = f"{title}<br />{venue}; {location}"
-
-        addressPoints.append([
-            popup,
-            result.latitude,
-            result.longitude
-        ])
-
-        print(f"✓ {location}")
-
-    except GeocoderTimedOut:
-        print(f"Timed out: {location}")
-
-with open("talkmap/org-locations.js", "w") as f:
-    f.write("var addressPoints = ")
-    json.dump(addressPoints, f, indent=2)
-    f.write(";")
-
-print(f"\nGenerated {len(addressPoints)} talk locations.")
+    	<div id="map"></div>
+    	<span>Mouse over a cluster to see the bounds of its children and click a cluster to zoom to those bounds</span>
+    	<script type="text/javascript">
+    		var tiles = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+              maxZoom: 18,
+              attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+                    }),
+    			latlng = L.latLng(30, 10);
+    		var map = L.map('map', {center: latlng, zoom: 0.7, layers: [tiles]});
+    		var markers = L.markerClusterGroup({
+    			showCoverageOnHover: false,
+    			maxClusterRadius: 80
+    			});
+    		for (var i = 0; i < addressPoints.length; i++) {
+    			var a = addressPoints[i];
+    			var title = a[0];
+    			var marker = L.marker(new L.LatLng(a[1], a[2]), { title: title });
+    			marker.bindPopup(title);
+    			markers.addLayer(marker);
+    		}
+    		map.addLayer(markers);
+    		map.zoomIn();
+    	</script>
+    </body>
+    </html>
+    
