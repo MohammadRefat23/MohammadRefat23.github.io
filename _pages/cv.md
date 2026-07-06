@@ -1,12 +1,21 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
-redirect_from:
-  - /resume
 ---
 
-{% include base_path %}
+<p>
+  <a href="/assets/cv/cv.pdf" target="_blank">Download CV PDF</a>
+</p>
 
-You can view my full CV [here](https://mohammadrefat23.github.io/assets/cv/cv.pdf)
+<object
+  data="/assets/CV.pdf"
+  type="application/pdf"
+  width="100%"
+  height="900px">
+  <p>
+    Your browser does not support embedded PDFs.
+    <a href="/assets/cv/cv.pdf">Download the CV instead.</a>
+  </p>
+</object>
