@@ -1,22 +1,32 @@
 var addressPoints = [
   [
-    "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
-    51.4893335,
-    -0.14405508452768728
+    "Chemodynamically Characterizing the Jhelum Stellar Stream with APOGEE-2<br />Simons Foundation; New York City, NY, USA",
+    40.7127281,
+    -74.0060152
   ],
   [
-    "Tutorial 1 on Relevant Topic in Your Field<br />UC-Berkeley Institute for Testing Science; Berkeley, CA, USA",
-    37.8708393,
-    -122.272863
+    "Towards Mapping Brown Dwarf and Giant Exoplanet Atmospheres<br />Simons Foundation; New York City, NY, USA",
+    40.7127281,
+    -74.0060152
   ],
   [
-    "Conference Proceeding talk 3 on Relevant Topic in Your Field<br />Testing Institute of America 2014 Annual Conference; Los Angeles, CA, USA",
-    34.0536909,
-    -118.242766
+    "Where Were Stars Born in The Milky Way?<br />American Museum of Natural History; New York City, NY, USA",
+    40.7127281,
+    -74.0060152
   ],
   [
-    "Talk 1 on Relevant Topic in Your Field<br />UC San Francisco, Department of Testing; San Francisco, CA, USA",
-    37.7792588,
-    -122.4193286
+    "Towards Mapping Brown Dwarf and Giant Exoplanet Atmospheres<br />AAS 240; Pasadena, CA, USA",
+    34.1476507,
+    -118.144155
+  ],
+  [
+    "Two-Point Statistics in the Star Forming ISM<br />Simons Foundation; New York City, NY, USA",
+    40.7127281,
+    -74.0060152
+  ],
+  [
+    "Starspot Inference with Light Curve Inversion Techniques<br />AAS 240; New York City, NY, USA",
+    40.7127281,
+    -74.0060152
   ]
 ];
