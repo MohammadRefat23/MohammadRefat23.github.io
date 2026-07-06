@@ -1,16 +1,11 @@
 var addressPoints = [
   [
-    "Chemodynamically Characterizing the Jhelum Stellar Stream with APOGEE-2<br />Simons Foundation; New York City, NY, USA",
-    40.7127281,
-    -74.0060152
-  ],
-  [
     "Towards Mapping Brown Dwarf and Giant Exoplanet Atmospheres<br />Simons Foundation; New York City, NY, USA",
     40.7127281,
     -74.0060152
   ],
   [
-    "Where Were Stars Born in The Milky Way?<br />American Museum of Natural History; New York City, NY, USA",
+    "Chemodynamically Characterizing the Jhelum Stellar Stream with APOGEE-2<br />Simons Foundation; New York City, NY, USA",
     40.7127281,
     -74.0060152
   ],
@@ -21,6 +16,11 @@ var addressPoints = [
   ],
   [
     "Two-Point Statistics in the Star Forming ISM<br />Simons Foundation; New York City, NY, USA",
+    40.7127281,
+    -74.0060152
+  ],
+  [
+    "Where Were Stars Born in The Milky Way?<br />American Museum of Natural History; New York City, NY, USA",
     40.7127281,
     -74.0060152
   ],
