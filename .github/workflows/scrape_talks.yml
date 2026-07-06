@@ -27,12 +27,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install python-frontmatter geopy getorg
+          pip install python-frontmatter geopy
 
       - name: Generate talk map
         run: python talkmap.py
 
-      - name: Commit updated map
+      - name: Commit updated talk map
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update talk map"
+          commit_message: "Automatically update talk map"
+          file_pattern: talkmap/org-locations.js
