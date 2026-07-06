@@ -6,11 +6,11 @@ author_profile: true
 ---
 
 <p>
-  <a href="/assets/CV.pdf" target="_blank">Download CV PDF</a>
+  <a href="/assets/cv/cv.pdf" target="_blank">Download CV PDF</a>
 </p>
 
 <iframe
-  src="/assets/CV.pdf"
+  src="/assets/cv/cv.pdf"
   width="100%"
   height="950px"
   style="border: none;">
