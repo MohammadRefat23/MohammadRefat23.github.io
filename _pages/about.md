@@ -7,16 +7,28 @@ redirect_from:
   - /about.html
 ---
 
-I am a graduate of the the [City University of New York’s Graduate Center’s](https://www.gc.cuny.edu/physics) [Master's in Astrophysics](https://www.gc.cuny.edu/astrophysics) program in New York City. My current research is in light curve inversion techniques and I am primarily interested in galactic archaeology and low mass stars. My master's thesis was with [Dr. Lucy Lu](https://astronomy.osu.edu/people/lu.3234) on [studying star spots using light curve inversion techniques.](https://academicworks.cuny.edu/gc_etds/6480/). I currently am an adjunct lecturer at [CUNY Baruch College's Natural Sciences department.](https://weissman.baruch.cuny.edu/weissman-academic-departments/the-department-of-natural-sciences/)
+I am a computational physicist interested in developing computational and statistical methods to solve inverse problems in the physical sciences. My research combines scientific computing, numerical modeling, statistical inference, and time-series analysis to extract physical insight from complex observational and experimental data.
 
-You can see a list of my publications via [ADS](https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0003-3149-4501&sort=date%20desc%2C%20bibcode%20desc).
+I graduated with an M.S. in Astrophysics from the [City University of New York Graduate Center](https://www.gc.cuny.edu/physics). My master's thesis, [*Starspot Inference Using Light Curve Inversion Techniques*](https://academicworks.cuny.edu/gc_etds/6480/), was completed under of [Dr. Lucy Lu](https://astronomy.osu.edu/people/lu.3234) and focused on developing computational methods for reconstructing stellar surface features from photometric light curves.
 
-Research Interests
-======
-My current research interest is in light curve inversion techniques in order to study starspots.
+My interests lie in computational physics and the development of algorithms for understanding complex physical systems. I am particularly interested in applying computational methods to inverse problems, scientific machine learning, and statistical inference.
 
-Previously, I have studied brown dwarf and exoplanet atmospheres, chemical tagging of stellar streams, spectra of stars and statistics in the star-forming intersellar medium.
+You can find a complete list of my publications through [NASA ADS](https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0003-3149-4501&sort=date%20desc%2C%20bibcode%20desc).
 
-About me
-======
-I started my undergraduate studies as a math major at [Baruch College](https://mfeapp.baruch.cuny.edu/math/). In 2019, I transfered into the [CUNY Baccalaureate for Unique and Interdisciplinary Studies](https://cunyba.cuny.edu/) program to major in astrophysics. After graduating, I enrolled in the Graduate Center's [Master's in Astrophysics program.](https://www.gc.cuny.edu/astrophysics). 
+# Research Interests
+
+My research focuses on developing computational methods for understanding complex physical systems through modeling, simulation, and data driven inference. My current research interests include:
+
+* Computational Physics
+* Scientific Computing
+* Inverse Problems
+* Scientific Machine Learning
+* Statistical Inference and Bayesian Methods
+* Time-Series Analysis
+* Numerical Methods
+
+My previous research has included starspot inference through light curve inversion, brown dwarf and giant exoplanet atmospheric variability, Galactic archaeology through chemical tagging of stellar streams, stellar spectroscopy, and statistical analyses of the star-forming interstellar medium.
+
+# Current Research Goals
+
+My long-term research goal is to develop broadly applicable computational methods for solving challenging problems across the physical sciences. I am particularly interested in combining scientific computing, statistical inference, and machine learning to study complex systems in physics. I am excited by interdisciplinary research that leverages modern computational techniques to advance our understanding of physical phenomena.
