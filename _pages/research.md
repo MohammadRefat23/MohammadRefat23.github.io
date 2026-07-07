@@ -33,20 +33,10 @@ A common theme throughout my work is the use of computational approaches to solv
       Developed computational approaches for reconstructing stellar surface features from photometric light curves. This project treated starspot mapping as an inverse problem, using time-series analysis, forward modeling, and numerical methods to explore how surface structure can be inferred from unresolved stellar observations.
     </p>
 
-    <div class="method-list">
-      <span class="method-tag">Python</span>
-      <span class="method-tag">starry</span>
-      <span class="method-tag">Light Curve Inversion</span>
-      <span class="method-tag">Time-Series Analysis</span>
-      <span class="method-tag">Inverse Problems</span>
-      <span class="method-tag">Statistical Inference</span>
-    </div>
-
     <p class="research-links">
       <a href="https://academicworks.cuny.edu/gc_etds/6480/" target="_blank" rel="noopener">M.S. Thesis</a>
     </p>
   </div>
-
 </div>
 
 <div class="research-card">
@@ -68,13 +58,6 @@ A common theme throughout my work is the use of computational approaches to solv
     <p>
       Studied atmospheric variability in brown dwarfs and giant exoplanets through analysis of photometric light curves. This work focused on using unresolved time-series observations to investigate rotational variability and infer atmospheric structure in low-mass objects.
     </p>
-
-    <div class="method-list">
-      <span class="method-tag">Python</span>
-      <span class="method-tag">Photometric Time-Series Analysis</span>
-      <span class="method-tag">Atmospheric Variability</span>
-      <span class="method-tag">Computational Modeling</span>
-    </div>
   </div>
 
 </div>
@@ -98,13 +81,6 @@ A common theme throughout my work is the use of computational approaches to solv
     <p>
       Analyzed APOGEE-2 spectroscopic data to identify and characterize candidate members of the Jhelum stellar stream. This project used chemical tagging and statistical analysis to study stellar populations and contribute to the broader reconstruction of the Milky Way's assembly history.
     </p>
-
-    <div class="method-list">
-      <span class="method-tag">APOGEE-2 Spectroscopy</span>
-      <span class="method-tag">Chemical Tagging</span>
-      <span class="method-tag">Statistical Analysis</span>
-      <span class="method-tag">Galactic Archaeology</span>
-    </div>
   </div>
 
 </div>
@@ -128,13 +104,6 @@ A common theme throughout my work is the use of computational approaches to solv
     <p>
       Processed and analyzed stellar spectra to derive chemical abundances and characterize stellar populations. This early research experience developed my foundation in observational data analysis, spectral line measurement, and quantitative stellar astrophysics.
     </p>
-
-    <div class="method-list">
-      <span class="method-tag">Spectroscopy</span>
-      <span class="method-tag">Equivalent Widths</span>
-      <span class="method-tag">Chemical Abundance Analysis</span>
-      <span class="method-tag">Stellar Populations</span>
-    </div>
   </div>
 
 </div>
@@ -158,13 +127,6 @@ A common theme throughout my work is the use of computational approaches to solv
     <p>
       Investigated metallicity correlations in star-forming regions using statistical methods. This project introduced me to computational approaches for studying complex astrophysical systems through spatial correlations and numerical analysis.
     </p>
-
-    <div class="method-list">
-      <span class="method-tag">Two-Point Statistics</span>
-      <span class="method-tag">Numerical Analysis</span>
-      <span class="method-tag">Star Formation</span>
-      <span class="method-tag">Interstellar Medium</span>
-    </div>
 
     <p class="research-links">
       <a href="/images/research/ism/PlotFluct.mp4" target="_blank" rel="noopener">View Full Animation</a>
