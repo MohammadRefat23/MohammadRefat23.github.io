@@ -1,0 +1,54 @@
+---
+layout: archive
+---
+
+<article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+
+  <header>
+    <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
+
+    {% if page.subtitle %}
+      <p><em>{{ page.subtitle }}</em></p>
+    {% endif %}
+
+    {% if page.dates or page.advisor or page.institution %}
+      <p>
+        {% if page.dates %}<strong>Dates:</strong> {{ page.dates }}<br>{% endif %}
+        {% if page.advisor %}<strong>Advisor:</strong> {{ page.advisor }}<br>{% endif %}
+        {% if page.institution %}<strong>Institution:</strong> {{ page.institution }}{% endif %}
+      </p>
+    {% endif %}
+  </header>
+
+  {% if page.image %}
+    <figure>
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+      {% if page.image_caption %}
+        <figcaption>{{ page.image_caption }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
+
+  <section>
+    {{ content }}
+  </section>
+
+  {% if page.methods %}
+    <h2>Methods and Tools</h2>
+    <ul>
+      {% for method in page.methods %}
+        <li>{{ method }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if page.outputs %}
+    <h2>Related Outputs</h2>
+    <ul>
+      {% for output in page.outputs %}
+        <li><a href="{{ output.url }}">{{ output.label }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+</article>
