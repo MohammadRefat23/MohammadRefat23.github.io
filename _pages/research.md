@@ -43,7 +43,7 @@ A common theme throughout my work is the use of computational approaches to solv
 </div>
 
 <div class="research-card">
-  <img src="/images/research/jhelum/alfe.png" alt="Jhelum stellar stream project image">
+  <img src="/images/research/jhelum/alfe.jpg" alt="Jhelum stellar stream project image">
   <div>
     <h2>Galactic Archaeology: The Jhelum Stellar Stream</h2>
     <p><strong>American Museum of Natural History, 2020–2021</strong><br>
