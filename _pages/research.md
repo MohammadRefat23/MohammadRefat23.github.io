@@ -95,7 +95,7 @@ A common theme throughout my work is the use of computational approaches to solv
 .research-card img {
   width: 220px;
   height: 160px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
   border: 1px solid #ddd;
 }
@@ -103,7 +103,7 @@ A common theme throughout my work is the use of computational approaches to solv
 .research-card video {
   width: 220px;
   height: 160px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
   border: 1px solid #ddd;
 }
