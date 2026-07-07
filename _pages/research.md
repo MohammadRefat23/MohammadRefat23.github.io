@@ -180,9 +180,10 @@ A common theme throughout my work is the use of computational approaches to solv
   gap: 2rem;
   margin: 3rem 0;
   padding: 1.5rem;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #444;
   border-radius: 10px;
-  background: #fafafa;
+  background: #2b2b2b;
+  color: #f5f5f5;
   align-items: start;
 }
 
@@ -203,9 +204,9 @@ A common theme throughout my work is the use of computational approaches to solv
   width: 280px;
   height: 200px;
   object-fit: contain;
-  border: 1px solid #ccc;
+  border: 1px solid #666;
   border-radius: 6px;
-  background: white;
+  background: #1a1a1a;
   display: block;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: zoom-in;
@@ -240,6 +241,31 @@ A common theme throughout my work is the use of computational approaches to solv
 .research-links a {
   font-weight: 600;
 }
+
+.research-card h2 {
+  color: #ffffff;
+}
+
+.research-card p {
+  color: #e8e8e8;
+}
+
+.research-card strong {
+  color: #ffffff;
+}
+
+.research-meta {
+  color: #d0d0d0;
+}
+
+.research-links a {
+  color: #6bb6ff;
+}
+
+.research-links a:hover {
+  color: #9fd0ff;
+}
+
 
 @media (max-width: 800px) {
   .research-card {
