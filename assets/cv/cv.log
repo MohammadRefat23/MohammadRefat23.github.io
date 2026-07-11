@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  7 JUL 2026 17:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  11 JUL 2026 05:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -613,8 +613,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip86
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 90.
-Package hyperref Info: Option `breaklinks' set `true' on input line 90.
+Package hyperref Info: Option `colorlinks' set `true' on input line 95.
+Package hyperref Info: Option `breaklinks' set `true' on input line 95.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
 Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
@@ -652,24 +652,24 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
  (./cv.aux)
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 194.
-LaTeX Font Info:    ... okay on input line 194.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
 (/opt/texlive/texdir/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count444
@@ -739,9 +739,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'cv.bbl' found.
  (./cv.bbl)
-Package biblatex Info: Reference section=0 on input line 194.
-Package biblatex Info: Reference segment=0 on input line 194.
-Package hyperref Info: Link coloring ON on input line 194.
+Package biblatex Info: Reference section=0 on input line 239.
+Package biblatex Info: Reference segment=0 on input line 239.
+Package hyperref Info: Link coloring ON on input line 239.
 
 (./cv.out) (./cv.out)
 \@outlinefile=\write4
@@ -750,8 +750,8 @@ Package hyperref Info: Link coloring ON on input line 194.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
 (/opt/texlive/texdir/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
-(./Sections/1 Research Interests.tex) (./Sections/2 Education.tex)
-(./Sections/3 Research Experience.tex
+(./Sections/1 Research Interests.tex) (./Sections/2 Teaching.tex)
+(./Sections/3 Education.tex) (./Sections/4 Research Experience.tex
 Underfull \hbox (badness 10000) in paragraph at lines 21--1
 
  []
@@ -761,15 +761,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--1
 {/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/opt/texlive
 /texdir/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{/opt/texlive/te
 xdir/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}])
-(./Sections/4 Publications.tex) (./Sections/5 Presentations.tex [2])
-(./Sections/6 Teaching.tex) (./Sections/7 Technical Skills.tex
+(./Sections/5 Publications.tex) (./Sections/6 Presentations.tex [2])
+(./Sections/7 Technical Skills.tex
 Underfull \hbox (badness 4726) in paragraph at lines 15--15
 []|\OT1/cmr/m/n/12 NumPy, SciPy, Pan-das, Mat-plotlib, Jupyter Note-book, As-tr
 opy,
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 15--230
+Underfull \hbox (badness 10000) in paragraph at lines 15--275
 
  []
 
@@ -779,19 +779,19 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
 Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: FA06BE19C8286BCE48D5AB9789001BB4;730.
+(rerunfilecheck)             Checksum: EC339A78E5A57F3229A2AD7C22018BC5;730.
 Package logreq Info: Writing requests to 'cv.run.xml'.
 \openout1 = `cv.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21435 strings out of 467168
- 390460 string characters out of 5411585
- 1253943 words of memory out of 5000000
- 50466 multiletter control sequences out of 15000+600000
+ 21448 strings out of 467168
+ 390814 string characters out of 5411585
+ 1254230 words of memory out of 5000000
+ 50478 multiletter control sequences out of 15000+600000
  633711 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,84p,1195b,1342s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 62i,11n,84p,1195b,1340s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/texlive/texdir/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5B
 rands-Regular.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/public/fontawesom
 e5/FontAwesome5Free-Solid.pfb></opt/texlive/texdir/texmf-dist/fonts/type1/publi
@@ -803,10 +803,10 @@ fb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></op
 t/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/texlive/
 texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on cv.pdf (3 pages, 145643 bytes).
+Output written on cv.pdf (3 pages, 149340 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

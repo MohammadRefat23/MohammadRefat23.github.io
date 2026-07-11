@@ -136,8 +136,8 @@
       \strng{namehash}{9b0ad27a3518216d4f33e79eef4e9ea5}
       \strng{fullhash}{75d42daac0159ca1a7271fd88a36b2b5}
       \strng{fullhashraw}{75d42daac0159ca1a7271fd88a36b2b5}
-      \strng{bibnamehash}{9b0ad27a3518216d4f33e79eef4e9ea5}
-      \strng{authorbibnamehash}{9b0ad27a3518216d4f33e79eef4e9ea5}
+      \strng{bibnamehash}{e67485ab90ec7c8c06d795e90b785854}
+      \strng{authorbibnamehash}{e67485ab90ec7c8c06d795e90b785854}
       \strng{authornamehash}{9b0ad27a3518216d4f33e79eef4e9ea5}
       \strng{authorfullhash}{75d42daac0159ca1a7271fd88a36b2b5}
       \strng{authorfullhashraw}{75d42daac0159ca1a7271fd88a36b2b5}
@@ -165,6 +165,43 @@
       \endverb
       \verb{url}
       \verb http://dx.doi.org/10.3847/1538-4357/abee93
+      \endverb
+    \endentry
+    \entry{refat2025thesis}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1a5054b0c0a74a74731f8f1a8a8779ac}{%
+           family={Refat},
+           familyi={R\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {CUNY Graduate Center}%
+      }
+      \strng{namehash}{1a5054b0c0a74a74731f8f1a8a8779ac}
+      \strng{fullhash}{1a5054b0c0a74a74731f8f1a8a8779ac}
+      \strng{fullhashraw}{1a5054b0c0a74a74731f8f1a8a8779ac}
+      \strng{bibnamehash}{1a5054b0c0a74a74731f8f1a8a8779ac}
+      \strng{authorbibnamehash}{1a5054b0c0a74a74731f8f1a8a8779ac}
+      \strng{authornamehash}{1a5054b0c0a74a74731f8f1a8a8779ac}
+      \strng{authorfullhash}{1a5054b0c0a74a74731f8f1a8a8779ac}
+      \strng{authorfullhashraw}{1a5054b0c0a74a74731f8f1a8a8779ac}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Starspot Inference Using Light Curve Inversion Techniques}
+      \field{type}{Master's thesis}
+      \field{year}{2025}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://academicworks.cuny.edu/gc_etds/6480/
+      \endverb
+      \verb{url}
+      \verb https://academicworks.cuny.edu/gc_etds/6480/
       \endverb
     \endentry
   \enddatalist

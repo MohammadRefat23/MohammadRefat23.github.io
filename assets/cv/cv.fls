@@ -212,40 +212,40 @@ INPUT ./Sections/1 Research Interests.tex
 INPUT Sections/1 Research Interests.tex
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
-INPUT ./Sections/2 Education.tex
-INPUT ./Sections/2 Education.tex
-INPUT ./Sections/2 Education.tex
-INPUT ./Sections/2 Education.tex
-INPUT Sections/2 Education.tex
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ./Sections/2 Teaching.tex
+INPUT ./Sections/2 Teaching.tex
+INPUT ./Sections/2 Teaching.tex
+INPUT ./Sections/2 Teaching.tex
+INPUT Sections/2 Teaching.tex
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
-INPUT ./Sections/3 Research Experience.tex
-INPUT ./Sections/3 Research Experience.tex
-INPUT ./Sections/3 Research Experience.tex
-INPUT ./Sections/3 Research Experience.tex
-INPUT Sections/3 Research Experience.tex
+INPUT ./Sections/3 Education.tex
+INPUT ./Sections/3 Education.tex
+INPUT ./Sections/3 Education.tex
+INPUT ./Sections/3 Education.tex
+INPUT Sections/3 Education.tex
+INPUT ./Sections/4 Research Experience.tex
+INPUT ./Sections/4 Research Experience.tex
+INPUT ./Sections/4 Research Experience.tex
+INPUT ./Sections/4 Research Experience.tex
+INPUT Sections/4 Research Experience.tex
 INPUT /opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /opt/texlive/texdir/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc
 INPUT /opt/texlive/texdir/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc
-INPUT ./Sections/4 Publications.tex
-INPUT ./Sections/4 Publications.tex
-INPUT ./Sections/4 Publications.tex
-INPUT ./Sections/4 Publications.tex
-INPUT Sections/4 Publications.tex
+INPUT ./Sections/5 Publications.tex
+INPUT ./Sections/5 Publications.tex
+INPUT ./Sections/5 Publications.tex
+INPUT ./Sections/5 Publications.tex
+INPUT Sections/5 Publications.tex
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
-INPUT ./Sections/5 Presentations.tex
-INPUT ./Sections/5 Presentations.tex
-INPUT ./Sections/5 Presentations.tex
-INPUT ./Sections/5 Presentations.tex
-INPUT Sections/5 Presentations.tex
+INPUT ./Sections/6 Presentations.tex
+INPUT ./Sections/6 Presentations.tex
+INPUT ./Sections/6 Presentations.tex
+INPUT ./Sections/6 Presentations.tex
+INPUT Sections/6 Presentations.tex
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /opt/texlive/texdir/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./Sections/6 Teaching.tex
-INPUT ./Sections/6 Teaching.tex
-INPUT ./Sections/6 Teaching.tex
-INPUT ./Sections/6 Teaching.tex
-INPUT Sections/6 Teaching.tex
 INPUT ./Sections/7 Technical Skills.tex
 INPUT ./Sections/7 Technical Skills.tex
 INPUT ./Sections/7 Technical Skills.tex
