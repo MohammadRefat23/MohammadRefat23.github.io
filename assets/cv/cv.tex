@@ -82,7 +82,12 @@
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
 %for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage[
+  style=authoryear,
+  sorting=ynt,
+  minbibnames=3,
+  maxbibnames=3
+]{biblatex}
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
@@ -90,6 +95,32 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \addbibresource{ref.bib}
 \setlength\bibitemsep{1em}
+
+%Bold name in pubs
+\usepackage{etoolbox}
+
+\newtoggle{boldname}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifboolexpr{
+    test {\ifdefstring{\namepartfamily}{Refat}}
+    and
+    test {\ifdefstring{\namepartgiven}{Mohammad}}
+  }
+    {\mkbibbold{#1}}
+    {#1}%
+}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \ifboolexpr{
+    test {\ifdefstring{\namepartfamily}{Refat}}
+    and
+    test {\ifdefstring{\namepartgiven}{Mohammad}}
+  }
+    {\mkbibbold{#1}}
+    {#1}%
+}
+
 
 %for social icons
 \usepackage{fontawesome5}
@@ -150,19 +181,33 @@ Advisor: #3 &
 {}
 
 \newenvironment{teaching}[3]
-{
-\begin{tabularx}{\linewidth}{@{}Xr@{}}
-\textbf{#1} & #3\\
-\textit{#2} &
-\end{tabularx}
+{%
+    \begin{tabularx}{\linewidth}{@{}Xr@{}}
+        \textbf{#1} & #3 \\
+        \textit{#2} &
+    \end{tabularx}
 
-\vspace{-0.5em}
+    \vspace{-0.5em}
 
-\begin{itemize}[nosep,leftmargin=1.2em,itemsep=2pt,label=--]
+    \begin{itemize}[
+        leftmargin=1.2em,
+        label={--},
+        topsep=0pt,
+        partopsep=0pt,
+        parsep=0pt,
+        itemsep=2pt
+    ]
 }
-{
-\end{itemize}
-\vspace{0.8em}
+{%
+    \end{itemize}
+    \vspace{0.8em}
+}
+
+\newcommand{\teachingcourse}[2]{%
+    \item
+    \begin{tabularx}{\linewidth}{@{}Xr@{}}
+        #1 & #2
+    \end{tabularx}%
 }
 
 
@@ -221,11 +266,11 @@ Advisor: #3 &
 
 % Sections 
 \input{Sections/1 Research Interests}
-\input{Sections/2 Education}
-\input{Sections/3 Research Experience}
-\input{Sections/4 Publications}
-\input{Sections/5 Presentations}
-\input{Sections/6 Teaching}
+\input{Sections/2 Teaching}
+\input{Sections/3 Education}
+\input{Sections/4 Research Experience}
+\input{Sections/5 Publications}
+\input{Sections/6 Presentations}
 \input{Sections/7 Technical Skills}
 
 \thispagestyle{laststyle}
