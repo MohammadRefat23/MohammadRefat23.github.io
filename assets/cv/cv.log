@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  11 JUL 2026 05:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.1)  14 JUL 2026 17:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -773,7 +773,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--275
 
  []
 
-[3] (./cv.aux)
+[3] [4] (./cv.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
@@ -785,9 +785,9 @@ Package logreq Info: Writing requests to 'cv.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21448 strings out of 467168
- 390814 string characters out of 5411585
- 1254230 words of memory out of 5000000
+ 21449 strings out of 467168
+ 390820 string characters out of 5411585
+ 1253230 words of memory out of 5000000
  50478 multiletter control sequences out of 15000+600000
  633711 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -803,10 +803,10 @@ fb></opt/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></op
 t/texlive/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/tex
 live/texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/texlive/
 texdir/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on cv.pdf (3 pages, 149340 bytes).
+Output written on cv.pdf (4 pages, 149932 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
+ 146 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
