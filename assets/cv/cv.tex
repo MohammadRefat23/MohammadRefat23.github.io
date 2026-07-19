@@ -48,6 +48,7 @@
 \usepackage{fontawesome5}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{refcount}
 
 \usepackage[
   style=authoryear,
@@ -241,7 +242,7 @@
 \fancyhf{}
 
 \fancyfoot[L]{%
-  \ifnum\value{page}=\pageref{LastPage}
+  \ifnum\value{page}=\getpagerefnumber{LastPage}\relax
     \footnotesize Last updated: \today
   \fi
 }
