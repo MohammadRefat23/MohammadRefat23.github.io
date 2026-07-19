@@ -5,10 +5,32 @@ permalink: /cv/
 author_profile: true
 ---
 
+<div style="margin-bottom: 1rem;">
+  <a
+    id="cv-download-link"
+    href="{{ '/assets/cv/cv.pdf' | relative_url }}"
+    target="_blank"
+    rel="noopener"
+  >
+    Open CV in a new tab
+  </a>
+</div>
 
 <iframe
-  src="/assets/cv/cv.pdf?v=20260714"
+  id="cv-frame"
   width="100%"
-  height="950px"
-  style="border: none;">
+  height="1050px"
+  style="border: none;"
+  title="Mohammad Refat Curriculum Vitae">
 </iframe>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cvPath = "{{ '/assets/cv/cv.pdf' | relative_url }}";
+    const cacheBuster = Date.now();
+    const refreshedUrl = `${cvPath}?v=${cacheBuster}`;
+
+    document.getElementById("cv-frame").src = refreshedUrl;
+    document.getElementById("cv-download-link").href = refreshedUrl;
+  });
+</script>
