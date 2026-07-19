@@ -152,19 +152,19 @@
     \end{minipage}    
     }
 
-% Research experience heading
-% #1 = Project title
-% #2 = Institution
-% #3 = Advisor
-% #4 = Dates
+% #1 Project title
+% #2 Institution
+% #3 Advisor
+% #4 Dates
 \newcommand{\researchentry}[4]{%
-  \par\noindent
-  \begin{tabularx}{\textwidth}{@{}X r@{}}
+  \par
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}Xr@{}}
     \textbf{#1} & #4 \\
     \textit{#2} & \\
     \multicolumn{2}{@{}l@{}}{\textit{Advisor: #3}}
-  \end{tabularx}
-  \vspace{-0.3em}
+  \end{tabularx}%
+  \par
 }
 
 \newenvironment{presentation}[4]
