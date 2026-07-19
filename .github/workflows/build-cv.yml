@@ -3,16 +3,23 @@ name: Build CV
 on:
   push:
     paths:
-      - 'assets/cv/**'
+      - 'assets/cv/**/*.tex'
+      - 'assets/cv/**/*.bib'
       - '.github/workflows/build-cv.yml'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.CV_DEPLOY_TOKEN }}
 
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
@@ -23,4 +30,5 @@ jobs:
       - name: Commit updated PDF
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Automatically update CV.pdf"
+          commit_message: "Automatically update cv.pdf"
+          file_pattern: assets/cv/cv.pdf
