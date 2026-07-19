@@ -62,6 +62,8 @@
 %for lists within experience section
 \usepackage{enumitem}
 
+
+
 % centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 
@@ -151,6 +153,29 @@
     \end{itemize}
     \end{minipage}    
     }
+
+
+\newcommand{\researchentry}[4]{%
+  \par
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}Xr@{}}
+    \textbf{#1} & #4 \\
+    \textit{#2} & \\
+    \multicolumn{2}{@{}l@{}}{\textit{Advisor: #3}}
+  \end{tabularx}%
+  \par
+}
+
+\newlist{researchitems}{itemize}{1}
+
+\setlist[researchitems]{
+  leftmargin=1.2em,
+  label=--,
+  itemsep=0pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
 
 % #1 Project title
 % #2 Institution
