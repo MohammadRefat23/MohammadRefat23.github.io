@@ -160,22 +160,28 @@
   \end{minipage}
 }
 
-% Research heading only.
-% The bullet list is created normally in the section file.
-%
+% Research experience heading
 % #1 = project title
 % #2 = institution
 % #3 = advisor
 % #4 = dates
 \newcommand{\researchentry}[4]{%
   \par\noindent
-  \begin{tabularx}{\linewidth}{@{}Xr@{}}
-    \textbf{#1} & #4 \\
-    \textit{#2} & \\
-    \multicolumn{2}{@{}l@{}}{\textit{Advisor: #3}}
-  \end{tabularx}%
-  \par\vspace{-0.35em}
+  \begin{minipage}[t]{0.72\linewidth}
+    \raggedright\textbf{#1}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.25\linewidth}
+    \raggedleft #4
+  \end{minipage}
+
+  \vspace{0.1em}
+  \noindent\textit{#2}
+
+  \noindent\textit{Advisor: #3}
+  \par\vspace{-0.25em}
 }
+
 
 % Presentation entry:
 % #1 = title
