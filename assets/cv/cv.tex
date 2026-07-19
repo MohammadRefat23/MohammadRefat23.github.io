@@ -191,12 +191,12 @@
 % #4 = date
 \newenvironment{presentation}[4]
 {%
+  \noindent
   \begin{tabularx}{\linewidth}{@{}Xr@{}}
     #1 & #4 \\
-    \textit{#2} & \\
-    #3 &
+    \multicolumn{2}{@{}X@{}}{\textit{#2} --- #3}
   \end{tabularx}
-  \vspace{0.5em}
+  \vspace{0.15em}
 }
 {}
 
