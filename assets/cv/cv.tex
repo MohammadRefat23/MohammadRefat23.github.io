@@ -76,6 +76,9 @@
 \usepackage{multicol}
 \usepackage{multirow}
 
+% xparse package
+\usepackage{xparse}
+
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
@@ -152,15 +155,31 @@
     \end{minipage}    
     }
 
-\newenvironment{research}[4]
+% Research experience entry
+% Arguments:
+% #1 = Project title
+% #2 = Institution
+% #3 = Advisor
+% #4 = Dates
+
+\NewDocumentEnvironment{research}{m m m m}
 {%
-  \noindent
+  \par\noindent
+
   \begin{tabularx}{\textwidth}{@{}X r@{}}
-    \textbf{#1} & #2 \\
-    \textit{#3} & \\
-    \multicolumn{2}{@{}l@{}}{\textit{Advisor: #4}}
+    \textbf{#1} & #4 \\
+    \textit{#2} & \\
+    \multicolumn{2}{@{}l@{}}{\textit{Advisor: #3}}
   \end{tabularx}
-  \begin{itemize}[leftmargin=1.2em,itemsep=0pt,topsep=2pt,parsep=0pt,partopsep=0pt]
+
+  \begin{itemize}[
+    leftmargin=1.2em,
+    label=\textendash,
+    itemsep=0pt,
+    topsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]
 }
 {%
   \end{itemize}
