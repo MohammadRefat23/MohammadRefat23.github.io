@@ -213,26 +213,22 @@ Advisor: #3 &
 
 %%% Header/footer
 \usepackage{fancyhdr}
+\usepackage{lastpage}
 
 \pagestyle{fancy}
-\fancyhf{} % Clear all headers and footers
+\fancyhf{}
 
-% Every page
+\fancyfoot[L]{%
+  \ifnum\value{page}=\pageref{LastPage}
+    \footnotesize Last updated: \today
+  \fi
+}
+
 \fancyfoot[C]{\footnotesize\thepage}
 \fancyfoot[R]{\footnotesize Mohammad Refat}
 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Last page
-\fancypagestyle{laststyle}{
-    \fancyhf{}
-    \fancyfoot[L]{\footnotesize Last updated: \today}
-    \fancyfoot[C]{\footnotesize\thepage}
-    \fancyfoot[R]{\footnotesize Mohammad Refat}
-    \renewcommand{\headrulewidth}{0pt}
-    \renewcommand{\footrulewidth}{0pt}
-}
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
