@@ -155,35 +155,19 @@
     \end{minipage}    
     }
 
-% Research experience entry
-% Arguments:
+% Research experience heading
 % #1 = Project title
 % #2 = Institution
 % #3 = Advisor
 % #4 = Dates
-
-\NewDocumentEnvironment{research}{m m m m}
-{%
+\newcommand{\researchentry}[4]{%
   \par\noindent
-
   \begin{tabularx}{\textwidth}{@{}X r@{}}
     \textbf{#1} & #4 \\
     \textit{#2} & \\
     \multicolumn{2}{@{}l@{}}{\textit{Advisor: #3}}
   \end{tabularx}
-
-  \begin{itemize}[
-    leftmargin=1.2em,
-    label=\textendash,
-    itemsep=0pt,
-    topsep=2pt,
-    parsep=0pt,
-    partopsep=0pt
-  ]
-}
-{%
-  \end{itemize}
-  \vspace{0.4em}
+  \vspace{-0.3em}
 }
 
 \newenvironment{presentation}[4]
