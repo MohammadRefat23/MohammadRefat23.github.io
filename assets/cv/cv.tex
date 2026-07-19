@@ -152,21 +152,25 @@
     \end{minipage}    
     }
 
-\newenvironment{research}[4]
-{
-\begin{tabularx}{\linewidth}{@{}Xr@{}}
-\textbf{#1} & #4\\
-\textit{#2} & \\
-Advisor: #3 &
-\end{tabularx}
-
-\vspace{-0.5em}
-
-\begin{itemize}[nosep,leftmargin=1.2em,itemsep=2pt,label=--]
+\NewDocumentEnvironment{research}{m m m m}
+{%
+  \noindent
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \\
+    \multicolumn{2}{@{}l@{}}{\textit{Advisor: #4}}
+  \end{tabularx}
+  \begin{itemize}[
+    leftmargin=1.2em,
+    itemsep=0pt,
+    topsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]
 }
-{
-\end{itemize}
-\vspace{0.8em}
+{%
+  \end{itemize}
+  \vspace{0.4em}
 }
 
 \newenvironment{presentation}[4]
