@@ -14,7 +14,7 @@ I graduated with an M.S. in Astrophysics from the [City University of New York G
 My previous research spans stellar surface mapping, brown-dwarf and exoplanet atmospheric variability, Galactic archaeology, stellar spectroscopy, and statistical analyses of the star-forming interstellar medium. Across these projects, I have used computation as a common framework for connecting complex data with interpretable physical models.
 
 
-# Research Interests
+## Research Interests
 
 <div class="interest-grid">
   <span class="interest-tag">Computational Physics</span>
@@ -27,7 +27,7 @@ My previous research spans stellar surface mapping, brown-dwarf and exoplanet at
   <!-- <span class="interest-tag">Soft and Biological Matter</span> -->
 </div>
 
-# Research Direction
+## Research Direction
 
 I am interested in developing broadly applicable computational methods for studying complex and data-rich physical systems. In doctoral research, I hope to combine numerical simulation, probabilistic modeling, and machine learning to address problems in computational physics.<!--, particularly in soft condensed matter, biological physics, and related interdisciplinary areas.-->
 
