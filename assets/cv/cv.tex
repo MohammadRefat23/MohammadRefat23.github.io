@@ -49,13 +49,25 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{refcount}
+\usepackage{needspace}
 
 \usepackage[
   style=authoryear,
   sorting=ynt,
   minbibnames=3,
-  maxbibnames=3
+  maxbibnames=3,
+  doi=true,
+  url=false,
+  isbn=false,
+  eprint=false
 ]{biblatex}
+
+\AtEveryBibitem{%
+  \clearfield{issn}%
+  \clearfield{urlyear}%
+}
+
+\setlength{\bibitemsep}{0.25em}
 
 \usepackage[
   unicode,
@@ -92,7 +104,7 @@
   {}
   [\titlerule]
 
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{7pt}{4pt}
 
 %----------------------------------------------------------------------------------------
 % BIBLIOGRAPHY
@@ -167,17 +179,19 @@
 % #3 = advisor
 % #4 = dates
 \newcommand{\researchentry}[4]{%
+  \Needspace{8\baselineskip}%
   \par\noindent
+  \textbf{#1}\par
+
+  \vspace{0.1em}
+  \noindent
   \begin{minipage}[t]{0.72\linewidth}
-    \raggedright\textbf{#1}
+    \raggedright\textit{#2}
   \end{minipage}%
   \hfill
   \begin{minipage}[t]{0.25\linewidth}
-    \raggedleft #4
+    \raggedleft\mbox{#4}
   \end{minipage}
-
-  \vspace{0.1em}
-  \noindent\textit{#2}
 
   \noindent\textit{Advisor: #3}
   \par\vspace{-0.25em}
@@ -191,12 +205,15 @@
 % #4 = date
 \newenvironment{presentation}[4]
 {%
-  \noindent
-  \begin{tabularx}{\linewidth}{@{}Xr@{}}
-    #1 & #4 \\
-    \multicolumn{2}{@{}X@{}}{\textit{#2} --- #3}
+  \Needspace{3\baselineskip}%
+  \par\noindent
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}Xr@{}}
+    \textbf{#1} & \mbox{#4} \\[-0.1em]
+    \multicolumn{2}{@{}X@{}}{%
+      {\small\textit{#2} \enspace---\enspace #3}%
+    }
   \end{tabularx}
-  \vspace{0.15em}
+  \par\vspace{0.3em}
 }
 {}
 
@@ -214,12 +231,12 @@
   \vspace{-0.5em}
 
   \begin{itemize}[
-    leftmargin=1.2em,
+    leftmargin=1em,
     label={--},
     topsep=0pt,
     partopsep=0pt,
     parsep=0pt,
-    itemsep=2pt
+    itemsep=1.5pt
   ]
 }
 {%
