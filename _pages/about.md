@@ -27,9 +27,6 @@ My previous research spans stellar surface mapping, brown-dwarf and exoplanet at
   <!-- <span class="interest-tag">Soft and Biological Matter</span> -->
 </div>
 
-## Research Direction
-
-
 # Research Direction
 
 I am interested in developing broadly applicable computational methods for studying complex and data-rich physical systems. In doctoral research, I hope to combine numerical simulation, probabilistic modeling, and machine learning to address problems in computational physics.<!--, particularly in soft condensed matter, biological physics, and related interdisciplinary areas.-->
