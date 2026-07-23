@@ -9,7 +9,7 @@ redirect_from:
 
 I am a computational physicist interested in developing computational and statistical methods to solve inverse problems in the physical sciences. My research combines scientific computing, numerical modeling, statistical inference, and time-series analysis to extract physical insight from complex observational and experimental data.
 
-I graduated with an M.S. in Astrophysics from the [City University of New York Graduate Center](https://www.gc.cuny.edu/physics). My master's thesis, [*Starspot Inference Using Light Curve Inversion Techniques*](https://academicworks.cuny.edu/gc_etds/6480/), was completed under of [Dr. Lucy Lu](https://astronomy.osu.edu/people/lu.3234) and focused on developing computational methods for reconstructing stellar surface features from photometric light curves.
+I graduated with an M.S. in Astrophysics from the [City University of New York Graduate Center](https://www.gc.cuny.edu/physics). My master's thesis, [*Starspot Inference Using Light Curve Inversion Techniques*](https://academicworks.cuny.edu/gc_etds/6480/), was completed under [Dr. Lucy Lu](https://astronomy.osu.edu/people/lu.3234) and focused on developing computational methods for reconstructing stellar surface features from photometric light curves.
 
 My interests lie in computational physics and the development of algorithms for understanding complex physical systems. I am particularly interested in applying computational methods to inverse problems, scientific machine learning, and statistical inference.
 
