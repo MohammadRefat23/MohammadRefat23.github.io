@@ -19,10 +19,10 @@ My previous research spans stellar surface mapping, brown-dwarf and exoplanet at
 <div class="interest-grid">
   <span class="interest-tag">Computational Physics</span>
   <span class="interest-tag">Scientific Computing</span>
-  <span class="interest-tag">Inverse Problems</span>
+  <!-- <span class="interest-tag">Inverse Problems</span>-->
   <span class="interest-tag">Statistical Inference</span>
   <span class="interest-tag">Scientific Machine Learning</span>
-  <span class="interest-tag">Time-Series Analysis</span>
+  <!-- <span class="interest-tag">Time-Series Analysis</span>-->
   <span class="interest-tag">Numerical Modeling</span>
   <!-- <span class="interest-tag">Soft and Biological Matter</span> -->
 </div>
