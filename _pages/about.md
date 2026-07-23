@@ -52,4 +52,4 @@ I am interested in developing broadly applicable computational methods for study
   font-size: 0.85rem;
   line-height: 1.3;
 }
-</style>s
+</style>
