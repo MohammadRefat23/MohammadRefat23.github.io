@@ -181,20 +181,17 @@
 \newcommand{\researchentry}[4]{%
   \Needspace{8\baselineskip}%
   \par\noindent
-  \textbf{#1}\par
+  \textbf{#1}\par\nobreak
+  \vspace{-0.15em}
 
-  \vspace{0.1em}
   \noindent
-  \begin{minipage}[t]{0.72\linewidth}
-    \raggedright\textit{#2}
-  \end{minipage}%
-  \hfill
-  \begin{minipage}[t]{0.25\linewidth}
-    \raggedleft\mbox{#4}
-  \end{minipage}
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X
+                                  >{\raggedleft\arraybackslash}l@{}}
+    \textit{#2} & \mbox{\textit{#4}} \\[-0.15em]
+    \textit{Advisor: #3} &
+  \end{tabularx}
 
-  \noindent\textit{Advisor: #3}
-  \par\vspace{-0.25em}
+  \par\vspace{-0.45em}
 }
 
 
