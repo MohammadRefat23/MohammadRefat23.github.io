@@ -4,7 +4,7 @@ title: "Mapping Brown Dwarf and Giant Exoplanet Atmospheres"
 subtitle: "Using rotational photometric variability to probe evolving cloud structures in substellar atmospheres"
 permalink: /research/brown-dwarf-atmospheres/
 
-image: images/research/browndwarfs/2mass.png
+image: /images/research/browndwarfs/2mass.png
 image_alt: "Illustration of a rotating brown dwarf with heterogeneous atmospheric cloud structures"
 image_caption: "Photometric variability produced by evolving cloud structures rotating across the visible hemisphere."
 
