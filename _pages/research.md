@@ -3,14 +3,11 @@ layout: archive
 title: "Research"
 permalink: /research/
 author_profile: true
----s
---------------------
+---
 
 My research focuses on developing computational methods for extracting physical insight from complex data. Across projects in astrophysics, spectroscopy, Galactic archaeology, and time-series analysis, I have used scientific computing, statistical inference, numerical modeling, and inverse methods to study complex physical systems.
 
 A common theme throughout my work is solving inverse problems: inferring hidden physical structure from indirect, incomplete, or noisy observations. Although my previous work has focused primarily on astrophysical applications, my broader research interests lie in computational physics, soft condensed matter, and biological physics.
-
----
 
 ## Research Projects
 
