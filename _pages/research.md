@@ -13,15 +13,21 @@ A common theme throughout my work is solving inverse problems: inferring hidden 
 
 Selected projects highlighting my experience in computational modeling, inverse problems, statistical analysis, and scientific computing.
 
-<div class="research-card">
+<div class="project-actions">
 
-<a href="/images/research/starspots/aumicstarry.png"
-  target="_blank"
-  rel="noopener"> <img src="/images/research/starspots/aumicstarry.png"
-      alt="Reconstructed stellar surface map from the starspot inference project"
-      class="project-image research-media"> </a>
+  <a href="{{ '/research/starspots/' | relative_url }}"
+     class="btn btn--primary">
+    Project Page
+  </a>
 
-  <div class="research-card-body">
+  <a href="https://academicworks.cuny.edu/gc_etds/6480/"
+     class="btn btn--primary"
+     target="_blank"
+     rel="noopener">
+    Thesis
+  </a>
+
+</div>
 
 
 <h2>Starspot Inference Using Light Curve Inversion Techniques</h2>
@@ -63,13 +69,14 @@ Selected projects highlighting my experience in computational modeling, inverse 
   </div>
 </div>
 
-<div class="research-card">
+<div class="project-actions">
 
-<a href="/images/research/browndwarfs/2mass.png"
-  target="_blank"
-  rel="noopener"> <img src="/images/research/browndwarfs/2mass.png"
-      alt="Brown dwarf atmospheric variability project"
-      class="project-image research-media"> </a>
+  <a href="{{ '/research/brown-dwarf-atmospheres/' | relative_url }}"
+     class="btn btn--primary">
+    Project Page
+  </a>
+
+</div>
 
   <div class="research-card-body">
 
@@ -103,15 +110,26 @@ Selected projects highlighting my experience in computational modeling, inverse 
   </div>
 </div>
 
-<div class="research-card">
+<div class="project-actions">
 
-<a href="/images/research/jhelum/alfe.jpg"
-  target="_blank"
-  rel="noopener"> <img src="/images/research/jhelum/alfe.jpg"
-      alt="Chemical abundance analysis for the Jhelum stellar stream"
-      class="project-image research-media"> </a>
+  <a href="{{ '/research/jhelum-stellar-stream/' | relative_url }}"
+     class="btn btn--primary">
+    Project Page
+  </a>
 
-  <div class="research-card-body">
+  <a href="{{ '/publications/2021-05-20/' | relative_url }}"
+     class="btn btn--primary">
+    Publication
+  </a>
+
+  <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...913...39S/abstract"
+     class="btn btn--primary"
+     target="_blank"
+     rel="noopener">
+    NASA ADS
+  </a>
+
+</div>
 
 
 <h2>Galactic Archaeology: The Jhelum Stellar Stream</h2>
@@ -157,15 +175,14 @@ Selected projects highlighting my experience in computational modeling, inverse 
   </div>
 </div>
 
-<div class="research-card">
+<div class="project-actions">
 
-<a href="/images/research/spectroscopy/arcturus.png"
-  target="_blank"
-  rel="noopener"> <img src="/images/research/spectroscopy/arcturus.png"
-      alt="Stellar spectrum used for chemical abundance analysis"
-      class="project-image research-media"> </a>
+  <a href="{{ '/research/stellar-spectroscopy/' | relative_url }}"
+     class="btn btn--primary">
+    Project Page
+  </a>
 
-  <div class="research-card-body">
+</div>
 
 
 <h2>Stellar Spectroscopy and Chemical Abundances</h2>
@@ -195,20 +212,21 @@ Selected projects highlighting my experience in computational modeling, inverse 
   </div>
 </div>
 
-<div class="research-card">
+<div class="project-actions">
 
-<a href="/images/research/ism/PlotFluct.mp4"
-  target="_blank"
-  rel="noopener"> <video autoplay
-        loop
-        muted
-        playsinline
-        class="project-image research-media"
-        aria-label="Animation of metallicity fluctuations in a simulated star-forming interstellar medium"> <source src="/images/research/ism/PlotFluct.mp4"
-           type="video/mp4">
-Your browser does not support the video element. </video> </a>
+  <a href="{{ '/research/star-forming-ism/' | relative_url }}"
+     class="btn btn--primary">
+    Project Page
+  </a>
 
-  <div class="research-card-body">
+  <a href="/images/research/ism/PlotFluct.mp4"
+     class="btn btn--primary"
+     target="_blank"
+     rel="noopener">
+    Animation
+  </a>
+
+</div>
 
 <h2>Two-Point Statistics in the Star-Forming ISM</h2>
 
