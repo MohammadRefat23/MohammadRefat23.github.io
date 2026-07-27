@@ -5,239 +5,253 @@ permalink: /research/
 author_profile: true
 ---
 
+---
+
+layout: archive
+title: "Research"
+permalink: /research/
+author_profile: true
+--------------------
+
 My research focuses on developing computational methods for extracting physical insight from complex data. Across projects in astrophysics, spectroscopy, Galactic archaeology, and time-series analysis, I have used scientific computing, statistical inference, numerical modeling, and inverse methods to study complex physical systems.
 
-A common theme throughout my work is the use of computational approaches to solve inverse problems: inferring hidden physical structure from indirect, incomplete, or noisy observations. Although my previous work has focused primarily on astrophysical applications, my broader research interests lie in computational physics, soft condensed matter, and biological physics.
+A common theme throughout my work is solving inverse problems: inferring hidden physical structure from indirect, incomplete, or noisy observations. Although my previous work has focused primarily on astrophysical applications, my broader research interests lie in computational physics, soft condensed matter, and biological physics.
 
 ---
 
 ## Research Projects
 
+Selected projects highlighting my experience in computational modeling, inverse problems, statistical analysis, and scientific computing.
+
 <div class="research-card">
 
-  <a href="/images/research/starspots/aumicstarry.png" target="_blank" rel="noopener">
-    <img src="/images/research/starspots/aumicstarry.png"
-         alt="Starspot inference project image"
-         class="research-media">
-  </a>
+<a href="/images/research/starspots/aumicstarry.png"
+  target="_blank"
+  rel="noopener"> <img src="/images/research/starspots/aumicstarry.png"
+      alt="Reconstructed stellar surface map from the starspot inference project"
+      class="project-image research-media"> </a>
 
   <div class="research-card-body">
-    <h2>Starspot Inference Using Light Curve Inversion Techniques</h2>
 
-    <p class="research-meta">
-      <strong>M.S. Thesis, CUNY Graduate Center, 2023–2025</strong><br>
-      Advisor: Dr. Lucy Lu
-    </p>
 
-    <p>
-      Developed computational approaches for reconstructing stellar surface features from photometric light curves. This project treated starspot mapping as an inverse problem, using time-series analysis, forward modeling, and numerical methods to explore how surface structure can be inferred from unresolved stellar observations.
-    </p>
+<h2>Starspot Inference Using Light Curve Inversion Techniques</h2>
 
-    <p class="research-links">
-      <a href="https://academicworks.cuny.edu/gc_etds/6480/" target="_blank" rel="noopener">M.S. Thesis</a>
-    </p>
+<p class="project-meta research-meta">
+  <strong>M.S. Thesis · CUNY Graduate Center · 2023–2025</strong><br>
+  Advisor: Dr. Lucy Lu
+</p>
+
+<p>
+  Developed computational methods for reconstructing stellar surface features from photometric light curves. The project treated starspot mapping as an inverse problem, combining time-series analysis, forward modeling, and numerical optimization to evaluate how reliably surface structure can be inferred from unresolved observations.
+</p>
+
+<div class="project-tags">
+  <span class="project-tag">Inverse Problems</span>
+  <span class="project-tag">Time-Series Analysis</span>
+  <span class="project-tag">Forward Modeling</span>
+  <span class="project-tag">Numerical Optimization</span>
+  <span class="project-tag">Python</span>
+  <span class="project-tag">starry</span>
+  <span class="project-tag">fleck</span>
+  <span class="project-tag">butterpy</span>
+</div>
+
+<p>
+  <strong>Outcome:</strong> M.S. thesis completed in 2025.
+</p>
+
+<div class="project-actions">
+  <a href="https://academicworks.cuny.edu/gc_etds/6480/"
+     class="btn btn--primary"
+     target="_blank"
+     rel="noopener">
+    View Thesis
+  </a>
+</div>
+
+
   </div>
 </div>
 
 <div class="research-card">
 
-  <a href="/images/research/browndwarfs/2mass.png" target="_blank" rel="noopener">
-    <img src="/images/research/browndwarfs/2mass.png"
-         alt="Brown dwarf atmospheres project image"
-         class="research-media">
-  </a>
+<a href="/images/research/browndwarfs/2mass.png"
+  target="_blank"
+  rel="noopener"> <img src="/images/research/browndwarfs/2mass.png"
+      alt="Brown dwarf atmospheric variability project"
+      class="project-image research-media"> </a>
 
   <div class="research-card-body">
-    <h2>Brown Dwarf and Giant Exoplanet Atmospheres</h2>
 
-    <p class="research-meta">
-      <strong>American Museum of Natural History, 2021–2023</strong><br>
-      Advisor: Dr. Johanna Vos
-    </p>
 
-    <p>
-      Studied atmospheric variability in brown dwarfs and giant exoplanets through analysis of photometric light curves. This work focused on using unresolved time-series observations to investigate rotational variability and infer atmospheric structure in low-mass objects.
-    </p>
+<h2>Brown Dwarf and Giant Exoplanet Atmospheres</h2>
+
+<p class="project-meta research-meta">
+  <strong>American Museum of Natural History · 2021–2023</strong><br>
+  Advisor: Dr. Johanna Vos
+</p>
+
+<p>
+  Studied atmospheric variability in brown dwarfs and giant exoplanets using photometric light curves. This work examined rotational variability in unresolved observations and explored how time-dependent brightness changes can constrain heterogeneous cloud structures and atmospheric features.
+</p>
+
+<div class="project-tags">
+  <span class="project-tag">Photometry</span>
+  <span class="project-tag">Time-Series Analysis</span>
+  <span class="project-tag">Rotational Variability</span>
+  <span class="project-tag">Atmospheric Mapping</span>
+  <span class="project-tag">Brown Dwarfs</span>
+  <span class="project-tag">Exoplanets</span>
+  <span class="project-tag">Python</span>
+</div>
+
+<p>
+  <strong>Outcome:</strong> Presented at the 240th meeting of the American Astronomical Society.
+</p>
+
+
   </div>
-
 </div>
 
 <div class="research-card">
 
-  <a href="/images/research/jhelum/alfe.jpg" target="_blank" rel="noopener">
-    <img src="/images/research/jhelum/alfe.jpg"
-         alt="Jhelum stellar stream project image"
-         class="research-media">
-  </a>
+<a href="/images/research/jhelum/alfe.jpg"
+  target="_blank"
+  rel="noopener"> <img src="/images/research/jhelum/alfe.jpg"
+      alt="Chemical abundance analysis for the Jhelum stellar stream"
+      class="project-image research-media"> </a>
 
   <div class="research-card-body">
-    <h2>Galactic Archaeology: The Jhelum Stellar Stream</h2>
 
-    <p class="research-meta">
-      <strong>American Museum of Natural History, 2020–2021</strong><br>
-      Advisor: Dr. Allyson Sheffield
-    </p>
 
-    <p>
-      Analyzed APOGEE-2 spectroscopic data to identify and characterize candidate members of the Jhelum stellar stream. This project used chemical tagging and statistical analysis to study stellar populations and contribute to the broader reconstruction of the Milky Way's assembly history.
-    </p>
+<h2>Galactic Archaeology: The Jhelum Stellar Stream</h2>
+
+<p class="project-meta research-meta">
+  <strong>American Museum of Natural History · 2020–2021</strong><br>
+  Advisor: Dr. Allyson Sheffield
+</p>
+
+<p>
+  Analyzed APOGEE-2 spectroscopic observations to identify and characterize candidate members of the Jhelum stellar stream. The project combined chemical abundances, stellar kinematics, and statistical analysis to investigate the stream's stellar population and possible progenitor.
+</p>
+
+<div class="project-tags">
+  <span class="project-tag">APOGEE-2</span>
+  <span class="project-tag">Gaia</span>
+  <span class="project-tag">Spectroscopy</span>
+  <span class="project-tag">Chemical Tagging</span>
+  <span class="project-tag">Galactic Dynamics</span>
+  <span class="project-tag">Statistical Analysis</span>
+  <span class="project-tag">Python</span>
+</div>
+
+<p>
+  <strong>Outcome:</strong> Co-authored publication in <em>The Astrophysical Journal</em>.
+</p>
+
+<div class="project-actions">
+  <a href="/publication/2021-05-20"
+     class="btn btn--primary">
+    Publication Page
+  </a>
+
+  <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...913...39S/abstract"
+     class="btn btn--primary"
+     target="_blank"
+     rel="noopener">
+    NASA ADS
+  </a>
+</div>
+
+
   </div>
-
 </div>
 
 <div class="research-card">
 
-  <a href="/images/research/spectroscopy/arcturus.png" target="_blank" rel="noopener">
-    <img src="/images/research/spectroscopy/arcturus.png"
-         alt="Stellar spectroscopy project image"
-         class="research-media">
-  </a>
+<a href="/images/research/spectroscopy/arcturus.png"
+  target="_blank"
+  rel="noopener"> <img src="/images/research/spectroscopy/arcturus.png"
+      alt="Stellar spectrum used for chemical abundance analysis"
+      class="project-image research-media"> </a>
 
   <div class="research-card-body">
-    <h2>Stellar Spectroscopy and Chemical Abundances</h2>
 
-    <p class="research-meta">
-      <strong>American Museum of Natural History, 2018–2020</strong><br>
-      Advisor: Dr. Allyson Sheffield
-    </p>
 
-    <p>
-      Processed and analyzed stellar spectra to derive chemical abundances and characterize stellar populations. This early research experience developed my foundation in observational data analysis, spectral line measurement, and quantitative stellar astrophysics.
-    </p>
+<h2>Stellar Spectroscopy and Chemical Abundances</h2>
+
+<p class="project-meta research-meta">
+  <strong>American Museum of Natural History · 2018–2020</strong><br>
+  Advisor: Dr. Allyson Sheffield
+</p>
+
+<p>
+  Processed and analyzed stellar spectra to measure chemical abundances and characterize stellar populations. This early research experience established my foundation in observational data analysis, spectral-line measurement, uncertainty assessment, and quantitative stellar astrophysics.
+</p>
+
+<div class="project-tags">
+  <span class="project-tag">Stellar Spectroscopy</span>
+  <span class="project-tag">Chemical Abundances</span>
+  <span class="project-tag">Spectral-Line Analysis</span>
+  <span class="project-tag">Data Reduction</span>
+  <span class="project-tag">Uncertainty Analysis</span>
+  <span class="project-tag">Python</span>
+</div>
+
+<p>
+  <strong>Outcome:</strong> Developed the spectroscopic analysis foundation used in subsequent Galactic archaeology research.
+</p>
+
   </div>
-
 </div>
 
 <div class="research-card">
 
-  <a href="/images/research/ism/PlotFluct.mp4" target="_blank" rel="noopener">
-    <video autoplay loop muted playsinline class="research-media">
-      <source src="/images/research/ism/PlotFluct.mp4" type="video/mp4">
-    </video>
-  </a>
+<a href="/images/research/ism/PlotFluct.mp4"
+  target="_blank"
+  rel="noopener"> <video autoplay
+        loop
+        muted
+        playsinline
+        class="project-image research-media"
+        aria-label="Animation of metallicity fluctuations in a simulated star-forming interstellar medium"> <source src="/images/research/ism/PlotFluct.mp4"
+           type="video/mp4">
+Your browser does not support the video element. </video> </a>
 
   <div class="research-card-body">
-    <h2>Two-Point Statistics in the Star-Forming ISM</h2>
 
-    <p class="research-meta">
-      <strong>Center for Computational Astrophysics, Flatiron Institute, 2018</strong><br>
-      Advisor: Dr. Chang-Goo Kim
-    </p>
+<h2>Two-Point Statistics in the Star-Forming ISM</h2>
 
-    <p>
-      Investigated metallicity correlations in star-forming regions using statistical methods. This project introduced me to computational approaches for studying complex astrophysical systems through spatial correlations and numerical analysis.
-    </p>
+<p class="project-meta research-meta">
+  <strong>Center for Computational Astrophysics, Flatiron Institute · 2018</strong><br>
+  Advisor: Dr. Chang-Goo Kim
+</p>
 
-    <p class="research-links">
-      <a href="/images/research/ism/PlotFluct.mp4" target="_blank" rel="noopener">View Full Animation</a>
-    </p>
-  </div>
+<p>
+  Investigated spatial metallicity correlations in simulated star-forming regions using two-point statistical methods. This project introduced me to computational approaches for analyzing spatial structure, numerical simulations, and statistical relationships in complex physical systems.
+</p>
 
+<div class="project-tags">
+  <span class="project-tag">Two-Point Statistics</span>
+  <span class="project-tag">Spatial Correlations</span>
+  <span class="project-tag">Numerical Simulations</span>
+  <span class="project-tag">Interstellar Medium</span>
+  <span class="project-tag">Scientific Visualization</span>
+  <span class="project-tag">Python</span>
 </div>
 
-<style>
-.research-card {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 2rem;
-  margin: 3rem 0;
-  padding: 1.5rem;
-  border: 1px solid #444;
-  border-radius: 10px;
-  background: #2b2b2b;
-  color: #f5f5f5;
-  align-items: start;
-}
+<p>
+  <strong>Outcome:</strong> Completed as a computational astrophysics research project at the Flatiron Institute.
+</p>
 
-.research-card h2 {
-  margin-top: 0;
-  margin-bottom: 0.4rem;
-}
+<div class="project-actions">
+  <a href="/images/research/ism/PlotFluct.mp4"
+     class="btn btn--primary"
+     target="_blank"
+     rel="noopener">
+    View Full Animation
+  </a>
+</div>
 
-.research-card p {
-  margin-bottom: 0.9rem;
-}
-
-.research-meta {
-  color: #444;
-}
-
-.research-media {
-  width: 280px;
-  height: 200px;
-  object-fit: contain;
-  border: 1px solid #666;
-  border-radius: 6px;
-  background: #1a1a1a;
-  display: block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: zoom-in;
-}
-
-.research-media:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-}
-
-.method-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 0.9rem 0 1rem 0;
-}
-
-.method-tag {
-  display: inline-block;
-  padding: 0.3rem 0.65rem;
-  border: 1px solid #d6d6d6;
-  border-radius: 999px;
-  background: #ffffff;
-  font-size: 0.85rem;
-  line-height: 1.3;
-}
-
-.research-links {
-  margin-top: 0.6rem;
-}
-
-.research-links a {
-  font-weight: 600;
-}
-
-.research-card h2 {
-  color: #ffffff;
-}
-
-.research-card p {
-  color: #e8e8e8;
-}
-
-.research-card strong {
-  color: #ffffff;
-}
-
-.research-meta {
-  color: #d0d0d0;
-}
-
-.research-links a {
-  color: #6bb6ff;
-}
-
-.research-links a:hover {
-  color: #9fd0ff;
-}
-
-
-@media (max-width: 800px) {
-  .research-card {
-    grid-template-columns: 1fr;
-  }
-
-  .research-media {
-    width: 100%;
-    height: auto;
-    max-height: 360px;
-  }
-}
-</style>
+  </div>
+</div>
