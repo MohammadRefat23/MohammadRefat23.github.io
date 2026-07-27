@@ -25,7 +25,7 @@ My publications and thesis work span Galactic archaeology, stellar spectroscopy,
 
   <div class="research-card-body">
 
-```
+
 <h2>
   <a href="{{ post.url | relative_url }}">
     {{ post.title }}
@@ -89,7 +89,7 @@ My publications and thesis work span Galactic archaeology, stellar spectroscopy,
     </a>
   {% endif %}
 </div>
-```
+s
 
   </div>
 </div>
