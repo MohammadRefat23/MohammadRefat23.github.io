@@ -4,7 +4,7 @@ title: "Chemodynamically Characterizing the Jhelum Stellar Stream"
 subtitle: "Combining APOGEE-2 spectroscopy and Gaia astrometry to identify members of the Jhelum stellar stream"
 permalink: /research/jhelum-stellar-stream/
 
-image: /images/research/jhelum/jhelum-hero.png
+image: images/research/jhelum/alfe.jpg
 image_alt: "Milky Way stellar streams"
 image_caption: "The Jhelum stellar stream traces the disruption of a satellite system in the Milky Way."
 

@@ -4,7 +4,7 @@ title: "Stellar Spectroscopy and Chemical Abundance Analysis"
 subtitle: "Extracting the physical properties of stars from high-resolution spectroscopic observations"
 permalink: /research/stellar-spectroscopy/
 
-image: /images/research/spectroscopy/spectroscopy-hero.png
+image: /images/research/spectroscopy/arcturus.png
 dates: "2020 -- 2021"
 institution: "American Museum of Natural History"
 advisor: "Dr. Allyson A. Sheffield"

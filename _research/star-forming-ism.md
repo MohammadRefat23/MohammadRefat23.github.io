@@ -4,7 +4,10 @@ title: "Star-forming Interstellar Medium"
 subtitle: "Investigating the physical processes governing molecular clouds and star formation"
 permalink: /research/star-forming-ism/
 
-image: /images/research/ism/ism-hero.png
+video: /images/research/ism/PlotFluct.mp4
+video_type: video/mp4
+video_alt: "Animation of metallicity fluctuations in a simulated star-forming interstellar medium"
+video_caption: "Evolution of spatial metallicity fluctuations in the simulated star-forming ISM."
 dates: "Early Research"
 institution: "CUNY Baccalaureate / American Museum of Natural History"
 role: "Student Researcher"

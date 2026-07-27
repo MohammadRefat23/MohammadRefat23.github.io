@@ -6,7 +6,23 @@ layout: archive
 
   <header class="project-header">
 
-    {% if page.image %}
+    {% if page.video %}
+      <figure class="project-hero">
+        <video autoplay
+               loop
+               muted
+               playsinline
+               controls
+               preload="metadata"
+               aria-label="{{ page.video_alt | default: page.title }}">
+          <source src="{{ page.video | relative_url }}" type="{{ page.video_type | default: 'video/mp4' }}">
+          Your browser does not support the video element.
+        </video>
+        {% if page.video_caption %}
+          <figcaption>{{ page.video_caption }}</figcaption>
+        {% endif %}
+      </figure>
+    {% elsif page.image %}
       <figure class="project-hero">
         <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
         {% if page.image_caption %}
@@ -84,12 +100,86 @@ layout: archive
 
 </article>
 
+
 <style>
-.project-hero figcaption,.project-gallery figcaption{color:inherit;opacity:.85}
-.page__title,.project-subtitle,.project-meta,.project-meta strong,.project-content,.method-tag{color:inherit}
-.project-meta{margin-top:1rem;padding:1rem 1.25rem;background:rgba(127,127,127,.12);border-left:4px solid #52adc8;border-radius:4px;line-height:1.7}
-.project-links{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
-.method-list{display:flex;flex-wrap:wrap;gap:.5rem}
-.method-tag{padding:.35rem .7rem;border:1px solid rgba(127,127,127,.35);border-radius:999px;background:rgba(127,127,127,.12)}
-.project-gallery img,.project-hero img{width:100%;max-height:520px;object-fit:contain;border-radius:6px}
+.project-header {
+  margin-bottom: 2rem;
+}
+
+.project-hero {
+  margin: 0 0 1.5rem;
+}
+
+.project-hero img,
+.project-hero video {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: rgba(127, 127, 127, 0.08);
+}
+
+.project-hero figcaption,
+.project-gallery figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.page__title,
+.project-subtitle,
+.project-meta,
+.project-meta strong,
+.project-content,
+.method-tag {
+  color: inherit;
+}
+
+.project-subtitle {
+  opacity: 0.9;
+}
+
+.project-meta {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  background: rgba(127, 127, 127, 0.12);
+  border-left: 4px solid #52adc8;
+  border-radius: 4px;
+  line-height: 1.7;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.method-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.method-tag {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(127, 127, 127, 0.35);
+  border-radius: 999px;
+  background: rgba(127, 127, 127, 0.12);
+}
+
+.project-gallery figure {
+  margin-bottom: 2rem;
+}
+
+.project-gallery img,
+.project-gallery video {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 6px;
+}
 </style>
