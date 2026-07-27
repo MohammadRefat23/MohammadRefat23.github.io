@@ -4,92 +4,91 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
----
+--------------------
 
-My publications and thesis work span Galactic archaeology, stellar spectroscopy, time-series analysis, and computational inverse problems. Each entry links to a dedicated page describing the work, its main findings, and my contributions.
-
----
-
-## Publications and Thesis
+My publications and thesis work span Galactic archaeology, stellar spectroscopy, time-series analysis, and computational inverse problems.
 
 {% assign publications = site.publications | sort: "date" | reverse %}
 
 {% for post in publications %}
 
-<div class="research-card publication-card">
+<div class="publication-entry">
 
-{% if post.image %} <a href="{{ post.url | relative_url }}"> <img src="{{ post.image | relative_url }}"
-        alt="{{ post.title | escape }}"
-        class="project-image research-media"> </a>
-{% endif %}
-
-  <div class="research-card-body">
-
-
-<h2>
-  <a href="{{ post.url | relative_url }}">
+  <h2 class="publication-title">
     {{ post.title }}
-  </a>
-</h2>
+  </h2>
 
-<p class="project-meta research-meta">
-  <strong>
-    {% if post.venue %}
-      {{ post.venue }}
+  <p class="publication-meta">
+    {% if post.authors %}
+      {{ post.authors }}<br>
     {% endif %}
 
-    {% if post.date %}
-      · {{ post.date | date: "%Y" }}
-    {% endif %}
-  </strong>
+{% if post.venue %}
+  <em>{{ post.venue }}</em>
+{% endif %}
 
-  {% if post.category %}
-    <br>
-    {% case post.category %}
-      {% when "journal-article" %}
-        Journal Article
-      {% when "thesis" %}
-        M.S. Thesis
-      {% when "conference-proceeding" %}
-        Conference Proceeding
-      {% when "preprint" %}
-        Preprint
-      {% else %}
-        {{ post.category | replace: "-", " " | capitalize }}
-    {% endcase %}
-  {% endif %}
-</p>
+{% if post.date %}
+  · {{ post.date | date: "%Y" }}
+{% endif %}
 
-{% if post.excerpt %}
-  <p>
-    {{ post.excerpt | strip_html | strip_newlines }}
+{% if post.category %}
+  <br>
+  {% case post.category %}
+    {% when "journal-article" %}
+      Journal Article
+    {% when "thesis" %}
+      M.S. Thesis
+    {% when "conference-proceeding" %}
+      Conference Proceeding
+    {% when "preprint" %}
+      Preprint
+    {% else %}
+      {{ post.category | replace: "-", " " | capitalize }}
+  {% endcase %}
+{% endif %}
+
+
   </p>
+
+{% if post.excerpt %} <p class="publication-summary">
+{{ post.excerpt | strip_html | strip_newlines }} </p>
 {% endif %}
 
-{% if post.tags %}
-  <div class="project-tags">
-    {% for tag in post.tags %}
-      <span class="project-tag">{{ tag }}</span>
-    {% endfor %}
-  </div>
-{% endif %}
+  <div class="project-actions">
 
-<div class="project-actions">
-  <a href="{{ post.url | relative_url }}"
-     class="btn btn--primary">
+
+{% if post.paperurl %}
+  <a href="{{ post.paperurl }}"
+     class="btn btn--primary"
+     target="_blank"
+     rel="noopener">
     View Publication
   </a>
+{% endif %}
 
-  {% if post.paperurl %}
-    <a href="{{ post.paperurl }}"
-       class="btn btn--primary"
-       target="_blank"
-       rel="noopener">
-      Read Paper
-    </a>
-  {% endif %}
-</div>
+{% if post.pdfurl %}
+  <a href="{{ post.pdfurl }}"
+     class="btn btn--primary"
+     target="_blank"
+     rel="noopener">
+    PDF
+  </a>
+{% endif %}
+
+{% if post.projecturl %}
+  <a href="{{ post.projecturl | relative_url }}"
+     class="btn btn--primary">
+    Related Project
+  </a>
+{% endif %}
+
   </div>
+
 </div>
+
+{% unless forloop.last %}
+
+<hr class="publication-divider">
+{% endunless %}
 
 {% endfor %}
