@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: ""
-author_profile: false
+author_profile: true
 redirect_from: 
   - /about/
   - /about.html
@@ -30,5 +30,3 @@ My previous research spans stellar surface mapping, brown-dwarf and exoplanet at
 ## Research Direction
 
 I am interested in developing broadly applicable computational methods for studying complex and data-rich physical systems. In doctoral research, I hope to combine numerical simulation, probabilistic modeling, and machine learning to address problems in computational physics.<!--, particularly in soft condensed matter, biological physics, and related interdisciplinary areas.-->
-
-{% include profile-links.html %}

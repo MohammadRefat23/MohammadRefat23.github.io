@@ -232,14 +232,14 @@ defaults:
       type: pages
     values:
       layout: archive
-      author_profile: false
+      author_profile: true
 
   - scope:
       path: ""
       type: publications
     values:
       layout: single
-      author_profile: false
+      author_profile: true
       share: false
       comments: false
 
@@ -248,7 +248,7 @@ defaults:
       type: talks
     values:
       layout: presentation
-      author_profile: false
+      author_profile: true
       share: false
       comments: false
 
@@ -257,7 +257,7 @@ defaults:
       type: research
     values:
       layout: project
-      author_profile: false
+      author_profile: true
       share: false
       comments: false
 

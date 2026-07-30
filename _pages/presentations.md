@@ -2,7 +2,7 @@
 layout: archive
 title: "Talks and presentations"
 permalink: /talks/
-author_profile: false
+author_profile: true
 redirect_from: 
 - /talks/
 ---

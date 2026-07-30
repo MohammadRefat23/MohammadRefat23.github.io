@@ -2,7 +2,7 @@
 layout: archive
 title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: false
+author_profile: true
 ---
 
 <div style="margin-bottom: 1rem;">

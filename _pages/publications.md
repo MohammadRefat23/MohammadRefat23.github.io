@@ -3,7 +3,7 @@
 layout: archive
 title: "Publications"
 permalink: /publications/
-author_profile: false
+author_profile: true
 ---
 
 My publications and thesis work span Galactic archaeology, stellar spectroscopy, time-series analysis, and computational inverse problems.

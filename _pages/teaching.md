@@ -2,5 +2,5 @@
 layout: archive
 title: "Teaching"
 permalink: /teaching/
-author_profile: false
+author_profile: true
 ---
