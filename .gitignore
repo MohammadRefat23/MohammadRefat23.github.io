@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.asset-cache/
+
+# Ruby
+.bundle/
+vendor/
+
+# Python and notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# LaTeX temporary files
+assets/cv/*.aux
+assets/cv/*.bbl
+assets/cv/*.bcf
+assets/cv/*.blg
+assets/cv/*.fdb_latexmk
+assets/cv/*.fls
+assets/cv/*.log
+assets/cv/*.out
+assets/cv/*.run.xml
+assets/cv/*.toc
+assets/cv/*.synctex.gz

@@ -14,9 +14,11 @@ advisor: "Dr. Johanna Vos"
 role: "Undergraduate Researcher"
 
 outputs:
-  - "AAS 240 presentation"
-  - "CCA/CUNY/AMNH Symposium presentation"
-  - "Computational time-series analysis workflows"
+  - label: "AAS 240 Presentation"
+    url: "/presentations/2022-06-14-talk-5/"
+
+  - label: "CCA Symposium Presentation"
+    url: "/presentations/2021-08-04-talk-4/"
 
 methods:
   - "Time-series analysis"
