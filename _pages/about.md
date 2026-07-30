@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Mohammad Alvi Refat"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
