@@ -748,184 +748,6 @@ p { color: inherit; }
 }
 
 /* ========================================================================== 
-   Homepage v3 — closer to Andrew Robertson's HugoBlox landing page
-   Full-width atmospheric gradient through the profile and Research Areas,
-   fading cleanly into the standard page background before Recorded Talks.
-   ========================================================================== */
-
-.site-main--home {
-  position: relative;
-  overflow: clip;
-}
-
-.home-page-shell {
-  position: relative;
-  z-index: 1;
-  width: min(100% - 3rem, 1100px);
-  margin-inline: auto;
-}
-
-.home-gradient-zone {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  margin-top: -1px;
-}
-
-/* Main tonal wash: cool blue at upper left, muted indigo at upper right,
-   and a long vertical fade back to the site's charcoal background. */
-.home-gradient-zone::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  pointer-events: none;
-  background:
-    radial-gradient(1050px 620px at 8% 2%, rgba(47, 111, 151, 0.34), transparent 68%),
-    radial-gradient(900px 540px at 92% 0%, rgba(91, 74, 145, 0.23), transparent 69%),
-    radial-gradient(760px 520px at 52% 36%, rgba(47, 93, 124, 0.12), transparent 72%),
-    linear-gradient(
-      180deg,
-      #111c27 0%,
-      #101923 34%,
-      #0f161f 68%,
-      var(--site-bg) 100%
-    );
-}
-
-/* Subtle texture and a soft highlight behind the portrait/profile content. */
-.home-gradient-zone::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.48;
-  background:
-    radial-gradient(circle at 22% 17%, rgba(255, 255, 255, 0.055) 0 1px, transparent 1.5px) 0 0 / 26px 26px,
-    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.018) 50%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.7) 58%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.7) 58%, transparent 100%);
-}
-
-.site-main--home .profile-hero {
-  max-width: 1040px;
-  padding: clamp(4.8rem, 8vw, 7.1rem) 0 clamp(5rem, 8vw, 7rem);
-}
-
-.site-main--home .profile-portrait {
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow:
-    0 24px 70px rgba(0, 0, 0, 0.34),
-    0 0 0 8px rgba(255, 255, 255, 0.018);
-}
-
-.site-main--home .profile-intro h1 {
-  max-width: 760px;
-  font-size: clamp(2.45rem, 5vw, 3.35rem);
-  letter-spacing: -0.042em;
-}
-
-.site-main--home .profile-biography {
-  max-width: 720px;
-}
-
-.site-main--home .profile-biography p {
-  color: rgba(237, 241, 245, 0.93);
-}
-
-.site-main--home .profile-socials a {
-  color: rgba(225, 232, 239, 0.74);
-}
-
-.site-main--home .site-button--primary {
-  border-color: #67b9df;
-  background: #67b9df;
-  box-shadow: 0 10px 28px rgba(35, 131, 177, 0.2);
-}
-
-.home-section--research {
-  padding-bottom: clamp(7rem, 10vw, 9.5rem);
-}
-
-.home-gradient-zone .section-heading h2 {
-  font-size: clamp(1.9rem, 4vw, 2.35rem);
-}
-
-/* Andrew's cards read as clean editorial panels rather than floating app tiles. */
-.home-gradient-zone .feature-card {
-  border-color: rgba(255, 255, 255, 0.105);
-  border-radius: 11px;
-  background: rgba(23, 32, 43, 0.9);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.home-gradient-zone .feature-card:hover {
-  border-color: rgba(105, 185, 220, 0.48);
-  background: rgba(27, 38, 51, 0.96);
-  transform: translateY(-4px);
-}
-
-.home-gradient-zone .feature-card__media {
-  border-bottom-color: rgba(255, 255, 255, 0.085);
-}
-
-.home-gradient-zone .feature-card__body {
-  padding: 1.2rem 1.25rem 1.35rem;
-}
-
-.home-gradient-zone .feature-card__kicker {
-  color: #72c1e3;
-}
-
-.home-page-shell--lower {
-  padding-top: clamp(5.75rem, 9vw, 8rem);
-}
-
-.home-page-shell--lower .home-section {
-  padding-bottom: clamp(6rem, 9vw, 8.25rem);
-}
-
-/* Keep the lower half visually quieter, as on the reference site. */
-.home-page-shell--lower .feature-card {
-  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.13);
-}
-
-@media (max-width: 700px) {
-  .home-page-shell {
-    width: min(100% - 2rem, 1100px);
-  }
-
-  .site-main--home .profile-hero {
-    padding: 3.6rem 0 4.8rem;
-  }
-
-  .home-section--research {
-    padding-bottom: 6rem;
-  }
-
-  .home-page-shell--lower {
-    padding-top: 4.75rem;
-  }
-
-  .home-gradient-zone::before {
-    background:
-      radial-gradient(720px 480px at 8% 0%, rgba(47, 111, 151, 0.32), transparent 70%),
-      radial-gradient(600px 440px at 100% 7%, rgba(91, 74, 145, 0.2), transparent 72%),
-      linear-gradient(180deg, #111c27 0%, #101923 48%, var(--site-bg) 100%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .home-gradient-zone .feature-card,
-  .home-gradient-zone .feature-card:hover {
-    transform: none;
-  }
-}
-
-/* ========================================================================== 
    Homepage v4 — source-faithful adaptation of Andrew Robertson's homepage
 
    His source applies HugoBlox's `hbx-bg-gradient` only to the biography block
@@ -939,7 +761,6 @@ p { color: inherit; }
   isolation: isolate;
   overflow: hidden;
   margin-top: -1px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .home-gradient-zone::before {
@@ -949,9 +770,9 @@ p { color: inherit; }
   z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(680px 520px at 12% 18%, rgba(139, 92, 246, 0.24), transparent 68%),
-    radial-gradient(760px 560px at 88% 8%, rgba(79, 70, 229, 0.22), transparent 70%),
-    linear-gradient(135deg, #3b1764 0%, #29245f 48%, #17183b 100%);
+    radial-gradient(760px 560px at 12% 16%, rgba(124, 58, 237, 0.20), transparent 68%),
+    radial-gradient(860px 620px at 88% 4%, rgba(79, 70, 229, 0.17), transparent 70%),
+    linear-gradient(135deg, #251634 0%, #202345 50%, #141a29 100%);
 }
 
 .home-gradient-zone::after {
@@ -988,10 +809,10 @@ p { color: inherit; }
   width: 320px;
   height: 320px;
   margin: 0 auto 1.55rem;
-  border: 3px solid rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   box-shadow:
-    0 24px 65px rgba(0, 0, 0, 0.34),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
+    0 20px 56px rgba(0, 0, 0, 0.30),
+    0 0 0 5px rgba(255, 255, 255, 0.035);
 }
 
 .profile-identity h1 {
@@ -1048,7 +869,7 @@ p { color: inherit; }
 .profile-summary .profile-biography p {
   margin: 0 0 1rem;
   color: rgba(248, 250, 252, 0.94);
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.72;
 }
 
@@ -1121,9 +942,9 @@ p { color: inherit; }
 @media (max-width: 700px) {
   .home-gradient-zone::before {
     background:
-      radial-gradient(520px 420px at 10% 8%, rgba(139, 92, 246, 0.25), transparent 70%),
-      radial-gradient(540px 430px at 100% 28%, rgba(79, 70, 229, 0.2), transparent 72%),
-      linear-gradient(155deg, #3b1764 0%, #29245f 50%, #17183b 100%);
+      radial-gradient(560px 440px at 10% 8%, rgba(124, 58, 237, 0.21), transparent 70%),
+      radial-gradient(600px 460px at 100% 24%, rgba(79, 70, 229, 0.17), transparent 72%),
+      linear-gradient(155deg, #251634 0%, #202345 52%, #141a29 100%);
   }
 
   .site-main--home .profile-hero {
@@ -1160,5 +981,95 @@ p { color: inherit; }
 
   .home-page-shell--sections .home-section {
     padding-bottom: 4.75rem;
+  }
+}
+
+
+/* ========================================================================== 
+   Homepage v5 — live polish after source comparison
+   ========================================================================== */
+
+/* Andrew's navbar brand is plain text, not an active pill or colored tile. */
+.masthead__menu-item--lg,
+.masthead__menu-item--lg.active,
+.masthead__menu-item--lg a,
+.masthead__menu-item--lg.active a,
+.greedy-nav .visible-links .masthead__menu-item--lg a {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.greedy-nav .visible-links .masthead__menu-item--lg a::before,
+.greedy-nav .visible-links .masthead__menu-item--lg a::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Active navigation items stay typographic rather than becoming buttons. */
+.masthead__menu-item.active a,
+.greedy-nav .visible-links .active a {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Match the quieter editorial feel of HugoBlox article-grid cards. */
+.home-page-shell--sections .feature-card {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+}
+
+.home-page-shell--sections .feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.17);
+}
+
+.home-page-shell--sections .research-feature-card .feature-card__body {
+  min-height: 0;
+}
+
+/* HugoBlox collection headings are visually centered above their grids. */
+.home-page-shell--sections .section-heading {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.home-page-shell--sections .section-heading__note {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.publication-list-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.55rem;
+  padding: 0.62rem 0.95rem;
+  border: 1px solid #4f46e5;
+  border-radius: 6px;
+  background: #4f46e5;
+  color: #fff !important;
+  font-size: 0.88rem;
+  font-weight: 650;
+  line-height: 1;
+  text-decoration: none !important;
+}
+
+.publication-list-button:hover {
+  border-color: #6366f1;
+  background: #6366f1;
+  color: #fff !important;
+}
+
+.publication-note-copy {
+  display: block;
+  margin-top: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .profile-summary .profile-biography p {
+    font-size: 0.94rem;
   }
 }

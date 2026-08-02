@@ -36,7 +36,7 @@ redirect_from:
   </section>
 
   <section class="home-section">
-    {% capture publication_note %}See my <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer">full publication profile on Google Scholar</a>. Below I highlight my thesis and peer-reviewed work.{% endcapture %}
+    {% capture publication_note %}<a class="publication-list-button" href="{{ site.author.googlescholar }}" target="_blank" rel="noopener noreferrer">Full publication profile on Google Scholar</a><span class="publication-note-copy">Below I highlight my thesis and peer-reviewed work.</span>{% endcapture %}
     {% include section-heading.html title="Publications" note=publication_note %}
     <div class="feature-grid feature-grid--two">
       {% assign featured_publications = site.publications | where: "featured", true | sort: "date" | reverse %}
