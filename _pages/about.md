@@ -11,20 +11,20 @@ redirect_from:
 <div class="home-gradient-zone">
   <div class="home-page-shell">
     {% include profile-hero.html %}
-
-    <section class="home-section home-section--research">
-      {% include section-heading.html title="Research Areas" %}
-      <div class="feature-grid feature-grid--three">
-        {% assign featured_research = site.data.research_cards | where: "featured", true | sort: "order" %}
-        {% for project in featured_research limit: 3 %}
-          {% include research-card.html project=project %}
-        {% endfor %}
-      </div>
-    </section>
   </div>
 </div>
 
-<div class="home-page-shell home-page-shell--lower">
+<div class="home-page-shell home-page-shell--sections">
+  <section class="home-section">
+    {% include section-heading.html title="Research Areas" %}
+    <div class="feature-grid feature-grid--three">
+      {% assign featured_research = site.data.research_cards | where: "featured", true | sort: "order" %}
+      {% for project in featured_research limit: 3 %}
+        {% include research-card.html project=project %}
+      {% endfor %}
+    </div>
+  </section>
+
   <section class="home-section">
     {% include section-heading.html title="Recorded Talks" %}
     <div class="feature-grid feature-grid--two">

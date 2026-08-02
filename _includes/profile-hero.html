@@ -1,24 +1,28 @@
 <section class="profile-hero">
-  <div class="profile-portrait-wrap">
-    <img class="profile-portrait" src="{{ '/images/profile.png' | relative_url }}" alt="Portrait of {{ site.author.name }}">
-  </div>
+  <div class="profile-identity">
+    <div class="profile-portrait-wrap">
+      <img class="profile-portrait" src="{{ '/images/profile.png' | relative_url }}" alt="Portrait of {{ site.author.name }}">
+    </div>
 
-  <div class="profile-intro">
     <h1>{{ site.author.name }}</h1>
     <p class="profile-role">{{ site.author.bio }}</p>
+
     {% if site.author.employer %}
       <p class="profile-affiliation">
-        {% if site.author.employer_url %}<a href="{{ site.author.employer_url }}" target="_blank" rel="noopener">{% endif %}
+        {% if site.author.employer_url %}<a href="{{ site.author.employer_url }}" target="_blank" rel="noopener noreferrer">{% endif %}
         {{ site.author.employer }}
         {% if site.author.employer_url %}</a>{% endif %}
       </p>
     {% endif %}
 
     {% include social-links.html %}
+  </div>
+
+  <div class="profile-summary">
     {% include bio-copy.html %}
 
     <div class="profile-actions">
-      <a class="site-button site-button--primary" href="{{ '/assets/cv/cv.pdf' | relative_url }}" target="_blank" rel="noopener">Download CV</a>
+      <a class="site-button site-button--primary" href="{{ '/assets/cv/cv.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download CV</a>
     </div>
   </div>
 </section>

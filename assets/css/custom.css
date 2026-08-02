@@ -924,3 +924,241 @@ p { color: inherit; }
     transform: none;
   }
 }
+
+/* ========================================================================== 
+   Homepage v4 — source-faithful adaptation of Andrew Robertson's homepage
+
+   His source applies HugoBlox's `hbx-bg-gradient` only to the biography block
+   and sets the avatar to the framework's large (320px) size. The rules below
+   reproduce that structure in Jekyll while leaving the later collections on
+   the site's regular dark background.
+   ========================================================================== */
+
+.home-gradient-zone {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: -1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.home-gradient-zone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(680px 520px at 12% 18%, rgba(139, 92, 246, 0.24), transparent 68%),
+    radial-gradient(760px 560px at 88% 8%, rgba(79, 70, 229, 0.22), transparent 70%),
+    linear-gradient(135deg, #3b1764 0%, #29245f 48%, #17183b 100%);
+}
+
+.home-gradient-zone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 42%),
+    radial-gradient(circle at 50% 115%, rgba(15, 20, 27, 0.55), transparent 58%);
+}
+
+.site-main--home .profile-hero {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: clamp(3.5rem, 7vw, 6.5rem);
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.profile-identity {
+  min-width: 0;
+  text-align: center;
+}
+
+.profile-identity .profile-portrait-wrap {
+  padding: 0;
+}
+
+.site-main--home .profile-portrait {
+  width: 320px;
+  height: 320px;
+  margin: 0 auto 1.55rem;
+  border: 3px solid rgba(255, 255, 255, 0.78);
+  box-shadow:
+    0 24px 65px rgba(0, 0, 0, 0.34),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.profile-identity h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.profile-identity .profile-role {
+  margin: 0.7rem 0 0;
+  color: #c7d2fe;
+  font-size: 1.08rem;
+  font-weight: 650;
+}
+
+.profile-identity .profile-affiliation {
+  margin: 0.28rem 0 0;
+  color: rgba(237, 241, 245, 0.78);
+  font-size: 0.98rem;
+}
+
+.profile-identity .profile-affiliation a {
+  color: inherit;
+}
+
+.profile-identity .profile-socials {
+  justify-content: center;
+  gap: 1.08rem;
+  margin-top: 1.35rem;
+}
+
+.profile-identity .profile-socials a {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.28rem;
+}
+
+.profile-identity .profile-socials a:hover {
+  color: #fff;
+}
+
+.profile-summary {
+  min-width: 0;
+  max-width: 720px;
+}
+
+.profile-summary .profile-biography {
+  max-width: 72ch;
+  margin: 0;
+}
+
+.profile-summary .profile-biography p {
+  margin: 0 0 1rem;
+  color: rgba(248, 250, 252, 0.94);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.profile-summary .profile-biography a {
+  color: #bfdbfe;
+}
+
+.profile-summary .profile-biography a:hover {
+  color: #fff;
+}
+
+.profile-summary .profile-actions {
+  margin-top: 1.55rem;
+}
+
+.site-main--home .profile-summary .site-button--primary {
+  min-height: 2.7rem;
+  padding-inline: 1.15rem;
+  border-color: #4f46e5;
+  background: #4f46e5;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(30, 27, 75, 0.36);
+}
+
+.site-main--home .profile-summary .site-button--primary:hover {
+  border-color: #6366f1;
+  background: #6366f1;
+  color: #fff;
+}
+
+.home-page-shell--sections {
+  padding-top: 6rem;
+}
+
+.home-page-shell--sections .home-section {
+  padding-bottom: 6rem;
+}
+
+.home-page-shell--sections .section-heading {
+  margin-bottom: 1.8rem;
+}
+
+.home-page-shell--sections .section-heading h2 {
+  font-size: clamp(1.85rem, 4vw, 2.3rem);
+}
+
+/* Andrew's Research Areas use non-cropped scientific figures. */
+.home-page-shell--sections .research-feature-card .feature-card__media {
+  aspect-ratio: 16 / 9;
+  background: #f8fafc;
+}
+
+.home-page-shell--sections .research-feature-card .feature-card__media img,
+.home-page-shell--sections .research-feature-card .feature-card__media video {
+  object-fit: contain;
+}
+
+@media (max-width: 960px) {
+  .site-main--home .profile-hero {
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .site-main--home .profile-portrait {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-gradient-zone::before {
+    background:
+      radial-gradient(520px 420px at 10% 8%, rgba(139, 92, 246, 0.25), transparent 70%),
+      radial-gradient(540px 430px at 100% 28%, rgba(79, 70, 229, 0.2), transparent 72%),
+      linear-gradient(155deg, #3b1764 0%, #29245f 50%, #17183b 100%);
+  }
+
+  .site-main--home .profile-hero {
+    grid-template-columns: 1fr;
+    gap: 2.35rem;
+    padding: 4rem 0 4.5rem;
+  }
+
+  .site-main--home .profile-portrait {
+    width: 205px;
+    height: 205px;
+    margin-bottom: 1.25rem;
+  }
+
+  .profile-identity h1 {
+    font-size: 2.25rem;
+  }
+
+  .profile-summary {
+    max-width: none;
+  }
+
+  .profile-summary .profile-biography p {
+    font-size: 0.98rem;
+  }
+
+  .profile-summary .profile-actions {
+    justify-content: center;
+  }
+
+  .home-page-shell--sections {
+    padding-top: 4.75rem;
+  }
+
+  .home-page-shell--sections .home-section {
+    padding-bottom: 4.75rem;
+  }
+}
