@@ -1,34 +1,20 @@
-{% include base_path %}
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
-        <button aria-label="Toggle navigation">
-          <div class="navicon"></div>
-        </button>
+      <nav id="site-nav" class="site-nav-static" aria-label="Primary navigation">
+        <a class="site-brand{% if page.url == '/' %} active{% endif %}"
+           href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>
+          M. Refat
+        </a>
 
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg{% if page.url == '/' %} active{% endif %}">
-            <a href="{{ base_path }}/"{% if page.url == '/' %} aria-current="page"{% endif %}>{{ site.masthead_title | default: site.title }}</a>
-          </li>
-
+        <div class="site-nav-links">
           {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            {% assign link_is_active = false %}
-            {% if page.url == link.url or page.url contains link.url %}
-              {% assign link_is_active = true %}
-            {% endif %}
-            <li class="masthead__menu-item{% if link_is_active %} active{% endif %}">
-              <a href="{{ domain }}{{ link.url }}"{% if link_is_active %} aria-current="page"{% endif %}>{{ link.title }}</a>
-            </li>
+            <a class="site-nav-link{% if page.url == link.url %} active{% endif %}"
+               href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>
+              {{ link.title }}
+            </a>
           {% endfor %}
-        </ul>
-
-        <ul class="hidden-links hidden"></ul>
+        </div>
       </nav>
     </div>
   </div>
