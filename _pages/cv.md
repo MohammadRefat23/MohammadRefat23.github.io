@@ -1,36 +1,26 @@
 ---
-layout: archive
+layout: clean
 title: "Curriculum Vitae"
 permalink: /cv/
-author_profile: true
+author_profile: false
+description: "View the current CV below or download a copy."
+wide: true
 ---
 
-<div style="margin-bottom: 1rem;">
-  <a
-    id="cv-download-link"
-    href="{{ '/assets/cv/cv.pdf' | relative_url }}"
-    target="_blank"
-    rel="noopener"
-  >
-    Open CV in a new tab
-  </a>
+<div class="cv-toolbar">
+  <a id="cv-download-link" class="site-button site-button--primary" href="{{ '/assets/cv/cv.pdf' | relative_url }}" download>Download CV</a>
+  <a id="cv-open-link" class="site-button site-button--ghost" href="{{ '/assets/cv/cv.pdf' | relative_url }}" target="_blank" rel="noopener">Open in a new tab</a>
 </div>
 
-<iframe
-  id="cv-frame"
-  width="100%"
-  height="1050px"
-  style="border: none;"
-  title="Mohammad Refat Curriculum Vitae">
-</iframe>
+<div class="cv-viewer">
+  <iframe id="cv-frame" title="Mohammad Alvi Refat curriculum vitae" loading="lazy"></iframe>
+</div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const cvPath = "{{ '/assets/cv/cv.pdf' | relative_url }}";
-    const cacheBuster = Date.now();
-    const refreshedUrl = `${cvPath}?v=${cacheBuster}`;
-
+    const refreshedUrl = `${cvPath}?v=${Date.now()}`;
     document.getElementById("cv-frame").src = refreshedUrl;
-    document.getElementById("cv-download-link").href = refreshedUrl;
+    document.getElementById("cv-open-link").href = refreshedUrl;
   });
 </script>

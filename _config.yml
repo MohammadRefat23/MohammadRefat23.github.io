@@ -36,7 +36,7 @@ author:
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=tXosG1EAAAAJ&hl=en"
   impactstory      : # URL
-  orcid            : "http://orcid.org/0000-0003-3149-4501"
+  orcid            : "https://orcid.org/0000-0003-3149-4501"
   semantic         : # URL
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
@@ -119,7 +119,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true      # hide the unused RSS link in the minimal footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -212,34 +212,33 @@ kramdown:
   enable_coderay: false
 
 
-# These settings control the types of collections used by the template
+# These settings control the types of collections used by the site
 collections:
   publications:
     output: true
-    permalink: /:collection/:path/
+    permalink: /publications/:path/
   talks:
     output: true
-    permalink: /:collection/:path/
+    permalink: /presentations/:path/
   research:
     output: true
     permalink: /research/:path/
 
-
-# These settings control how pages and collections are included in the site
+# Default layouts for top-level pages and collections
 defaults:
   - scope:
       path: ""
       type: pages
     values:
-      layout: archive
-      author_profile: true
+      layout: clean
+      author_profile: false
 
   - scope:
       path: ""
       type: publications
     values:
-      layout: single
-      author_profile: true
+      layout: publication
+      author_profile: false
       share: false
       comments: false
 
@@ -248,7 +247,7 @@ defaults:
       type: talks
     values:
       layout: presentation
-      author_profile: true
+      author_profile: false
       share: false
       comments: false
 
@@ -257,10 +256,9 @@ defaults:
       type: research
     values:
       layout: project
-      author_profile: true
+      author_profile: false
       share: false
       comments: false
-
 
 # Sass/SCSS
 sass:
@@ -272,7 +270,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

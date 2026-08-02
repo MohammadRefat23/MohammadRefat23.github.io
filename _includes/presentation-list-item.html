@@ -1,0 +1,16 @@
+{% assign item = include.item %}
+<li class="presentation-list-item">
+  <div>
+    <h3>
+      {% if item.external_url %}
+        <a href="{{ item.external_url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+      {% elsif item.url %}
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% else %}
+        {{ item.title }}
+      {% endif %}
+    </h3>
+    <p>{{ item.event | default: item.venue }}{% if item.organization %} · {{ item.organization }}{% endif %}{% if item.location %} · {{ item.location }}{% endif %}</p>
+  </div>
+  <span class="presentation-year">{% if item.year %}{{ item.year }}{% elsif item.date %}{{ item.date | date: '%Y' }}{% endif %}</span>
+</li>
