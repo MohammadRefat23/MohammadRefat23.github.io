@@ -7,7 +7,11 @@
     <h1>{{ site.author.name }}</h1>
     <p class="profile-role">{{ site.author.bio }}</p>
     {% if site.author.employer %}
-      <p class="profile-affiliation">{{ site.author.employer }}</p>
+      <p class="profile-affiliation">
+        {% if site.author.employer_url %}<a href="{{ site.author.employer_url }}" target="_blank" rel="noopener">{% endif %}
+        {{ site.author.employer }}
+        {% if site.author.employer_url %}</a>{% endif %}
+      </p>
     {% endif %}
 
     {% include social-links.html %}
@@ -15,9 +19,6 @@
 
     <div class="profile-actions">
       <a class="site-button site-button--primary" href="{{ '/assets/cv/cv.pdf' | relative_url }}" target="_blank" rel="noopener">Download CV</a>
-      {% unless page.permalink == '/bio/' %}
-        <a class="site-button site-button--ghost" href="{{ '/bio/' | relative_url }}">Full bio</a>
-      {% endunless %}
     </div>
   </div>
 </section>

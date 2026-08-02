@@ -29,6 +29,7 @@ author:
   bio              : "Computational Physicist"
   location         : "New York City"
   employer         : "CUNY Graduate Center"
+  employer_url     : "https://www.gc.cuny.edu/"
   uri              : # URL
   email            : "moref17@gmail.com" 
 

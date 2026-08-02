@@ -2,6 +2,7 @@
   url: "/research/starspots/"
   image: "/images/research/starspots/aumicstarry.png"
   image_alt: "Reconstructed stellar surface map generated through light-curve inversion"
+  media_style: "figure"
   label: "Inverse Problems"
   summary: "Reconstructing stellar surface structure from rotational light curves through forward modeling, numerical optimization, and statistical inference."
   featured: true
@@ -11,6 +12,7 @@
   url: "/research/brown-dwarf-atmospheres/"
   image: "/images/research/browndwarfs/2mass.png"
   image_alt: "Brown dwarf atmospheric variability"
+  media_style: "figure"
   label: "Atmospheric Variability"
   summary: "Using time-series photometry and rotational variability to investigate evolving cloud structures in unresolved substellar atmospheres."
   featured: true
@@ -20,6 +22,7 @@
   url: "/research/jhelum-stellar-stream/"
   image: "/images/research/jhelum/alfe.jpg"
   image_alt: "Chemical abundance analysis of the Jhelum stellar stream"
+  media_style: "figure"
   label: "Galactic Archaeology"
   summary: "Combining APOGEE-2 spectroscopy and Gaia astrometry to identify stellar-stream members and investigate their origin."
   featured: true
@@ -29,6 +32,7 @@
   url: "/research/stellar-spectroscopy/"
   image: "/images/research/spectroscopy/arcturus.png"
   image_alt: "Stellar spectrum used for chemical abundance analysis"
+  media_style: "figure"
   label: "Stellar Spectroscopy"
   summary: "Extracting stellar properties and chemical abundances from high-resolution spectra using reproducible computational workflows."
   featured: false
@@ -39,6 +43,7 @@
   video: "/images/research/ism/PlotFluct.mp4"
   video_type: "video/mp4"
   video_alt: "Animation of metallicity fluctuations in a simulated star-forming interstellar medium"
+  media_style: "figure"
   label: "Spatial Statistics"
   summary: "Analyzing spatial metallicity correlations in simulated star-forming regions using two-point statistics and scientific visualization."
   featured: false

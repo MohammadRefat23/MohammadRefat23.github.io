@@ -1,7 +1,7 @@
 ---
-layout: clean
+layout: home
 permalink: /bio/
-title: ""
+title: "Bio"
 hide_title: true
 author_profile: false
 ---
