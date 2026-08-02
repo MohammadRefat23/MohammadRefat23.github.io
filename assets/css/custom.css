@@ -1181,20 +1181,27 @@ p { color: inherit; }
 }
 
 /*
- * Give the identity column a real share of the biography block, matching the
- * centered left-hand profile area in Andrew's resume-biography layout.
+ * Center the identity block across the full biography section.  The previous
+ * version centered it only inside the left grid column, which left the whole
+ * portrait/name/social group visibly off-center on the page.
  */
 .site-main--home .profile-hero {
-  grid-template-columns: minmax(350px, 0.86fr) minmax(0, 1.14fr);
-  gap: clamp(2.75rem, 4.8vw, 5.25rem);
-  max-width: 1180px;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: clamp(2.25rem, 4vw, 3.5rem);
+  max-width: 980px;
 }
 
 .site-main--home .profile-identity {
-  width: min(100%, 390px);
+  width: min(100%, 540px);
   justify-self: center;
   align-self: center;
+  margin-inline: auto;
   text-align: center;
+}
+
+.site-main--home .profile-portrait-wrap {
+  margin-inline: auto;
 }
 
 .site-main--home .profile-portrait {
@@ -1211,15 +1218,21 @@ p { color: inherit; }
 }
 
 .site-main--home .profile-identity .profile-socials {
+  width: 100%;
   justify-content: center;
 }
 
-@media (max-width: 960px) {
-  .site-main--home .profile-hero {
-    grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
-    gap: 2.75rem;
-  }
+.site-main--home .profile-summary {
+  width: min(100%, 72ch);
+  justify-self: center;
+  margin-inline: auto;
+}
 
+.site-main--home .profile-summary .profile-biography {
+  text-align: left;
+}
+
+@media (max-width: 960px) {
   .site-main--home .profile-portrait {
     width: 255px;
     height: 255px;
@@ -1249,10 +1262,6 @@ p { color: inherit; }
 
   .site-nav-link {
     font-size: 0.75rem;
-  }
-
-  .site-main--home .profile-hero {
-    grid-template-columns: 1fr;
   }
 
   .site-main--home .profile-identity {
