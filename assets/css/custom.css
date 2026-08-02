@@ -746,3 +746,181 @@ p { color: inherit; }
   .profile-actions .site-button,
   .cv-toolbar .site-button { width: 100%; }
 }
+
+/* ========================================================================== 
+   Homepage v3 — closer to Andrew Robertson's HugoBlox landing page
+   Full-width atmospheric gradient through the profile and Research Areas,
+   fading cleanly into the standard page background before Recorded Talks.
+   ========================================================================== */
+
+.site-main--home {
+  position: relative;
+  overflow: clip;
+}
+
+.home-page-shell {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 3rem, 1100px);
+  margin-inline: auto;
+}
+
+.home-gradient-zone {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: -1px;
+}
+
+/* Main tonal wash: cool blue at upper left, muted indigo at upper right,
+   and a long vertical fade back to the site's charcoal background. */
+.home-gradient-zone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(1050px 620px at 8% 2%, rgba(47, 111, 151, 0.34), transparent 68%),
+    radial-gradient(900px 540px at 92% 0%, rgba(91, 74, 145, 0.23), transparent 69%),
+    radial-gradient(760px 520px at 52% 36%, rgba(47, 93, 124, 0.12), transparent 72%),
+    linear-gradient(
+      180deg,
+      #111c27 0%,
+      #101923 34%,
+      #0f161f 68%,
+      var(--site-bg) 100%
+    );
+}
+
+/* Subtle texture and a soft highlight behind the portrait/profile content. */
+.home-gradient-zone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.48;
+  background:
+    radial-gradient(circle at 22% 17%, rgba(255, 255, 255, 0.055) 0 1px, transparent 1.5px) 0 0 / 26px 26px,
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.018) 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.7) 58%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.7) 58%, transparent 100%);
+}
+
+.site-main--home .profile-hero {
+  max-width: 1040px;
+  padding: clamp(4.8rem, 8vw, 7.1rem) 0 clamp(5rem, 8vw, 7rem);
+}
+
+.site-main--home .profile-portrait {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.34),
+    0 0 0 8px rgba(255, 255, 255, 0.018);
+}
+
+.site-main--home .profile-intro h1 {
+  max-width: 760px;
+  font-size: clamp(2.45rem, 5vw, 3.35rem);
+  letter-spacing: -0.042em;
+}
+
+.site-main--home .profile-biography {
+  max-width: 720px;
+}
+
+.site-main--home .profile-biography p {
+  color: rgba(237, 241, 245, 0.93);
+}
+
+.site-main--home .profile-socials a {
+  color: rgba(225, 232, 239, 0.74);
+}
+
+.site-main--home .site-button--primary {
+  border-color: #67b9df;
+  background: #67b9df;
+  box-shadow: 0 10px 28px rgba(35, 131, 177, 0.2);
+}
+
+.home-section--research {
+  padding-bottom: clamp(7rem, 10vw, 9.5rem);
+}
+
+.home-gradient-zone .section-heading h2 {
+  font-size: clamp(1.9rem, 4vw, 2.35rem);
+}
+
+/* Andrew's cards read as clean editorial panels rather than floating app tiles. */
+.home-gradient-zone .feature-card {
+  border-color: rgba(255, 255, 255, 0.105);
+  border-radius: 11px;
+  background: rgba(23, 32, 43, 0.9);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.home-gradient-zone .feature-card:hover {
+  border-color: rgba(105, 185, 220, 0.48);
+  background: rgba(27, 38, 51, 0.96);
+  transform: translateY(-4px);
+}
+
+.home-gradient-zone .feature-card__media {
+  border-bottom-color: rgba(255, 255, 255, 0.085);
+}
+
+.home-gradient-zone .feature-card__body {
+  padding: 1.2rem 1.25rem 1.35rem;
+}
+
+.home-gradient-zone .feature-card__kicker {
+  color: #72c1e3;
+}
+
+.home-page-shell--lower {
+  padding-top: clamp(5.75rem, 9vw, 8rem);
+}
+
+.home-page-shell--lower .home-section {
+  padding-bottom: clamp(6rem, 9vw, 8.25rem);
+}
+
+/* Keep the lower half visually quieter, as on the reference site. */
+.home-page-shell--lower .feature-card {
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.13);
+}
+
+@media (max-width: 700px) {
+  .home-page-shell {
+    width: min(100% - 2rem, 1100px);
+  }
+
+  .site-main--home .profile-hero {
+    padding: 3.6rem 0 4.8rem;
+  }
+
+  .home-section--research {
+    padding-bottom: 6rem;
+  }
+
+  .home-page-shell--lower {
+    padding-top: 4.75rem;
+  }
+
+  .home-gradient-zone::before {
+    background:
+      radial-gradient(720px 480px at 8% 0%, rgba(47, 111, 151, 0.32), transparent 70%),
+      radial-gradient(600px 440px at 100% 7%, rgba(91, 74, 145, 0.2), transparent 72%),
+      linear-gradient(180deg, #111c27 0%, #101923 48%, var(--site-bg) 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-gradient-zone .feature-card,
+  .home-gradient-zone .feature-card:hover {
+    transform: none;
+  }
+}
