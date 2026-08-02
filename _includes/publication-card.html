@@ -1,0 +1,18 @@
+{% assign publication = include.publication %}
+<article class="feature-card publication-feature-card">
+  <a class="feature-card__media" href="{{ publication.url | relative_url }}" aria-label="Read about {{ publication.title }}">
+    {% if publication.thumbnail %}
+      <img src="{{ publication.thumbnail | relative_url }}" alt="Thumbnail for {{ publication.title }}" loading="lazy">
+    {% else %}
+      <div class="feature-card__placeholder" aria-hidden="true"><i class="fas fa-file-alt"></i></div>
+    {% endif %}
+  </a>
+
+  <div class="feature-card__body">
+    <p class="feature-card__kicker">{{ publication.card_label | default: publication.category | replace: '-', ' ' | capitalize }}</p>
+    <h3><a href="{{ publication.url | relative_url }}">{{ publication.title }}</a></h3>
+    <p>{{ publication.excerpt }}</p>
+    <p class="feature-card__byline">{{ publication.authors }}{% if publication.date %} · {{ publication.date | date: '%Y' }}{% endif %}</p>
+    <a class="text-link" href="{{ publication.url | relative_url }}">Read more <span aria-hidden="true">→</span></a>
+  </div>
+</article>

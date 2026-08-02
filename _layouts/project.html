@@ -1,101 +1,72 @@
 ---
-layout: archive
+layout: clean
+hide_title: true
+wide: true
 ---
 
-<article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-
-  <header class="project-header">
-
+<article class="detail-page project-detail" itemscope itemtype="http://schema.org/CreativeWork">
+  <header class="detail-header">
     {% if page.video %}
-      <figure class="project-hero">
-        <video autoplay
-               loop
-               muted
-               playsinline
-               controls
-               preload="metadata"
-               aria-label="{{ page.video_alt | default: page.title }}">
+      <figure class="detail-hero">
+        <video autoplay loop muted playsinline controls preload="metadata" aria-label="{{ page.video_alt | default: page.title }}">
           <source src="{{ page.video | relative_url }}" type="{{ page.video_type | default: 'video/mp4' }}">
           Your browser does not support the video element.
         </video>
-        {% if page.video_caption %}
-          <figcaption>{{ page.video_caption }}</figcaption>
-        {% endif %}
+        {% if page.video_caption %}<figcaption>{{ page.video_caption }}</figcaption>{% endif %}
       </figure>
     {% elsif page.image %}
-      <figure class="project-hero">
+      <figure class="detail-hero">
         <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
-        {% if page.image_caption %}
-          <figcaption>{{ page.image_caption }}</figcaption>
-        {% endif %}
+        {% if page.image_caption %}<figcaption>{{ page.image_caption }}</figcaption>{% endif %}
       </figure>
     {% endif %}
 
-    <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
+    {% if page.card_label %}<p class="detail-kicker">{{ page.card_label }}</p>{% endif %}
+    <h1 itemprop="headline">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="detail-subtitle">{{ page.subtitle }}</p>{% endif %}
 
-    {% if page.subtitle %}
-      <p class="project-subtitle"><em>{{ page.subtitle }}</em></p>
-    {% endif %}
-
-    <p class="project-meta">
-      {% if page.dates %}
-        <strong>Dates:</strong> {{ page.dates }}<br>
-      {% endif %}
-      {% if page.institution %}
-        <strong>Institution:</strong> {{ page.institution }}<br>
-      {% endif %}
-      {% if page.advisor %}
-        <strong>Advisor:</strong> {{ page.advisor }}<br>
-      {% endif %}
-    </p>
+    <dl class="detail-meta">
+      {% if page.dates %}<div><dt>Dates</dt><dd>{{ page.dates }}</dd></div>{% endif %}
+      {% if page.institution %}<div><dt>Institution</dt><dd>{{ page.institution }}</dd></div>{% endif %}
+      {% if page.advisor %}<div><dt>Advisor</dt><dd>{{ page.advisor }}</dd></div>{% endif %}
+      {% if page.role %}<div><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
+    </dl>
 
     {% if page.outputs %}
-      <div class="project-links">
+      <div class="detail-actions">
         {% for output in page.outputs %}
-          <a class="btn btn--primary" href="{{ output.url }}" target="_blank" rel="noopener">
-            {{ output.label }}
-          </a>
+          {% if output.url %}
+            <a class="site-button site-button--ghost" href="{{ output.url }}"{% if output.url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ output.label }}</a>
+          {% else %}
+            <span class="detail-output">{{ output }}</span>
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}
-
   </header>
 
-  <hr>
-
-  <section class="project-content">
+  <div class="detail-content" itemprop="text">
     {{ content }}
-  </section>
+  </div>
 
   {% if page.methods %}
-    <hr>
-
-    <section class="project-methods">
-      <h2>Methods and Tools</h2>
-
-      <div class="method-list">
-        {% for method in page.methods %}
-          <span class="method-tag">{{ method }}</span>
-        {% endfor %}
+    <section class="detail-section">
+      <h2>Methods and tools</h2>
+      <div class="tag-list">
+        {% for method in page.methods %}<span>{{ method }}</span>{% endfor %}
       </div>
     </section>
   {% endif %}
 
   {% if page.gallery %}
-    <hr>
-
-    <section class="project-gallery">
+    <section class="detail-section detail-gallery">
       <h2>Gallery</h2>
-
       {% for item in page.gallery %}
         <figure>
           <img src="{{ item.image | relative_url }}" alt="{{ item.alt | default: page.title }}">
-          {% if item.caption %}
-            <figcaption>{{ item.caption }}</figcaption>
-          {% endif %}
+          {% if item.caption %}<figcaption>{{ item.caption }}</figcaption>{% endif %}
         </figure>
       {% endfor %}
     </section>
   {% endif %}
-
 </article>

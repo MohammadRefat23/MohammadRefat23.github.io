@@ -1,0 +1,45 @@
+- title: "Starspot Inference Using Light Curve Inversion Techniques"
+  url: "/research/starspots/"
+  image: "/images/research/starspots/aumicstarry.png"
+  image_alt: "Reconstructed stellar surface map generated through light-curve inversion"
+  label: "Inverse Problems"
+  summary: "Reconstructing stellar surface structure from rotational light curves through forward modeling, numerical optimization, and statistical inference."
+  featured: true
+  order: 1
+
+- title: "Mapping Brown Dwarf and Giant Exoplanet Atmospheres"
+  url: "/research/brown-dwarf-atmospheres/"
+  image: "/images/research/browndwarfs/2mass.png"
+  image_alt: "Brown dwarf atmospheric variability"
+  label: "Atmospheric Variability"
+  summary: "Using time-series photometry and rotational variability to investigate evolving cloud structures in unresolved substellar atmospheres."
+  featured: true
+  order: 2
+
+- title: "Chemodynamically Characterizing the Jhelum Stellar Stream"
+  url: "/research/jhelum-stellar-stream/"
+  image: "/images/research/jhelum/alfe.jpg"
+  image_alt: "Chemical abundance analysis of the Jhelum stellar stream"
+  label: "Galactic Archaeology"
+  summary: "Combining APOGEE-2 spectroscopy and Gaia astrometry to identify stellar-stream members and investigate their origin."
+  featured: true
+  order: 3
+
+- title: "Stellar Spectroscopy and Chemical Abundance Analysis"
+  url: "/research/stellar-spectroscopy/"
+  image: "/images/research/spectroscopy/arcturus.png"
+  image_alt: "Stellar spectrum used for chemical abundance analysis"
+  label: "Stellar Spectroscopy"
+  summary: "Extracting stellar properties and chemical abundances from high-resolution spectra using reproducible computational workflows."
+  featured: false
+  order: 4
+
+- title: "Two-Point Statistics in the Star-Forming ISM"
+  url: "/research/star-forming-ism/"
+  video: "/images/research/ism/PlotFluct.mp4"
+  video_type: "video/mp4"
+  video_alt: "Animation of metallicity fluctuations in a simulated star-forming interstellar medium"
+  label: "Spatial Statistics"
+  summary: "Analyzing spatial metallicity correlations in simulated star-forming regions using two-point statistics and scientific visualization."
+  featured: false
+  order: 5
