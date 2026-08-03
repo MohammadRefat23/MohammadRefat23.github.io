@@ -1,0 +1,20 @@
+main:
+  - name: Bio
+    url: /
+    weight: 10
+
+  - name: Research
+    url: /research/
+    weight: 20
+
+  - name: Publications
+    url: /publications/
+    weight: 30
+
+  - name: Presentations
+    url: /events/
+    weight: 40
+
+  - name: CV
+    url: /uploads/Mohammad_Refat_CV.pdf
+    weight: 50
