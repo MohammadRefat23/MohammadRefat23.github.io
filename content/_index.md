@@ -53,6 +53,7 @@ sections:
       filters:
         folders:
           - events
+        featured_only: true
     design:
       view: card
   - block: collection
