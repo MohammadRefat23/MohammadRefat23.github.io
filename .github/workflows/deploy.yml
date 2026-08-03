@@ -1,119 +1,116 @@
-name: Deploy website to GitHub Pages
+name: Build CV and Hugo Site
 
 env:
-  WC_HUGO_VERSION: '0.152.2'
-  NODE_VERSION: '20'
+  HUGO_VERSION: "0.152.2"
+  NODE_VERSION: "20"
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
   push:
-    branches: ['main']
-  # Allows you to run this workflow manually from the Actions tab on GitHub
+    branches:
+      - main
+      - hugo-migration
   workflow_dispatch:
 
-# Provide permission to clone the repo and deploy it to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
 concurrency:
-  group: 'pages'
-  cancel-in-progress: false
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  # Build website
   build:
-    if: github.repository_owner != 'HugoBlox'
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-          # Fetch history for Hugo's .GitInfo and .Lastmod
-        fetch-depth: 0
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ env.NODE_VERSION }}
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
 
-    - name: Setup pnpm
-      if: hashFiles('package.json') != ''
-      uses: pnpm/action-setup@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
 
-    - name: Install dependencies
-      run: |
-        # Install Tailwind CLI if package.json exists
-        if [ -f "package.json" ]; then
-          echo "Installing Tailwind dependencies..."
-          pnpm install || npm install
-        fi
+      - name: Install site dependencies
+        run: pnpm install --frozen-lockfile
 
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v3
-      with:
-        hugo-version: ${{ env.WC_HUGO_VERSION }}
-        extended: true
+      - name: Compile CV
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: cv.tex
+          working_directory: cv
+          os: debian
 
-      # Cache dependencies (Go modules, node_modules) - stable, rarely changes
-    - uses: actions/cache@v4
-      with:
-        path: |
-          /tmp/hugo_cache_runner/
-          node_modules/
-          modules/*/node_modules/
-        key: ${{ runner.os }}-hugo-deps-${{ hashFiles('**/go.mod', '**/package-lock.json',
-          '**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-hugo-deps-
+      - name: Copy CV into Hugo static files
+        run: |
+          mkdir -p static/uploads
+          cp cv/cv.pdf static/uploads/Mohammad_Refat_CV.pdf
 
-      # Cache Hugo resources (processed images, CSS) - invalidates only when assets/config change
-    - uses: actions/cache@v4
-      with:
-        path: resources/
-        key: ${{ runner.os }}-hugo-resources-${{ hashFiles('assets/**/*', 'config/**/*',
-          'hugo.yaml', 'package.json') }}
-        restore-keys: |
-          ${{ runner.os }}-hugo-resources-
+          if [ ! -s static/uploads/Mohammad_Refat_CV.pdf ]; then
+            echo "CV PDF was not created correctly."
+            exit 1
+          fi
 
-    - name: Setup Pages
-      id: pages
-      uses: actions/configure-pages@v5
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
 
-    - name: Build with Hugo
-      env:
-        HUGO_ENVIRONMENT: production
-      run: |
-        echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-        hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Configure GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        id: pages
+        uses: actions/configure-pages@v5
 
-    - name: Generate Pagefind search index (if applicable)
-      run: |
-        # Check if site uses Pagefind search
-        if [ -f "package.json" ] && grep -q "pagefind" package.json; then
-          pnpm dlx pagefind --source "public" || npx pagefind --source "public"
-        fi
+      - name: Build Hugo site
+        env:
+          HUGO_ENVIRONMENT: production
+        run: |
+          if [ "$GITHUB_REF" = "refs/heads/main" ]; then
+            hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+          else
+            hugo --minify
+          fi
 
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v4
-      with:
-        path: ./public
+      - name: Verify deployed CV
+        run: |
+          test -s public/uploads/Mohammad_Refat_CV.pdf
+          echo "CV is included in the Hugo build."
 
-  # Deploy website to GitHub Pages hosting
+      - name: Generate Pagefind index
+        run: |
+          if grep -q '"pagefind"' package.json 2>/dev/null; then
+            pnpm dlx pagefind --source public
+          fi
+
+      - name: Upload GitHub Pages artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+
   deploy:
-    if: github.repository_owner != 'HugoBlox'
+    if: github.ref == 'refs/heads/main'
     needs: build
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-    # Deploy to the github-pages environment
+    runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
     steps:
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
