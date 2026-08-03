@@ -21,6 +21,7 @@ hide_featured: false
 location: "American Astronomical Society, Pasadena, CA, USA"
 
 aliases:
+  - /presentations/2022-06-14-talk-5/
   - /talks/2022-06-14-talk-5/
   - /talks/2022-06-14-talk-5
 

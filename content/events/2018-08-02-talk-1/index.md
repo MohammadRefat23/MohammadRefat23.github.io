@@ -21,6 +21,7 @@ hide_featured: false
 location: "Flatiron Institute, Center for Computational Astrophysics, New York City, NY, USA"
 
 aliases:
+  - /presentations/2018-08-02-talk-1/
   - /talks/2018-08-02-talk-1/
   - /talks/2018-08-02-talk-1
 
