@@ -14,15 +14,15 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'Personal website of Andrew Robertson, astrophysicist working on dark matter, gravitational lensing, galaxy formation, and cosmology.'
-    twitter: 'astroandrew91'
+    description: 'Personal website of Mohammad Alvi Refat, a computational physicist working on inverse problems, scientific computing, statistical inference, and data-driven physical modeling.'
+    twitter: ''
   analytics:
-    google_analytics: ''
+    google_analytics: 'G-6PKL83GG52'
     baidu_tongji: ''
     plausible: ''
     fathom: ''
     pirsch: ''
-    goatcounter: 'andrew-a-robertson91.goatcounter.com'
+    goatcounter: ''
   verification:
     google: ''
     baidu: ''
@@ -33,17 +33,17 @@ header:
     enable: true
     block: 'navbar'
     fixed_to_top: true
-    show_search: true
-    show_theme_chooser: true
+    show_search: false
+    show_theme_chooser: false
     logo:
-      text: 'Andrew Robertson'
+      text: 'M. Refat'
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Andrew Robertson. This work is licensed under {license}'
+    notice: '© {year} Mohammad Alvi Refat'
     license:
-      enable: true
+      enable: false
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
