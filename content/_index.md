@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/Andrew_Robertson_CV_2026_03.pdf
+        url: uploads/Mohammad_Refat_CV.pdf
       headings:
         about: ''
         education: ''
@@ -36,6 +36,7 @@ sections:
       filters:
         folders:
           - research
+        featured_only: true
       sort_by: weight
       sort_ascending: true
     design:
@@ -59,8 +60,8 @@ sections:
     content:
       title: Publications
       text:  |-
-        {{< button text="Full publication list on NASA ADS" url="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0002-0086-0524&sort=date+desc" />}}  
-        Below I highlight some recent papers. 
+        {{< button text="Full publication profile on Google Scholar" url="https://scholar.google.com/citations?user=tXosG1EAAAAJ&hl=en" />}}  
+        Below I highlight my thesis and peer-reviewed work. 
       filters:
         folders:
           - publications
