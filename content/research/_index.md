@@ -19,7 +19,6 @@ sections:
       filters:
         folders:
           - research
-        featured_only: true
       sort_by: weight
       sort_ascending: true
     design:
