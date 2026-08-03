@@ -16,5 +16,5 @@ main:
     weight: 40
 
   - name: CV
-    url: /uploads/Mohammad_Refat_CV.pdf
+    url: /cv/
     weight: 50

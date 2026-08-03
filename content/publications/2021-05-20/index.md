@@ -4,7 +4,7 @@ title: "Chemodynamically Characterizing the Jhelum Stellar Stream with APOGEE-2"
 authors:
   - "Allyson A. Sheffield"
   - "Aidan Z. Subrahimovic"
-  - "Mohammad Refat"
+  - admin
   - "et al."
 
 date: 2021-05-20

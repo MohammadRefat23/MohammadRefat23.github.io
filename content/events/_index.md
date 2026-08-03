@@ -1,13 +1,35 @@
 ---
-title: Recent & Upcoming Talks
+title: Presentations
+type: landing
 cms_exclude: true
-#url: talk
 
-# View
-view: card
+design:
+  spacing: '5rem'
 
-# Optional cover image (relative to `assets/media/` folder).
-image:
-  caption: ''
-  filename: ''
+sections:
+  - block: collection
+    id: talks
+    content:
+      title: Talks
+      text: Research talks and recorded presentations.
+      filters:
+        folders:
+          - events
+      sort_by: date
+      sort_ascending: false
+    design:
+      view: card
+      columns: 3
+      fill_image: true
+      show_date: true
+      show_read_time: false
+
+  - block: markdown
+    id: posters
+    content:
+      title: Posters
+      text: |-
+        Poster presentations will be added here.
+    design:
+      columns: '1'
 ---
