@@ -1,7 +1,7 @@
 ---
 
 title: "Mapping Brown Dwarf and Giant Exoplanet Atmospheres"
-summary: "Using rotational photometric variability to probe evolving cloud structures in substellar atmospheres."
+summary: "Mapping evolving cloud structures in brown-dwarf and giant-exoplanet atmospheres from rotational variability."
 date: 2021-05-01
 featured: true
 weight: 20

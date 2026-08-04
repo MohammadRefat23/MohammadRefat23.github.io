@@ -29,7 +29,7 @@ sections:
   - block: collection
     id: research
     content:
-      title: Research Areas
+      title: Featured Research
       filters:
         folders:
           - research

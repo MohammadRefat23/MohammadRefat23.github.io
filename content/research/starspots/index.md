@@ -1,7 +1,7 @@
 ---
 
 title: "Starspot Inference Using Light Curve Inversion Techniques"
-summary: "Recovering stellar surface structure from rotational photometric variability."
+summary: "Testing what stellar rotation, activity, and surface structure can be recovered from photometric light-curve inversion."
 date: 2023-08-01
 featured: true
 weight: 10

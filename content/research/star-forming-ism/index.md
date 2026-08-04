@@ -1,7 +1,7 @@
 ---
 
 title: "Two-Point Statistics in the Star-Forming Interstellar Medium"
-summary: "Measuring the characteristic scale of metallicity homogeneity in simulated star-forming gas."
+summary: "Using two-point statistics to measure the characteristic scale of metallicity homogeneity in simulated star-forming gas."
 featured: false
 weight: 50
 authors:
