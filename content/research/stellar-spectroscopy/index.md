@@ -1,6 +1,7 @@
 ---
+
 title: "Stellar Spectroscopy and Chemical Abundance Analysis"
-summary: "Extracting the physical properties of stars from high-resolution spectroscopic observations."
+summary: "Validating a high-resolution spectroscopic workflow for measuring stellar parameters and chemical abundances in red giants."
 date: 2020-01-01
 featured: false
 weight: 40
@@ -11,69 +12,20 @@ tags:
   - "Chemical Abundances"
   - "Scientific Computing"
   - "Data Analysis"
+image:
+  preview_only: true
 ---
 
-## Project Details
+![Normalization and absorption-line measurements performed with SMHr.](smhr-workflow.png)
 
-- **Period:** 2020–2021
-- **Institution:** American Museum of Natural History
-- **Advisor:** Dr. Allyson A. Sheffield
-- **Role:** Research Assistant
+*The analysis workflow involved normalizing high-resolution spectra and measuring the strengths of individual absorption lines before fitting stellar-atmosphere parameters.*
 
-## Overview
+The chemical composition and motion of a star provide clues to where it formed within the Milky Way. In this project, I developed a stellar-spectroscopy workflow for studying red giants near the interface between the Galactic disk and halo. I used **Spectroscopy Made Harder (SMHr)** to normalize high-resolution echelle spectra, measure absorption-line strengths, and iteratively infer atmospheric parameters by comparing the observations with stellar models.
 
-This project focused on using stellar spectroscopy to measure the physical and chemical properties of stars. By analyzing absorption features in stellar spectra, I investigated stellar parameters and chemical abundances that help reconstruct the formation history of the Milky Way.
+I validated the methodology using the well-studied red giant **Arcturus**. The analysis produced an effective temperature of **4300 K**, a surface gravity of **log \(g = 1.6\)**, and a metallicity of **[Fe/H] = −0.65**. Each value agreed with the literature within its reported uncertainty, providing a proof of concept for applying the same chemical-tagging approach to a larger sample of red giants. The broader goal was to distinguish stars formed in the Milky Way from stars accreted through disrupted satellite galaxies by combining their chemistry with halo-like kinematics.
 
-## Scientific Motivation
+![Comparison between the stellar parameters derived for Arcturus and published literature values.](arcturus-results.png)
 
-Spectroscopy provides one of the richest sources of astrophysical information. Chemical abundances and radial velocities allow researchers to identify stellar populations, trace Galactic evolution, and connect individual stars to larger structures such as stellar streams.
+*The parameters derived with SMHr were consistent with previous measurements, validating the analysis procedure before applying it to additional red giants.*
 
-## Research Questions
-
-- How can stellar spectra distinguish different Galactic populations?
-- Which elemental abundances best characterize stellar origins?
-- How can spectroscopy complement astrometric surveys?
-
-## Methods
-
-- Spectral quality assessment
-- Data cleaning
-- Cross-matching with survey catalogs
-- Chemical abundance analysis
-- Radial velocity interpretation
-- Scientific visualization
-
-## Key Results
-
-The project strengthened my understanding of spectroscopic pipelines, stellar parameter estimation, and quantitative analysis of large astronomical datasets while supporting research on Galactic archaeology.
-
-## My Contributions
-
-- Processed spectroscopic datasets
-- Evaluated stellar parameters
-- Produced publication-quality figures
-- Interpreted abundance measurements
-- Automated analysis tasks with Python
-
-## Software and Tools
-
-- Python
-- Astropy
-- NumPy
-- Pandas
-- Matplotlib
-- Jupyter Notebook
-
-## Skills and Techniques
-
-
-- Spectroscopy
-- Chemical Abundances
-- Data Analysis
-- Scientific Computing
-- Python
-
-
-## Broader Relevance
-
-The statistical analysis, feature extraction, and computational workflows developed through spectroscopy are directly applicable to computational physics, quantitative biology, and other data-intensive scientific disciplines.
+{{< button text="Watch the Research Talk" url="/events/2019-07-31-talk-2/" />}}

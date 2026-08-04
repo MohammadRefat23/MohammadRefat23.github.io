@@ -2,7 +2,7 @@
 title: "Starspot Inference Using Light Curve Inversion Techniques"
 
 authors:
-  - "Mohammad Refat"
+  - admin
 
 date: 2025-09-30
 
@@ -13,9 +13,9 @@ publication: "M.S. Thesis, CUNY Graduate Center"
 publication_short: "M.S. Thesis"
 
 abstract: |
-  Developed computational light-curve inversion techniques for reconstructing stellar surface features from rotational photometric observations.
+  I tested which properties of stellar rotation, magnetic activity, and surface structure can be recovered reliably from rotational light curves using contrasting light-curve inversion frameworks.
 
-summary: "Developed computational light-curve inversion techniques for reconstructing stellar surface features from rotational photometric observations."
+summary: "Testing what stellar rotation, activity, and surface information can be recovered reliably from photometric light-curve inversion."
 
 tags:
   - Light-Curve Inversion
@@ -33,7 +33,7 @@ featured: true
 
 links:
   - type: custom
-    label: Thesis
+    label: Thesis Record
     url: https://academicworks.cuny.edu/gc_etds/6480/
 
   - type: custom
@@ -44,6 +44,10 @@ links:
     label: Research Project
     url: /research/starspots/
 
+  - type: custom
+    label: Thesis Talk
+    url: /events/2025-06-10-talk-6/
+
 image:
   preview_only: false
 
@@ -52,10 +56,3 @@ projects:
 
 slides: ""
 ---
-
-## Citation
-
-Refat, Mohammad. *Starspot Inference Using Light Curve Inversion Techniques.*  
-M.S. Thesis, CUNY Graduate Center, 2025.
-
-[View the associated research project](/research/starspots/).

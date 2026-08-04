@@ -8,7 +8,7 @@ on:
   push:
     branches:
       - main
-      - hugo-migration
+      - site-polish
   workflow_dispatch:
 
 permissions:
@@ -25,10 +25,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout website repository
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+
+      - name: Checkout CV repository
+        uses: actions/checkout@v6
+        with:
+          repository: MohammadRefat23/cv
+          ref: main
+          path: external-cv
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
@@ -46,13 +53,13 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           root_file: cv.tex
-          working_directory: cv
+          working_directory: external-cv
           os: debian
 
       - name: Copy CV into Hugo static files
         run: |
           mkdir -p static/uploads
-          cp cv/cv.pdf static/uploads/Mohammad_Refat_CV.pdf
+          cp external-cv/cv.pdf static/uploads/Mohammad_Refat_CV.pdf
 
           if [ ! -s static/uploads/Mohammad_Refat_CV.pdf ]; then
             echo "CV PDF was not created correctly."

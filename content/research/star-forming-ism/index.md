@@ -1,6 +1,7 @@
 ---
-title: "Star-forming Interstellar Medium"
-summary: "Investigating the physical processes governing molecular clouds and star formation."
+
+title: "Two-Point Statistics in the Star-Forming Interstellar Medium"
+summary: "Using two-point statistics to measure the characteristic scale of metallicity homogeneity in simulated star-forming gas."
 featured: false
 weight: 50
 authors:
@@ -10,70 +11,23 @@ tags:
   - "Star Formation"
   - "Scientific Computing"
   - "Data Visualization"
+image:
+  preview_only: true
 ---
 
-## Project Details
+<video controls playsinline muted loop style="width: 100%; border-radius: 0.5rem;">
+  <source src="PlotFluct.mp4" type="video/mp4">
+  Your browser does not support embedded video.
+</video>
 
-- **Period:** Early Research
-- **Institution:** CUNY Baccalaureate / American Museum of Natural History
-- **Role:** Student Researcher
+*The simulation shows metallicity fluctuations evolving as supernovae inject metals and turbulence redistributes them through the interstellar medium.*
 
-### Research Animation
+Chemical tagging uses stellar abundances to identify stars that may have formed together, but its effectiveness depends on the spatial scale over which star-forming gas is chemically homogeneous. In this project, I analyzed the metal distribution in **TIGRESS** simulations of the star-forming interstellar medium. These simulations include magnetohydrodynamics, self-gravity, Galactic shear, star formation, and supernova feedback. Supernovae play two competing roles: they introduce localized metal enrichment while also driving turbulence that mixes those metals through the gas.
 
-[View the metallicity-fluctuation animation](PlotFluct.mp4)
+I quantified the spatial structure of the metallicity field using a **two-point correlation function**, measuring how rapidly the similarity between metallicity fluctuations declined with separation. The correlation fell to one-half at an average separation of approximately **\(120 \pm 25\) pc** and approached zero at scales of roughly 300 pc. I also compared the evolving half-correlation scale with the supernova rate and velocity dispersion. The initial analysis did not reveal a clear direct relationship, suggesting that the competition between enrichment and turbulent mixing requires a more detailed time-dependent treatment.
 
-## Overview
+![Evolution of the metallicity half-correlation length in the TIGRESS simulation.](correlation-length.png)
 
-This project introduced me to the physics of the interstellar medium and the computational analysis of star-forming environments. I explored how observations of molecular clouds can be interpreted to understand the processes leading to star formation.
+*The characteristic scale at which the metallicity correlation falls to one-half fluctuates around approximately \(120 \pm 25\) pc.*
 
-## Scientific Motivation
-
-Stars form inside cold molecular clouds whose evolution is governed by gravity, turbulence, magnetic fields, and radiative processes. Understanding these environments is fundamental to explaining the lifecycle of galaxies.
-
-## Research Questions
-
-- Which physical processes regulate star formation?
-- How can observations constrain cloud properties?
-- What computational methods are useful for analyzing ISM data?
-
-## Methods
-
-- Literature synthesis
-- Observational data interpretation
-- Image analysis
-- Quantitative modeling
-- Scientific visualization
-
-## Key Results
-
-This work established my foundation in computational astrophysics by combining physical intuition with quantitative analysis of observational data.
-
-## My Contributions
-
-- Reviewed observational datasets
-- Investigated molecular cloud properties
-- Produced scientific figures
-- Applied computational analysis techniques
-- Developed reproducible Python workflows
-
-## Software and Tools
-
-- Python
-- NumPy
-- Matplotlib
-- Astropy
-- Jupyter Notebook
-
-## Skills and Techniques
-
-
-- Interstellar Medium
-- Star Formation
-- Scientific Computing
-- Data Visualization
-- Python
-
-
-## Broader Relevance
-
-Although centered on astrophysics, this project developed transferable skills in computational modeling, quantitative reasoning, and scientific data analysis that continue to inform my broader research interests.
+{{< button text="View the Research Talk" url="/events/2018-08-02-talk-1/" />}}
