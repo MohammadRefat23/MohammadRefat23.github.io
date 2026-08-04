@@ -24,12 +24,20 @@ sections:
       show_date: true
       show_read_time: false
 
-  - block: markdown
+  - block: collection
     id: posters
     content:
       title: Posters
-      text: |-
-        Poster presentations will be added here.
+      text: Selected research posters.
+      filters:
+        folders:
+          - posters
+      sort_by: date
+      sort_ascending: false
     design:
-      columns: '1'
+      view: card
+      columns: 3
+      fill_image: true
+      show_date: true
+      show_read_time: false
 ---
