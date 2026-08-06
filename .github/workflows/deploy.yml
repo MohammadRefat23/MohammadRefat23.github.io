@@ -8,7 +8,7 @@ on:
   push:
     branches:
       - main
-      - site-polish
+      - hugo-migration
   workflow_dispatch:
 
 permissions:
@@ -30,6 +30,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Checkout CV repository
+        uses: actions/checkout@v6
+        with:
+          repository: MohammadRefat23/cv
+          ref: main
+          path: external-cv
+
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
 
@@ -41,6 +48,23 @@ jobs:
 
       - name: Install site dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Compile CV
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: cv.tex
+          working_directory: external-cv
+          os: debian
+
+      - name: Copy CV into Hugo static files
+        run: |
+          mkdir -p static/uploads
+          cp external-cv/cv.pdf static/uploads/Mohammad_Refat_CV.pdf
+
+          if [ ! -s static/uploads/Mohammad_Refat_CV.pdf ]; then
+            echo "CV PDF was not created correctly."
+            exit 1
+          fi
 
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v3
@@ -62,6 +86,11 @@ jobs:
           else
             hugo --minify
           fi
+
+      - name: Verify deployed CV
+        run: |
+          test -s public/uploads/Mohammad_Refat_CV.pdf
+          echo "CV is included in the Hugo build."
 
       - name: Generate Pagefind index
         run: |
