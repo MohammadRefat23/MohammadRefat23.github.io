@@ -11,6 +11,7 @@ publication_types:
 
 publication: "M.S. Thesis, CUNY Graduate Center"
 publication_short: "M.S. Thesis"
+card_label: "M.S. Thesis"
 
 abstract: |
   I tested which properties of stellar rotation, magnetic activity, and surface structure can be recovered reliably from rotational light curves using contrasting light-curve inversion frameworks.

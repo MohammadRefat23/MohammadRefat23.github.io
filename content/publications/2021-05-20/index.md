@@ -28,6 +28,7 @@ publication_types:
 
 publication: "The Astrophysical Journal, 913(1), 39"
 publication_short: "ApJ"
+card_label: "Peer-Reviewed Article"
 
 abstract: |
   We combined APOGEE-2 spectroscopy with Gaia astrometry to identify candidate members of the Jhelum stellar stream and investigate the chemical and orbital properties of its disrupted progenitor.
