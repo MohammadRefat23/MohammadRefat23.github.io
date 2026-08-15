@@ -9,6 +9,6 @@ banner:
   image: ""
 ---
 
-Peer-reviewed research and graduate thesis work in computational astrophysics, stellar variability, and Galactic archaeology.
+Peer-reviewed research and graduate thesis work applying computational methods to problems in astrophysics.
 
 {{< button text="View Full Profile on Google Scholar" url="https://scholar.google.com/citations?user=tXosG1EAAAAJ&hl=en" />}}

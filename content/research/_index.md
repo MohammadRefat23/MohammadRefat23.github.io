@@ -13,7 +13,7 @@ sections:
   - block: collection
     content:
       title: Research Projects
-      text: Selected computational astrophysics projects involving inverse problems, time-series analysis, stellar spectroscopy, Galactic archaeology, and statistical analysis of simulated physical systems.
+      text: Selected research applying inverse methods, numerical modeling, statistical inference, spectroscopic analysis, and spatial statistics to astrophysical systems.
       filters:
         folders:
           - research
