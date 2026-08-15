@@ -1,7 +1,6 @@
 ---
 title: Curriculum Vitae
 summary: Academic curriculum vitae for Mohammad Alvi Refat.
-date: 2026-08-03
 ---
 
 {{< pdf-viewer
