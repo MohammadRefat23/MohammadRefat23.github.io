@@ -10,16 +10,6 @@ image:
   preview_only: true
 ---
 
-## Poster
-
-<div style="width: 100%; height: 80vh; margin: 1.5rem 0;">
-  <iframe
-    src="/posters/aas245-starspots.pdf"
-    style="width: 100%; height: 100%; border: none;"
-    title="Starspot Inference with Light Curve Inversion Techniques">
-  </iframe>
-</div>
-
 ## Interactive Poster
 
 This presentation was created as an interactive AAS iPoster.
