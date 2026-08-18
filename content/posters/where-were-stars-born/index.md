@@ -25,10 +25,6 @@ featured: true
 
 links:
   - type: custom
-    label: View Poster
-    url: /uploads/Where_Were_Stars_Born_Poster.pdf
-
-  - type: custom
     label: Official Event Program
     url: https://indico.flatironinstitute.org/event/115/timetable/?view=standard_numbered_inline_minutes
 
@@ -48,6 +44,5 @@ This poster presents a high-resolution spectroscopic workflow for determining th
 
 Presented at **NYC GothamFest 2019** at the Flatiron Institute in New York City.
 
-{{< button text="View Poster PDF" url="/uploads/Where_Were_Stars_Born_Poster.pdf" />}}
 {{< button text="Official Event Program" url="https://indico.flatironinstitute.org/event/115/timetable/?view=standard_numbered_inline_minutes" />}}
 {{< button text="View Research Project" url="/research/stellar-spectroscopy/" />}}
