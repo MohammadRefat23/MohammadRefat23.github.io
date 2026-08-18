@@ -14,7 +14,7 @@ image:
 
 The poster is hosted by the Cool Stars 22 conference.
 
-{{< button text="View Online Poster" url="https://zenodo.org/records/13224983" >}}
+{{< button text="View Online Poster" url="https://zenodo.org/records/13224983" />}}
 
 ## Poster Information
 
