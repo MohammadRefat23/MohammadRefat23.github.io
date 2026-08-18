@@ -93,10 +93,7 @@ jobs:
           echo "CV is included in the Hugo build."
 
       - name: Generate Pagefind index
-        run: |
-          if grep -q '"pagefind"' package.json 2>/dev/null; then
-            pnpm dlx pagefind --source public
-          fi
+        run: pnpm dlx pagefind --site public
 
       - name: Upload GitHub Pages artifact
         if: github.ref == 'refs/heads/main'

@@ -33,8 +33,8 @@ header:
     enable: true
     block: 'navbar'
     fixed_to_top: true
-    show_search: false
-    show_theme_chooser: false
+    show_search: true
+    show_theme_chooser: true
     logo:
       text: 'M. Refat'
 
