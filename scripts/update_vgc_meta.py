@@ -41,6 +41,8 @@ session = requests.Session()
 session.headers.update(HEADERS)
 
 
+
+
 def get_json(url: str) -> dict:
     print(f"GET {url}")
 
@@ -59,6 +61,15 @@ def get_json(url: str) -> dict:
             f"Expected JSON from {url}."
         ) from exc
 
+
+ITEM_NAME_FIXES = {
+    "Tyra nitarite": "Tyranitarite",
+}
+
+
+def clean_item_name(name):
+    name = " ".join(str(name).split())
+    return ITEM_NAME_FIXES.get(name, name)
 
 # ============================================================
 # Helpers
@@ -450,11 +461,19 @@ def fetch_battle_data(
             5
         ),
 
-        "items": rows_for_category(
-            rows,
-            "held_item",
-            3
+"items": [
+    {
+        **item,
+        "name": clean_item_name(
+            item.get("name", "")
         ),
+    }
+    for item in rows_for_category(
+        rows,
+        "held_item",
+        3
+    )
+],
 
         "abilities": rows_for_category(
             rows,
