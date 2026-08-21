@@ -1,6 +1,6 @@
 main:
   - name: Bio
-    url: /
+    url: /about/
     weight: 10
 
   - name: Research
