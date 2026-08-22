@@ -22,6 +22,12 @@
 
     <div class="vgc-network-wrap">
 
+      <div class="vgc-zoom-controls" aria-label="Network zoom controls">
+        <button type="button" class="vgc-zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
+        <button type="button" class="vgc-zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+        <button type="button" class="vgc-zoom-reset" aria-label="Reset zoom" title="Reset zoom">Reset</button>
+      </div>
+
       <svg
         class="vgc-network"
         viewBox="0 0 700 560"
@@ -30,7 +36,8 @@
       ></svg>
 
       <p class="vgc-help">
-        Click a Pokémon for details. Drag nodes to rearrange the network.
+        Click a Pokémon for details. Drag nodes to rearrange them.
+        Drag empty space or scroll while zoomed to pan the network.
       </p>
 
     </div>
@@ -117,6 +124,9 @@
     </a>.
     Data snapshot:
     <span class="vgc-attribution-date"></span>.
+    This is an unofficial fan visualization and is not affiliated with,
+    endorsed by, or sponsored by Pokémon, Nintendo, Game Freak,
+    Creatures Inc., or Pokémon Champions.
   </p>
 
 </div>
@@ -203,6 +213,7 @@
 }
 
 #{{ $id }} .vgc-network-wrap {
+  position: relative;
   overflow: hidden;
 }
 
@@ -213,6 +224,45 @@
   height: auto;
 
   min-height: 500px;
+  touch-action: none;
+}
+
+#{{ $id }} .vgc-zoom-controls {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  z-index: 5;
+  display: flex;
+  gap: 0.35rem;
+}
+
+#{{ $id }} .vgc-zoom-controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  padding: 0 0.55rem;
+  border: 1px solid var(--vgc-border);
+  border-radius: 0.5rem;
+  background: var(--vgc-panel-strong);
+  color: var(--vgc-text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+
+#{{ $id }} .vgc-zoom-controls button:hover {
+  border-color: rgba(99, 102, 241, 0.7);
+  background: rgba(99, 102, 241, 0.10);
+}
+
+#{{ $id }} .vgc-zoom-controls button:active {
+  transform: scale(0.96);
 }
 
 #{{ $id }} .vgc-help {
@@ -349,8 +399,6 @@
 }
 
 #{{ $id }} .vgc-node-circle {
-  fill: var(--vgc-node-bg);
-
   stroke: rgba(99, 102, 241, 0.48);
   stroke-width: 2;
 
@@ -377,6 +425,14 @@
 
   text-anchor: middle;
 
+  pointer-events: none;
+}
+
+
+#{{ $id }} .vgc-node-rank {
+  fill: var(--vgc-text);
+  text-anchor: middle;
+  font-weight: 700;
   pointer-events: none;
 }
 
@@ -512,6 +568,13 @@
 
   let selectedId = null;
   let dragging = null;
+  let panning = null;
+
+  let zoom = 1;
+  const MIN_ZOOM = 0.65;
+  const MAX_ZOOM = 2.5;
+  let viewCenterX = WIDTH / 2;
+  let viewCenterY = HEIGHT / 2;
 
 
   // ==========================================================
@@ -578,7 +641,6 @@ function typePalette() {
     steel:    "#787f8e",
     fairy:    "#ad6c91"
   };
-
 }
 
 
@@ -591,18 +653,25 @@ function typeColors(types) {
     return ["#6366f1"];
   }
 
-  const cleaned =
+  const colors =
     types
-      .map(type => String(type).toLowerCase())
-      .filter(type => palette[type]);
+      .map(
+        type =>
+          palette[
+            String(type)
+              .trim()
+              .toLowerCase()
+          ]
+      )
+      .filter(Boolean);
 
-  if (cleaned.length === 0) {
-    return ["#6366f1"];
-  }
-
-  return cleaned.map(type => palette[type]);
-
+  return (
+    colors.length
+      ? colors
+      : ["#6366f1"]
+  );
 }
+
 
   function percentageText(value) {
 
@@ -618,123 +687,206 @@ function typeColors(types) {
   }
 
 
-function ensureDefs() {
+  function updateViewBox() {
 
-  let defs =
-    svg.querySelector("defs");
+    const visibleWidth =
+      WIDTH / zoom;
 
-  if (!defs) {
-    defs = svgElement("defs");
-    svg.appendChild(defs);
+    const visibleHeight =
+      HEIGHT / zoom;
+
+    const x =
+      viewCenterX
+      -
+      visibleWidth / 2;
+
+    const y =
+      viewCenterY
+      -
+      visibleHeight / 2;
+
+    svg.setAttribute(
+      "viewBox",
+      `${x} ${y} ${visibleWidth} ${visibleHeight}`
+    );
   }
 
-  return defs;
 
-}
+  function clampViewCenter() {
 
+    const visibleWidth =
+      WIDTH / zoom;
 
-function makeNodeFill(node) {
+    const visibleHeight =
+      HEIGHT / zoom;
 
-  const colors =
-    typeColors(node.types);
+    // When zoomed out far enough to see beyond the base canvas,
+    // keep the graph centered on that axis.
+    if (visibleWidth >= WIDTH) {
+      viewCenterX = WIDTH / 2;
+    } else {
+      viewCenterX =
+        Math.max(
+          visibleWidth / 2,
+          Math.min(
+            WIDTH - visibleWidth / 2,
+            viewCenterX
+          )
+        );
+    }
 
-  if (colors.length === 1) {
-    return {
-      fill: colors[0],
-      opacity: "0.30"
-    };
+    if (visibleHeight >= HEIGHT) {
+      viewCenterY = HEIGHT / 2;
+    } else {
+      viewCenterY =
+        Math.max(
+          visibleHeight / 2,
+          Math.min(
+            HEIGHT - visibleHeight / 2,
+            viewCenterY
+          )
+        );
+    }
   }
 
-  const defs =
-    ensureDefs();
 
-  const gradientId =
-    `vgc-gradient-${node.id}`;
+  function setZoomAroundPoint(
+    newZoom,
+    clientX,
+    clientY
+  ) {
 
-  let gradient =
-    svg.querySelector(
-      `#${gradientId}`
-    );
+    const rect =
+      svg.getBoundingClientRect();
 
-  if (!gradient) {
+    if (
+      !rect.width
+      ||
+      !rect.height
+    ) {
+      return;
+    }
 
-    gradient =
-      svgElement("linearGradient");
+    const u =
+      (clientX - rect.left)
+      /
+      rect.width;
 
-    gradient.setAttribute(
-      "id",
-      gradientId
-    );
+    const v =
+      (clientY - rect.top)
+      /
+      rect.height;
 
-    gradient.setAttribute(
-      "x1",
-      "0%"
-    );
+    const oldVisibleWidth =
+      WIDTH / zoom;
 
-    gradient.setAttribute(
-      "y1",
-      "0%"
-    );
+    const oldVisibleHeight =
+      HEIGHT / zoom;
 
-    gradient.setAttribute(
-      "x2",
-      "100%"
-    );
+    const oldLeft =
+      viewCenterX
+      -
+      oldVisibleWidth / 2;
 
-    gradient.setAttribute(
-      "y2",
-      "100%"
-    );
+    const oldTop =
+      viewCenterY
+      -
+      oldVisibleHeight / 2;
 
-    const stop1 =
-      svgElement("stop");
+    // SVG coordinate currently underneath the pointer.
+    const anchorX =
+      oldLeft
+      +
+      u * oldVisibleWidth;
 
-    stop1.setAttribute(
-      "offset",
-      "0%"
-    );
+    const anchorY =
+      oldTop
+      +
+      v * oldVisibleHeight;
 
-    stop1.setAttribute(
-      "stop-color",
-      colors[0]
-    );
+    zoom =
+      Math.max(
+        MIN_ZOOM,
+        Math.min(
+          MAX_ZOOM,
+          newZoom
+        )
+      );
 
-    stop1.setAttribute(
-      "stop-opacity",
-      "0.34"
-    );
+    const newVisibleWidth =
+      WIDTH / zoom;
 
-    const stop2 =
-      svgElement("stop");
+    const newVisibleHeight =
+      HEIGHT / zoom;
 
-    stop2.setAttribute(
-      "offset",
-      "100%"
-    );
+    // Keep the same SVG point underneath the cursor.
+    viewCenterX =
+      anchorX
+      -
+      (u - 0.5)
+      *
+      newVisibleWidth;
 
-    stop2.setAttribute(
-      "stop-color",
-      colors[1]
-    );
+    viewCenterY =
+      anchorY
+      -
+      (v - 0.5)
+      *
+      newVisibleHeight;
 
-    stop2.setAttribute(
-      "stop-opacity",
-      "0.34"
-    );
-
-    gradient.appendChild(stop1);
-    gradient.appendChild(stop2);
-
-    defs.appendChild(gradient);
-
+    clampViewCenter();
+    updateViewBox();
   }
 
-  return {
-    fill: `url(#${gradientId})`,
-    opacity: "1"
-  };
 
-}
+  root.querySelector(
+    ".vgc-zoom-in"
+  ).addEventListener(
+    "click",
+    () => {
+
+      zoom = Math.min(
+        MAX_ZOOM,
+        zoom * 1.25
+      );
+
+      clampViewCenter();
+      updateViewBox();
+    }
+  );
+
+
+  root.querySelector(
+    ".vgc-zoom-out"
+  ).addEventListener(
+    "click",
+    () => {
+
+      zoom = Math.max(
+        MIN_ZOOM,
+        zoom / 1.25
+      );
+
+      clampViewCenter();
+      updateViewBox();
+    }
+  );
+
+
+  root.querySelector(
+    ".vgc-zoom-reset"
+  ).addEventListener(
+    "click",
+    () => {
+
+      zoom = 1;
+      viewCenterX = WIDTH / 2;
+      viewCenterY = HEIGHT / 2;
+
+      updateViewBox();
+    }
+  );
+
 
   // ==========================================================
   // Details
@@ -1289,6 +1441,11 @@ root.querySelector(
 
     svg.innerHTML = "";
 
+    const defs =
+      svgElement("defs");
+
+    svg.appendChild(defs);
+
     const nodeMap =
       new Map(
         nodes.map(
@@ -1407,17 +1564,106 @@ root.querySelector(
           radius
         );
 
-        circle.setAttribute(
-  "fill",
-  typeColor(
-    node.types
-  )
-);
+        const colors =
+          typeColors(
+            node.types
+          );
 
-circle.setAttribute(
-  "fill-opacity",
-  "0.22"
-);
+        if (colors.length >= 2) {
+
+          const gradientId =
+            `{{ $id }}-gradient-${node.id}`;
+
+          const gradient =
+            svgElement(
+              "linearGradient"
+            );
+
+          gradient.setAttribute(
+            "id",
+            gradientId
+          );
+
+          gradient.setAttribute(
+            "x1",
+            "0%"
+          );
+
+          gradient.setAttribute(
+            "y1",
+            "0%"
+          );
+
+          gradient.setAttribute(
+            "x2",
+            "100%"
+          );
+
+          gradient.setAttribute(
+            "y2",
+            "0%"
+          );
+
+          const firstStop =
+            svgElement("stop");
+
+          firstStop.setAttribute(
+            "offset",
+            "0%"
+          );
+
+          firstStop.setAttribute(
+            "stop-color",
+            colors[0]
+          );
+
+          const secondStop =
+            svgElement("stop");
+
+          secondStop.setAttribute(
+            "offset",
+            "100%"
+          );
+
+          secondStop.setAttribute(
+            "stop-color",
+            colors[1]
+          );
+
+          gradient.appendChild(
+            firstStop
+          );
+
+          gradient.appendChild(
+            secondStop
+          );
+
+          defs.appendChild(
+            gradient
+          );
+
+          circle.setAttribute(
+            "fill",
+            `url(#${gradientId})`
+          );
+
+          circle.setAttribute(
+            "fill-opacity",
+            "0.46"
+          );
+
+        } else {
+
+          circle.setAttribute(
+            "fill",
+            colors[0]
+          );
+
+          circle.setAttribute(
+            "fill-opacity",
+            "0.36"
+          );
+        }
 
         group.appendChild(
           circle
@@ -1425,6 +1671,10 @@ circle.setAttribute(
 
 const rankLabel =
   svgElement("text");
+
+rankLabel.classList.add(
+  "vgc-node-rank"
+);
 
 rankLabel.setAttribute(
   "x",
@@ -1518,6 +1768,7 @@ group.appendChild(
               event.pointerId
             );
 
+            event.stopPropagation();
             event.preventDefault();
 
           }
@@ -1536,32 +1787,32 @@ group.appendChild(
               return;
             }
 
-            const rect =
-              svg.getBoundingClientRect();
+            const point =
+              svg.createSVGPoint();
 
-            const scaleX =
-              WIDTH /
-              rect.width;
+            point.x =
+              event.clientX;
 
-            const scaleY =
-              HEIGHT /
-              rect.height;
+            point.y =
+              event.clientY;
+
+            const matrix =
+              svg.getScreenCTM();
+
+            if (!matrix) {
+              return;
+            }
+
+            const svgPoint =
+              point.matrixTransform(
+                matrix.inverse()
+              );
 
             node.x =
-              (
-                event.clientX -
-                rect.left
-              )
-              *
-              scaleX;
+              svgPoint.x;
 
             node.y =
-              (
-                event.clientY -
-                rect.top
-              )
-              *
-              scaleY;
+              svgPoint.y;
 
             render();
 
@@ -1588,6 +1839,244 @@ group.appendChild(
     updateHighlighting();
 
   }
+
+
+
+  // ==========================================================
+  // Pan / scroll navigation
+  // ==========================================================
+
+  svg.addEventListener(
+    "pointerdown",
+    event => {
+
+      // Node pointerdown handlers stop propagation, so reaching
+      // this handler means the user grabbed empty graph space.
+      if (event.button !== 0) {
+        return;
+      }
+
+      panning = {
+        pointerId: event.pointerId,
+        startClientX: event.clientX,
+        startClientY: event.clientY,
+        startCenterX: viewCenterX,
+        startCenterY: viewCenterY
+      };
+
+      svg.setPointerCapture(
+        event.pointerId
+      );
+
+      svg.classList.add(
+        "is-panning"
+      );
+
+      event.preventDefault();
+    }
+  );
+
+
+  svg.addEventListener(
+    "pointermove",
+    event => {
+
+      if (
+        !panning
+        ||
+        panning.pointerId !== event.pointerId
+      ) {
+        return;
+      }
+
+      const rect =
+        svg.getBoundingClientRect();
+
+      if (
+        !rect.width
+        ||
+        !rect.height
+      ) {
+        return;
+      }
+
+      const visibleWidth =
+        WIDTH / zoom;
+
+      const visibleHeight =
+        HEIGHT / zoom;
+
+      const dx =
+        (
+          event.clientX
+          -
+          panning.startClientX
+        )
+        *
+        (
+          visibleWidth
+          /
+          rect.width
+        );
+
+      const dy =
+        (
+          event.clientY
+          -
+          panning.startClientY
+        )
+        *
+        (
+          visibleHeight
+          /
+          rect.height
+        );
+
+      // Dragging the viewport right reveals content to the left,
+      // hence the subtraction.
+      viewCenterX =
+        panning.startCenterX
+        -
+        dx;
+
+      viewCenterY =
+        panning.startCenterY
+        -
+        dy;
+
+      clampViewCenter();
+      updateViewBox();
+    }
+  );
+
+
+  function stopPanning(
+    event
+  ) {
+
+    if (!panning) {
+      return;
+    }
+
+    if (
+      event
+      &&
+      event.pointerId !== undefined
+      &&
+      panning.pointerId !== event.pointerId
+    ) {
+      return;
+    }
+
+    if (
+      svg.hasPointerCapture(
+        panning.pointerId
+      )
+    ) {
+      svg.releasePointerCapture(
+        panning.pointerId
+      );
+    }
+
+    panning = null;
+
+    svg.classList.remove(
+      "is-panning"
+    );
+  }
+
+
+  svg.addEventListener(
+    "pointerup",
+    stopPanning
+  );
+
+  svg.addEventListener(
+    "pointercancel",
+    stopPanning
+  );
+
+
+  svg.addEventListener(
+    "wheel",
+    event => {
+
+      // Ctrl/Cmd + wheel (including many trackpad pinch gestures)
+      // zooms around the pointer instead of the center.
+      if (
+        event.ctrlKey
+        ||
+        event.metaKey
+      ) {
+
+        event.preventDefault();
+
+        const factor =
+          Math.exp(
+            -event.deltaY * 0.002
+          );
+
+        setZoomAroundPoint(
+          zoom * factor,
+          event.clientX,
+          event.clientY
+        );
+
+        return;
+      }
+
+
+      // At the default zoom, leave ordinary wheel scrolling to
+      // the page. Once the user zooms in, wheel/trackpad movement
+      // pans around the graph.
+      if (zoom <= 1.001) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const rect =
+        svg.getBoundingClientRect();
+
+      if (
+        !rect.width
+        ||
+        !rect.height
+      ) {
+        return;
+      }
+
+      const visibleWidth =
+        WIDTH / zoom;
+
+      const visibleHeight =
+        HEIGHT / zoom;
+
+      viewCenterX +=
+        event.deltaX
+        *
+        (
+          visibleWidth
+          /
+          rect.width
+        );
+
+      viewCenterY +=
+        event.deltaY
+        *
+        (
+          visibleHeight
+          /
+          rect.height
+        );
+
+      clampViewCenter();
+      updateViewBox();
+    },
+    {
+      passive: false
+    }
+  );
 
 
   // ==========================================================
@@ -1644,6 +2133,8 @@ group.appendChild(
       simulate();
 
       render();
+
+      updateViewBox();
 
     })
     .catch(error => {
