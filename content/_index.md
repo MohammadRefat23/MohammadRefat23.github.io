@@ -13,8 +13,9 @@ sections:
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-      text: ''
-      # Homepage call-to-action button intentionally omitted.
+      text: |-
+        {{< button text="View Research" url="/research/" />}}
+        {{< button text="Download CV" url="/uploads/Mohammad_Refat_CV.pdf" />}}
       headings:
         about: ''
         education: ''
@@ -53,6 +54,7 @@ sections:
         featured_only: true
     design:
       view: card
+      show_read_time: false
   - block: collection
     id: papers
     content:
@@ -67,6 +69,7 @@ sections:
     design:
       view: article-grid
       columns: 2
+      show_read_time: false
   #- block: collection
   #  content:
   #    title: Recent Publications

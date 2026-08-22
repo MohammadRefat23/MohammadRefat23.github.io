@@ -11,6 +11,11 @@ figure.wrapped-figure figcaption {
   color: #666;
 }
 
+/* Keep the footer focused on the site's author rather than theme promotion. */
+p.powered-by:has([data-hbx="poweredby_brand"]) {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .resume-biography .prose {
     max-width: 72ch;

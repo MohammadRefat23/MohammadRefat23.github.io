@@ -13,6 +13,16 @@
 {{ $showDate := .config.show_date | default true }}
 {{ $showReadTime := .config.show_read_time | default true }}
 {{ $showReadMore := .config.show_read_more | default true }}
+{{ $readMoreText := i18n "read_more" | default "Read more" }}
+{{ if eq $item.Section "events" }}
+  {{ $readMoreText = "View presentation" }}
+{{ else if eq $item.Section "posters" }}
+  {{ $readMoreText = "View poster" }}
+{{ else if eq $item.Section "publications" }}
+  {{ $readMoreText = "View publication" }}
+{{ else if eq $item.Section "research" }}
+  {{ $readMoreText = "View project" }}
+{{ end }}
 {{ $hasMeta := or $showDate $showReadTime $showReadMore }}
 {{ $index := .index }}
 
@@ -255,7 +265,7 @@
         {{ if $showReadMore }}
         <div class="pt-2 border-t border-zinc-200/50 dark:border-zinc-700/50">
           <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm transition-all duration-300 group/link">
-            <span>{{ i18n "read_more" | default "Read more" }}</span>
+            <span>{{ $readMoreText }}</span>
             <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
             </svg>

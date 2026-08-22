@@ -38,6 +38,8 @@ sections:
       view: card
       columns: 3
       fill_image: true
-      show_date: true
+      # Several older posters are known only by year, so avoid displaying
+      # artificial January 1 / December 1 placeholder dates on their cards.
+      show_date: false
       show_read_time: false
 ---

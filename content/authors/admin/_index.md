@@ -17,7 +17,7 @@ highlight_name: true
 role: Computational Physicist
 
 organizations:
-  - name: CUNY Graduate Center
+  - name: M.S. Astrophysics · CUNY Graduate Center
     url: https://www.gc.cuny.edu/
 
 profiles:
@@ -117,10 +117,8 @@ skills:
         icon: server
 ---
 
-I am a computational physicist interested in using numerical modeling, statistical inference, and scientific computing to study complex physical systems. My work has focused particularly on inverse problems: extracting physical structure and behavior from incomplete, noisy, or indirect observations.
+I am a computational physicist who uses numerical modeling, statistical inference, and scientific computing to study complex physical systems. My work centers on inverse problems: recovering physical structure and behavior from incomplete, noisy, or indirect observations.
 
-I earned an M.S. in Astrophysics from the [CUNY Graduate Center](https://www.gc.cuny.edu/physics). My thesis, [_Starspot Inference Using Light Curve Inversion Techniques_](https://academicworks.cuny.edu/gc_etds/6480/), developed computational methods for reconstructing stellar surface features from photometric light curves.
+I earned an M.S. in Astrophysics from the [CUNY Graduate Center](https://www.gc.cuny.edu/physics). My thesis, [_Starspot Inference Using Light Curve Inversion Techniques_](https://academicworks.cuny.edu/gc_etds/6480/), examined what stellar surface information can be recovered reliably from rotational photometric light curves.
 
-My previous research spans stellar surface mapping, brown-dwarf and exoplanet atmospheric variability, Galactic archaeology, stellar spectroscopy, and the star-forming interstellar medium. Across these projects, I have used computation as a common framework for connecting complex data with interpretable physical models.
-
-I am broadly interested in developing transferable computational methods for data-rich physical systems, including numerical simulation, probabilistic modeling, inverse methods, and scientific machine learning.
+My research spans stellar surface mapping, brown-dwarf and exoplanet atmospheric variability, Galactic archaeology, stellar spectroscopy, and the star-forming interstellar medium. I am now interested in applying inverse methods, probabilistic modeling, numerical simulation, and scientific machine learning to complex systems in soft condensed matter and biophysics.

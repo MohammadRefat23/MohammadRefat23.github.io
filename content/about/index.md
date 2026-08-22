@@ -5,7 +5,7 @@ summary: "Computational physicist interested in numerical modeling, statistical 
 
 # About Me
 
-My name is Mohammad I am a New York City native, born and raised in Queens. I first became interested in physics through the [Science Research Mentoring Program (SRMP)](https://www.amnh.org/learn-teach/teens/science-research-mentoring-program) at the American Museum of Natural History. I later completed my bachelor's through the [City University of New York (CUNY) Baccalaureate for Unique and Interdisciplinary Studies](https://cunyba.cuny.edu/) program in computational physics. Then, I finished my master's at the [CUNY Graduate Center's Astrophysics program](https://www.gc.cuny.edu/astrophysics). 
+My name is Mohammad, and I am a New York City native, born and raised in Queens. I first became interested in physics through the [Science Research Mentoring Program (SRMP)](https://www.amnh.org/learn-teach/teens/science-research-mentoring-program) at the American Museum of Natural History. I later completed my bachelor's through the [City University of New York (CUNY) Baccalaureate for Unique and Interdisciplinary Studies](https://cunyba.cuny.edu/) program in computational physics, followed by a master's in astrophysics at the [CUNY Graduate Center](https://www.gc.cuny.edu/astrophysics).
 
 My academic background is in astrophysics, but I'm generally interested in computational problems as a whole. I've done work with stellar surface mapping, brown-dwarf atmospheres, stellar spectroscopy, galactic archaeology, and numerical simulations. I am also interested in problems in condensed matter, soft matter, and biophysics.
 
@@ -162,7 +162,7 @@ I have also worked on the chemodynamical characterization of the Jhelum stellar 
 
 There, the inputs were stellar chemistry, spectroscopy, velocities, and phase-space information rather than light curves, but the basic inference problem was familiar: use incomplete measurements to recover information about the history and membership of a larger physical system.
 
-[Explore the project →](/research/jhelum/)
+[Explore the project →](/research/jhelum-stellar-stream/)
 
 ### Stellar Spectroscopy
 
@@ -184,7 +184,7 @@ That experience pushed my interests beyond individual inverse problems toward a 
 
 ## What I'm Interested in Now
 
-I’m currently interested in extending the computational approaches I’ve used in astrophysics toward problems in condensed matter, soft matter, and biophysics.
+I’m currently interested in applying the computational approaches I’ve used in astrophysics—including inverse methods, probabilistic modeling, numerical simulation, and scientific computing—to complex systems in soft condensed matter and biophysics.
 
 I’m especially drawn to problems involving emergent behavior, statistical inference, nonequilibrium systems, and the relationship between microscopic interactions and macroscopic structure.
 
@@ -215,6 +215,6 @@ The visualization is updated periodically rather than querying the source every 
 If you are primarily here for my academic work, you can find it throughout the rest of the site:
 
 - [Research](/research/)
-- [Publications](/publication/)
+- [Publications](/publications/)
 - [Presentations](/events/)
 - [Curriculum Vitae](/uploads/Mohammad_Refat_CV.pdf)
