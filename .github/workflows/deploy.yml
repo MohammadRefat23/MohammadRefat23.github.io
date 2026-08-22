@@ -3,6 +3,7 @@ name: Build CV and Hugo Site
 env:
   HUGO_VERSION: "0.152.2"
   NODE_VERSION: "20"
+  TZ: "America/New_York"
 
 on:
   push:
