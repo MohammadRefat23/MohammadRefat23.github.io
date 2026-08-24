@@ -16,6 +16,19 @@ p.powered-by:has([data-hbx="poweredby_brand"]) {
   display: none;
 }
 
+/* Keep the homepage research and CV actions on the same row. */
+.blox-resume-biography .bio-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.blox-resume-biography .bio-text > .text-left {
+  margin: 0;
+}
+
 @media (min-width: 1024px) {
   .resume-biography .prose {
     max-width: 72ch;
