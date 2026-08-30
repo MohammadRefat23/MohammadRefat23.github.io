@@ -7,6 +7,7 @@ hide_date: true
 reading_time: false
 share: false
 draft: false
+pager: false
 ---
 
 {{< pdf-viewer

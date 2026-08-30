@@ -257,10 +257,12 @@
 
       {{ partial "components/last-edited.html" . }}
 
-      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
-        {{ .Scratch.Set "invert_pager" true }}
-        {{ partial "page_footer" . }}
-      </div>
+      {{ if not (eq .Params.pager false) }}
+  <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+    {{ .Scratch.Set "invert_pager" true }}
+    {{ partial "page_footer" . }}
+  </div>
+{{ end }}
 
     </main>
   </article>
