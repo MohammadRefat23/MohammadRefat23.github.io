@@ -61,6 +61,7 @@ jobs:
         run: |
           mkdir -p static/uploads
           cp external-cv/cv.pdf static/uploads/Mohammad_Alvi_Refat_CV.pdf
+          cp external-cv/cv.pdf static/uploads/Mohammad_Refat_CV.pdf
 
           if [ ! -s static/uploads/Mohammad_Alvi_Refat_CV.pdf ]; then
             echo "CV PDF was not created correctly."
