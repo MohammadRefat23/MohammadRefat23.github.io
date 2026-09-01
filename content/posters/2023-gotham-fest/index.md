@@ -1,6 +1,7 @@
 ---
 title: "Towards Mapping Brown Dwarf and Giant Exoplanet Atmospheres"
-date: 2023-12-01
+hide_date: true
+show_date_updated: false
 authors:
   - admin
 summary: "Poster presented at the Center for Computational Astrophysics Gotham Fest (2023)."

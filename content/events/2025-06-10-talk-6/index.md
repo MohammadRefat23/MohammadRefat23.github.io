@@ -1,5 +1,5 @@
 ---
-title: "Starspot Inference with Light Curve Inversion Techniques"
+title: "Star Spot Inference Using Light Curve Inversion Techniques"
 
 event: "CUNY Masters Graduation 2025"
 summary: "An overview of my M.S. thesis on reconstructing stellar surface features from rotational light curves and testing the limits of light-curve inversion."

@@ -15,7 +15,7 @@ sections:
       username: admin
       text: |-
         {{< button text="View Research" url="/research/" />}}
-        {{< button text="Download CV" url="/uploads/Mohammad_Refat_CV.pdf" />}}
+        {{< button text="Download CV" url="/uploads/Mohammad_Alvi_Refat_CV.pdf" />}}
       headings:
         about: ''
         education: ''
@@ -30,7 +30,7 @@ sections:
   - block: collection
     id: research
     content:
-      title: Featured Research
+      title: '<h2>Featured Research</h2>'
       filters:
         folders:
           - research
@@ -47,7 +47,7 @@ sections:
   - block: collection
     id: talks
     content:
-      title: Recorded Talks
+      title: '<h2>Recorded Talks</h2>'
       filters:
         folders:
           - events
@@ -58,7 +58,7 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Publications
+      title: '<h2>Publications</h2>'
       text:  |-
         {{< button text="Full publication profile on Google Scholar" url="https://scholar.google.com/citations?user=tXosG1EAAAAJ&hl=en" />}}  
         Below I highlight my thesis and peer-reviewed work. 

@@ -5,7 +5,8 @@ authors:
   - admin
   - "Johanna Vos"
 
-date: 2021-12-09
+hide_date: true
+show_date_updated: false
 
 event: "GothamFest 2021"
 location: "Flatiron Institute, New York City, NY, USA"

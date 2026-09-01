@@ -17,7 +17,7 @@ highlight_name: true
 role: Computational Physicist
 
 organizations:
-  - name: M.S. Astrophysics · CUNY Graduate Center
+  - name: M.S. in Astrophysics · The Graduate Center, CUNY
     url: https://www.gc.cuny.edu/
 
 profiles:

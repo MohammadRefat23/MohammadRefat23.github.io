@@ -1,9 +1,10 @@
 ---
 title: "About Me"
 summary: "Computational physicist interested in numerical modeling, statistical inference, inverse problems, and complex physical systems."
+share: false
+pager: false
+show_date_updated: false
 ---
-
-# About Me
 
 My name is Mohammad, and I am a New York City native, born and raised in Queens. I first became interested in physics through the [Science Research Mentoring Program (SRMP)](https://www.amnh.org/learn-teach/teens/science-research-mentoring-program) at the American Museum of Natural History. I later completed my bachelor's through the [City University of New York (CUNY) Baccalaureate for Unique and Interdisciplinary Studies](https://cunyba.cuny.edu/) program in computational physics, followed by a master's in astrophysics at the [CUNY Graduate Center](https://www.gc.cuny.edu/astrophysics).
 
@@ -80,7 +81,7 @@ That is an inverse problem.
 
 ## Spherical Harmonics
 
-One mathematical tool that is useful for this is the  **spherical-harmonic basis**. One way to think of spherical harmonics is as sine waves wrapped around a sphere.
+One mathematical tool that is useful for this is the **spherical-harmonic basis**. One way to think of spherical harmonics is as sine waves wrapped around a sphere.
 
 Just as Fourier modes can be combined to describe increasingly complicated periodic signals, spherical harmonics can be combined to describe increasingly complicated patterns across a sphere.
 
@@ -192,7 +193,7 @@ I’m especially drawn to problems involving emergent behavior, statistical infe
 
 ## Outside of Physics
 
-Outside of physics, I enjoy things like basketball (<span style="color:#F58426">Go New York Go New York Go!</span>.)
+Outside of physics, I enjoy sports, especially basketball (<span style="color:#F58426">Go Knicks!</span>).
 
 I also enjoy competitive Pokémon, particularly the official VGC formats. While I’m not the best player, I do enjoy looking at trends and trying to predict what will pop off next. I think the sheer number of choices is what makes the game interesting.
 
@@ -217,4 +218,4 @@ If you are primarily here for my academic work, you can find it throughout the r
 - [Research](/research/)
 - [Publications](/publications/)
 - [Presentations](/events/)
-- [Curriculum Vitae](/uploads/Mohammad_Refat_CV.pdf)
+- [Curriculum Vitae](/uploads/Mohammad_Alvi_Refat_CV.pdf)

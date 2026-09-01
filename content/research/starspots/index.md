@@ -53,3 +53,4 @@ The analysis combined forward modeling, time-series analysis, spherical-harmonic
 
 {{< button text="Read Thesis" url="https://academicworks.cuny.edu/gc_etds/6480/" />}}
 {{< button text="Watch Thesis Talk" url="/events/2025-06-10-talk-6/" />}}
+{{< button text="View Code" url="https://github.com/mohammadrefat23/StarryStarSpots_MCMC" />}}

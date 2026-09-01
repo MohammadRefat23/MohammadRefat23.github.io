@@ -5,7 +5,8 @@ authors:
   - admin
   - "Allyson A. Sheffield"
 
-date: 2019-09-06
+hide_date: true
+show_date_updated: false
 
 event: "NYC GothamFest 2019"
 location: "Flatiron Institute, New York City, NY, USA"

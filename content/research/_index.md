@@ -2,6 +2,7 @@
 title: "Research"
 date: 2024-05-19
 type: landing
+summary: "Selected computational physics research applying inverse methods, numerical modeling, statistical inference, spectroscopy, and spatial statistics."
 
 cascade:
   share: false
@@ -12,7 +13,7 @@ design:
 sections:
   - block: collection
     content:
-      title: Research Projects
+      title: '<h2>Research Projects</h2>'
       text: Selected research applying inverse methods, numerical modeling, statistical inference, spectroscopic analysis, and spatial statistics to astrophysical systems.
       filters:
         folders:

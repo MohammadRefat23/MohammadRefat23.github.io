@@ -1,6 +1,7 @@
 ---
 title: "Chemodynamically Characterizing the Jhelum Stellar Stream with APOGEE-2"
-date: 2021-01-01
+hide_date: true
+show_date_updated: false
 authors:
   - admin
 summary: "Poster presented at the 237th American Astronomical Society Meeting (2021)."

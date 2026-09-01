@@ -5,9 +5,9 @@ event: "American Museum of Natural History REU Symposium"
 summary: "Combining APOGEE-2 spectroscopy and Gaia astrometry to identify candidate members of the Jhelum stellar stream."
 abstract: "Combining APOGEE-2 spectroscopy and Gaia astrometry to identify candidate members of the Jhelum stellar stream."
 
-date: 2020-08-08
+date: 2020-08-07
 all_day: true
-publishDate: 2020-08-08
+publishDate: 2020-08-07
 
 authors:
   - admin

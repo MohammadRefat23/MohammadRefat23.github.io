@@ -1,6 +1,7 @@
 ---
 title: "Starspot Inference with Light Curve Inversion Techniques"
-date: 2025-01-01
+hide_date: true
+show_date_updated: false
 authors:
   - admin
 summary: "Poster presented at the 245th American Astronomical Society Meeting (2025)."

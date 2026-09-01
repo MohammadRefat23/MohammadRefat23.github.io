@@ -2,7 +2,7 @@
 title: Presentations
 type: landing
 cms_exclude: true
-
+summary: "Research talks, recorded presentations, and scientific posters by Mohammad Alvi Refat."
 design:
   spacing: '5rem'
 
@@ -10,7 +10,7 @@ sections:
   - block: collection
     id: talks
     content:
-      title: Talks
+      title: '<h2>Talks</h2>'
       text: Research talks and recorded presentations.
       filters:
         folders:
@@ -27,7 +27,7 @@ sections:
   - block: collection
     id: posters
     content:
-      title: Posters
+      title: '<h2>Posters</h2>'
       text: Selected research posters.
       filters:
         folders:

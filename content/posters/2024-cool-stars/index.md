@@ -1,6 +1,7 @@
 ---
 title: "Star Spots with Starry"
-date: 2024-01-01
+hide_date: true
+show_date_updated: false
 authors:
   - admin
 summary: "Poster presented at the 22nd Cambridge Workshop on Cool Stars, Stellar Systems, and the Sun (2024)."
