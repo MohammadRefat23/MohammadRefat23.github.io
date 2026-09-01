@@ -2,7 +2,7 @@
 
 title: "Chemodynamically Characterizing the Jhelum Stellar Stream"
 summary: "Combining APOGEE spectroscopy and Gaia astrometry to identify and chemically characterize the Jhelum stellar stream."
-date: 2020-01-01
+date: 2020-05-01
 featured: true
 weight: 30
 authors:

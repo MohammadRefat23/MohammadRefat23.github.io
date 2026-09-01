@@ -16,6 +16,7 @@ tags:
   - "Data Visualization"
 image:
   preview_only: true
+date: 2018-06-01
 ---
 
 ## Overview

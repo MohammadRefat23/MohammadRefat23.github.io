@@ -2,7 +2,7 @@
 
 title: "Stellar Spectroscopy and Chemical Abundance Analysis"
 summary: "Validating a high-resolution spectroscopic workflow for measuring stellar parameters and chemical abundances in red giants."
-date: 2020-01-01
+date: 2018-08-01
 featured: false
 weight: 40
 authors:
