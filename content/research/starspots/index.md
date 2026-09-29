@@ -27,7 +27,7 @@ I generated synthetic, evolving starspot light curves with **butterpy** and anal
 
 ## My Contributions
 
-- Generated and analyzed 1,000 synthetic evolving starspot light curves using **butterpy**.
+- Analyzed 1,000 synthetic evolving starspot light curves using **butterpy**.
 - Implemented and compared light-curve inversion workflows using **starry** and **fleck**.
 - Evaluated which rotational, activity, and surface properties could be recovered reliably from photometric observations.
 - Quantified relationships between stellar activity, photometric variability, and spherical-harmonic power.
