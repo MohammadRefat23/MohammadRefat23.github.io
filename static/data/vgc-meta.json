@@ -5,7 +5,7 @@
   "attribution": "Battle data provided by Pokémon Champions Battle Data.",
   "format": "Doubles",
   "season": "Current",
-  "updated": "2026-09-22",
+  "updated": "2026-10-01",
   "top_n": 15,
   "pokemon": [
     {
@@ -29,62 +29,62 @@
         {
           "rank": 1,
           "name": "Grassy Glide",
-          "percentage": 97.6
+          "percentage": 97.4
         },
         {
           "rank": 2,
           "name": "Fake Out",
-          "percentage": 95.5
+          "percentage": 95
         },
         {
           "rank": 3,
           "name": "Wood Hammer",
-          "percentage": 79.3
+          "percentage": 78.3
         },
         {
           "rank": 4,
-          "name": "U-turn",
-          "percentage": 49.2
+          "name": "High Horsepower",
+          "percentage": 50.1
         },
         {
           "rank": 5,
-          "name": "High Horsepower",
-          "percentage": 48.4
+          "name": "U-turn",
+          "percentage": 47.5
         }
       ],
       "items": [
         {
           "rank": 1,
           "name": "Miracle Seed",
-          "percentage": 56.4
+          "percentage": 58.5
         },
         {
           "rank": 2,
           "name": "Life Orb",
-          "percentage": 11.1
+          "percentage": 10.3
         },
         {
           "rank": 3,
           "name": "Sitrus Berry",
-          "percentage": 10.9
+          "percentage": 9.7
         }
       ],
       "abilities": [
         {
           "rank": 1,
           "name": "Grassy Surge",
-          "percentage": 100
+          "percentage": 99.9
         },
         {
           "rank": 2,
           "name": "Overgrow",
-          "percentage": 0
+          "percentage": 0.1
         }
       ],
       "teammates": [
         {
           "rank": 1,
-          "name": "Salamence",
+          "name": "Incineroar",
           "percentage": null
         },
         {
@@ -94,7 +94,7 @@
         },
         {
           "rank": 3,
-          "name": "Incineroar",
+          "name": "Salamence",
           "percentage": null
         },
         {
@@ -104,22 +104,22 @@
         },
         {
           "rank": 5,
-          "name": "Kingambit",
+          "name": "Raichu",
           "percentage": null
         },
         {
           "rank": 6,
-          "name": "Basculegion",
+          "name": "Kingambit",
           "percentage": null
         },
         {
           "rank": 7,
-          "name": "Arcanine-Hisui",
+          "name": "Garchomp",
           "percentage": null
         },
         {
           "rank": 8,
-          "name": "Milotic",
+          "name": "Basculegion",
           "percentage": null
         }
       ]
@@ -146,56 +146,56 @@
         {
           "rank": 1,
           "name": "Close Combat",
-          "percentage": 99.4
+          "percentage": 99.2
         },
         {
           "rank": 2,
           "name": "Dire Claw",
-          "percentage": 92.3
+          "percentage": 92.4
         },
         {
           "rank": 3,
           "name": "Protect",
-          "percentage": 63.7
+          "percentage": 64.2
         },
         {
           "rank": 4,
           "name": "Fake Out",
-          "percentage": 58.1
+          "percentage": 55.4
         },
         {
           "rank": 5,
           "name": "Rock Slide",
-          "percentage": 28.8
+          "percentage": 27.4
         }
       ],
       "items": [
         {
           "rank": 1,
-          "name": "Psychic Seed",
-          "percentage": 27.9
+          "name": "White Herb",
+          "percentage": 31.4
         },
         {
           "rank": 2,
-          "name": "Grassy Seed",
-          "percentage": 27.6
+          "name": "Psychic Seed",
+          "percentage": 26.1
         },
         {
           "rank": 3,
-          "name": "White Herb",
-          "percentage": 26.1
+          "name": "Grassy Seed",
+          "percentage": 24.3
         }
       ],
       "abilities": [
         {
           "rank": 1,
           "name": "Unburden",
-          "percentage": 88.9
+          "percentage": 89
         },
         {
           "rank": 2,
           "name": "Poison Touch",
-          "percentage": 11
+          "percentage": 10.8
         }
       ],
       "teammates": [
@@ -216,17 +216,17 @@
         },
         {
           "rank": 4,
-          "name": "Basculegion",
-          "percentage": null
-        },
-        {
-          "rank": 5,
           "name": "Indeedee-F",
           "percentage": null
         },
         {
-          "rank": 6,
+          "rank": 5,
           "name": "Incineroar",
+          "percentage": null
+        },
+        {
+          "rank": 6,
+          "name": "Basculegion",
           "percentage": null
         },
         {
@@ -242,128 +242,11 @@
       ]
     },
     {
-      "id": "salamence",
-      "name": "Salamence",
-      "showdown_id": "salamence",
-      "saved_name": "Salamence",
-      "rank": 3,
-      "types": [
-        "Dragon",
-        "Flying"
-      ],
-      "base_stats": {
-        "hp": 170,
-        "attack": 155,
-        "defense": 100,
-        "sp_attack": 130,
-        "sp_defense": 100,
-        "speed": 120
-      },
-      "moves": [
-        {
-          "rank": 1,
-          "name": "Protect",
-          "percentage": 94.7
-        },
-        {
-          "rank": 2,
-          "name": "Hyper Voice",
-          "percentage": 91.2
-        },
-        {
-          "rank": 3,
-          "name": "Tailwind",
-          "percentage": 62.9
-        },
-        {
-          "rank": 4,
-          "name": "Draco Meteor",
-          "percentage": 57.6
-        },
-        {
-          "rank": 5,
-          "name": "Flamethrower",
-          "percentage": 24.6
-        }
-      ],
-      "items": [
-        {
-          "rank": 1,
-          "name": "Salamencite",
-          "percentage": 98.1
-        },
-        {
-          "rank": 2,
-          "name": "Life Orb",
-          "percentage": 0.4
-        },
-        {
-          "rank": 3,
-          "name": "Choice Scarf",
-          "percentage": 0.2
-        }
-      ],
-      "abilities": [
-        {
-          "rank": 1,
-          "name": "Intimidate",
-          "percentage": 98.9
-        },
-        {
-          "rank": 2,
-          "name": "Moxie",
-          "percentage": 1.1
-        }
-      ],
-      "teammates": [
-        {
-          "rank": 1,
-          "name": "Rillaboom",
-          "percentage": null
-        },
-        {
-          "rank": 2,
-          "name": "Sneasler",
-          "percentage": null
-        },
-        {
-          "rank": 3,
-          "name": "Kingambit",
-          "percentage": null
-        },
-        {
-          "rank": 4,
-          "name": "Gholdengo",
-          "percentage": null
-        },
-        {
-          "rank": 5,
-          "name": "Incineroar",
-          "percentage": null
-        },
-        {
-          "rank": 6,
-          "name": "Basculegion",
-          "percentage": null
-        },
-        {
-          "rank": 7,
-          "name": "Milotic",
-          "percentage": null
-        },
-        {
-          "rank": 8,
-          "name": "Arcanine-Hisui",
-          "percentage": null
-        }
-      ]
-    },
-    {
       "id": "incineroar",
       "name": "Incineroar",
       "showdown_id": "incineroar",
       "saved_name": "Incineroar",
-      "rank": 4,
+      "rank": 3,
       "types": [
         "Fire",
         "Dark"
@@ -380,44 +263,44 @@
         {
           "rank": 1,
           "name": "Fake Out",
-          "percentage": 97.8
+          "percentage": 97.6
         },
         {
           "rank": 2,
           "name": "Flare Blitz",
-          "percentage": 91.8
+          "percentage": 91.3
         },
         {
           "rank": 3,
           "name": "Parting Shot",
-          "percentage": 90.8
+          "percentage": 90.9
         },
         {
           "rank": 4,
-          "name": "Throat Chop",
-          "percentage": 40
+          "name": "Darkest Lariat",
+          "percentage": 42.3
         },
         {
           "rank": 5,
-          "name": "Darkest Lariat",
-          "percentage": 39.7
+          "name": "Throat Chop",
+          "percentage": 37.6
         }
       ],
       "items": [
         {
           "rank": 1,
           "name": "Sitrus Berry",
-          "percentage": 64.6
+          "percentage": 65.8
         },
         {
           "rank": 2,
           "name": "Chople Berry",
-          "percentage": 9
+          "percentage": 8.5
         },
         {
           "rank": 3,
-          "name": "Rocky Helmet",
-          "percentage": 6.5
+          "name": "Passho Berry",
+          "percentage": 6.8
         }
       ],
       "abilities": [
@@ -445,32 +328,149 @@
         },
         {
           "rank": 3,
-          "name": "Salamence",
-          "percentage": null
-        },
-        {
-          "rank": 4,
           "name": "Garchomp",
           "percentage": null
         },
         {
-          "rank": 5,
+          "rank": 4,
           "name": "Gholdengo",
           "percentage": null
         },
         {
+          "rank": 5,
+          "name": "Salamence",
+          "percentage": null
+        },
+        {
           "rank": 6,
-          "name": "Basculegion",
+          "name": "Raichu",
           "percentage": null
         },
         {
           "rank": 7,
-          "name": "Kingambit",
+          "name": "Basculegion",
           "percentage": null
         },
         {
           "rank": 8,
-          "name": "Golisopod",
+          "name": "Indeedee-F",
+          "percentage": null
+        }
+      ]
+    },
+    {
+      "id": "salamence",
+      "name": "Salamence",
+      "showdown_id": "salamence",
+      "saved_name": "Salamence",
+      "rank": 4,
+      "types": [
+        "Dragon",
+        "Flying"
+      ],
+      "base_stats": {
+        "hp": 170,
+        "attack": 155,
+        "defense": 100,
+        "sp_attack": 130,
+        "sp_defense": 100,
+        "speed": 120
+      },
+      "moves": [
+        {
+          "rank": 1,
+          "name": "Protect",
+          "percentage": 93.5
+        },
+        {
+          "rank": 2,
+          "name": "Hyper Voice",
+          "percentage": 90.5
+        },
+        {
+          "rank": 3,
+          "name": "Draco Meteor",
+          "percentage": 61.5
+        },
+        {
+          "rank": 4,
+          "name": "Tailwind",
+          "percentage": 57.8
+        },
+        {
+          "rank": 5,
+          "name": "Flamethrower",
+          "percentage": 30.2
+        }
+      ],
+      "items": [
+        {
+          "rank": 1,
+          "name": "Salamencite",
+          "percentage": 97.6
+        },
+        {
+          "rank": 2,
+          "name": "Life Orb",
+          "percentage": 0.5
+        },
+        {
+          "rank": 3,
+          "name": "Haban Berry",
+          "percentage": 0.3
+        }
+      ],
+      "abilities": [
+        {
+          "rank": 1,
+          "name": "Intimidate",
+          "percentage": 98.8
+        },
+        {
+          "rank": 2,
+          "name": "Moxie",
+          "percentage": 1.2
+        }
+      ],
+      "teammates": [
+        {
+          "rank": 1,
+          "name": "Rillaboom",
+          "percentage": null
+        },
+        {
+          "rank": 2,
+          "name": "Sneasler",
+          "percentage": null
+        },
+        {
+          "rank": 3,
+          "name": "Kingambit",
+          "percentage": null
+        },
+        {
+          "rank": 4,
+          "name": "Gholdengo",
+          "percentage": null
+        },
+        {
+          "rank": 5,
+          "name": "Incineroar",
+          "percentage": null
+        },
+        {
+          "rank": 6,
+          "name": "Tyranitar",
+          "percentage": null
+        },
+        {
+          "rank": 7,
+          "name": "Basculegion",
+          "percentage": null
+        },
+        {
+          "rank": 8,
+          "name": "Milotic",
           "percentage": null
         }
       ]
@@ -497,51 +497,51 @@
         {
           "rank": 1,
           "name": "Follow Me",
-          "percentage": 98.1
+          "percentage": 97.3
         },
         {
           "rank": 2,
           "name": "Trick Room",
-          "percentage": 85.8
+          "percentage": 81.5
         },
         {
           "rank": 3,
           "name": "Helping Hand",
-          "percentage": 81
+          "percentage": 79.3
         },
         {
           "rank": 4,
           "name": "Psychic",
-          "percentage": 60
+          "percentage": 62.6
         },
         {
           "rank": 5,
-          "name": "Terrain Pulse",
-          "percentage": 20.3
+          "name": "Protect",
+          "percentage": 19.2
         }
       ],
       "items": [
         {
           "rank": 1,
-          "name": "Colbur Berry",
-          "percentage": 28.8
+          "name": "Rocky Helmet",
+          "percentage": 26.5
         },
         {
           "rank": 2,
-          "name": "Psychic Seed",
-          "percentage": 24
+          "name": "Colbur Berry",
+          "percentage": 26.5
         },
         {
           "rank": 3,
-          "name": "Rocky Helmet",
-          "percentage": 24
+          "name": "Psychic Seed",
+          "percentage": 22.7
         }
       ],
       "abilities": [
         {
           "rank": 1,
           "name": "Psychic Surge",
-          "percentage": 99.8
+          "percentage": 99.7
         },
         {
           "rank": 2,
@@ -582,12 +582,12 @@
         },
         {
           "rank": 7,
-          "name": "Torkoal",
+          "name": "Pelipper",
           "percentage": null
         },
         {
           "rank": 8,
-          "name": "Pelipper",
+          "name": "Torkoal",
           "percentage": null
         }
       ]
@@ -614,56 +614,56 @@
         {
           "rank": 1,
           "name": "Kowtow Cleave",
-          "percentage": 98
+          "percentage": 97.5
         },
         {
           "rank": 2,
           "name": "Sucker Punch",
-          "percentage": 97.2
+          "percentage": 96.7
         },
         {
           "rank": 3,
           "name": "Iron Head",
-          "percentage": 78.7
+          "percentage": 79.2
         },
         {
           "rank": 4,
           "name": "Protect",
-          "percentage": 55.1
+          "percentage": 58
         },
         {
           "rank": 5,
           "name": "Low Kick",
-          "percentage": 51.4
+          "percentage": 46.7
         }
       ],
       "items": [
         {
           "rank": 1,
           "name": "Chople Berry",
-          "percentage": 44
+          "percentage": 41.9
         },
         {
           "rank": 2,
           "name": "Black Glasses",
-          "percentage": 18.2
+          "percentage": 18.6
         },
         {
           "rank": 3,
           "name": "Focus Sash",
-          "percentage": 17.5
+          "percentage": 17.9
         }
       ],
       "abilities": [
         {
           "rank": 1,
           "name": "Defiant",
-          "percentage": 96.6
+          "percentage": 95.6
         },
         {
           "rank": 2,
           "name": "Supreme Overlord",
-          "percentage": 3.3
+          "percentage": 4.3
         }
       ],
       "teammates": [
@@ -689,12 +689,12 @@
         },
         {
           "rank": 5,
-          "name": "Indeedee-F",
+          "name": "Garchomp",
           "percentage": null
         },
         {
           "rank": 6,
-          "name": "Garchomp",
+          "name": "Indeedee-F",
           "percentage": null
         },
         {
@@ -710,11 +710,128 @@
       ]
     },
     {
+      "id": "garchomp",
+      "name": "Garchomp",
+      "showdown_id": "garchomp",
+      "saved_name": "Garchomp",
+      "rank": 7,
+      "types": [
+        "Dragon",
+        "Ground"
+      ],
+      "base_stats": {
+        "hp": 183,
+        "attack": 150,
+        "defense": 115,
+        "sp_attack": 100,
+        "sp_defense": 105,
+        "speed": 122
+      },
+      "moves": [
+        {
+          "rank": 1,
+          "name": "Protect",
+          "percentage": 81.1
+        },
+        {
+          "rank": 2,
+          "name": "Rock Slide",
+          "percentage": 41.6
+        },
+        {
+          "rank": 3,
+          "name": "Dragon Claw",
+          "percentage": 40.6
+        },
+        {
+          "rank": 4,
+          "name": "Power Gem",
+          "percentage": 39.7
+        },
+        {
+          "rank": 5,
+          "name": "Earthquake",
+          "percentage": 38.9
+        }
+      ],
+      "items": [
+        {
+          "rank": 1,
+          "name": "Garchompite Z",
+          "percentage": 49.1
+        },
+        {
+          "rank": 2,
+          "name": "Life Orb",
+          "percentage": 24.4
+        },
+        {
+          "rank": 3,
+          "name": "Choice Scarf",
+          "percentage": 9
+        }
+      ],
+      "abilities": [
+        {
+          "rank": 1,
+          "name": "Rough Skin",
+          "percentage": 96.7
+        },
+        {
+          "rank": 2,
+          "name": "Sand Veil",
+          "percentage": 3.3
+        }
+      ],
+      "teammates": [
+        {
+          "rank": 1,
+          "name": "Rillaboom",
+          "percentage": null
+        },
+        {
+          "rank": 2,
+          "name": "Incineroar",
+          "percentage": null
+        },
+        {
+          "rank": 3,
+          "name": "Sneasler",
+          "percentage": null
+        },
+        {
+          "rank": 4,
+          "name": "Charizard",
+          "percentage": null
+        },
+        {
+          "rank": 5,
+          "name": "Kingambit",
+          "percentage": null
+        },
+        {
+          "rank": 6,
+          "name": "Gholdengo",
+          "percentage": null
+        },
+        {
+          "rank": 7,
+          "name": "Basculegion",
+          "percentage": null
+        },
+        {
+          "rank": 8,
+          "name": "Whimsicott",
+          "percentage": null
+        }
+      ]
+    },
+    {
       "id": "basculegion",
       "name": "Basculegion",
       "showdown_id": "basculegion",
       "saved_name": "Basculegion Male",
-      "rank": 7,
+      "rank": 8,
       "types": [
         "Water",
         "Ghost"
@@ -731,56 +848,56 @@
         {
           "rank": 1,
           "name": "Last Respects",
-          "percentage": 99.9
+          "percentage": 99.8
         },
         {
           "rank": 2,
           "name": "Wave Crash",
-          "percentage": 93.3
+          "percentage": 92.8
         },
         {
           "rank": 3,
           "name": "Aqua Jet",
-          "percentage": 91.6
+          "percentage": 89.8
         },
         {
           "rank": 4,
           "name": "Protect",
-          "percentage": 53
+          "percentage": 51.1
         },
         {
           "rank": 5,
           "name": "Flip Turn",
-          "percentage": 45.2
+          "percentage": 46.4
         }
       ],
       "items": [
         {
           "rank": 1,
           "name": "Choice Scarf",
-          "percentage": 44.8
+          "percentage": 45.8
         },
         {
           "rank": 2,
           "name": "Life Orb",
-          "percentage": 30.9
+          "percentage": 28.8
         },
         {
           "rank": 3,
           "name": "Mystic Water",
-          "percentage": 13.1
+          "percentage": 12.8
         }
       ],
       "abilities": [
         {
           "rank": 1,
           "name": "Adaptability",
-          "percentage": 95.2
+          "percentage": 93.8
         },
         {
           "rank": 2,
           "name": "Swift Swim",
-          "percentage": 4.6
+          "percentage": 5.9
         }
       ],
       "teammates": [
@@ -816,12 +933,12 @@
         },
         {
           "rank": 7,
-          "name": "Gardevoir",
+          "name": "Pelipper",
           "percentage": null
         },
         {
           "rank": 8,
-          "name": "Pelipper",
+          "name": "Gardevoir",
           "percentage": null
         }
       ]
@@ -831,7 +948,7 @@
       "name": "Golisopod",
       "showdown_id": "golisopod",
       "saved_name": "Golisopod",
-      "rank": 8,
+      "rank": 9,
       "types": [
         "Bug",
         "Water"
@@ -848,39 +965,39 @@
         {
           "rank": 1,
           "name": "Leech Life",
-          "percentage": 95
+          "percentage": 94.9
         },
         {
           "rank": 2,
           "name": "Iron Head",
-          "percentage": 83.3
+          "percentage": 81.2
         },
         {
           "rank": 3,
           "name": "Protect",
-          "percentage": 63.8
+          "percentage": 63.7
         },
         {
           "rank": 4,
           "name": "Swords Dance",
-          "percentage": 45.4
+          "percentage": 43.4
         },
         {
           "rank": 5,
           "name": "Sucker Punch",
-          "percentage": 32.5
+          "percentage": 34.1
         }
       ],
       "items": [
         {
           "rank": 1,
           "name": "Golisopite",
-          "percentage": 98.7
+          "percentage": 98.3
         },
         {
           "rank": 2,
           "name": "Life Orb",
-          "percentage": 0.3
+          "percentage": 0.4
         },
         {
           "rank": 3,
@@ -913,12 +1030,12 @@
         },
         {
           "rank": 4,
-          "name": "Rillaboom",
+          "name": "Farigiraf",
           "percentage": null
         },
         {
           "rank": 5,
-          "name": "Farigiraf",
+          "name": "Rillaboom",
           "percentage": null
         },
         {
@@ -939,77 +1056,72 @@
       ]
     },
     {
-      "id": "garchomp",
-      "name": "Garchomp",
-      "showdown_id": "garchomp",
-      "saved_name": "Garchomp",
-      "rank": 9,
+      "id": "gholdengo",
+      "name": "Gholdengo",
+      "showdown_id": "gholdengo",
+      "saved_name": "Gholdengo",
+      "rank": 10,
       "types": [
-        "Dragon",
-        "Ground"
+        "Steel",
+        "Ghost"
       ],
       "base_stats": {
-        "hp": 183,
-        "attack": 150,
+        "hp": 162,
+        "attack": 80,
         "defense": 115,
-        "sp_attack": 100,
-        "sp_defense": 105,
-        "speed": 122
+        "sp_attack": 153,
+        "sp_defense": 111,
+        "speed": 104
       },
       "moves": [
         {
           "rank": 1,
-          "name": "Protect",
-          "percentage": 81
+          "name": "Make It Rain",
+          "percentage": 99.4
         },
         {
           "rank": 2,
-          "name": "Rock Slide",
-          "percentage": 45.4
+          "name": "Shadow Ball",
+          "percentage": 98.7
         },
         {
           "rank": 3,
-          "name": "Dragon Claw",
-          "percentage": 44.7
+          "name": "Protect",
+          "percentage": 90.7
         },
         {
           "rank": 4,
-          "name": "Earthquake",
-          "percentage": 41.1
+          "name": "Nasty Plot",
+          "percentage": 82.4
         },
         {
           "rank": 5,
           "name": "Power Gem",
-          "percentage": 35.6
+          "percentage": 10.9
         }
       ],
       "items": [
         {
           "rank": 1,
-          "name": "Garchompite Z",
-          "percentage": 45.4
+          "name": "Life Orb",
+          "percentage": 78.5
         },
         {
           "rank": 2,
-          "name": "Life Orb",
-          "percentage": 26.9
+          "name": "Choice Scarf",
+          "percentage": 5.6
         },
         {
           "rank": 3,
-          "name": "Choice Scarf",
-          "percentage": 9.7
+          "name": "White Herb",
+          "percentage": 3.1
         }
       ],
       "abilities": [
         {
           "rank": 1,
-          "name": "Rough Skin",
-          "percentage": 97.1
-        },
-        {
-          "rank": 2,
-          "name": "Sand Veil",
-          "percentage": 2.9
+          "name": "Good as Gold",
+          "percentage": 100
         }
       ],
       "teammates": [
@@ -1020,37 +1132,154 @@
         },
         {
           "rank": 2,
-          "name": "Incineroar",
+          "name": "Salamence",
           "percentage": null
         },
         {
           "rank": 3,
-          "name": "Sneasler",
+          "name": "Incineroar",
           "percentage": null
         },
         {
           "rank": 4,
-          "name": "Charizard",
+          "name": "Raichu",
           "percentage": null
         },
         {
           "rank": 5,
-          "name": "Kingambit",
+          "name": "Sneasler",
           "percentage": null
         },
         {
           "rank": 6,
-          "name": "Basculegion",
+          "name": "Arcanine-Hisui",
           "percentage": null
         },
         {
           "rank": 7,
-          "name": "Whimsicott",
+          "name": "Milotic",
           "percentage": null
         },
         {
           "rank": 8,
-          "name": "Farigiraf",
+          "name": "Garchomp",
+          "percentage": null
+        }
+      ]
+    },
+    {
+      "id": "archaludon",
+      "name": "Archaludon",
+      "showdown_id": "archaludon",
+      "saved_name": "Archaludon",
+      "rank": 11,
+      "types": [
+        "Steel",
+        "Dragon"
+      ],
+      "base_stats": {
+        "hp": 165,
+        "attack": 125,
+        "defense": 150,
+        "sp_attack": 145,
+        "sp_defense": 85,
+        "speed": 105
+      },
+      "moves": [
+        {
+          "rank": 1,
+          "name": "Electro Shot",
+          "percentage": 94.9
+        },
+        {
+          "rank": 2,
+          "name": "Protect",
+          "percentage": 92.2
+        },
+        {
+          "rank": 3,
+          "name": "Flash Cannon",
+          "percentage": 82
+        },
+        {
+          "rank": 4,
+          "name": "Dragon Pulse",
+          "percentage": 75.8
+        },
+        {
+          "rank": 5,
+          "name": "Aura Sphere",
+          "percentage": 18.8
+        }
+      ],
+      "items": [
+        {
+          "rank": 1,
+          "name": "Leftovers",
+          "percentage": 86.2
+        },
+        {
+          "rank": 2,
+          "name": "Sitrus Berry",
+          "percentage": 3.1
+        },
+        {
+          "rank": 3,
+          "name": "Chople Berry",
+          "percentage": 2.1
+        }
+      ],
+      "abilities": [
+        {
+          "rank": 1,
+          "name": "Stamina",
+          "percentage": 96.1
+        },
+        {
+          "rank": 2,
+          "name": "Sturdy",
+          "percentage": 2.4
+        }
+      ],
+      "teammates": [
+        {
+          "rank": 1,
+          "name": "Pelipper",
+          "percentage": null
+        },
+        {
+          "rank": 2,
+          "name": "Golisopod",
+          "percentage": null
+        },
+        {
+          "rank": 3,
+          "name": "Rillaboom",
+          "percentage": null
+        },
+        {
+          "rank": 4,
+          "name": "Swampert",
+          "percentage": null
+        },
+        {
+          "rank": 5,
+          "name": "Incineroar",
+          "percentage": null
+        },
+        {
+          "rank": 6,
+          "name": "Politoed",
+          "percentage": null
+        },
+        {
+          "rank": 7,
+          "name": "Grimmsnarl",
+          "percentage": null
+        },
+        {
+          "rank": 8,
+          "name": "Charizard",
           "percentage": null
         }
       ]
@@ -1060,7 +1289,7 @@
       "name": "Pelipper",
       "showdown_id": "pelipper",
       "saved_name": "Pelipper",
-      "rank": 10,
+      "rank": 12,
       "types": [
         "Water",
         "Flying"
@@ -1077,44 +1306,44 @@
         {
           "rank": 1,
           "name": "Hurricane",
-          "percentage": 97.5
+          "percentage": 97.2
         },
         {
           "rank": 2,
           "name": "Weather Ball",
-          "percentage": 87.1
+          "percentage": 84.6
         },
         {
           "rank": 3,
           "name": "Tailwind",
-          "percentage": 80.1
+          "percentage": 78
         },
         {
           "rank": 4,
           "name": "Wide Guard",
-          "percentage": 67.4
+          "percentage": 67
         },
         {
           "rank": 5,
           "name": "Protect",
-          "percentage": 31.4
+          "percentage": 31.1
         }
       ],
       "items": [
         {
           "rank": 1,
           "name": "Focus Sash",
-          "percentage": 46.6
+          "percentage": 47.9
         },
         {
           "rank": 2,
           "name": "Sitrus Berry",
-          "percentage": 32.4
+          "percentage": 28.8
         },
         {
           "rank": 3,
           "name": "Damp Rock",
-          "percentage": 7.5
+          "percentage": 9.6
         }
       ],
       "abilities": [
@@ -1147,256 +1376,27 @@
         },
         {
           "rank": 4,
+          "name": "Swampert",
+          "percentage": null
+        },
+        {
+          "rank": 5,
+          "name": "Sneasler",
+          "percentage": null
+        },
+        {
+          "rank": 6,
           "name": "Indeedee-F",
           "percentage": null
         },
         {
-          "rank": 5,
-          "name": "Sneasler",
-          "percentage": null
-        },
-        {
-          "rank": 6,
-          "name": "Basculegion",
-          "percentage": null
-        },
-        {
           "rank": 7,
-          "name": "Swampert",
+          "name": "Basculegion",
           "percentage": null
         },
         {
           "rank": 8,
           "name": "Grimmsnarl",
-          "percentage": null
-        }
-      ]
-    },
-    {
-      "id": "gholdengo",
-      "name": "Gholdengo",
-      "showdown_id": "gholdengo",
-      "saved_name": "Gholdengo",
-      "rank": 11,
-      "types": [
-        "Steel",
-        "Ghost"
-      ],
-      "base_stats": {
-        "hp": 162,
-        "attack": 80,
-        "defense": 115,
-        "sp_attack": 153,
-        "sp_defense": 111,
-        "speed": 104
-      },
-      "moves": [
-        {
-          "rank": 1,
-          "name": "Make It Rain",
-          "percentage": 99.5
-        },
-        {
-          "rank": 2,
-          "name": "Shadow Ball",
-          "percentage": 98.9
-        },
-        {
-          "rank": 3,
-          "name": "Protect",
-          "percentage": 90.9
-        },
-        {
-          "rank": 4,
-          "name": "Nasty Plot",
-          "percentage": 81.2
-        },
-        {
-          "rank": 5,
-          "name": "Power Gem",
-          "percentage": 12.4
-        }
-      ],
-      "items": [
-        {
-          "rank": 1,
-          "name": "Life Orb",
-          "percentage": 77
-        },
-        {
-          "rank": 2,
-          "name": "Choice Scarf",
-          "percentage": 6.1
-        },
-        {
-          "rank": 3,
-          "name": "White Herb",
-          "percentage": 2.9
-        }
-      ],
-      "abilities": [
-        {
-          "rank": 1,
-          "name": "Good as Gold",
-          "percentage": 100
-        }
-      ],
-      "teammates": [
-        {
-          "rank": 1,
-          "name": "Rillaboom",
-          "percentage": null
-        },
-        {
-          "rank": 2,
-          "name": "Salamence",
-          "percentage": null
-        },
-        {
-          "rank": 3,
-          "name": "Sneasler",
-          "percentage": null
-        },
-        {
-          "rank": 4,
-          "name": "Incineroar",
-          "percentage": null
-        },
-        {
-          "rank": 5,
-          "name": "Raichu",
-          "percentage": null
-        },
-        {
-          "rank": 6,
-          "name": "Arcanine-Hisui",
-          "percentage": null
-        },
-        {
-          "rank": 7,
-          "name": "Milotic",
-          "percentage": null
-        },
-        {
-          "rank": 8,
-          "name": "Tyranitar",
-          "percentage": null
-        }
-      ]
-    },
-    {
-      "id": "archaludon",
-      "name": "Archaludon",
-      "showdown_id": "archaludon",
-      "saved_name": "Archaludon",
-      "rank": 12,
-      "types": [
-        "Steel",
-        "Dragon"
-      ],
-      "base_stats": {
-        "hp": 165,
-        "attack": 125,
-        "defense": 150,
-        "sp_attack": 145,
-        "sp_defense": 85,
-        "speed": 105
-      },
-      "moves": [
-        {
-          "rank": 1,
-          "name": "Electro Shot",
-          "percentage": 95.1
-        },
-        {
-          "rank": 2,
-          "name": "Protect",
-          "percentage": 93.7
-        },
-        {
-          "rank": 3,
-          "name": "Flash Cannon",
-          "percentage": 87.6
-        },
-        {
-          "rank": 4,
-          "name": "Dragon Pulse",
-          "percentage": 77.1
-        },
-        {
-          "rank": 5,
-          "name": "Aura Sphere",
-          "percentage": 17.3
-        }
-      ],
-      "items": [
-        {
-          "rank": 1,
-          "name": "Leftovers",
-          "percentage": 87.5
-        },
-        {
-          "rank": 2,
-          "name": "Sitrus Berry",
-          "percentage": 2.7
-        },
-        {
-          "rank": 3,
-          "name": "Chople Berry",
-          "percentage": 2.2
-        }
-      ],
-      "abilities": [
-        {
-          "rank": 1,
-          "name": "Stamina",
-          "percentage": 96.4
-        },
-        {
-          "rank": 2,
-          "name": "Sturdy",
-          "percentage": 2.1
-        }
-      ],
-      "teammates": [
-        {
-          "rank": 1,
-          "name": "Pelipper",
-          "percentage": null
-        },
-        {
-          "rank": 2,
-          "name": "Golisopod",
-          "percentage": null
-        },
-        {
-          "rank": 3,
-          "name": "Rillaboom",
-          "percentage": null
-        },
-        {
-          "rank": 4,
-          "name": "Incineroar",
-          "percentage": null
-        },
-        {
-          "rank": 5,
-          "name": "Swampert",
-          "percentage": null
-        },
-        {
-          "rank": 6,
-          "name": "Grimmsnarl",
-          "percentage": null
-        },
-        {
-          "rank": 7,
-          "name": "Politoed",
-          "percentage": null
-        },
-        {
-          "rank": 8,
-          "name": "Basculegion",
           "percentage": null
         }
       ]
@@ -1422,56 +1422,56 @@
         {
           "rank": 1,
           "name": "Protect",
-          "percentage": 77.1
+          "percentage": 69.8
         },
         {
           "rank": 2,
           "name": "Scald",
-          "percentage": 69.9
+          "percentage": 65.1
         },
         {
           "rank": 3,
           "name": "Ice Beam",
-          "percentage": 60.1
+          "percentage": 58.2
         },
         {
           "rank": 4,
           "name": "Icy Wind",
-          "percentage": 43.4
+          "percentage": 39.9
         },
         {
           "rank": 5,
           "name": "Muddy Water",
-          "percentage": 30.9
+          "percentage": 35.5
         }
       ],
       "items": [
         {
           "rank": 1,
           "name": "Leftovers",
-          "percentage": 65.3
+          "percentage": 62.2
         },
         {
           "rank": 2,
           "name": "Sitrus Berry",
-          "percentage": 22.7
+          "percentage": 21.6
         },
         {
           "rank": 3,
           "name": "Psychic Seed",
-          "percentage": 2.3
+          "percentage": 6.2
         }
       ],
       "abilities": [
         {
           "rank": 1,
           "name": "Competitive",
-          "percentage": 99.3
+          "percentage": 99.1
         },
         {
           "rank": 2,
           "name": "Marvel Scale",
-          "percentage": 0.5
+          "percentage": 0.6
         }
       ],
       "teammates": [
@@ -1507,12 +1507,128 @@
         },
         {
           "rank": 7,
-          "name": "Excadrill",
+          "name": "Indeedee-F",
           "percentage": null
         },
         {
           "rank": 8,
-          "name": "Golisopod",
+          "name": "Excadrill",
+          "percentage": null
+        }
+      ]
+    },
+    {
+      "id": "raichu",
+      "name": "Raichu",
+      "showdown_id": "raichu",
+      "saved_name": "Raichu",
+      "rank": 14,
+      "types": [
+        "Electric"
+      ],
+      "base_stats": {
+        "hp": 135,
+        "attack": 110,
+        "defense": 75,
+        "sp_attack": 110,
+        "sp_defense": 100,
+        "speed": 130
+      },
+      "moves": [
+        {
+          "rank": 1,
+          "name": "Protect",
+          "percentage": 86.8
+        },
+        {
+          "rank": 2,
+          "name": "Zap Cannon",
+          "percentage": 83.6
+        },
+        {
+          "rank": 3,
+          "name": "Focus Blast",
+          "percentage": 83.3
+        },
+        {
+          "rank": 4,
+          "name": "Fake Out",
+          "percentage": 77.3
+        },
+        {
+          "rank": 5,
+          "name": "Encore",
+          "percentage": 19.2
+        }
+      ],
+      "items": [
+        {
+          "rank": 1,
+          "name": "Raichunite Y",
+          "percentage": 83.6
+        },
+        {
+          "rank": 2,
+          "name": "Raichunite X",
+          "percentage": 13.7
+        },
+        {
+          "rank": 3,
+          "name": "Focus Sash",
+          "percentage": 1.3
+        }
+      ],
+      "abilities": [
+        {
+          "rank": 1,
+          "name": "Lightning Rod",
+          "percentage": 96.7
+        },
+        {
+          "rank": 2,
+          "name": "Static",
+          "percentage": 3.3
+        }
+      ],
+      "teammates": [
+        {
+          "rank": 1,
+          "name": "Rillaboom",
+          "percentage": null
+        },
+        {
+          "rank": 2,
+          "name": "Gholdengo",
+          "percentage": null
+        },
+        {
+          "rank": 3,
+          "name": "Incineroar",
+          "percentage": null
+        },
+        {
+          "rank": 4,
+          "name": "Arcanine-Hisui",
+          "percentage": null
+        },
+        {
+          "rank": 5,
+          "name": "Staraptor",
+          "percentage": null
+        },
+        {
+          "rank": 6,
+          "name": "Sneasler",
+          "percentage": null
+        },
+        {
+          "rank": 7,
+          "name": "Garchomp",
+          "percentage": null
+        },
+        {
+          "rank": 8,
+          "name": "Sylveon",
           "percentage": null
         }
       ]
@@ -1522,7 +1638,7 @@
       "name": "Farigiraf",
       "showdown_id": "farigiraf",
       "saved_name": "Farigiraf",
-      "rank": 14,
+      "rank": 15,
       "types": [
         "Normal",
         "Psychic"
@@ -1539,56 +1655,56 @@
         {
           "rank": 1,
           "name": "Trick Room",
-          "percentage": 95.3
+          "percentage": 94.8
         },
         {
           "rank": 2,
           "name": "Helping Hand",
-          "percentage": 53.2
+          "percentage": 52.7
         },
         {
           "rank": 3,
           "name": "Psychic",
-          "percentage": 49.9
+          "percentage": 51
         },
         {
           "rank": 4,
-          "name": "Thunderbolt",
-          "percentage": 45.2
+          "name": "Protect",
+          "percentage": 46.5
         },
         {
           "rank": 5,
-          "name": "Protect",
-          "percentage": 44.7
+          "name": "Thunderbolt",
+          "percentage": 41
         }
       ],
       "items": [
         {
           "rank": 1,
           "name": "Sitrus Berry",
-          "percentage": 58.5
+          "percentage": 59.6
         },
         {
           "rank": 2,
           "name": "Colbur Berry",
-          "percentage": 20.1
+          "percentage": 19.6
         },
         {
           "rank": 3,
           "name": "Grassy Seed",
-          "percentage": 8
+          "percentage": 6
         }
       ],
       "abilities": [
         {
           "rank": 1,
           "name": "Armor Tail",
-          "percentage": 98.2
+          "percentage": 98.1
         },
         {
           "rank": 2,
           "name": "Sap Sipper",
-          "percentage": 1.2
+          "percentage": 1.3
         }
       ],
       "teammates": [
@@ -1614,139 +1730,22 @@
         },
         {
           "rank": 5,
-          "name": "Pelipper",
-          "percentage": null
-        },
-        {
-          "rank": 6,
           "name": "Garchomp",
           "percentage": null
         },
         {
-          "rank": 7,
-          "name": "Sneasler",
-          "percentage": null
-        },
-        {
-          "rank": 8,
+          "rank": 6,
           "name": "Sylveon",
           "percentage": null
-        }
-      ]
-    },
-    {
-      "id": "charizard",
-      "name": "Charizard",
-      "showdown_id": "charizard",
-      "saved_name": "Charizard",
-      "rank": 15,
-      "types": [
-        "Fire",
-        "Flying"
-      ],
-      "base_stats": {
-        "hp": 153,
-        "attack": 104,
-        "defense": 98,
-        "sp_attack": 129,
-        "sp_defense": 105,
-        "speed": 120
-      },
-      "moves": [
-        {
-          "rank": 1,
-          "name": "Protect",
-          "percentage": 94.7
-        },
-        {
-          "rank": 2,
-          "name": "Heat Wave",
-          "percentage": 93.8
-        },
-        {
-          "rank": 3,
-          "name": "Weather Ball",
-          "percentage": 72.8
-        },
-        {
-          "rank": 4,
-          "name": "Solar Beam",
-          "percentage": 60.7
-        },
-        {
-          "rank": 5,
-          "name": "Ancient Power",
-          "percentage": 28.9
-        }
-      ],
-      "items": [
-        {
-          "rank": 1,
-          "name": "Charizardite Y",
-          "percentage": 93.7
-        },
-        {
-          "rank": 2,
-          "name": "Charizardite X",
-          "percentage": 4.4
-        },
-        {
-          "rank": 3,
-          "name": "Choice Scarf",
-          "percentage": 0.4
-        }
-      ],
-      "abilities": [
-        {
-          "rank": 1,
-          "name": "Blaze",
-          "percentage": 77.2
-        },
-        {
-          "rank": 2,
-          "name": "Solar Power",
-          "percentage": 22.8
-        }
-      ],
-      "teammates": [
-        {
-          "rank": 1,
-          "name": "Garchomp",
-          "percentage": null
-        },
-        {
-          "rank": 2,
-          "name": "Sneasler",
-          "percentage": null
-        },
-        {
-          "rank": 3,
-          "name": "Rillaboom",
-          "percentage": null
-        },
-        {
-          "rank": 4,
-          "name": "Kingambit",
-          "percentage": null
-        },
-        {
-          "rank": 5,
-          "name": "Basculegion",
-          "percentage": null
-        },
-        {
-          "rank": 6,
-          "name": "Whimsicott",
-          "percentage": null
         },
         {
           "rank": 7,
-          "name": "Incineroar",
+          "name": "Archaludon",
           "percentage": null
         },
         {
           "rank": 8,
-          "name": "Venusaur",
+          "name": "Pelipper",
           "percentage": null
         }
       ]
@@ -1754,8 +1753,8 @@
   ],
   "links": [
     {
-      "source": "rillaboom",
-      "target": "salamence",
+      "source": "incineroar",
+      "target": "rillaboom",
       "strength": 1.0,
       "mutual": true,
       "directions": [
@@ -1764,19 +1763,7 @@
           "teammate_rank": 1
         },
         {
-          "from": "salamence",
-          "teammate_rank": 1
-        }
-      ]
-    },
-    {
-      "source": "garchomp",
-      "target": "rillaboom",
-      "strength": 1.0,
-      "mutual": false,
-      "directions": [
-        {
-          "from": "garchomp",
+          "from": "incineroar",
           "teammate_rank": 1
         }
       ]
@@ -1788,11 +1775,23 @@
       "mutual": true,
       "directions": [
         {
-          "from": "pelipper",
+          "from": "archaludon",
           "teammate_rank": 1
         },
         {
-          "from": "archaludon",
+          "from": "pelipper",
+          "teammate_rank": 1
+        }
+      ]
+    },
+    {
+      "source": "milotic",
+      "target": "rillaboom",
+      "strength": 1.0,
+      "mutual": false,
+      "directions": [
+        {
+          "from": "milotic",
           "teammate_rank": 1
         }
       ]
@@ -1830,8 +1829,8 @@
       ]
     },
     {
-      "source": "incineroar",
-      "target": "rillaboom",
+      "source": "rillaboom",
+      "target": "salamence",
       "strength": 0.6667,
       "mutual": true,
       "directions": [
@@ -1840,7 +1839,7 @@
           "teammate_rank": 3
         },
         {
-          "from": "incineroar",
+          "from": "salamence",
           "teammate_rank": 1
         }
       ]
@@ -1878,46 +1877,14 @@
       ]
     },
     {
-      "source": "basculegion",
-      "target": "sneasler",
-      "strength": 0.625,
-      "mutual": true,
-      "directions": [
-        {
-          "from": "sneasler",
-          "teammate_rank": 4
-        },
-        {
-          "from": "basculegion",
-          "teammate_rank": 1
-        }
-      ]
-    },
-    {
-      "source": "charizard",
-      "target": "garchomp",
-      "strength": 0.625,
-      "mutual": true,
-      "directions": [
-        {
-          "from": "garchomp",
-          "teammate_rank": 4
-        },
-        {
-          "from": "charizard",
-          "teammate_rank": 1
-        }
-      ]
-    },
-    {
       "source": "indeedeef",
       "target": "sneasler",
-      "strength": 0.6,
+      "strength": 0.625,
       "mutual": true,
       "directions": [
         {
           "from": "sneasler",
-          "teammate_rank": 5
+          "teammate_rank": 4
         },
         {
           "from": "indeedeef",
@@ -1928,12 +1895,12 @@
     {
       "source": "farigiraf",
       "target": "golisopod",
-      "strength": 0.6,
+      "strength": 0.625,
       "mutual": true,
       "directions": [
         {
           "from": "golisopod",
-          "teammate_rank": 5
+          "teammate_rank": 4
         },
         {
           "from": "farigiraf",
@@ -1942,17 +1909,49 @@
       ]
     },
     {
-      "source": "milotic",
+      "source": "raichu",
       "target": "rillaboom",
-      "strength": 0.5625,
+      "strength": 0.6,
       "mutual": true,
       "directions": [
         {
           "from": "rillaboom",
-          "teammate_rank": 8
+          "teammate_rank": 5
         },
         {
-          "from": "milotic",
+          "from": "raichu",
+          "teammate_rank": 1
+        }
+      ]
+    },
+    {
+      "source": "basculegion",
+      "target": "sneasler",
+      "strength": 0.5833,
+      "mutual": true,
+      "directions": [
+        {
+          "from": "sneasler",
+          "teammate_rank": 6
+        },
+        {
+          "from": "basculegion",
+          "teammate_rank": 1
+        }
+      ]
+    },
+    {
+      "source": "garchomp",
+      "target": "rillaboom",
+      "strength": 0.5714,
+      "mutual": true,
+      "directions": [
+        {
+          "from": "rillaboom",
+          "teammate_rank": 7
+        },
+        {
+          "from": "garchomp",
           "teammate_rank": 1
         }
       ]
@@ -2002,13 +2001,17 @@
       ]
     },
     {
-      "source": "charizard",
-      "target": "sneasler",
-      "strength": 0.5,
-      "mutual": false,
+      "source": "garchomp",
+      "target": "incineroar",
+      "strength": 0.4167,
+      "mutual": true,
       "directions": [
         {
-          "from": "charizard",
+          "from": "incineroar",
+          "teammate_rank": 3
+        },
+        {
+          "from": "garchomp",
           "teammate_rank": 2
         }
       ]
@@ -2030,49 +2033,17 @@
       ]
     },
     {
-      "source": "garchomp",
-      "target": "incineroar",
+      "source": "gholdengo",
+      "target": "raichu",
       "strength": 0.375,
       "mutual": true,
       "directions": [
         {
-          "from": "incineroar",
+          "from": "gholdengo",
           "teammate_rank": 4
         },
         {
-          "from": "garchomp",
-          "teammate_rank": 2
-        }
-      ]
-    },
-    {
-      "source": "kingambit",
-      "target": "rillaboom",
-      "strength": 0.35,
-      "mutual": true,
-      "directions": [
-        {
-          "from": "rillaboom",
-          "teammate_rank": 5
-        },
-        {
-          "from": "kingambit",
-          "teammate_rank": 2
-        }
-      ]
-    },
-    {
-      "source": "basculegion",
-      "target": "rillaboom",
-      "strength": 0.3333,
-      "mutual": true,
-      "directions": [
-        {
-          "from": "rillaboom",
-          "teammate_rank": 6
-        },
-        {
-          "from": "basculegion",
+          "from": "raichu",
           "teammate_rank": 2
         }
       ]
@@ -2080,15 +2051,31 @@
     {
       "source": "incineroar",
       "target": "sneasler",
-      "strength": 0.3333,
+      "strength": 0.35,
       "mutual": true,
       "directions": [
         {
           "from": "sneasler",
-          "teammate_rank": 6
+          "teammate_rank": 5
         },
         {
           "from": "incineroar",
+          "teammate_rank": 2
+        }
+      ]
+    },
+    {
+      "source": "kingambit",
+      "target": "rillaboom",
+      "strength": 0.3333,
+      "mutual": true,
+      "directions": [
+        {
+          "from": "rillaboom",
+          "teammate_rank": 6
+        },
+        {
+          "from": "kingambit",
           "teammate_rank": 2
         }
       ]
@@ -2117,6 +2104,18 @@
       "directions": [
         {
           "from": "garchomp",
+          "teammate_rank": 3
+        }
+      ]
+    },
+    {
+      "source": "archaludon",
+      "target": "rillaboom",
+      "strength": 0.3333,
+      "mutual": false,
+      "directions": [
+        {
+          "from": "archaludon",
           "teammate_rank": 3
         }
       ]
@@ -2134,18 +2133,6 @@
       ]
     },
     {
-      "source": "archaludon",
-      "target": "rillaboom",
-      "strength": 0.3333,
-      "mutual": false,
-      "directions": [
-        {
-          "from": "archaludon",
-          "teammate_rank": 3
-        }
-      ]
-    },
-    {
       "source": "milotic",
       "target": "sneasler",
       "strength": 0.3333,
@@ -2170,30 +2157,50 @@
       ]
     },
     {
-      "source": "charizard",
+      "source": "basculegion",
       "target": "rillaboom",
-      "strength": 0.3333,
-      "mutual": false,
+      "strength": 0.3125,
+      "mutual": true,
       "directions": [
         {
-          "from": "charizard",
-          "teammate_rank": 3
+          "from": "rillaboom",
+          "teammate_rank": 8
+        },
+        {
+          "from": "basculegion",
+          "teammate_rank": 2
         }
       ]
     },
     {
       "source": "milotic",
       "target": "salamence",
-      "strength": 0.3214,
+      "strength": 0.3125,
       "mutual": true,
       "directions": [
         {
           "from": "salamence",
-          "teammate_rank": 7
+          "teammate_rank": 8
         },
         {
           "from": "milotic",
           "teammate_rank": 2
+        }
+      ]
+    },
+    {
+      "source": "gholdengo",
+      "target": "incineroar",
+      "strength": 0.2917,
+      "mutual": true,
+      "directions": [
+        {
+          "from": "incineroar",
+          "teammate_rank": 4
+        },
+        {
+          "from": "gholdengo",
+          "teammate_rank": 3
         }
       ]
     },
@@ -2231,41 +2238,17 @@
     },
     {
       "source": "incineroar",
-      "target": "salamence",
-      "strength": 0.2667,
+      "target": "raichu",
+      "strength": 0.25,
       "mutual": true,
       "directions": [
         {
-          "from": "salamence",
-          "teammate_rank": 5
+          "from": "incineroar",
+          "teammate_rank": 6
         },
         {
-          "from": "incineroar",
+          "from": "raichu",
           "teammate_rank": 3
-        }
-      ]
-    },
-    {
-      "source": "golisopod",
-      "target": "rillaboom",
-      "strength": 0.25,
-      "mutual": false,
-      "directions": [
-        {
-          "from": "golisopod",
-          "teammate_rank": 4
-        }
-      ]
-    },
-    {
-      "source": "archaludon",
-      "target": "incineroar",
-      "strength": 0.25,
-      "mutual": false,
-      "directions": [
-        {
-          "from": "archaludon",
-          "teammate_rank": 4
         }
       ]
     },
@@ -2282,25 +2265,9 @@
       ]
     },
     {
-      "source": "gholdengo",
-      "target": "sneasler",
-      "strength": 0.2292,
-      "mutual": true,
-      "directions": [
-        {
-          "from": "sneasler",
-          "teammate_rank": 8
-        },
-        {
-          "from": "gholdengo",
-          "teammate_rank": 3
-        }
-      ]
-    },
-    {
-      "source": "gholdengo",
-      "target": "incineroar",
-      "strength": 0.225,
+      "source": "incineroar",
+      "target": "salamence",
+      "strength": 0.2,
       "mutual": true,
       "directions": [
         {
@@ -2308,24 +2275,8 @@
           "teammate_rank": 5
         },
         {
-          "from": "gholdengo",
-          "teammate_rank": 4
-        }
-      ]
-    },
-    {
-      "source": "basculegion",
-      "target": "salamence",
-      "strength": 0.2083,
-      "mutual": true,
-      "directions": [
-        {
           "from": "salamence",
-          "teammate_rank": 6
-        },
-        {
-          "from": "basculegion",
-          "teammate_rank": 4
+          "teammate_rank": 5
         }
       ]
     },
@@ -2341,6 +2292,46 @@
         },
         {
           "from": "basculegion",
+          "teammate_rank": 5
+        }
+      ]
+    },
+    {
+      "source": "garchomp",
+      "target": "kingambit",
+      "strength": 0.2,
+      "mutual": true,
+      "directions": [
+        {
+          "from": "kingambit",
+          "teammate_rank": 5
+        },
+        {
+          "from": "garchomp",
+          "teammate_rank": 5
+        }
+      ]
+    },
+    {
+      "source": "golisopod",
+      "target": "rillaboom",
+      "strength": 0.2,
+      "mutual": false,
+      "directions": [
+        {
+          "from": "golisopod",
+          "teammate_rank": 5
+        }
+      ]
+    },
+    {
+      "source": "archaludon",
+      "target": "incineroar",
+      "strength": 0.2,
+      "mutual": false,
+      "directions": [
+        {
+          "from": "archaludon",
           "teammate_rank": 5
         }
       ]
@@ -2371,7 +2362,7 @@
     },
     {
       "source": "farigiraf",
-      "target": "pelipper",
+      "target": "garchomp",
       "strength": 0.2,
       "mutual": false,
       "directions": [
@@ -2383,13 +2374,17 @@
     },
     {
       "source": "basculegion",
-      "target": "charizard",
-      "strength": 0.2,
-      "mutual": false,
+      "target": "salamence",
+      "strength": 0.1964,
+      "mutual": true,
       "directions": [
         {
-          "from": "charizard",
-          "teammate_rank": 5
+          "from": "salamence",
+          "teammate_rank": 7
+        },
+        {
+          "from": "basculegion",
+          "teammate_rank": 4
         }
       ]
     },
@@ -2411,80 +2406,16 @@
     },
     {
       "source": "indeedeef",
-      "target": "pelipper",
-      "strength": 0.1875,
-      "mutual": true,
-      "directions": [
-        {
-          "from": "indeedeef",
-          "teammate_rank": 8
-        },
-        {
-          "from": "pelipper",
-          "teammate_rank": 4
-        }
-      ]
-    },
-    {
-      "source": "charizard",
       "target": "kingambit",
-      "strength": 0.1875,
-      "mutual": true,
-      "directions": [
-        {
-          "from": "kingambit",
-          "teammate_rank": 8
-        },
-        {
-          "from": "charizard",
-          "teammate_rank": 4
-        }
-      ]
-    },
-    {
-      "source": "indeedeef",
-      "target": "kingambit",
-      "strength": 0.1833,
-      "mutual": true,
-      "directions": [
-        {
-          "from": "indeedeef",
-          "teammate_rank": 6
-        },
-        {
-          "from": "kingambit",
-          "teammate_rank": 5
-        }
-      ]
-    },
-    {
-      "source": "garchomp",
-      "target": "kingambit",
-      "strength": 0.1833,
-      "mutual": true,
-      "directions": [
-        {
-          "from": "kingambit",
-          "teammate_rank": 6
-        },
-        {
-          "from": "garchomp",
-          "teammate_rank": 5
-        }
-      ]
-    },
-    {
-      "source": "basculegion",
-      "target": "incineroar",
       "strength": 0.1667,
       "mutual": true,
       "directions": [
         {
-          "from": "incineroar",
+          "from": "indeedeef",
           "teammate_rank": 6
         },
         {
-          "from": "basculegion",
+          "from": "kingambit",
           "teammate_rank": 6
         }
       ]
@@ -2502,26 +2433,58 @@
       ]
     },
     {
-      "source": "basculegion",
-      "target": "garchomp",
+      "source": "raichu",
+      "target": "sneasler",
       "strength": 0.1667,
       "mutual": false,
       "directions": [
         {
-          "from": "garchomp",
+          "from": "raichu",
           "teammate_rank": 6
         }
       ]
     },
     {
-      "source": "basculegion",
-      "target": "pelipper",
-      "strength": 0.1458,
+      "source": "gholdengo",
+      "target": "sneasler",
+      "strength": 0.1625,
       "mutual": true,
       "directions": [
         {
-          "from": "basculegion",
+          "from": "sneasler",
           "teammate_rank": 8
+        },
+        {
+          "from": "gholdengo",
+          "teammate_rank": 5
+        }
+      ]
+    },
+    {
+      "source": "basculegion",
+      "target": "incineroar",
+      "strength": 0.1548,
+      "mutual": true,
+      "directions": [
+        {
+          "from": "incineroar",
+          "teammate_rank": 7
+        },
+        {
+          "from": "basculegion",
+          "teammate_rank": 6
+        }
+      ]
+    },
+    {
+      "source": "indeedeef",
+      "target": "pelipper",
+      "strength": 0.1548,
+      "mutual": true,
+      "directions": [
+        {
+          "from": "indeedeef",
+          "teammate_rank": 7
         },
         {
           "from": "pelipper",
@@ -2530,18 +2493,18 @@
       ]
     },
     {
-      "source": "farigiraf",
-      "target": "garchomp",
+      "source": "garchomp",
+      "target": "gholdengo",
       "strength": 0.1458,
       "mutual": true,
       "directions": [
         {
           "from": "garchomp",
-          "teammate_rank": 8
+          "teammate_rank": 6
         },
         {
-          "from": "farigiraf",
-          "teammate_rank": 6
+          "from": "gholdengo",
+          "teammate_rank": 8
         }
       ]
     },
@@ -2549,12 +2512,8 @@
       "source": "incineroar",
       "target": "kingambit",
       "strength": 0.1429,
-      "mutual": true,
+      "mutual": false,
       "directions": [
-        {
-          "from": "incineroar",
-          "teammate_rank": 7
-        },
         {
           "from": "kingambit",
           "teammate_rank": 7
@@ -2562,8 +2521,72 @@
       ]
     },
     {
-      "source": "farigiraf",
-      "target": "sneasler",
+      "source": "basculegion",
+      "target": "garchomp",
+      "strength": 0.1429,
+      "mutual": false,
+      "directions": [
+        {
+          "from": "garchomp",
+          "teammate_rank": 7
+        }
+      ]
+    },
+    {
+      "source": "basculegion",
+      "target": "pelipper",
+      "strength": 0.1429,
+      "mutual": true,
+      "directions": [
+        {
+          "from": "basculegion",
+          "teammate_rank": 7
+        },
+        {
+          "from": "pelipper",
+          "teammate_rank": 7
+        }
+      ]
+    },
+    {
+      "source": "golisopod",
+      "target": "incineroar",
+      "strength": 0.1429,
+      "mutual": false,
+      "directions": [
+        {
+          "from": "golisopod",
+          "teammate_rank": 7
+        }
+      ]
+    },
+    {
+      "source": "indeedeef",
+      "target": "milotic",
+      "strength": 0.1429,
+      "mutual": false,
+      "directions": [
+        {
+          "from": "milotic",
+          "teammate_rank": 7
+        }
+      ]
+    },
+    {
+      "source": "garchomp",
+      "target": "raichu",
+      "strength": 0.1429,
+      "mutual": false,
+      "directions": [
+        {
+          "from": "raichu",
+          "teammate_rank": 7
+        }
+      ]
+    },
+    {
+      "source": "archaludon",
+      "target": "farigiraf",
       "strength": 0.1429,
       "mutual": false,
       "directions": [
@@ -2574,30 +2597,14 @@
       ]
     },
     {
-      "source": "charizard",
-      "target": "incineroar",
-      "strength": 0.1429,
+      "source": "incineroar",
+      "target": "indeedeef",
+      "strength": 0.125,
       "mutual": false,
-      "directions": [
-        {
-          "from": "charizard",
-          "teammate_rank": 7
-        }
-      ]
-    },
-    {
-      "source": "golisopod",
-      "target": "incineroar",
-      "strength": 0.1339,
-      "mutual": true,
       "directions": [
         {
           "from": "incineroar",
           "teammate_rank": 8
-        },
-        {
-          "from": "golisopod",
-          "teammate_rank": 7
         }
       ]
     },
@@ -2614,25 +2621,13 @@
       ]
     },
     {
-      "source": "archaludon",
-      "target": "basculegion",
+      "source": "farigiraf",
+      "target": "pelipper",
       "strength": 0.125,
       "mutual": false,
       "directions": [
         {
-          "from": "archaludon",
-          "teammate_rank": 8
-        }
-      ]
-    },
-    {
-      "source": "golisopod",
-      "target": "milotic",
-      "strength": 0.125,
-      "mutual": false,
-      "directions": [
-        {
-          "from": "milotic",
+          "from": "farigiraf",
           "teammate_rank": 8
         }
       ]
