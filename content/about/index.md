@@ -6,7 +6,7 @@ pager: false
 show_date_updated: false
 ---
 
-My name is Mohammad, and I am a New York City native, born and raised in Queens. I first became interested in physics through the [Science Research Mentoring Program (SRMP)](https://www.amnh.org/learn-teach/teens/science-research-mentoring-program) at the American Museum of Natural History. I later completed my bachelor's through the [City University of New York (CUNY) Baccalaureate for Unique and Interdisciplinary Studies](https://cunyba.cuny.edu/) program in computational physics, followed by a master's in astrophysics at the [CUNY Graduate Center](https://www.gc.cuny.edu/astrophysics).
+My name is Mohammad, and I am a New York City native, born and raised in Queens. I first became interested in physics through the [Science Research Mentoring Program (SRMP)](https://www.amnh.org/learn-teach/teens/science-research-mentoring-program) at the American Museum of Natural History. I later completed my bachelor's through the [City University of New York (CUNY) Baccalaureate for Unique and Interdisciplinary Studies](https://cunyba.cuny.edu/) program in computational astrophysics, followed by a master's in astrophysics at the [CUNY Graduate Center](https://www.gc.cuny.edu/astrophysics).
 
 My academic background is in astrophysics, but I'm generally interested in computational problems as a whole. I've done work with stellar surface mapping, brown-dwarf atmospheres, stellar spectroscopy, galactic archaeology, and numerical simulations. I am also interested in problems in condensed matter, soft matter, and biophysics.
 
