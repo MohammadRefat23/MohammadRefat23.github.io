@@ -1,0 +1,48 @@
+- title: "Starspot Inference Using Light Curve Inversion Techniques"
+  summary: "Tested what stellar rotation, activity, and surface structure can be recovered from photometric light-curve inversion."
+  url: /research/starspots/
+  tags:
+    - Astrophysics
+    - Statistical inference
+    - Time-series
+    - Visualization
+
+- title: "Mapping Brown Dwarf and Giant Exoplanet Atmospheres"
+  summary: "Studied rotational variability to infer evolving cloud structures on brown dwarfs and directly imaged giant exoplanets."
+  url: /research/brown-dwarf-atmospheres/
+  tags:
+    - Astrophysics
+    - Statistical inference
+    - Time-series
+
+- title: "Chemodynamically Characterizing the Jhelum Stellar Stream"
+  summary: "Combined APOGEE spectroscopy, Gaia astrometry, and kinematics to identify and characterize stellar-stream candidates."
+  url: /research/jhelum-stellar-stream/
+  tags:
+    - Astrophysics
+    - Data analysis
+    - Spectroscopy
+
+- title: "Stellar Spectroscopy and Chemical Abundance Analysis"
+  summary: "Analyzed high-resolution stellar spectra to estimate stellar parameters and chemical abundances."
+  url: /research/stellar-spectroscopy/
+  tags:
+    - Astrophysics
+    - Data analysis
+    - Spectroscopy
+
+- title: "Two-Point Statistics in the Star-Forming Interstellar Medium"
+  summary: "Used two-point statistics to study the characteristic scale of metallicity structure in simulated star-forming gas."
+  url: /research/star-forming-ism/
+  tags:
+    - Astrophysics
+    - Simulation
+    - Statistical inference
+
+- title: "Competitive Doubles Metagame Explorer"
+  summary: "Built an interactive network explorer for Pokémon Champions Doubles usage and teammate-affinity data."
+  url: /projects/vgc-metagame/
+  tags:
+    - Data analysis
+    - Visualization
+    - Pokémon VGC

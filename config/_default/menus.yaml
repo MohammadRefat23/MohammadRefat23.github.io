@@ -2,19 +2,18 @@ main:
   - name: Bio
     url: /about/
     weight: 10
-
   - name: Research
     url: /research/
     weight: 20
-
+  - name: Projects
+    url: /projects/
+    weight: 25
   - name: Publications
     url: /publications/
     weight: 30
-
   - name: Presentations
     url: /events/
     weight: 40
-
   - name: CV
     url: /cv/
     weight: 50
