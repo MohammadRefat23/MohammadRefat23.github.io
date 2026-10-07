@@ -1,6 +1,8 @@
 ---
 title: Stellar Spectroscopy
 summary: Using stellar spectra to infer temperatures, chemical abundances, velocities, and other physical properties.
+date: 2018-08-01
+hide_date: true
 project: true
 project_url: /research/stellar-spectroscopy/
 tags:

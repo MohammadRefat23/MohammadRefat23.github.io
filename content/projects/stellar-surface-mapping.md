@@ -1,6 +1,8 @@
 ---
 title: Stellar Surface Mapping
 summary: Inferring starspot distributions from stellar rotational light curves.
+date: 2023-08-01
+hide_date: true
 project: true
 project_url: /research/starspots/
 tags:
