@@ -37,7 +37,6 @@ The animation below shows real spherical-harmonic modes, a mathematical basis I 
   Individual real spherical-harmonic modes. Increasing the degree allows progressively finer angular structure.
 </p>
 
-{{< spherical-harmonics >}}
 
 ---
 
