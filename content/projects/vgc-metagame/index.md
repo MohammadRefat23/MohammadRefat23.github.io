@@ -11,7 +11,6 @@ share: false
 
 I built this interactive explorer to look at relationships among Pokémon in a periodically updated snapshot of the Pokémon Champions Doubles metagame. Node size represents overall rank, and connections represent teammate affinity. Select a Pokémon to inspect its commonly used moves, items, abilities, and teammates.
 
-{{< vgc-meta >}}
 
 The visualization uses a saved data snapshot rather than querying the source whenever the page loads. This makes each version reproducible and lets the data be refreshed as a distinct update.
 
