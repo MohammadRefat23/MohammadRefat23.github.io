@@ -1,0 +1,2163 @@
+{{ $id := printf "vgc-meta-%d" .Ordinal }}
+
+<div id="{{ $id }}" class="vgc-widget">
+
+  <div class="vgc-header">
+    <div>
+      <h3>Competitive Doubles Metagame Explorer</h3>
+
+      <p class="vgc-subtitle">
+        Explore relationships among the top Pokémon in the current
+        Pokémon Champions Doubles metagame.
+      </p>
+    </div>
+
+    <div class="vgc-metadata">
+      <span class="vgc-format">Loading…</span>
+      <span class="vgc-updated"></span>
+    </div>
+  </div>
+
+  <div class="vgc-main">
+
+    <div class="vgc-network-wrap">
+
+      <div class="vgc-zoom-controls" aria-label="Network zoom controls">
+        <button type="button" class="vgc-zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
+        <button type="button" class="vgc-zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+        <button type="button" class="vgc-zoom-reset" aria-label="Reset zoom" title="Reset zoom">Reset</button>
+      </div>
+
+      <svg
+        class="vgc-network"
+        viewBox="0 0 700 560"
+        role="img"
+        aria-label="Interactive network of competitive Doubles Pokémon"
+      ></svg>
+
+      <p class="vgc-help">
+        Click a Pokémon for details. Drag nodes to rearrange them.
+        Drag empty space or scroll while zoomed to pan the network.
+      </p>
+
+    </div>
+
+    <aside class="vgc-details">
+
+      <div class="vgc-placeholder">
+        <strong>Select a Pokémon</strong>
+        <p>
+          Click a node to inspect its current moves, held items,
+          abilities, and common teammates.
+        </p>
+      </div>
+
+      <div class="vgc-selected" hidden>
+
+<div class="vgc-selected-header">
+
+  <div class="vgc-detail-rank-badge">
+    <span class="vgc-detail-rank-number"></span>
+  </div>
+
+  <div>
+    <div class="vgc-rank"></div>
+    <h4 class="vgc-name"></h4>
+    <div class="vgc-types"></div>
+  </div>
+
+</div>
+
+        <div class="vgc-detail-section">
+          <h5>Common Moves</h5>
+          <div class="vgc-moves"></div>
+        </div>
+
+        <div class="vgc-detail-section">
+          <h5>Held Items</h5>
+          <div class="vgc-items"></div>
+        </div>
+
+        <div class="vgc-detail-section">
+          <h5>Abilities</h5>
+          <div class="vgc-abilities"></div>
+        </div>
+
+        <div class="vgc-detail-section">
+          <h5>Common Teammates</h5>
+          <div class="vgc-teammates"></div>
+        </div>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+  <div class="vgc-legend">
+
+    <div>
+      <span class="vgc-legend-node large"></span>
+      Higher overall rank
+    </div>
+
+    <div>
+      <span class="vgc-legend-node small"></span>
+      Lower overall rank
+    </div>
+
+    <div>
+      <span class="vgc-legend-edge"></span>
+      Teammate relationship
+    </div>
+
+  </div>
+
+  <p class="vgc-attribution">
+    Battle data provided by
+    <a
+      href="https://championsbattledata.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Pokémon Champions Battle Data
+    </a>.
+    Data snapshot:
+    <span class="vgc-attribution-date"></span>.
+    This is an unofficial fan visualization and is not affiliated with,
+    endorsed by, or sponsored by Pokémon, Nintendo, Game Freak,
+    Creatures Inc., or Pokémon Champions.
+  </p>
+
+</div>
+
+
+<style>
+
+#{{ $id }} {
+  --vgc-text: #18181b;
+  --vgc-muted: #71717a;
+  --vgc-border: rgba(113, 113, 122, 0.22);
+  --vgc-panel: rgba(250, 250, 250, 0.72);
+  --vgc-panel-strong: #ffffff;
+  --vgc-edge: rgba(82, 82, 91, 0.28);
+  --vgc-edge-active: rgba(99, 102, 241, 0.78);
+  --vgc-node-bg: #ffffff;
+
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  color: var(--vgc-text);
+}
+
+.dark #{{ $id }} {
+  --vgc-text: #f4f4f5;
+  --vgc-muted: #a1a1aa;
+  --vgc-border: rgba(161, 161, 170, 0.22);
+  --vgc-panel: rgba(39, 39, 42, 0.65);
+  --vgc-panel-strong: #27272a;
+  --vgc-edge: rgba(161, 161, 170, 0.24);
+  --vgc-edge-active: rgba(129, 140, 248, 0.88);
+  --vgc-node-bg: #27272a;
+}
+
+#{{ $id }} .vgc-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start;
+
+  margin-bottom: 1rem;
+}
+
+#{{ $id }} .vgc-header h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.5rem;
+}
+
+#{{ $id }} .vgc-subtitle {
+  margin: 0;
+  max-width: 650px;
+
+  color: var(--vgc-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+#{{ $id }} .vgc-metadata {
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  color: var(--vgc-muted);
+  font-size: 0.78rem;
+}
+
+#{{ $id }} .vgc-main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.6fr)
+    minmax(280px, 0.75fr);
+
+  gap: 1rem;
+}
+
+#{{ $id }} .vgc-network-wrap,
+#{{ $id }} .vgc-details {
+  border: 1px solid var(--vgc-border);
+  border-radius: 1rem;
+
+  background: var(--vgc-panel);
+}
+
+#{{ $id }} .vgc-network-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+#{{ $id }} .vgc-network {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  min-height: 500px;
+  touch-action: none;
+}
+
+#{{ $id }} .vgc-zoom-controls {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  z-index: 5;
+  display: flex;
+  gap: 0.35rem;
+}
+
+#{{ $id }} .vgc-zoom-controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  padding: 0 0.55rem;
+  border: 1px solid var(--vgc-border);
+  border-radius: 0.5rem;
+  background: var(--vgc-panel-strong);
+  color: var(--vgc-text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+
+#{{ $id }} .vgc-zoom-controls button:hover {
+  border-color: rgba(99, 102, 241, 0.7);
+  background: rgba(99, 102, 241, 0.10);
+}
+
+#{{ $id }} .vgc-zoom-controls button:active {
+  transform: scale(0.96);
+}
+
+#{{ $id }} .vgc-help {
+  margin: -0.3rem 1rem 1rem;
+
+  color: var(--vgc-muted);
+
+  text-align: center;
+  font-size: 0.76rem;
+}
+
+#{{ $id }} .vgc-details {
+  padding: 1.25rem;
+}
+
+#{{ $id }} .vgc-placeholder {
+  padding: 4rem 1rem;
+
+  color: var(--vgc-muted);
+
+  text-align: center;
+}
+
+#{{ $id }} .vgc-placeholder strong {
+  color: var(--vgc-text);
+}
+
+#{{ $id }} .vgc-placeholder p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+#{{ $id }} .vgc-selected-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid var(--vgc-border);
+}
+
+#{{ $id }} .vgc-detail-rank-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 82px;
+  height: 82px;
+
+  flex-shrink: 0;
+
+  border: 2px solid rgba(99, 102, 241, 0.55);
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      rgba(99, 102, 241, 0.22),
+      rgba(99, 102, 241, 0.05)
+    );
+}
+
+#{{ $id }} .vgc-detail-rank-number {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+#{{ $id }} .vgc-rank {
+  color: var(--vgc-muted);
+  font-size: 0.78rem;
+}
+
+#{{ $id }} .vgc-name {
+  margin: 0.1rem 0 0.45rem;
+
+  font-size: 1.25rem;
+}
+
+#{{ $id }} .vgc-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+#{{ $id }} .vgc-type {
+  display: inline-block;
+
+  padding: 0.15rem 0.4rem;
+
+  border: 1px solid var(--vgc-border);
+  border-radius: 999px;
+
+  color: var(--vgc-muted);
+
+  font-size: 0.68rem;
+}
+
+#{{ $id }} .vgc-detail-section {
+  margin-top: 1.15rem;
+}
+
+#{{ $id }} .vgc-detail-section h5 {
+  margin: 0 0 0.4rem;
+
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+#{{ $id }} .vgc-detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 0.27rem 0;
+
+  color: var(--vgc-muted);
+
+  font-size: 0.8rem;
+}
+
+#{{ $id }} .vgc-detail-row strong {
+  color: var(--vgc-text);
+  font-weight: 500;
+}
+
+#{{ $id }} .vgc-node {
+  cursor: grab;
+}
+
+#{{ $id }} .vgc-node:active {
+  cursor: grabbing;
+}
+
+#{{ $id }} .vgc-node-circle {
+  stroke: rgba(99, 102, 241, 0.48);
+  stroke-width: 2;
+
+  transition:
+    stroke 0.15s ease,
+    stroke-width 0.15s ease,
+    opacity 0.15s ease;
+}
+
+#{{ $id }} .vgc-node.selected .vgc-node-circle {
+  stroke: rgba(99, 102, 241, 1);
+  stroke-width: 4;
+}
+
+#{{ $id }} .vgc-node.dimmed {
+  opacity: 0.28;
+}
+
+#{{ $id }} .vgc-node-label {
+  fill: var(--vgc-text);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-anchor: middle;
+
+  pointer-events: none;
+}
+
+
+#{{ $id }} .vgc-node-rank {
+  fill: var(--vgc-text);
+  text-anchor: middle;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+#{{ $id }} .vgc-edge {
+  stroke: var(--vgc-edge);
+
+  stroke-linecap: round;
+
+  transition:
+    stroke 0.15s ease,
+    opacity 0.15s ease;
+}
+
+#{{ $id }} .vgc-edge.active {
+  stroke: var(--vgc-edge-active);
+}
+
+#{{ $id }} .vgc-edge.dimmed {
+  opacity: 0.08;
+}
+
+#{{ $id }} .vgc-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+
+  margin-top: 0.8rem;
+
+  color: var(--vgc-muted);
+  font-size: 0.72rem;
+}
+
+#{{ $id }} .vgc-legend > div {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+#{{ $id }} .vgc-legend-node {
+  display: inline-block;
+
+  border: 2px solid rgba(99, 102, 241, 0.7);
+  border-radius: 50%;
+
+  background: var(--vgc-node-bg);
+}
+
+#{{ $id }} .vgc-legend-node.large {
+  width: 18px;
+  height: 18px;
+}
+
+#{{ $id }} .vgc-legend-node.small {
+  width: 10px;
+  height: 10px;
+}
+
+#{{ $id }} .vgc-legend-edge {
+  display: inline-block;
+
+  width: 26px;
+  height: 3px;
+
+  border-radius: 99px;
+
+  background: var(--vgc-edge);
+}
+
+#{{ $id }} .vgc-attribution {
+  margin-top: 1rem;
+
+  color: var(--vgc-muted);
+
+  text-align: center;
+  font-size: 0.72rem;
+}
+
+#{{ $id }} .vgc-attribution a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+
+  #{{ $id }} .vgc-header {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #{{ $id }} .vgc-metadata {
+    align-items: flex-start;
+  }
+
+  #{{ $id }} .vgc-main {
+    grid-template-columns: 1fr;
+  }
+
+  #{{ $id }} .vgc-network {
+    min-height: 430px;
+  }
+
+}
+
+</style>
+
+
+<script>
+(() => {
+
+  const root =
+    document.getElementById("{{ $id }}");
+
+  if (!root) return;
+
+  const svg =
+    root.querySelector(".vgc-network");
+
+  const details =
+    root.querySelector(".vgc-selected");
+
+  const placeholder =
+    root.querySelector(".vgc-placeholder");
+
+  const namespace =
+    "http://www.w3.org/2000/svg";
+
+  const WIDTH = 700;
+  const HEIGHT = 560;
+
+  let nodes = [];
+  let links = [];
+
+  let selectedId = null;
+  let dragging = null;
+  let panning = null;
+
+  let zoom = 1;
+  const MIN_ZOOM = 0.65;
+  const MAX_ZOOM = 2.5;
+  let viewCenterX = WIDTH / 2;
+  let viewCenterY = HEIGHT / 2;
+
+
+  // ==========================================================
+  // Helpers
+  // ==========================================================
+
+  function svgElement(name) {
+
+    return document.createElementNS(
+      namespace,
+      name
+    );
+  }
+
+
+  function nodeRadius(rank) {
+
+    const best = 38;
+    const smallest = 24;
+
+    const fraction =
+      (rank - 1) / 14;
+
+    return (
+      best
+      -
+      fraction *
+      (best - smallest)
+    );
+  }
+
+
+  function edgeWidth(strength) {
+
+    return (
+      1
+      +
+      Math.min(
+        5,
+        strength * 6
+      )
+    );
+  }
+
+function typePalette() {
+
+  return {
+    normal:   "#8a8a78",
+    fire:     "#c75b39",
+    water:    "#4779bd",
+    electric: "#c7a72c",
+    grass:    "#60974a",
+    ice:      "#65a6a5",
+    fighting: "#a6463c",
+    poison:   "#87558d",
+    ground:   "#b48b4e",
+    flying:   "#767bad",
+    psychic:  "#b95076",
+    bug:      "#7d8d37",
+    rock:     "#8f7b48",
+    ghost:    "#625d82",
+    dragon:   "#6154a2",
+    dark:     "#514b47",
+    steel:    "#787f8e",
+    fairy:    "#ad6c91"
+  };
+}
+
+
+function typeColors(types) {
+
+  const palette =
+    typePalette();
+
+  if (!types || types.length === 0) {
+    return ["#6366f1"];
+  }
+
+  const colors =
+    types
+      .map(
+        type =>
+          palette[
+            String(type)
+              .trim()
+              .toLowerCase()
+          ]
+      )
+      .filter(Boolean);
+
+  return (
+    colors.length
+      ? colors
+      : ["#6366f1"]
+  );
+}
+
+
+  function percentageText(value) {
+
+    if (
+      value === null
+      ||
+      value === undefined
+    ) {
+      return "";
+    }
+
+    return `${value}%`;
+  }
+
+
+  function updateViewBox() {
+
+    const visibleWidth =
+      WIDTH / zoom;
+
+    const visibleHeight =
+      HEIGHT / zoom;
+
+    const x =
+      viewCenterX
+      -
+      visibleWidth / 2;
+
+    const y =
+      viewCenterY
+      -
+      visibleHeight / 2;
+
+    svg.setAttribute(
+      "viewBox",
+      `${x} ${y} ${visibleWidth} ${visibleHeight}`
+    );
+  }
+
+
+  function clampViewCenter() {
+
+    const visibleWidth =
+      WIDTH / zoom;
+
+    const visibleHeight =
+      HEIGHT / zoom;
+
+    // When zoomed out far enough to see beyond the base canvas,
+    // keep the graph centered on that axis.
+    if (visibleWidth >= WIDTH) {
+      viewCenterX = WIDTH / 2;
+    } else {
+      viewCenterX =
+        Math.max(
+          visibleWidth / 2,
+          Math.min(
+            WIDTH - visibleWidth / 2,
+            viewCenterX
+          )
+        );
+    }
+
+    if (visibleHeight >= HEIGHT) {
+      viewCenterY = HEIGHT / 2;
+    } else {
+      viewCenterY =
+        Math.max(
+          visibleHeight / 2,
+          Math.min(
+            HEIGHT - visibleHeight / 2,
+            viewCenterY
+          )
+        );
+    }
+  }
+
+
+  function setZoomAroundPoint(
+    newZoom,
+    clientX,
+    clientY
+  ) {
+
+    const rect =
+      svg.getBoundingClientRect();
+
+    if (
+      !rect.width
+      ||
+      !rect.height
+    ) {
+      return;
+    }
+
+    const u =
+      (clientX - rect.left)
+      /
+      rect.width;
+
+    const v =
+      (clientY - rect.top)
+      /
+      rect.height;
+
+    const oldVisibleWidth =
+      WIDTH / zoom;
+
+    const oldVisibleHeight =
+      HEIGHT / zoom;
+
+    const oldLeft =
+      viewCenterX
+      -
+      oldVisibleWidth / 2;
+
+    const oldTop =
+      viewCenterY
+      -
+      oldVisibleHeight / 2;
+
+    // SVG coordinate currently underneath the pointer.
+    const anchorX =
+      oldLeft
+      +
+      u * oldVisibleWidth;
+
+    const anchorY =
+      oldTop
+      +
+      v * oldVisibleHeight;
+
+    zoom =
+      Math.max(
+        MIN_ZOOM,
+        Math.min(
+          MAX_ZOOM,
+          newZoom
+        )
+      );
+
+    const newVisibleWidth =
+      WIDTH / zoom;
+
+    const newVisibleHeight =
+      HEIGHT / zoom;
+
+    // Keep the same SVG point underneath the cursor.
+    viewCenterX =
+      anchorX
+      -
+      (u - 0.5)
+      *
+      newVisibleWidth;
+
+    viewCenterY =
+      anchorY
+      -
+      (v - 0.5)
+      *
+      newVisibleHeight;
+
+    clampViewCenter();
+    updateViewBox();
+  }
+
+
+  root.querySelector(
+    ".vgc-zoom-in"
+  ).addEventListener(
+    "click",
+    () => {
+
+      zoom = Math.min(
+        MAX_ZOOM,
+        zoom * 1.25
+      );
+
+      clampViewCenter();
+      updateViewBox();
+    }
+  );
+
+
+  root.querySelector(
+    ".vgc-zoom-out"
+  ).addEventListener(
+    "click",
+    () => {
+
+      zoom = Math.max(
+        MIN_ZOOM,
+        zoom / 1.25
+      );
+
+      clampViewCenter();
+      updateViewBox();
+    }
+  );
+
+
+  root.querySelector(
+    ".vgc-zoom-reset"
+  ).addEventListener(
+    "click",
+    () => {
+
+      zoom = 1;
+      viewCenterX = WIDTH / 2;
+      viewCenterY = HEIGHT / 2;
+
+      updateViewBox();
+    }
+  );
+
+
+  // ==========================================================
+  // Details
+  // ==========================================================
+
+  function fillRows(
+    element,
+    rows,
+    showPercent = true
+  ) {
+
+    element.innerHTML = "";
+
+    if (!rows || rows.length === 0) {
+
+      const row =
+        document.createElement("div");
+
+      row.className =
+        "vgc-detail-row";
+
+      row.textContent =
+        "No data available";
+
+      element.appendChild(row);
+
+      return;
+    }
+
+    rows.forEach(rowData => {
+
+      const row =
+        document.createElement("div");
+
+      row.className =
+        "vgc-detail-row";
+
+      const name =
+        document.createElement("strong");
+
+      name.textContent =
+        rowData.name;
+
+      const value =
+        document.createElement("span");
+
+      if (
+        showPercent
+        &&
+        rowData.percentage !== null
+        &&
+        rowData.percentage !== undefined
+      ) {
+
+        value.textContent =
+          percentageText(
+            rowData.percentage
+          );
+
+      } else {
+
+        value.textContent =
+          rowData.rank
+          ? `#${rowData.rank}`
+          : "";
+      }
+
+      row.appendChild(name);
+      row.appendChild(value);
+
+      element.appendChild(row);
+
+    });
+
+  }
+
+
+  function selectNode(node) {
+
+    selectedId =
+      node.id;
+
+    placeholder.hidden =
+      true;
+
+    details.hidden =
+      false;
+      
+root.querySelector(
+  ".vgc-detail-rank-number"
+).textContent =
+  `#${node.rank}`;
+
+    root.querySelector(
+      ".vgc-rank"
+    ).textContent =
+      `#${node.rank} · Current Doubles`;
+
+    root.querySelector(
+      ".vgc-name"
+    ).textContent =
+      node.name;
+
+    const types =
+      root.querySelector(
+        ".vgc-types"
+      );
+
+    types.innerHTML = "";
+
+    (node.types || []).forEach(
+      type => {
+
+        const span =
+          document.createElement(
+            "span"
+          );
+
+        span.className =
+          "vgc-type";
+
+        span.textContent =
+          type;
+
+        types.appendChild(span);
+
+      }
+    );
+
+    fillRows(
+      root.querySelector(
+        ".vgc-moves"
+      ),
+      node.moves,
+      true
+    );
+
+    fillRows(
+      root.querySelector(
+        ".vgc-items"
+      ),
+      node.items,
+      true
+    );
+
+    fillRows(
+      root.querySelector(
+        ".vgc-abilities"
+      ),
+      node.abilities,
+      true
+    );
+
+    fillRows(
+      root.querySelector(
+        ".vgc-teammates"
+      ),
+      node.teammates,
+      false
+    );
+
+    updateHighlighting();
+
+  }
+
+
+  // ==========================================================
+  // Highlighting
+  // ==========================================================
+
+  function updateHighlighting() {
+
+    const nodeElements =
+      svg.querySelectorAll(
+        ".vgc-node"
+      );
+
+    const edgeElements =
+      svg.querySelectorAll(
+        ".vgc-edge"
+      );
+
+    if (!selectedId) {
+
+      nodeElements.forEach(
+        node => {
+
+          node.classList.remove(
+            "selected",
+            "dimmed"
+          );
+
+        }
+      );
+
+      edgeElements.forEach(
+        edge => {
+
+          edge.classList.remove(
+            "active",
+            "dimmed"
+          );
+
+        }
+      );
+
+      return;
+    }
+
+    const connected =
+      new Set([selectedId]);
+
+    links.forEach(link => {
+
+      if (
+        link.source === selectedId
+      ) {
+
+        connected.add(
+          link.target
+        );
+
+      }
+
+      if (
+        link.target === selectedId
+      ) {
+
+        connected.add(
+          link.source
+        );
+
+      }
+
+    });
+
+    nodeElements.forEach(
+      element => {
+
+        const id =
+          element.dataset.id;
+
+        element.classList.toggle(
+          "selected",
+          id === selectedId
+        );
+
+        element.classList.toggle(
+          "dimmed",
+          !connected.has(id)
+        );
+
+      }
+    );
+
+    edgeElements.forEach(
+      element => {
+
+        const source =
+          element.dataset.source;
+
+        const target =
+          element.dataset.target;
+
+        const active =
+          source === selectedId
+          ||
+          target === selectedId;
+
+        element.classList.toggle(
+          "active",
+          active
+        );
+
+        element.classList.toggle(
+          "dimmed",
+          !active
+        );
+
+      }
+    );
+
+  }
+
+
+  // ==========================================================
+  // Initial positions
+  // ==========================================================
+
+  function initializePositions() {
+
+    const centerX =
+      WIDTH / 2;
+
+    const centerY =
+      HEIGHT / 2;
+
+    const outerRadius =
+      205;
+
+    nodes.forEach(
+      (node, index) => {
+
+        const angle =
+          (
+            2 *
+            Math.PI *
+            index /
+            nodes.length
+          )
+          -
+          Math.PI / 2;
+
+        node.x =
+          centerX
+          +
+          outerRadius *
+          Math.cos(angle);
+
+        node.y =
+          centerY
+          +
+          outerRadius *
+          Math.sin(angle);
+
+        node.vx = 0;
+        node.vy = 0;
+
+      }
+    );
+
+  }
+
+
+  // ==========================================================
+  // Simple force simulation
+  // ==========================================================
+
+  function simulate() {
+
+    const nodeMap =
+      new Map(
+        nodes.map(
+          node => [
+            node.id,
+            node
+          ]
+        )
+      );
+
+    for (
+      let iteration = 0;
+      iteration < 280;
+      iteration++
+    ) {
+
+      // Repulsion
+      for (
+        let i = 0;
+        i < nodes.length;
+        i++
+      ) {
+
+        for (
+          let j = i + 1;
+          j < nodes.length;
+          j++
+        ) {
+
+          const a =
+            nodes[i];
+
+          const b =
+            nodes[j];
+
+          let dx =
+            b.x - a.x;
+
+          let dy =
+            b.y - a.y;
+
+          let distanceSquared =
+            dx * dx +
+            dy * dy;
+
+          if (
+            distanceSquared < 1
+          ) {
+            distanceSquared = 1;
+          }
+
+          const distance =
+            Math.sqrt(
+              distanceSquared
+            );
+
+          const force =
+            850 /
+            distanceSquared;
+
+          const fx =
+            force *
+            dx /
+            distance;
+
+          const fy =
+            force *
+            dy /
+            distance;
+
+          a.vx -= fx;
+          a.vy -= fy;
+
+          b.vx += fx;
+          b.vy += fy;
+
+        }
+      }
+
+
+      // Springs
+      links.forEach(
+        link => {
+
+          const a =
+            nodeMap.get(
+              link.source
+            );
+
+          const b =
+            nodeMap.get(
+              link.target
+            );
+
+          if (!a || !b) return;
+
+          let dx =
+            b.x - a.x;
+
+          let dy =
+            b.y - a.y;
+
+          let distance =
+            Math.sqrt(
+              dx * dx +
+              dy * dy
+            );
+
+          if (distance < 1) {
+            distance = 1;
+          }
+
+          const ideal =
+            125;
+
+          const spring =
+            (
+              distance - ideal
+            )
+            *
+            (
+              0.0008
+              +
+              link.strength *
+              0.002
+            );
+
+          const fx =
+            spring *
+            dx;
+
+          const fy =
+            spring *
+            dy;
+
+          a.vx += fx;
+          a.vy += fy;
+
+          b.vx -= fx;
+          b.vy -= fy;
+
+        }
+      );
+
+
+      // Gravity toward center
+      nodes.forEach(
+        node => {
+
+          node.vx +=
+            (
+              WIDTH / 2 -
+              node.x
+            )
+            *
+            0.0007;
+
+          node.vy +=
+            (
+              HEIGHT / 2 -
+              node.y
+            )
+            *
+            0.0007;
+
+
+          node.vx *= 0.82;
+          node.vy *= 0.82;
+
+          node.x += node.vx;
+          node.y += node.vy;
+
+
+          const margin =
+            nodeRadius(
+              node.rank
+            )
+            +
+            35;
+
+          node.x =
+            Math.max(
+              margin,
+              Math.min(
+                WIDTH - margin,
+                node.x
+              )
+            );
+
+          node.y =
+            Math.max(
+              margin,
+              Math.min(
+                HEIGHT - margin,
+                node.y
+              )
+            );
+
+        }
+      );
+
+    }
+
+  }
+
+
+  // ==========================================================
+  // SVG rendering
+  // ==========================================================
+
+  function render() {
+
+    svg.innerHTML = "";
+
+    const defs =
+      svgElement("defs");
+
+    svg.appendChild(defs);
+
+    const nodeMap =
+      new Map(
+        nodes.map(
+          node => [
+            node.id,
+            node
+          ]
+        )
+      );
+
+
+    // Edges first
+    links.forEach(
+      link => {
+
+        const source =
+          nodeMap.get(
+            link.source
+          );
+
+        const target =
+          nodeMap.get(
+            link.target
+          );
+
+        if (
+          !source
+          ||
+          !target
+        ) {
+          return;
+        }
+
+        const line =
+          svgElement("line");
+
+        line.classList.add(
+          "vgc-edge"
+        );
+
+        line.dataset.source =
+          link.source;
+
+        line.dataset.target =
+          link.target;
+
+        line.setAttribute(
+          "x1",
+          source.x
+        );
+
+        line.setAttribute(
+          "y1",
+          source.y
+        );
+
+        line.setAttribute(
+          "x2",
+          target.x
+        );
+
+        line.setAttribute(
+          "y2",
+          target.y
+        );
+
+        line.setAttribute(
+          "stroke-width",
+          edgeWidth(
+            link.strength
+          )
+        );
+
+        svg.appendChild(
+          line
+        );
+
+      }
+    );
+
+
+    // Nodes
+    nodes.forEach(
+      node => {
+
+        const radius =
+          nodeRadius(
+            node.rank
+          );
+
+        const group =
+          svgElement("g");
+
+        group.classList.add(
+          "vgc-node"
+        );
+
+        group.dataset.id =
+          node.id;
+
+        group.setAttribute(
+          "transform",
+          `translate(${node.x}, ${node.y})`
+        );
+
+
+        const circle =
+          svgElement("circle");
+
+        circle.classList.add(
+          "vgc-node-circle"
+        );
+
+        circle.setAttribute(
+          "r",
+          radius
+        );
+
+        const colors =
+          typeColors(
+            node.types
+          );
+
+        if (colors.length >= 2) {
+
+          const gradientId =
+            `{{ $id }}-gradient-${node.id}`;
+
+          const gradient =
+            svgElement(
+              "linearGradient"
+            );
+
+          gradient.setAttribute(
+            "id",
+            gradientId
+          );
+
+          gradient.setAttribute(
+            "x1",
+            "0%"
+          );
+
+          gradient.setAttribute(
+            "y1",
+            "0%"
+          );
+
+          gradient.setAttribute(
+            "x2",
+            "100%"
+          );
+
+          gradient.setAttribute(
+            "y2",
+            "0%"
+          );
+
+          const firstStop =
+            svgElement("stop");
+
+          firstStop.setAttribute(
+            "offset",
+            "0%"
+          );
+
+          firstStop.setAttribute(
+            "stop-color",
+            colors[0]
+          );
+
+          const secondStop =
+            svgElement("stop");
+
+          secondStop.setAttribute(
+            "offset",
+            "100%"
+          );
+
+          secondStop.setAttribute(
+            "stop-color",
+            colors[1]
+          );
+
+          gradient.appendChild(
+            firstStop
+          );
+
+          gradient.appendChild(
+            secondStop
+          );
+
+          defs.appendChild(
+            gradient
+          );
+
+          circle.setAttribute(
+            "fill",
+            `url(#${gradientId})`
+          );
+
+          circle.setAttribute(
+            "fill-opacity",
+            "0.46"
+          );
+
+        } else {
+
+          circle.setAttribute(
+            "fill",
+            colors[0]
+          );
+
+          circle.setAttribute(
+            "fill-opacity",
+            "0.36"
+          );
+        }
+
+        group.appendChild(
+          circle
+        );
+
+const rankLabel =
+  svgElement("text");
+
+rankLabel.classList.add(
+  "vgc-node-rank"
+);
+
+rankLabel.setAttribute(
+  "x",
+  0
+);
+
+rankLabel.setAttribute(
+  "y",
+  5
+);
+
+rankLabel.setAttribute(
+  "text-anchor",
+  "middle"
+);
+
+rankLabel.setAttribute(
+  "fill",
+  "var(--vgc-text)"
+);
+
+rankLabel.setAttribute(
+  "font-size",
+  Math.max(
+    13,
+    radius * 0.48
+  )
+);
+
+rankLabel.setAttribute(
+  "font-weight",
+  "700"
+);
+
+rankLabel.style.pointerEvents =
+  "none";
+
+rankLabel.textContent =
+  `#${node.rank}`;
+
+group.appendChild(
+  rankLabel
+);
+        
+
+        const label =
+          svgElement("text");
+
+        label.classList.add(
+          "vgc-node-label"
+        );
+
+        label.setAttribute(
+          "y",
+          radius + 17
+        );
+
+        label.textContent =
+  node.name;
+
+        group.appendChild(
+          label
+        );
+
+
+        group.addEventListener(
+          "click",
+          event => {
+
+            event.stopPropagation();
+
+            selectNode(
+              node
+            );
+
+          }
+        );
+
+
+        group.addEventListener(
+          "pointerdown",
+          event => {
+
+            dragging = {
+              node,
+              pointerId:
+                event.pointerId
+            };
+
+            group.setPointerCapture(
+              event.pointerId
+            );
+
+            event.stopPropagation();
+            event.preventDefault();
+
+          }
+        );
+
+
+        group.addEventListener(
+          "pointermove",
+          event => {
+
+            if (
+              !dragging
+              ||
+              dragging.node !== node
+            ) {
+              return;
+            }
+
+            const point =
+              svg.createSVGPoint();
+
+            point.x =
+              event.clientX;
+
+            point.y =
+              event.clientY;
+
+            const matrix =
+              svg.getScreenCTM();
+
+            if (!matrix) {
+              return;
+            }
+
+            const svgPoint =
+              point.matrixTransform(
+                matrix.inverse()
+              );
+
+            node.x =
+              svgPoint.x;
+
+            node.y =
+              svgPoint.y;
+
+            render();
+
+          }
+        );
+
+
+        group.addEventListener(
+          "pointerup",
+          () => {
+            dragging = null;
+          }
+        );
+
+
+        svg.appendChild(
+          group
+        );
+
+      }
+    );
+
+
+    updateHighlighting();
+
+  }
+
+
+
+  // ==========================================================
+  // Pan / scroll navigation
+  // ==========================================================
+
+  svg.addEventListener(
+    "pointerdown",
+    event => {
+
+      // Node pointerdown handlers stop propagation, so reaching
+      // this handler means the user grabbed empty graph space.
+      if (event.button !== 0) {
+        return;
+      }
+
+      panning = {
+        pointerId: event.pointerId,
+        startClientX: event.clientX,
+        startClientY: event.clientY,
+        startCenterX: viewCenterX,
+        startCenterY: viewCenterY
+      };
+
+      svg.setPointerCapture(
+        event.pointerId
+      );
+
+      svg.classList.add(
+        "is-panning"
+      );
+
+      event.preventDefault();
+    }
+  );
+
+
+  svg.addEventListener(
+    "pointermove",
+    event => {
+
+      if (
+        !panning
+        ||
+        panning.pointerId !== event.pointerId
+      ) {
+        return;
+      }
+
+      const rect =
+        svg.getBoundingClientRect();
+
+      if (
+        !rect.width
+        ||
+        !rect.height
+      ) {
+        return;
+      }
+
+      const visibleWidth =
+        WIDTH / zoom;
+
+      const visibleHeight =
+        HEIGHT / zoom;
+
+      const dx =
+        (
+          event.clientX
+          -
+          panning.startClientX
+        )
+        *
+        (
+          visibleWidth
+          /
+          rect.width
+        );
+
+      const dy =
+        (
+          event.clientY
+          -
+          panning.startClientY
+        )
+        *
+        (
+          visibleHeight
+          /
+          rect.height
+        );
+
+      // Dragging the viewport right reveals content to the left,
+      // hence the subtraction.
+      viewCenterX =
+        panning.startCenterX
+        -
+        dx;
+
+      viewCenterY =
+        panning.startCenterY
+        -
+        dy;
+
+      clampViewCenter();
+      updateViewBox();
+    }
+  );
+
+
+  function stopPanning(
+    event
+  ) {
+
+    if (!panning) {
+      return;
+    }
+
+    if (
+      event
+      &&
+      event.pointerId !== undefined
+      &&
+      panning.pointerId !== event.pointerId
+    ) {
+      return;
+    }
+
+    if (
+      svg.hasPointerCapture(
+        panning.pointerId
+      )
+    ) {
+      svg.releasePointerCapture(
+        panning.pointerId
+      );
+    }
+
+    panning = null;
+
+    svg.classList.remove(
+      "is-panning"
+    );
+  }
+
+
+  svg.addEventListener(
+    "pointerup",
+    stopPanning
+  );
+
+  svg.addEventListener(
+    "pointercancel",
+    stopPanning
+  );
+
+
+  svg.addEventListener(
+    "wheel",
+    event => {
+
+      // Ctrl/Cmd + wheel (including many trackpad pinch gestures)
+      // zooms around the pointer instead of the center.
+      if (
+        event.ctrlKey
+        ||
+        event.metaKey
+      ) {
+
+        event.preventDefault();
+
+        const factor =
+          Math.exp(
+            -event.deltaY * 0.002
+          );
+
+        setZoomAroundPoint(
+          zoom * factor,
+          event.clientX,
+          event.clientY
+        );
+
+        return;
+      }
+
+
+      // At the default zoom, leave ordinary wheel scrolling to
+      // the page. Once the user zooms in, wheel/trackpad movement
+      // pans around the graph.
+      if (zoom <= 1.001) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const rect =
+        svg.getBoundingClientRect();
+
+      if (
+        !rect.width
+        ||
+        !rect.height
+      ) {
+        return;
+      }
+
+      const visibleWidth =
+        WIDTH / zoom;
+
+      const visibleHeight =
+        HEIGHT / zoom;
+
+      viewCenterX +=
+        event.deltaX
+        *
+        (
+          visibleWidth
+          /
+          rect.width
+        );
+
+      viewCenterY +=
+        event.deltaY
+        *
+        (
+          visibleHeight
+          /
+          rect.height
+        );
+
+      clampViewCenter();
+      updateViewBox();
+    },
+    {
+      passive: false
+    }
+  );
+
+
+  // ==========================================================
+  // Load data
+  // ==========================================================
+
+  fetch(
+    "/data/vgc-meta.json"
+  )
+    .then(response => {
+
+      if (!response.ok) {
+
+        throw new Error(
+          `HTTP ${response.status}`
+        );
+
+      }
+
+      return response.json();
+
+    })
+    .then(data => {
+
+      nodes =
+        data.pokemon || [];
+
+      links =
+        data.links || [];
+
+
+      root.querySelector(
+        ".vgc-format"
+      ).textContent =
+        `${data.format || "Doubles"} · ${data.season || "Current"}`;
+
+
+      root.querySelector(
+        ".vgc-updated"
+      ).textContent =
+        data.updated
+        ? `Updated ${data.updated}`
+        : "";
+
+
+      root.querySelector(
+        ".vgc-attribution-date"
+      ).textContent =
+        data.updated || "current";
+
+
+      initializePositions();
+
+      simulate();
+
+      render();
+
+      updateViewBox();
+
+    })
+    .catch(error => {
+
+      console.error(
+        "Unable to load VGC data:",
+        error
+      );
+
+      root.querySelector(
+        ".vgc-network-wrap"
+      ).innerHTML =
+        `
+        <div style="
+          padding: 4rem 2rem;
+          text-align: center;
+          color: var(--vgc-muted);
+        ">
+          Competitive data could not be loaded.
+        </div>
+        `;
+
+    });
+
+})();
+</script>

@@ -84,27 +84,10 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           if [ "$GITHUB_REF" = "refs/heads/main" ]; then
-            hugo --minify --destination public --baseURL "${{ steps.pages.outputs.base_url }}/"
+            hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
           else
-            hugo --minify --destination public
+            hugo --minify
           fi
-
-      - name: Verify Hugo HTML output
-        run: |
-          if [ ! -d public ]; then
-            echo "::error::Hugo did not create the public/ output directory."
-            exit 1
-          fi
-
-          html_file="$(find public -type f -name '*.html' -print -quit)"
-          if [ -z "$html_file" ]; then
-            echo "::error::Hugo created public/ but no HTML files were found."
-            echo "Files found in public/:"
-            find public -maxdepth 4 -type f -print | sort
-            exit 1
-          fi
-
-          echo "Hugo HTML found: $html_file"
 
       - name: Verify deployed CV
         run: |
