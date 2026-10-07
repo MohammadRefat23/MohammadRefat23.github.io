@@ -55,6 +55,10 @@ The animation below, made with Manim, shows individual real spherical-harmonic m
   Increasing the degree allows progressively finer angular structure.
 </p>
 
+You can explore individual modes below by changing the degree \(\ell\) and order \(m\).
+
+{{< spherical-harmonics >}}
+
 The lobed shapes visualize the mathematics; the star itself is not being deformed. The basis describes how a quantity such as **brightness varies across the surface of a fixed sphere**. The displayed modes illustrate how the degree \(\ell\) and order \(m\) change the angular pattern.
 
 Higher values of \(\ell\) represent smaller-scale structure. A complete surface map can be built from a weighted combination of modes, and the inference problem is to determine which combinations the light curve supports.
