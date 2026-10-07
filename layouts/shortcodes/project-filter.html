@@ -5,7 +5,7 @@
     {{- $tagList = $tagList | append . -}}
   {{- end -}}
 {{- end -}}
-{{- $tags := sortAlpha (uniq $tagList) -}}
+{{- $tags := sort (uniq $tagList) -}}
 
 <section class="project-filter" data-project-filter>
   <div class="project-filter__controls" role="group" aria-label="Filter projects by tag">
