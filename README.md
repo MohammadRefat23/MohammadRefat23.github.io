@@ -32,7 +32,7 @@ pnpm build
 
 ## Deployment
 
-GitHub Actions builds and deploys the site to GitHub Pages when changes are pushed to the `main` branch. The workflow also compiles the CV from the `MohammadRefat23/cv` repository and includes it in the site, then generates a Pagefind search index.
+GitHub Actions builds and deploys the site to GitHub Pages when changes are pushed to the `main` branch. The workflow checks out the separate `MohammadRefat23/cv` and `MohammadRefat23/resume` repositories, compiles both documents, includes them in the site, then generates a Pagefind search index. A push to either source repository dispatches this deployment workflow.
 
 ## Built with
 

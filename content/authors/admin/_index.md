@@ -14,7 +14,7 @@ status:
 superuser: true
 highlight_name: true
 
-role: Computational Astrophysics
+role: Computational Physicist
 
 organizations:
   - name: M.S. in Astrophysics · The Graduate Center, CUNY
@@ -117,8 +117,8 @@ skills:
         icon: server
 ---
 
-I am a computational astrophysicist who uses numerical modeling, statistical inference, and scientific computing to study complex physical systems. My work centers on inverse problems: recovering physical structure and behavior from incomplete, noisy, or indirect observations.
+I am a computational physicist with a research background in astrophysics. I use numerical modeling, statistical inference, and scientific computing to study complex physical systems, with experience in inverse problems and recovering physical structure from incomplete observations.
 
 I earned an M.S. in Astrophysics from the [CUNY Graduate Center](https://www.gc.cuny.edu/physics). My thesis, [_Starspot Inference Using Light Curve Inversion Techniques_](https://academicworks.cuny.edu/gc_etds/6480/), examined what stellar surface information can be recovered reliably from rotational photometric light curves.
 
-My research spans stellar surface mapping, brown-dwarf and exoplanet atmospheric variability, Galactic archaeology, stellar spectroscopy, and the star-forming interstellar medium. I am now interested in applying inverse methods, probabilistic modeling, numerical simulation, and scientific machine learning to complex systems in soft condensed matter and biophysics.
+My research spans stellar surface mapping, brown-dwarf and exoplanet atmospheric variability, Galactic archaeology, stellar spectroscopy, and the star-forming interstellar medium. My current interests include computational materials physics, molecular materials, and atomistic simulation, alongside broader work on complex systems in soft matter and biophysics.

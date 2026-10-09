@@ -1,4 +1,4 @@
-name: Build CV and Hugo Site
+name: Build CV, résumé, and Hugo Site
 
 env:
   HUGO_VERSION: "0.152.2"
@@ -38,6 +38,13 @@ jobs:
           ref: main
           path: external-cv
 
+      - name: Checkout résumé repository
+        uses: actions/checkout@v6
+        with:
+          repository: MohammadRefat23/resume
+          ref: main
+          path: external-resume
+
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
 
@@ -57,11 +64,21 @@ jobs:
           working_directory: external-cv
           os: debian
 
-      - name: Copy CV into Hugo static files
+      - name: Compile industry résumé
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: Mohammad_Alvi_Refat_Resume.tex
+          working_directory: external-resume
+          os: debian
+
+      - name: Copy CV and résumé into Hugo static files
         run: |
           mkdir -p static/uploads
+          test -s external-cv/cv.pdf
+          test -s external-resume/Mohammad_Alvi_Refat_Resume.pdf
           cp external-cv/cv.pdf static/uploads/Mohammad_Alvi_Refat_CV.pdf
           cp external-cv/cv.pdf static/uploads/Mohammad_Refat_CV.pdf
+          cp external-resume/Mohammad_Alvi_Refat_Resume.pdf static/uploads/Mohammad_Alvi_Refat_Resume.pdf
 
           if [ ! -s static/uploads/Mohammad_Alvi_Refat_CV.pdf ]; then
             echo "CV PDF was not created correctly."
@@ -89,10 +106,11 @@ jobs:
             hugo --minify
           fi
 
-      - name: Verify deployed CV
+      - name: Verify deployed documents
         run: |
           test -s public/uploads/Mohammad_Alvi_Refat_CV.pdf
-          echo "CV is included in the Hugo build."
+          test -s public/uploads/Mohammad_Alvi_Refat_Resume.pdf
+          echo "Academic CV and industry résumé are included in the Hugo build."
 
       - name: Generate Pagefind index
         run: pnpm dlx pagefind --site public
