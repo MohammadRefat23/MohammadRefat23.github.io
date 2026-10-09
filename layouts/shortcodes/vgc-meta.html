@@ -1284,7 +1284,7 @@ root.querySelector(
             );
 
           const force =
-            850 /
+            1200 /
             distanceSquared;
 
           const fx =
@@ -1340,7 +1340,7 @@ root.querySelector(
           }
 
           const ideal =
-            125;
+            130;
 
           const spring =
             (
@@ -1356,11 +1356,13 @@ root.querySelector(
 
           const fx =
             spring *
-            dx;
+            dx /
+            distance;
 
           const fy =
             spring *
-            dy;
+            dy /
+            distance;
 
           a.vx += fx;
           a.vy += fy;
