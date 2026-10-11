@@ -1,0 +1,2735 @@
+{
+  "schema_version": 2,
+  "month": "2026-05",
+  "format": "Doubles Bo3",
+  "regulation": "M-A",
+  "format_id": "gen9championsvgc2026regmabo3",
+  "rating_cutoff": 1630,
+  "total_battles": 307577,
+  "avg_weight_per_team": 0.244,
+  "source": "Smogon / Pokémon Showdown",
+  "source_url": "https://www.smogon.com/stats/2026-05/gen9championsvgc2026regmabo3-1630.txt",
+  "attribution": "Usage statistics: Smogon / Pokémon Showdown",
+  "pokemon": [
+    {
+      "id": "basculegion",
+      "name": "Basculegion",
+      "rank": 1,
+      "usage_pct": 52.95054,
+      "raw": 235290,
+      "raw_pct": 38.249,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "garchomp",
+      "name": "Garchomp",
+      "rank": 2,
+      "usage_pct": 45.05689,
+      "raw": 221550,
+      "raw_pct": 36.015,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "kingambit",
+      "name": "Kingambit",
+      "rank": 3,
+      "usage_pct": 44.79202,
+      "raw": 204968,
+      "raw_pct": 33.32,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "sneasler",
+      "name": "Sneasler",
+      "rank": 4,
+      "usage_pct": 32.09968,
+      "raw": 194741,
+      "raw_pct": 31.657,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "charizardmegay",
+      "name": "Charizard-Mega-Y",
+      "rank": 5,
+      "usage_pct": 32.07199,
+      "raw": 141268,
+      "raw_pct": 22.965,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "incineroar",
+      "name": "Incineroar",
+      "rank": 6,
+      "usage_pct": 30.38557,
+      "raw": 179911,
+      "raw_pct": 29.246,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "floettemega",
+      "name": "Floette-Mega",
+      "rank": 7,
+      "usage_pct": 26.41026,
+      "raw": 107175,
+      "raw_pct": 17.422,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "whimsicott",
+      "name": "Whimsicott",
+      "rank": 8,
+      "usage_pct": 20.69994,
+      "raw": 106059,
+      "raw_pct": 17.241,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "sinistcha",
+      "name": "Sinistcha",
+      "rank": 9,
+      "usage_pct": 19.75185,
+      "raw": 137248,
+      "raw_pct": 22.311,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "aerodactylmega",
+      "name": "Aerodactyl-Mega",
+      "rank": 10,
+      "usage_pct": 16.86432,
+      "raw": 76540,
+      "raw_pct": 12.442,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "sylveon",
+      "name": "Sylveon",
+      "rank": 11,
+      "usage_pct": 15.73871,
+      "raw": 78356,
+      "raw_pct": 12.738,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "archaludon",
+      "name": "Archaludon",
+      "rank": 12,
+      "usage_pct": 13.93961,
+      "raw": 92443,
+      "raw_pct": 15.028,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "farigiraf",
+      "name": "Farigiraf",
+      "rank": 13,
+      "usage_pct": 12.22631,
+      "raw": 91653,
+      "raw_pct": 14.899,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "pelipper",
+      "name": "Pelipper",
+      "rank": 14,
+      "usage_pct": 12.03258,
+      "raw": 85901,
+      "raw_pct": 13.964,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "rotomwash",
+      "name": "Rotom-Wash",
+      "rank": 15,
+      "usage_pct": 10.47299,
+      "raw": 72463,
+      "raw_pct": 11.78,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "aegislash",
+      "name": "Aegislash",
+      "rank": 16,
+      "usage_pct": 9.6994,
+      "raw": 52773,
+      "raw_pct": 8.579,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "glimmora",
+      "name": "Glimmora",
+      "rank": 17,
+      "usage_pct": 9.66871,
+      "raw": 37264,
+      "raw_pct": 6.058,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gengarmega",
+      "name": "Gengar-Mega",
+      "rank": 18,
+      "usage_pct": 8.4928,
+      "raw": 55804,
+      "raw_pct": 9.072,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "dragonitemega",
+      "name": "Dragonite-Mega",
+      "rank": 19,
+      "usage_pct": 7.90259,
+      "raw": 38504,
+      "raw_pct": 6.259,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "aerodactyl",
+      "name": "Aerodactyl",
+      "rank": 20,
+      "usage_pct": 7.8129,
+      "raw": 60703,
+      "raw_pct": 9.868,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "maushold",
+      "name": "Maushold",
+      "rank": 21,
+      "usage_pct": 7.56067,
+      "raw": 40225,
+      "raw_pct": 6.539,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "kommoo",
+      "name": "Kommo-o",
+      "rank": 22,
+      "usage_pct": 7.23033,
+      "raw": 37044,
+      "raw_pct": 6.022,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "scovillainmega",
+      "name": "Scovillain-Mega",
+      "rank": 23,
+      "usage_pct": 7.1667,
+      "raw": 40238,
+      "raw_pct": 6.541,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "ninetalesalola",
+      "name": "Ninetales-Alola",
+      "rank": 24,
+      "usage_pct": 6.74387,
+      "raw": 36602,
+      "raw_pct": 5.95,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "froslassmega",
+      "name": "Froslass-Mega",
+      "rank": 25,
+      "usage_pct": 6.45554,
+      "raw": 34980,
+      "raw_pct": 5.686,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "talonflame",
+      "name": "Talonflame",
+      "rank": 26,
+      "usage_pct": 6.19174,
+      "raw": 38318,
+      "raw_pct": 6.229,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "tyranitarmega",
+      "name": "Tyranitar-Mega",
+      "rank": 27,
+      "usage_pct": 6.18323,
+      "raw": 41648,
+      "raw_pct": 6.77,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "venusaurmega",
+      "name": "Venusaur-Mega",
+      "rank": 28,
+      "usage_pct": 6.08979,
+      "raw": 36622,
+      "raw_pct": 5.953,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "sableye",
+      "name": "Sableye",
+      "rank": 29,
+      "usage_pct": 5.83309,
+      "raw": 51836,
+      "raw_pct": 8.427,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "scizormega",
+      "name": "Scizor-Mega",
+      "rank": 30,
+      "usage_pct": 5.08626,
+      "raw": 32034,
+      "raw_pct": 5.207,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "milotic",
+      "name": "Milotic",
+      "rank": 31,
+      "usage_pct": 4.80396,
+      "raw": 52387,
+      "raw_pct": 8.516,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "corviknight",
+      "name": "Corviknight",
+      "rank": 32,
+      "usage_pct": 4.7784,
+      "raw": 35001,
+      "raw_pct": 5.69,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "kangaskhanmega",
+      "name": "Kangaskhan-Mega",
+      "rank": 33,
+      "usage_pct": 4.74108,
+      "raw": 26616,
+      "raw_pct": 4.327,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gardevoirmega",
+      "name": "Gardevoir-Mega",
+      "rank": 34,
+      "usage_pct": 4.44061,
+      "raw": 25670,
+      "raw_pct": 4.173,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "vivillon",
+      "name": "Vivillon",
+      "rank": 35,
+      "usage_pct": 4.23381,
+      "raw": 17798,
+      "raw_pct": 2.893,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "politoed",
+      "name": "Politoed",
+      "rank": 36,
+      "usage_pct": 4.05115,
+      "raw": 28407,
+      "raw_pct": 4.618,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "excadrill",
+      "name": "Excadrill",
+      "rank": 37,
+      "usage_pct": 4.03611,
+      "raw": 26887,
+      "raw_pct": 4.371,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "charizardmegax",
+      "name": "Charizard-Mega-X",
+      "rank": 38,
+      "usage_pct": 3.6629,
+      "raw": 20883,
+      "raw_pct": 3.395,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "dragonite",
+      "name": "Dragonite",
+      "rank": 39,
+      "usage_pct": 3.51614,
+      "raw": 18111,
+      "raw_pct": 2.944,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "delphoxmega",
+      "name": "Delphox-Mega",
+      "rank": 40,
+      "usage_pct": 3.49388,
+      "raw": 24851,
+      "raw_pct": 4.04,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "torkoal",
+      "name": "Torkoal",
+      "rank": 41,
+      "usage_pct": 3.41631,
+      "raw": 29280,
+      "raw_pct": 4.76,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "hydreigon",
+      "name": "Hydreigon",
+      "rank": 42,
+      "usage_pct": 3.40992,
+      "raw": 20604,
+      "raw_pct": 3.349,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "glimmoramega",
+      "name": "Glimmora-Mega",
+      "rank": 43,
+      "usage_pct": 3.26047,
+      "raw": 20751,
+      "raw_pct": 3.373,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "blastoisemega",
+      "name": "Blastoise-Mega",
+      "rank": 44,
+      "usage_pct": 2.67083,
+      "raw": 23767,
+      "raw_pct": 3.864,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "kleavor",
+      "name": "Kleavor",
+      "rank": 45,
+      "usage_pct": 2.33523,
+      "raw": 10124,
+      "raw_pct": 1.646,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "venusaur",
+      "name": "Venusaur",
+      "rank": 46,
+      "usage_pct": 2.26235,
+      "raw": 19093,
+      "raw_pct": 3.104,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "palafin",
+      "name": "Palafin",
+      "rank": 47,
+      "usage_pct": 2.19839,
+      "raw": 14583,
+      "raw_pct": 2.371,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "tsareena",
+      "name": "Tsareena",
+      "rank": 48,
+      "usage_pct": 1.96765,
+      "raw": 15823,
+      "raw_pct": 2.572,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "arcaninehisui",
+      "name": "Arcanine-Hisui",
+      "rank": 49,
+      "usage_pct": 1.72601,
+      "raw": 10004,
+      "raw_pct": 1.626,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "ceruledge",
+      "name": "Ceruledge",
+      "rank": 50,
+      "usage_pct": 1.67559,
+      "raw": 11916,
+      "raw_pct": 1.937,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "tinkaton",
+      "name": "Tinkaton",
+      "rank": 51,
+      "usage_pct": 1.63834,
+      "raw": 11512,
+      "raw_pct": 1.871,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "meganiummega",
+      "name": "Meganium-Mega",
+      "rank": 52,
+      "usage_pct": 1.53942,
+      "raw": 20984,
+      "raw_pct": 3.411,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "primarina",
+      "name": "Primarina",
+      "rank": 53,
+      "usage_pct": 1.45705,
+      "raw": 18564,
+      "raw_pct": 3.018,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "rotomheat",
+      "name": "Rotom-Heat",
+      "rank": 54,
+      "usage_pct": 1.37192,
+      "raw": 12629,
+      "raw_pct": 2.053,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "skarmorymega",
+      "name": "Skarmory-Mega",
+      "rank": 55,
+      "usage_pct": 1.31738,
+      "raw": 9327,
+      "raw_pct": 1.516,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "scizor",
+      "name": "Scizor",
+      "rank": 56,
+      "usage_pct": 1.26684,
+      "raw": 9431,
+      "raw_pct": 1.533,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "lopunnymega",
+      "name": "Lopunny-Mega",
+      "rank": 57,
+      "usage_pct": 1.23388,
+      "raw": 12138,
+      "raw_pct": 1.973,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "espathra",
+      "name": "Espathra",
+      "rank": 58,
+      "usage_pct": 1.06037,
+      "raw": 8390,
+      "raw_pct": 1.364,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "volcarona",
+      "name": "Volcarona",
+      "rank": 59,
+      "usage_pct": 0.95371,
+      "raw": 11534,
+      "raw_pct": 1.875,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "garchompmega",
+      "name": "Garchomp-Mega",
+      "rank": 60,
+      "usage_pct": 0.90181,
+      "raw": 8225,
+      "raw_pct": 1.337,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "cameruptmega",
+      "name": "Camerupt-Mega",
+      "rank": 61,
+      "usage_pct": 0.88975,
+      "raw": 8353,
+      "raw_pct": 1.358,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "taurospaldeaaqua",
+      "name": "Tauros-Paldea-Aqua",
+      "rank": 62,
+      "usage_pct": 0.88126,
+      "raw": 6697,
+      "raw_pct": 1.089,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "snorlax",
+      "name": "Snorlax",
+      "rank": 63,
+      "usage_pct": 0.84933,
+      "raw": 7897,
+      "raw_pct": 1.284,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "mimikyu",
+      "name": "Mimikyu",
+      "rank": 64,
+      "usage_pct": 0.83804,
+      "raw": 7515,
+      "raw_pct": 1.222,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "samurotthisui",
+      "name": "Samurott-Hisui",
+      "rank": 65,
+      "usage_pct": 0.82403,
+      "raw": 5507,
+      "raw_pct": 0.895,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "clefable",
+      "name": "Clefable",
+      "rank": 66,
+      "usage_pct": 0.80919,
+      "raw": 10229,
+      "raw_pct": 1.663,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "typhlosionhisui",
+      "name": "Typhlosion-Hisui",
+      "rank": 67,
+      "usage_pct": 0.80678,
+      "raw": 9069,
+      "raw_pct": 1.474,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "tyranitar",
+      "name": "Tyranitar",
+      "rank": 68,
+      "usage_pct": 0.7257,
+      "raw": 14059,
+      "raw_pct": 2.285,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "manectricmega",
+      "name": "Manectric-Mega",
+      "rank": 69,
+      "usage_pct": 0.7211,
+      "raw": 6367,
+      "raw_pct": 1.035,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "azumarill",
+      "name": "Azumarill",
+      "rank": 70,
+      "usage_pct": 0.69885,
+      "raw": 6283,
+      "raw_pct": 1.021,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "dragapult",
+      "name": "Dragapult",
+      "rank": 71,
+      "usage_pct": 0.66393,
+      "raw": 13781,
+      "raw_pct": 2.24,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "meowscarada",
+      "name": "Meowscarada",
+      "rank": 72,
+      "usage_pct": 0.64749,
+      "raw": 10672,
+      "raw_pct": 1.735,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "crabominablemega",
+      "name": "Crabominable-Mega",
+      "rank": 73,
+      "usage_pct": 0.60657,
+      "raw": 8443,
+      "raw_pct": 1.373,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "weavile",
+      "name": "Weavile",
+      "rank": 74,
+      "usage_pct": 0.59305,
+      "raw": 6589,
+      "raw_pct": 1.071,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "kangaskhan",
+      "name": "Kangaskhan",
+      "rank": 75,
+      "usage_pct": 0.58145,
+      "raw": 8651,
+      "raw_pct": 1.406,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gyaradosmega",
+      "name": "Gyarados-Mega",
+      "rank": 76,
+      "usage_pct": 0.56677,
+      "raw": 7446,
+      "raw_pct": 1.21,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gallade",
+      "name": "Gallade",
+      "rank": 77,
+      "usage_pct": 0.50664,
+      "raw": 7085,
+      "raw_pct": 1.152,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "zoroarkhisui",
+      "name": "Zoroark-Hisui",
+      "rank": 78,
+      "usage_pct": 0.50358,
+      "raw": 8976,
+      "raw_pct": 1.459,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "lucariomega",
+      "name": "Lucario-Mega",
+      "rank": 79,
+      "usage_pct": 0.47464,
+      "raw": 10068,
+      "raw_pct": 1.637,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "araquanid",
+      "name": "Araquanid",
+      "rank": 80,
+      "usage_pct": 0.45109,
+      "raw": 7765,
+      "raw_pct": 1.262,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "starmiemega",
+      "name": "Starmie-Mega",
+      "rank": 81,
+      "usage_pct": 0.44818,
+      "raw": 8385,
+      "raw_pct": 1.363,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "orthworm",
+      "name": "Orthworm",
+      "rank": 82,
+      "usage_pct": 0.43922,
+      "raw": 4548,
+      "raw_pct": 0.739,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "hatterene",
+      "name": "Hatterene",
+      "rank": 83,
+      "usage_pct": 0.42207,
+      "raw": 7425,
+      "raw_pct": 1.207,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "heliolisk",
+      "name": "Heliolisk",
+      "rank": 84,
+      "usage_pct": 0.39931,
+      "raw": 7479,
+      "raw_pct": 1.216,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "mamoswine",
+      "name": "Mamoswine",
+      "rank": 85,
+      "usage_pct": 0.38358,
+      "raw": 4869,
+      "raw_pct": 0.792,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "basculegionf",
+      "name": "Basculegion-F",
+      "rank": 86,
+      "usage_pct": 0.37995,
+      "raw": 2540,
+      "raw_pct": 0.413,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "hawluchamega",
+      "name": "Hawlucha-Mega",
+      "rank": 87,
+      "usage_pct": 0.36522,
+      "raw": 6366,
+      "raw_pct": 1.035,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "aggronmega",
+      "name": "Aggron-Mega",
+      "rank": 88,
+      "usage_pct": 0.34341,
+      "raw": 7080,
+      "raw_pct": 1.151,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "excadrillmega",
+      "name": "Excadrill-Mega",
+      "rank": 89,
+      "usage_pct": 0.33945,
+      "raw": 4492,
+      "raw_pct": 0.73,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "arcanine",
+      "name": "Arcanine",
+      "rank": 90,
+      "usage_pct": 0.33309,
+      "raw": 3425,
+      "raw_pct": 0.557,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "drampamega",
+      "name": "Drampa-Mega",
+      "rank": 91,
+      "usage_pct": 0.30697,
+      "raw": 6554,
+      "raw_pct": 1.065,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "toxapex",
+      "name": "Toxapex",
+      "rank": 92,
+      "usage_pct": 0.30656,
+      "raw": 4463,
+      "raw_pct": 0.726,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "oranguru",
+      "name": "Oranguru",
+      "rank": 93,
+      "usage_pct": 0.28632,
+      "raw": 7299,
+      "raw_pct": 1.187,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "conkeldurr",
+      "name": "Conkeldurr",
+      "rank": 94,
+      "usage_pct": 0.26884,
+      "raw": 3131,
+      "raw_pct": 0.509,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "heracrossmega",
+      "name": "Heracross-Mega",
+      "rank": 95,
+      "usage_pct": 0.25745,
+      "raw": 2936,
+      "raw_pct": 0.477,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "raichu",
+      "name": "Raichu",
+      "rank": 96,
+      "usage_pct": 0.23141,
+      "raw": 4269,
+      "raw_pct": 0.694,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gyarados",
+      "name": "Gyarados",
+      "rank": 97,
+      "usage_pct": 0.21,
+      "raw": 3655,
+      "raw_pct": 0.594,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "lycanrocdusk",
+      "name": "Lycanroc-Dusk",
+      "rank": 98,
+      "usage_pct": 0.20944,
+      "raw": 1239,
+      "raw_pct": 0.201,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "banettemega",
+      "name": "Banette-Mega",
+      "rank": 99,
+      "usage_pct": 0.20733,
+      "raw": 3195,
+      "raw_pct": 0.519,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "chandeluremega",
+      "name": "Chandelure-Mega",
+      "rank": 100,
+      "usage_pct": 0.2026,
+      "raw": 3878,
+      "raw_pct": 0.63,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "vanilluxe",
+      "name": "Vanilluxe",
+      "rank": 101,
+      "usage_pct": 0.20059,
+      "raw": 3165,
+      "raw_pct": 0.515,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gallademega",
+      "name": "Gallade-Mega",
+      "rank": 102,
+      "usage_pct": 0.19819,
+      "raw": 3078,
+      "raw_pct": 0.5,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "absol",
+      "name": "Absol",
+      "rank": 103,
+      "usage_pct": 0.18572,
+      "raw": 482,
+      "raw_pct": 0.078,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "mudsdale",
+      "name": "Mudsdale",
+      "rank": 104,
+      "usage_pct": 0.1851,
+      "raw": 1786,
+      "raw_pct": 0.29,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "clefablemega",
+      "name": "Clefable-Mega",
+      "rank": 105,
+      "usage_pct": 0.18022,
+      "raw": 2923,
+      "raw_pct": 0.475,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "golurkmega",
+      "name": "Golurk-Mega",
+      "rank": 106,
+      "usage_pct": 0.17521,
+      "raw": 5100,
+      "raw_pct": 0.829,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "blastoise",
+      "name": "Blastoise",
+      "rank": 107,
+      "usage_pct": 0.17379,
+      "raw": 1881,
+      "raw_pct": 0.306,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "umbreon",
+      "name": "Umbreon",
+      "rank": 108,
+      "usage_pct": 0.16172,
+      "raw": 2877,
+      "raw_pct": 0.468,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "chandelure",
+      "name": "Chandelure",
+      "rank": 109,
+      "usage_pct": 0.1604,
+      "raw": 2074,
+      "raw_pct": 0.337,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "feraligatrmega",
+      "name": "Feraligatr-Mega",
+      "rank": 110,
+      "usage_pct": 0.15859,
+      "raw": 4120,
+      "raw_pct": 0.67,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "klefki",
+      "name": "Klefki",
+      "rank": 111,
+      "usage_pct": 0.1575,
+      "raw": 3827,
+      "raw_pct": 0.622,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "floetteeternal",
+      "name": "Floette-Eternal",
+      "rank": 112,
+      "usage_pct": 0.15638,
+      "raw": 1177,
+      "raw_pct": 0.191,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "goodrahisui",
+      "name": "Goodra-Hisui",
+      "rank": 113,
+      "usage_pct": 0.14828,
+      "raw": 3464,
+      "raw_pct": 0.563,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "ampharosmega",
+      "name": "Ampharos-Mega",
+      "rank": 114,
+      "usage_pct": 0.13063,
+      "raw": 3140,
+      "raw_pct": 0.51,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "meowstic",
+      "name": "Meowstic",
+      "rank": 115,
+      "usage_pct": 0.12806,
+      "raw": 5118,
+      "raw_pct": 0.832,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "hippowdon",
+      "name": "Hippowdon",
+      "rank": 116,
+      "usage_pct": 0.12493,
+      "raw": 1616,
+      "raw_pct": 0.263,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gardevoir",
+      "name": "Gardevoir",
+      "rank": 117,
+      "usage_pct": 0.12216,
+      "raw": 2541,
+      "raw_pct": 0.413,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "rotommow",
+      "name": "Rotom-Mow",
+      "rank": 118,
+      "usage_pct": 0.11759,
+      "raw": 2441,
+      "raw_pct": 0.397,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "lucario",
+      "name": "Lucario",
+      "rank": 119,
+      "usage_pct": 0.11714,
+      "raw": 2362,
+      "raw_pct": 0.384,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "slowkinggalar",
+      "name": "Slowking-Galar",
+      "rank": 120,
+      "usage_pct": 0.11213,
+      "raw": 4180,
+      "raw_pct": 0.68,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "krookodile",
+      "name": "Krookodile",
+      "rank": 121,
+      "usage_pct": 0.11169,
+      "raw": 2364,
+      "raw_pct": 0.384,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "greninjamega",
+      "name": "Greninja-Mega",
+      "rank": 122,
+      "usage_pct": 0.11007,
+      "raw": 4714,
+      "raw_pct": 0.766,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "chesnaughtmega",
+      "name": "Chesnaught-Mega",
+      "rank": 123,
+      "usage_pct": 0.10318,
+      "raw": 2689,
+      "raw_pct": 0.437,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "armarouge",
+      "name": "Armarouge",
+      "rank": 124,
+      "usage_pct": 0.10277,
+      "raw": 2364,
+      "raw_pct": 0.384,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "ariados",
+      "name": "Ariados",
+      "rank": 125,
+      "usage_pct": 0.10044,
+      "raw": 2216,
+      "raw_pct": 0.36,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "bellibolt",
+      "name": "Bellibolt",
+      "rank": 126,
+      "usage_pct": 0.09927,
+      "raw": 2699,
+      "raw_pct": 0.439,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "altaria",
+      "name": "Altaria",
+      "rank": 127,
+      "usage_pct": 0.09892,
+      "raw": 1559,
+      "raw_pct": 0.253,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "salazzle",
+      "name": "Salazzle",
+      "rank": 128,
+      "usage_pct": 0.09498,
+      "raw": 1547,
+      "raw_pct": 0.251,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "slowbromega",
+      "name": "Slowbro-Mega",
+      "rank": 129,
+      "usage_pct": 0.09494,
+      "raw": 1284,
+      "raw_pct": 0.209,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "torterra",
+      "name": "Torterra",
+      "rank": 130,
+      "usage_pct": 0.09332,
+      "raw": 1224,
+      "raw_pct": 0.199,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "spiritomb",
+      "name": "Spiritomb",
+      "rank": 131,
+      "usage_pct": 0.09116,
+      "raw": 1205,
+      "raw_pct": 0.196,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "abomasnowmega",
+      "name": "Abomasnow-Mega",
+      "rank": 132,
+      "usage_pct": 0.08857,
+      "raw": 2062,
+      "raw_pct": 0.335,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "chimechomega",
+      "name": "Chimecho-Mega",
+      "rank": 133,
+      "usage_pct": 0.08428,
+      "raw": 2271,
+      "raw_pct": 0.369,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "steelixmega",
+      "name": "Steelix-Mega",
+      "rank": 134,
+      "usage_pct": 0.08258,
+      "raw": 1347,
+      "raw_pct": 0.219,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "quaquaval",
+      "name": "Quaquaval",
+      "rank": 135,
+      "usage_pct": 0.0816,
+      "raw": 1653,
+      "raw_pct": 0.269,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "rhyperior",
+      "name": "Rhyperior",
+      "rank": 136,
+      "usage_pct": 0.07403,
+      "raw": 1681,
+      "raw_pct": 0.273,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "altariamega",
+      "name": "Altaria-Mega",
+      "rank": 137,
+      "usage_pct": 0.07366,
+      "raw": 1908,
+      "raw_pct": 0.31,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "drampa",
+      "name": "Drampa",
+      "rank": 138,
+      "usage_pct": 0.07291,
+      "raw": 1393,
+      "raw_pct": 0.226,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "chesnaught",
+      "name": "Chesnaught",
+      "rank": 139,
+      "usage_pct": 0.07233,
+      "raw": 551,
+      "raw_pct": 0.09,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "victreebelmega",
+      "name": "Victreebel-Mega",
+      "rank": 140,
+      "usage_pct": 0.07144,
+      "raw": 1296,
+      "raw_pct": 0.211,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "ninetales",
+      "name": "Ninetales",
+      "rank": 141,
+      "usage_pct": 0.06923,
+      "raw": 1648,
+      "raw_pct": 0.268,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "noivern",
+      "name": "Noivern",
+      "rank": 142,
+      "usage_pct": 0.0649,
+      "raw": 1624,
+      "raw_pct": 0.264,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "toxicroak",
+      "name": "Toxicroak",
+      "rank": 143,
+      "usage_pct": 0.05954,
+      "raw": 1676,
+      "raw_pct": 0.272,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "medichammega",
+      "name": "Medicham-Mega",
+      "rank": 144,
+      "usage_pct": 0.05705,
+      "raw": 1539,
+      "raw_pct": 0.25,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "serperior",
+      "name": "Serperior",
+      "rank": 145,
+      "usage_pct": 0.05679,
+      "raw": 1830,
+      "raw_pct": 0.297,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "taurospaldeablaze",
+      "name": "Tauros-Paldea-Blaze",
+      "rank": 146,
+      "usage_pct": 0.05607,
+      "raw": 1405,
+      "raw_pct": 0.228,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "glaceon",
+      "name": "Glaceon",
+      "rank": 147,
+      "usage_pct": 0.05606,
+      "raw": 1188,
+      "raw_pct": 0.193,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "rotomfrost",
+      "name": "Rotom-Frost",
+      "rank": 148,
+      "usage_pct": 0.054,
+      "raw": 2047,
+      "raw_pct": 0.333,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "pidgeotmega",
+      "name": "Pidgeot-Mega",
+      "rank": 149,
+      "usage_pct": 0.05348,
+      "raw": 871,
+      "raw_pct": 0.142,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "jolteon",
+      "name": "Jolteon",
+      "rank": 150,
+      "usage_pct": 0.04866,
+      "raw": 1977,
+      "raw_pct": 0.321,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gengar",
+      "name": "Gengar",
+      "rank": 151,
+      "usage_pct": 0.0458,
+      "raw": 2488,
+      "raw_pct": 0.404,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "wyrdeer",
+      "name": "Wyrdeer",
+      "rank": 152,
+      "usage_pct": 0.04543,
+      "raw": 1426,
+      "raw_pct": 0.232,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "sharpedomega",
+      "name": "Sharpedo-Mega",
+      "rank": 153,
+      "usage_pct": 0.04399,
+      "raw": 1263,
+      "raw_pct": 0.205,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "alcremie",
+      "name": "Alcremie",
+      "rank": 154,
+      "usage_pct": 0.04263,
+      "raw": 1879,
+      "raw_pct": 0.305,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "infernape",
+      "name": "Infernape",
+      "rank": 155,
+      "usage_pct": 0.04183,
+      "raw": 1522,
+      "raw_pct": 0.247,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "ditto",
+      "name": "Ditto",
+      "rank": 156,
+      "usage_pct": 0.04055,
+      "raw": 3360,
+      "raw_pct": 0.546,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "decidueyehisui",
+      "name": "Decidueye-Hisui",
+      "rank": 157,
+      "usage_pct": 0.04018,
+      "raw": 1345,
+      "raw_pct": 0.219,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "houndoommega",
+      "name": "Houndoom-Mega",
+      "rank": 158,
+      "usage_pct": 0.03952,
+      "raw": 1007,
+      "raw_pct": 0.164,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "hydrapple",
+      "name": "Hydrapple",
+      "rank": 159,
+      "usage_pct": 0.0383,
+      "raw": 1412,
+      "raw_pct": 0.23,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "simipour",
+      "name": "Simipour",
+      "rank": 160,
+      "usage_pct": 0.03587,
+      "raw": 363,
+      "raw_pct": 0.059,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "emboarmega",
+      "name": "Emboar-Mega",
+      "rank": 161,
+      "usage_pct": 0.03557,
+      "raw": 1279,
+      "raw_pct": 0.208,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "greninja",
+      "name": "Greninja",
+      "rank": 162,
+      "usage_pct": 0.03461,
+      "raw": 1168,
+      "raw_pct": 0.19,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "machamp",
+      "name": "Machamp",
+      "rank": 163,
+      "usage_pct": 0.03353,
+      "raw": 896,
+      "raw_pct": 0.146,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "absolmega",
+      "name": "Absol-Mega",
+      "rank": 164,
+      "usage_pct": 0.0328,
+      "raw": 779,
+      "raw_pct": 0.127,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "alakazammega",
+      "name": "Alakazam-Mega",
+      "rank": 165,
+      "usage_pct": 0.0326,
+      "raw": 2418,
+      "raw_pct": 0.393,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "slowbrogalar",
+      "name": "Slowbro-Galar",
+      "rank": 166,
+      "usage_pct": 0.03087,
+      "raw": 803,
+      "raw_pct": 0.131,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "empoleon",
+      "name": "Empoleon",
+      "rank": 167,
+      "usage_pct": 0.03037,
+      "raw": 2228,
+      "raw_pct": 0.362,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "pinsirmega",
+      "name": "Pinsir-Mega",
+      "rank": 168,
+      "usage_pct": 0.02985,
+      "raw": 895,
+      "raw_pct": 0.145,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "pangoro",
+      "name": "Pangoro",
+      "rank": 169,
+      "usage_pct": 0.02806,
+      "raw": 641,
+      "raw_pct": 0.104,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gliscor",
+      "name": "Gliscor",
+      "rank": 170,
+      "usage_pct": 0.02724,
+      "raw": 2122,
+      "raw_pct": 0.345,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "slowking",
+      "name": "Slowking",
+      "rank": 171,
+      "usage_pct": 0.02705,
+      "raw": 1431,
+      "raw_pct": 0.233,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "beedrillmega",
+      "name": "Beedrill-Mega",
+      "rank": 172,
+      "usage_pct": 0.02701,
+      "raw": 2338,
+      "raw_pct": 0.38,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "sharpedo",
+      "name": "Sharpedo",
+      "rank": 173,
+      "usage_pct": 0.02666,
+      "raw": 357,
+      "raw_pct": 0.058,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "audinomega",
+      "name": "Audino-Mega",
+      "rank": 174,
+      "usage_pct": 0.02578,
+      "raw": 815,
+      "raw_pct": 0.132,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "aromatisse",
+      "name": "Aromatisse",
+      "rank": 175,
+      "usage_pct": 0.02552,
+      "raw": 631,
+      "raw_pct": 0.103,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "meowsticmmega",
+      "name": "Meowstic-M-Mega",
+      "rank": 176,
+      "usage_pct": 0.02546,
+      "raw": 473,
+      "raw_pct": 0.077,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "medicham",
+      "name": "Medicham",
+      "rank": 177,
+      "usage_pct": 0.02279,
+      "raw": 783,
+      "raw_pct": 0.127,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "garganacl",
+      "name": "Garganacl",
+      "rank": 178,
+      "usage_pct": 0.02095,
+      "raw": 1409,
+      "raw_pct": 0.229,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "cofagrigus",
+      "name": "Cofagrigus",
+      "rank": 179,
+      "usage_pct": 0.02091,
+      "raw": 1644,
+      "raw_pct": 0.267,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "liepard",
+      "name": "Liepard",
+      "rank": 180,
+      "usage_pct": 0.02048,
+      "raw": 1097,
+      "raw_pct": 0.178,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "pikachu",
+      "name": "Pikachu",
+      "rank": 181,
+      "usage_pct": 0.01964,
+      "raw": 616,
+      "raw_pct": 0.1,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "passimian",
+      "name": "Passimian",
+      "rank": 182,
+      "usage_pct": 0.01945,
+      "raw": 538,
+      "raw_pct": 0.087,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "lycanroc",
+      "name": "Lycanroc",
+      "rank": 183,
+      "usage_pct": 0.01925,
+      "raw": 764,
+      "raw_pct": 0.124,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "stunfisk",
+      "name": "Stunfisk",
+      "rank": 184,
+      "usage_pct": 0.01875,
+      "raw": 170,
+      "raw_pct": 0.028,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "raichualola",
+      "name": "Raichu-Alola",
+      "rank": 185,
+      "usage_pct": 0.01834,
+      "raw": 359,
+      "raw_pct": 0.058,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "starmie",
+      "name": "Starmie",
+      "rank": 186,
+      "usage_pct": 0.01805,
+      "raw": 371,
+      "raw_pct": 0.06,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "skeledirge",
+      "name": "Skeledirge",
+      "rank": 187,
+      "usage_pct": 0.01793,
+      "raw": 883,
+      "raw_pct": 0.144,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gourgeistsuper",
+      "name": "Gourgeist-Super",
+      "rank": 188,
+      "usage_pct": 0.01781,
+      "raw": 277,
+      "raw_pct": 0.045,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "charizard",
+      "name": "Charizard",
+      "rank": 189,
+      "usage_pct": 0.01657,
+      "raw": 429,
+      "raw_pct": 0.07,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "leafeon",
+      "name": "Leafeon",
+      "rank": 190,
+      "usage_pct": 0.01608,
+      "raw": 817,
+      "raw_pct": 0.133,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "rotomfan",
+      "name": "Rotom-Fan",
+      "rank": 191,
+      "usage_pct": 0.01523,
+      "raw": 244,
+      "raw_pct": 0.04,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "vaporeon",
+      "name": "Vaporeon",
+      "rank": 192,
+      "usage_pct": 0.01472,
+      "raw": 1158,
+      "raw_pct": 0.188,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "mrrime",
+      "name": "Mr. Rime",
+      "rank": 193,
+      "usage_pct": 0.01429,
+      "raw": 1100,
+      "raw_pct": 0.179,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "tyrantrum",
+      "name": "Tyrantrum",
+      "rank": 194,
+      "usage_pct": 0.01402,
+      "raw": 651,
+      "raw_pct": 0.106,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "emolga",
+      "name": "Emolga",
+      "rank": 195,
+      "usage_pct": 0.01336,
+      "raw": 405,
+      "raw_pct": 0.066,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "scovillain",
+      "name": "Scovillain",
+      "rank": 196,
+      "usage_pct": 0.01203,
+      "raw": 505,
+      "raw_pct": 0.082,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gourgeistsmall",
+      "name": "Gourgeist-Small",
+      "rank": 197,
+      "usage_pct": 0.01186,
+      "raw": 231,
+      "raw_pct": 0.038,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "sableyemega",
+      "name": "Sableye-Mega",
+      "rank": 198,
+      "usage_pct": 0.01167,
+      "raw": 828,
+      "raw_pct": 0.135,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "alakazam",
+      "name": "Alakazam",
+      "rank": 199,
+      "usage_pct": 0.01148,
+      "raw": 1341,
+      "raw_pct": 0.218,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "meowsticfmega",
+      "name": "Meowstic-F-Mega",
+      "rank": 200,
+      "usage_pct": 0.01144,
+      "raw": 570,
+      "raw_pct": 0.093,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "golurk",
+      "name": "Golurk",
+      "rank": 201,
+      "usage_pct": 0.01074,
+      "raw": 261,
+      "raw_pct": 0.042,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "diggersby",
+      "name": "Diggersby",
+      "rank": 202,
+      "usage_pct": 0.01027,
+      "raw": 197,
+      "raw_pct": 0.032,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "hawlucha",
+      "name": "Hawlucha",
+      "rank": 203,
+      "usage_pct": 0.01,
+      "raw": 631,
+      "raw_pct": 0.103,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "luxray",
+      "name": "Luxray",
+      "rank": 204,
+      "usage_pct": 0.00932,
+      "raw": 650,
+      "raw_pct": 0.106,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "beartic",
+      "name": "Beartic",
+      "rank": 205,
+      "usage_pct": 0.00891,
+      "raw": 865,
+      "raw_pct": 0.141,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "rampardos",
+      "name": "Rampardos",
+      "rank": 206,
+      "usage_pct": 0.00877,
+      "raw": 591,
+      "raw_pct": 0.096,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "simisage",
+      "name": "Simisage",
+      "rank": 207,
+      "usage_pct": 0.00815,
+      "raw": 153,
+      "raw_pct": 0.025,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "aurorus",
+      "name": "Aurorus",
+      "rank": 208,
+      "usage_pct": 0.0081,
+      "raw": 847,
+      "raw_pct": 0.138,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "bastiodon",
+      "name": "Bastiodon",
+      "rank": 209,
+      "usage_pct": 0.00672,
+      "raw": 485,
+      "raw_pct": 0.079,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "runerigus",
+      "name": "Runerigus",
+      "rank": 210,
+      "usage_pct": 0.0066,
+      "raw": 884,
+      "raw_pct": 0.144,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "slowbro",
+      "name": "Slowbro",
+      "rank": 211,
+      "usage_pct": 0.0065,
+      "raw": 580,
+      "raw_pct": 0.094,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "typhlosion",
+      "name": "Typhlosion",
+      "rank": 212,
+      "usage_pct": 0.00605,
+      "raw": 293,
+      "raw_pct": 0.048,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "glaliemega",
+      "name": "Glalie-Mega",
+      "rank": 213,
+      "usage_pct": 0.00603,
+      "raw": 725,
+      "raw_pct": 0.118,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "goodra",
+      "name": "Goodra",
+      "rank": 214,
+      "usage_pct": 0.00571,
+      "raw": 412,
+      "raw_pct": 0.067,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "morpeko",
+      "name": "Morpeko",
+      "rank": 215,
+      "usage_pct": 0.0057,
+      "raw": 425,
+      "raw_pct": 0.069,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "emboar",
+      "name": "Emboar",
+      "rank": 216,
+      "usage_pct": 0.00523,
+      "raw": 248,
+      "raw_pct": 0.04,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "skarmory",
+      "name": "Skarmory",
+      "rank": 217,
+      "usage_pct": 0.00492,
+      "raw": 298,
+      "raw_pct": 0.048,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "roserade",
+      "name": "Roserade",
+      "rank": 218,
+      "usage_pct": 0.00483,
+      "raw": 679,
+      "raw_pct": 0.11,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "zoroark",
+      "name": "Zoroark",
+      "rank": 219,
+      "usage_pct": 0.00477,
+      "raw": 275,
+      "raw_pct": 0.045,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "clawitzer",
+      "name": "Clawitzer",
+      "rank": 220,
+      "usage_pct": 0.00474,
+      "raw": 1077,
+      "raw_pct": 0.175,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "espeon",
+      "name": "Espeon",
+      "rank": 221,
+      "usage_pct": 0.00471,
+      "raw": 586,
+      "raw_pct": 0.095,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "florges",
+      "name": "Florges",
+      "rank": 222,
+      "usage_pct": 0.00446,
+      "raw": 673,
+      "raw_pct": 0.109,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "flapple",
+      "name": "Flapple",
+      "rank": 223,
+      "usage_pct": 0.0044,
+      "raw": 514,
+      "raw_pct": 0.084,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "trevenant",
+      "name": "Trevenant",
+      "rank": 224,
+      "usage_pct": 0.00432,
+      "raw": 712,
+      "raw_pct": 0.116,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "toucannon",
+      "name": "Toucannon",
+      "rank": 225,
+      "usage_pct": 0.00405,
+      "raw": 395,
+      "raw_pct": 0.064,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "rotom",
+      "name": "Rotom",
+      "rank": 226,
+      "usage_pct": 0.00404,
+      "raw": 133,
+      "raw_pct": 0.022,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "reuniclus",
+      "name": "Reuniclus",
+      "rank": 227,
+      "usage_pct": 0.00401,
+      "raw": 876,
+      "raw_pct": 0.142,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "abomasnow",
+      "name": "Abomasnow",
+      "rank": 228,
+      "usage_pct": 0.00391,
+      "raw": 447,
+      "raw_pct": 0.073,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "arbok",
+      "name": "Arbok",
+      "rank": 229,
+      "usage_pct": 0.00388,
+      "raw": 283,
+      "raw_pct": 0.046,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "polteageist",
+      "name": "Polteageist",
+      "rank": 230,
+      "usage_pct": 0.00364,
+      "raw": 148,
+      "raw_pct": 0.024,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "sandaconda",
+      "name": "Sandaconda",
+      "rank": 231,
+      "usage_pct": 0.00361,
+      "raw": 521,
+      "raw_pct": 0.085,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "steelix",
+      "name": "Steelix",
+      "rank": 232,
+      "usage_pct": 0.00357,
+      "raw": 299,
+      "raw_pct": 0.049,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "audino",
+      "name": "Audino",
+      "rank": 233,
+      "usage_pct": 0.00346,
+      "raw": 809,
+      "raw_pct": 0.132,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "watchog",
+      "name": "Watchog",
+      "rank": 234,
+      "usage_pct": 0.00288,
+      "raw": 88,
+      "raw_pct": 0.014,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "froslass",
+      "name": "Froslass",
+      "rank": 235,
+      "usage_pct": 0.00251,
+      "raw": 415,
+      "raw_pct": 0.067,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "simisear",
+      "name": "Simisear",
+      "rank": 236,
+      "usage_pct": 0.00238,
+      "raw": 59,
+      "raw_pct": 0.01,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gourgeist",
+      "name": "Gourgeist",
+      "rank": 237,
+      "usage_pct": 0.00231,
+      "raw": 87,
+      "raw_pct": 0.014,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "slurpuff",
+      "name": "Slurpuff",
+      "rank": 238,
+      "usage_pct": 0.00218,
+      "raw": 83,
+      "raw_pct": 0.013,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "manectric",
+      "name": "Manectric",
+      "rank": 239,
+      "usage_pct": 0.00209,
+      "raw": 500,
+      "raw_pct": 0.081,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "tauros",
+      "name": "Tauros",
+      "rank": 240,
+      "usage_pct": 0.002,
+      "raw": 141,
+      "raw_pct": 0.023,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "avalugghisui",
+      "name": "Avalugg-Hisui",
+      "rank": 241,
+      "usage_pct": 0.00192,
+      "raw": 362,
+      "raw_pct": 0.059,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "aggron",
+      "name": "Aggron",
+      "rank": 242,
+      "usage_pct": 0.00159,
+      "raw": 276,
+      "raw_pct": 0.045,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "castform",
+      "name": "Castform",
+      "rank": 243,
+      "usage_pct": 0.00155,
+      "raw": 317,
+      "raw_pct": 0.052,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "heracross",
+      "name": "Heracross",
+      "rank": 244,
+      "usage_pct": 0.00149,
+      "raw": 263,
+      "raw_pct": 0.043,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "appletun",
+      "name": "Appletun",
+      "rank": 245,
+      "usage_pct": 0.0013,
+      "raw": 361,
+      "raw_pct": 0.059,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "furfrou",
+      "name": "Furfrou",
+      "rank": 246,
+      "usage_pct": 0.00128,
+      "raw": 72,
+      "raw_pct": 0.012,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "glalie",
+      "name": "Glalie",
+      "rank": 247,
+      "usage_pct": 0.00109,
+      "raw": 78,
+      "raw_pct": 0.013,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "delphox",
+      "name": "Delphox",
+      "rank": 248,
+      "usage_pct": 0.00103,
+      "raw": 221,
+      "raw_pct": 0.036,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "forretress",
+      "name": "Forretress",
+      "rank": 249,
+      "usage_pct": 0.001,
+      "raw": 292,
+      "raw_pct": 0.047,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "decidueye",
+      "name": "Decidueye",
+      "rank": 250,
+      "usage_pct": 0.00098,
+      "raw": 301,
+      "raw_pct": 0.049,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "beedrill",
+      "name": "Beedrill",
+      "rank": 251,
+      "usage_pct": 0.00096,
+      "raw": 37,
+      "raw_pct": 0.006,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "lycanrocmidnight",
+      "name": "Lycanroc-Midnight",
+      "rank": 252,
+      "usage_pct": 0.00089,
+      "raw": 114,
+      "raw_pct": 0.019,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "feraligatr",
+      "name": "Feraligatr",
+      "rank": 253,
+      "usage_pct": 0.00077,
+      "raw": 69,
+      "raw_pct": 0.011,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "gourgeistlarge",
+      "name": "Gourgeist-Large",
+      "rank": 254,
+      "usage_pct": 0.00076,
+      "raw": 15,
+      "raw_pct": 0.002,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "camerupt",
+      "name": "Camerupt",
+      "rank": 255,
+      "usage_pct": 0.00066,
+      "raw": 160,
+      "raw_pct": 0.026,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "victreebel",
+      "name": "Victreebel",
+      "rank": 256,
+      "usage_pct": 0.00053,
+      "raw": 75,
+      "raw_pct": 0.012,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "avalugg",
+      "name": "Avalugg",
+      "rank": 257,
+      "usage_pct": 0.00046,
+      "raw": 181,
+      "raw_pct": 0.029,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "pinsir",
+      "name": "Pinsir",
+      "rank": 258,
+      "usage_pct": 0.00044,
+      "raw": 20,
+      "raw_pct": 0.003,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "pidgeot",
+      "name": "Pidgeot",
+      "rank": 259,
+      "usage_pct": 0.00041,
+      "raw": 36,
+      "raw_pct": 0.006,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "flareon",
+      "name": "Flareon",
+      "rank": 260,
+      "usage_pct": 0.00031,
+      "raw": 214,
+      "raw_pct": 0.035,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "dedenne",
+      "name": "Dedenne",
+      "rank": 261,
+      "usage_pct": 0.0003,
+      "raw": 241,
+      "raw_pct": 0.039,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "chimecho",
+      "name": "Chimecho",
+      "rank": 262,
+      "usage_pct": 0.00026,
+      "raw": 118,
+      "raw_pct": 0.019,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "lopunny",
+      "name": "Lopunny",
+      "rank": 263,
+      "usage_pct": 0.00026,
+      "raw": 137,
+      "raw_pct": 0.022,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "meganium",
+      "name": "Meganium",
+      "rank": 264,
+      "usage_pct": 0.00022,
+      "raw": 44,
+      "raw_pct": 0.007,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "crabominable",
+      "name": "Crabominable",
+      "rank": 265,
+      "usage_pct": 0.00018,
+      "raw": 107,
+      "raw_pct": 0.017,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "banette",
+      "name": "Banette",
+      "rank": 266,
+      "usage_pct": 9e-05,
+      "raw": 64,
+      "raw_pct": 0.01,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "garbodor",
+      "name": "Garbodor",
+      "rank": 267,
+      "usage_pct": 9e-05,
+      "raw": 208,
+      "raw_pct": 0.034,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "taurospaldeacombat",
+      "name": "Tauros-Paldea-Combat",
+      "rank": 268,
+      "usage_pct": 8e-05,
+      "raw": 78,
+      "raw_pct": 0.013,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "stunfiskgalar",
+      "name": "Stunfisk-Galar",
+      "rank": 269,
+      "usage_pct": 7e-05,
+      "raw": 65,
+      "raw_pct": 0.011,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "houndoom",
+      "name": "Houndoom",
+      "rank": 270,
+      "usage_pct": 4e-05,
+      "raw": 83,
+      "raw_pct": 0.013,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "ampharos",
+      "name": "Ampharos",
+      "rank": 271,
+      "usage_pct": 4e-05,
+      "raw": 95,
+      "raw_pct": 0.015,
+      "real": 0,
+      "real_pct": 0.0
+    },
+    {
+      "id": "samurott",
+      "name": "Samurott",
+      "rank": 272,
+      "usage_pct": 0.0,
+      "raw": 31,
+      "raw_pct": 0.005,
+      "real": 0,
+      "real_pct": 0.0
+    }
+  ]
+}

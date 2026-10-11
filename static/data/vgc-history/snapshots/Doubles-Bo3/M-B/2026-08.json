@@ -3,12 +3,12 @@
   "month": "2026-08",
   "format": "Doubles Bo3",
   "regulation": "M-B",
-  "format_id": "gen9championsvgc2026regbbo3",
+  "format_id": "gen9championsvgc2026regmbbo3",
   "rating_cutoff": 1630,
   "total_battles": 179434,
   "avg_weight_per_team": 0.315,
   "source": "Smogon / Pokémon Showdown",
-  "source_url": "https://www.smogon.com/stats/2026-08/gen9championsvgc2026regbbo3-1630.txt",
+  "source_url": "https://www.smogon.com/stats/2026-08/gen9championsvgc2026regmbbo3-1630.txt",
   "attribution": "Usage statistics: Smogon / Pokémon Showdown",
   "pokemon": [
     {
