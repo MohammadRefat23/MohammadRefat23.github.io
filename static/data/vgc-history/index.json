@@ -5,6 +5,41 @@
   "attribution": "Usage statistics: Smogon / Pokémon Showdown",
   "snapshots": [
     {
+      "month": "2026-04",
+      "format": "Doubles Bo3",
+      "regulation": "M-A",
+      "path": "snapshots/Doubles-Bo3/M-A/2026-04.json",
+      "total_battles": 239230
+    },
+    {
+      "month": "2026-05",
+      "format": "Doubles Bo3",
+      "regulation": "M-A",
+      "path": "snapshots/Doubles-Bo3/M-A/2026-05.json",
+      "total_battles": 307577
+    },
+    {
+      "month": "2026-06",
+      "format": "Doubles Bo3",
+      "regulation": "M-A",
+      "path": "snapshots/Doubles-Bo3/M-A/2026-06.json",
+      "total_battles": 170664
+    },
+    {
+      "month": "2026-06",
+      "format": "Doubles Bo3",
+      "regulation": "M-B",
+      "path": "snapshots/Doubles-Bo3/M-B/2026-06.json",
+      "total_battles": 119911
+    },
+    {
+      "month": "2026-07",
+      "format": "Doubles Bo3",
+      "regulation": "M-B",
+      "path": "snapshots/Doubles-Bo3/M-B/2026-07.json",
+      "total_battles": 200850
+    },
+    {
       "month": "2026-08",
       "format": "Doubles Bo3",
       "regulation": "M-B",
@@ -17,9 +52,366 @@
       "regulation": "M-B",
       "path": "snapshots/Doubles-Bo3/M-B/2026-09.json",
       "total_battles": 38449
+    },
+    {
+      "month": "2026-09",
+      "format": "Doubles Bo3",
+      "regulation": "M-C",
+      "path": "snapshots/Doubles-Bo3/M-C/2026-09.json",
+      "total_battles": 223477
     }
   ],
   "comparisons": [
+    {
+      "regulation": "M-A",
+      "earlier_month": "2026-04",
+      "later_month": "2026-05",
+      "earlier_battles": 239230,
+      "later_battles": 307577,
+      "shared_roster": 272,
+      "earlier_only": [],
+      "later_only": [],
+      "top_n": 15,
+      "top_n_overlap": 12,
+      "top_n_overlap_pct": 80.0,
+      "top_n_entered": [
+        "Aerodactyl-Mega",
+        "Archaludon",
+        "Sylveon"
+      ],
+      "top_n_exited": [
+        "Aegislash",
+        "Aerodactyl",
+        "Milotic"
+      ],
+      "spearman_rho_shared": 0.9527158862409568,
+      "sum_squared_rank_differences": 158586,
+      "largest_usage_gains": [
+        {
+          "pokemon": "Basculegion",
+          "usage_change_pp": 18.14509,
+          "earlier_rank": 5,
+          "later_rank": 1
+        },
+        {
+          "pokemon": "Charizard-Mega-Y",
+          "usage_change_pp": 16.4785,
+          "earlier_rank": 10,
+          "later_rank": 5
+        },
+        {
+          "pokemon": "Sylveon",
+          "usage_change_pp": 12.57529,
+          "earlier_rank": 41,
+          "later_rank": 11
+        },
+        {
+          "pokemon": "Whimsicott",
+          "usage_change_pp": 11.16918,
+          "earlier_rank": 15,
+          "later_rank": 8
+        },
+        {
+          "pokemon": "Aerodactyl-Mega",
+          "usage_change_pp": 9.45986,
+          "earlier_rank": 23,
+          "later_rank": 10
+        }
+      ],
+      "largest_usage_declines": [
+        {
+          "pokemon": "Sneasler",
+          "usage_change_pp": -20.45609,
+          "earlier_rank": 1,
+          "later_rank": 4
+        },
+        {
+          "pokemon": "Aerodactyl",
+          "usage_change_pp": -12.9616,
+          "earlier_rank": 8,
+          "later_rank": 20
+        },
+        {
+          "pokemon": "Incineroar",
+          "usage_change_pp": -10.40306,
+          "earlier_rank": 3,
+          "later_rank": 6
+        },
+        {
+          "pokemon": "Milotic",
+          "usage_change_pp": -9.30044,
+          "earlier_rank": 11,
+          "later_rank": 31
+        },
+        {
+          "pokemon": "Sinistcha",
+          "usage_change_pp": -8.24793,
+          "earlier_rank": 6,
+          "later_rank": 9
+        }
+      ]
+    },
+    {
+      "regulation": "M-A",
+      "earlier_month": "2026-05",
+      "later_month": "2026-06",
+      "earlier_battles": 307577,
+      "later_battles": 170664,
+      "shared_roster": 272,
+      "earlier_only": [],
+      "later_only": [],
+      "top_n": 15,
+      "top_n_overlap": 13,
+      "top_n_overlap_pct": 86.67,
+      "top_n_entered": [
+        "Dragonite-Mega",
+        "Froslass-Mega"
+      ],
+      "top_n_exited": [
+        "Pelipper",
+        "Rotom-Wash"
+      ],
+      "spearman_rho_shared": 0.953333078902864,
+      "sum_squared_rank_differences": 156516,
+      "largest_usage_gains": [
+        {
+          "pokemon": "Sneasler",
+          "usage_change_pp": 12.69252,
+          "earlier_rank": 4,
+          "later_rank": 2
+        },
+        {
+          "pokemon": "Incineroar",
+          "usage_change_pp": 12.63442,
+          "earlier_rank": 6,
+          "later_rank": 4
+        },
+        {
+          "pokemon": "Floette-Mega",
+          "usage_change_pp": 11.58509,
+          "earlier_rank": 7,
+          "later_rank": 6
+        },
+        {
+          "pokemon": "Sinistcha",
+          "usage_change_pp": 10.86944,
+          "earlier_rank": 9,
+          "later_rank": 7
+        },
+        {
+          "pokemon": "Froslass-Mega",
+          "usage_change_pp": 7.89092,
+          "earlier_rank": 25,
+          "later_rank": 10
+        }
+      ],
+      "largest_usage_declines": [
+        {
+          "pokemon": "Basculegion",
+          "usage_change_pp": -9.9102,
+          "earlier_rank": 1,
+          "later_rank": 3
+        },
+        {
+          "pokemon": "Aegislash",
+          "usage_change_pp": -6.63472,
+          "earlier_rank": 16,
+          "later_rank": 42
+        },
+        {
+          "pokemon": "Aerodactyl-Mega",
+          "usage_change_pp": -6.33792,
+          "earlier_rank": 10,
+          "later_rank": 13
+        },
+        {
+          "pokemon": "Glimmora",
+          "usage_change_pp": -5.47566,
+          "earlier_rank": 17,
+          "later_rank": 29
+        },
+        {
+          "pokemon": "Pelipper",
+          "usage_change_pp": -5.37961,
+          "earlier_rank": 14,
+          "later_rank": 22
+        }
+      ]
+    },
+    {
+      "regulation": "M-B",
+      "earlier_month": "2026-06",
+      "later_month": "2026-07",
+      "earlier_battles": 119911,
+      "later_battles": 200850,
+      "shared_roster": 310,
+      "earlier_only": [],
+      "later_only": [],
+      "top_n": 15,
+      "top_n_overlap": 13,
+      "top_n_overlap_pct": 86.67,
+      "top_n_entered": [
+        "Delphox-Mega",
+        "Staraptor-Mega"
+      ],
+      "top_n_exited": [
+        "Grimmsnarl",
+        "Swampert-Mega"
+      ],
+      "spearman_rho_shared": 0.9495447738874124,
+      "sum_squared_rank_differences": 250516,
+      "largest_usage_gains": [
+        {
+          "pokemon": "Charizard-Mega-Y",
+          "usage_change_pp": 9.06857,
+          "earlier_rank": 7,
+          "later_rank": 3
+        },
+        {
+          "pokemon": "Kingambit",
+          "usage_change_pp": 8.99031,
+          "earlier_rank": 3,
+          "later_rank": 1
+        },
+        {
+          "pokemon": "Venusaur",
+          "usage_change_pp": 7.54965,
+          "earlier_rank": 36,
+          "later_rank": 17
+        },
+        {
+          "pokemon": "Blastoise-Mega",
+          "usage_change_pp": 7.17302,
+          "earlier_rank": 47,
+          "later_rank": 20
+        },
+        {
+          "pokemon": "Toxapex",
+          "usage_change_pp": 6.28542,
+          "earlier_rank": 42,
+          "later_rank": 21
+        }
+      ],
+      "largest_usage_declines": [
+        {
+          "pokemon": "Metagross-Mega",
+          "usage_change_pp": -8.11542,
+          "earlier_rank": 16,
+          "later_rank": 31
+        },
+        {
+          "pokemon": "Floette-Mega",
+          "usage_change_pp": -6.79124,
+          "earlier_rank": 6,
+          "later_rank": 8
+        },
+        {
+          "pokemon": "Basculegion",
+          "usage_change_pp": -6.77699,
+          "earlier_rank": 4,
+          "later_rank": 5
+        },
+        {
+          "pokemon": "Swampert-Mega",
+          "usage_change_pp": -6.40899,
+          "earlier_rank": 15,
+          "later_rank": 23
+        },
+        {
+          "pokemon": "Whimsicott",
+          "usage_change_pp": -5.69917,
+          "earlier_rank": 8,
+          "later_rank": 9
+        }
+      ]
+    },
+    {
+      "regulation": "M-B",
+      "earlier_month": "2026-07",
+      "later_month": "2026-08",
+      "earlier_battles": 200850,
+      "later_battles": 179434,
+      "shared_roster": 310,
+      "earlier_only": [],
+      "later_only": [],
+      "top_n": 15,
+      "top_n_overlap": 13,
+      "top_n_overlap_pct": 86.67,
+      "top_n_entered": [
+        "Raichu-Mega-Y",
+        "Venusaur"
+      ],
+      "top_n_exited": [
+        "Archaludon",
+        "Pelipper"
+      ],
+      "spearman_rho_shared": 0.9403320970410555,
+      "sum_squared_rank_differences": 296258,
+      "largest_usage_gains": [
+        {
+          "pokemon": "Kingambit",
+          "usage_change_pp": 9.88662,
+          "earlier_rank": 1,
+          "later_rank": 1
+        },
+        {
+          "pokemon": "Whimsicott",
+          "usage_change_pp": 6.87469,
+          "earlier_rank": 9,
+          "later_rank": 7
+        },
+        {
+          "pokemon": "Raichu-Mega-Y",
+          "usage_change_pp": 6.40401,
+          "earlier_rank": 22,
+          "later_rank": 13
+        },
+        {
+          "pokemon": "Staraptor-Mega",
+          "usage_change_pp": 6.00011,
+          "earlier_rank": 15,
+          "later_rank": 12
+        },
+        {
+          "pokemon": "Arcanine-Hisui",
+          "usage_change_pp": 5.72248,
+          "earlier_rank": 47,
+          "later_rank": 18
+        }
+      ],
+      "largest_usage_declines": [
+        {
+          "pokemon": "Sinistcha",
+          "usage_change_pp": -6.63155,
+          "earlier_rank": 6,
+          "later_rank": 10
+        },
+        {
+          "pokemon": "Incineroar",
+          "usage_change_pp": -4.43927,
+          "earlier_rank": 2,
+          "later_rank": 3
+        },
+        {
+          "pokemon": "Grimmsnarl",
+          "usage_change_pp": -4.26005,
+          "earlier_rank": 16,
+          "later_rank": 23
+        },
+        {
+          "pokemon": "Pelipper",
+          "usage_change_pp": -3.80384,
+          "earlier_rank": 14,
+          "later_rank": 20
+        },
+        {
+          "pokemon": "Venusaur-Mega",
+          "usage_change_pp": -3.57151,
+          "earlier_rank": 30,
+          "later_rank": 43
+        }
+      ]
+    },
     {
       "regulation": "M-B",
       "earlier_month": "2026-08",
