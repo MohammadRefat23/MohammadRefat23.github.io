@@ -1,4 +1,4 @@
-name: Build CV and Hugo Site
+name: Build CV, résumé, and Hugo Site
 
 env:
   HUGO_VERSION: "0.152.2"
@@ -36,7 +36,16 @@ jobs:
         with:
           repository: MohammadRefat23/cv
           ref: main
+          token: ${{ secrets.SOURCE_REPO_TOKEN || github.token }}
           path: external-cv
+
+      - name: Checkout résumé repository
+        uses: actions/checkout@v6
+        with:
+          repository: MohammadRefat23/resume
+          ref: main
+          token: ${{ secrets.SOURCE_REPO_TOKEN || github.token }}
+          path: external-resume
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
@@ -57,11 +66,21 @@ jobs:
           working_directory: external-cv
           os: debian
 
-      - name: Copy CV into Hugo static files
+      - name: Compile industry résumé
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: Mohammad_Alvi_Refat_Resume.tex
+          working_directory: external-resume
+          os: debian
+
+      - name: Copy CV and résumé into Hugo static files
         run: |
           mkdir -p static/uploads
+          test -s external-cv/cv.pdf
+          test -s external-resume/Mohammad_Alvi_Refat_Resume.pdf
           cp external-cv/cv.pdf static/uploads/Mohammad_Alvi_Refat_CV.pdf
           cp external-cv/cv.pdf static/uploads/Mohammad_Refat_CV.pdf
+          cp external-resume/Mohammad_Alvi_Refat_Resume.pdf static/uploads/Mohammad_Alvi_Refat_Resume.pdf
 
           if [ ! -s static/uploads/Mohammad_Alvi_Refat_CV.pdf ]; then
             echo "CV PDF was not created correctly."
@@ -74,6 +93,12 @@ jobs:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
 
+      - name: Resolve Hugo theme modules
+        run: |
+          test -s config/_default/module.yaml
+          test -s go.mod
+          hugo mod graph
+
       - name: Configure GitHub Pages
         if: github.ref == 'refs/heads/main'
         id: pages
@@ -84,15 +109,31 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           if [ "$GITHUB_REF" = "refs/heads/main" ]; then
-            hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+            hugo --minify --destination public --baseURL "${{ steps.pages.outputs.base_url }}/"
           else
-            hugo --minify
+            hugo --minify --destination public
           fi
 
-      - name: Verify deployed CV
+      - name: Verify rendered site assets
+        run: |
+          html_file=$(find public -type f -name '*.html' -print -quit)
+          css_file=$(find public -type f -name '*.css' -print -quit)
+          favicon_file=$(find public -type f \( -iname 'favicon.ico' -o -iname 'favicon.png' -o -iname 'icon*.png' \) -print -quit)
+          if [ -z "$html_file" ] || [ -z "$css_file" ] || [ -z "$favicon_file" ]; then
+            echo "Hugo did not publish the expected HTML, CSS, and favicon assets."
+            echo "Generated files (first 100):"
+            find public -maxdepth 4 -type f -print | sort | head -100
+            exit 1
+          fi
+          echo "Verified HTML: $html_file"
+          echo "Verified CSS: $css_file"
+          echo "Verified favicon: $favicon_file"
+
+      - name: Verify deployed documents
         run: |
           test -s public/uploads/Mohammad_Alvi_Refat_CV.pdf
-          echo "CV is included in the Hugo build."
+          test -s public/uploads/Mohammad_Alvi_Refat_Resume.pdf
+          echo "Academic CV and industry résumé are included in the Hugo build."
 
       - name: Generate Pagefind index
         run: pnpm dlx pagefind --site public

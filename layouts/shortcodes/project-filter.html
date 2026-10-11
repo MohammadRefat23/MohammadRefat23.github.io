@@ -1,0 +1,82 @@
+{{- $projects := where .Site.RegularPages "Params.project" true -}}
+<div class="project-filter" data-project-filter>
+  <div class="project-filter__controls" role="group" aria-label="Filter projects by tag">
+    <button type="button" class="project-filter__tag is-active" data-filter-tag="all" aria-pressed="true">All projects</button>
+  </div>
+  <p class="project-filter__status" aria-live="polite"></p>
+  <div class="project-filter__grid">
+    {{- range sort $projects "Title" "asc" }}
+      {{- $tags := .Params.tags -}}
+      {{- $href := .Params.project_url | default .RelPermalink -}}
+      <article class="project-filter__card" data-project-card data-tags="{{ delimit $tags "|" }}">
+        <h2 class="project-filter__title"><a href="{{ $href }}">{{ .Title }}</a></h2>
+        {{- with .Params.summary }}<p>{{ . }}</p>{{ end }}
+        {{- with $tags }}
+          <ul class="project-filter__badges" aria-label="Project tags">
+            {{- range . }}<li>{{ . }}</li>{{ end -}}
+          </ul>
+        {{- end }}
+      </article>
+    {{- end }}
+  </div>
+</div>
+
+<style>
+  .project-filter__controls,.project-filter__badges{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0}
+  .project-filter__controls{margin:1rem 0}
+  .project-filter__tag{border:1px solid currentColor;border-radius:999px;background:transparent;color:inherit;padding:.4rem .8rem;cursor:pointer}
+  .project-filter__tag.is-active{background:#2563eb;border-color:#2563eb;color:#fff}
+  .project-filter__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:1rem}
+  .project-filter__card{border:1px solid rgba(127,127,127,.3);border-radius:.75rem;padding:1.1rem}
+  .project-filter__title{margin-top:0}
+  .project-filter__badges li{border-radius:999px;background:rgba(127,127,127,.13);padding:.2rem .6rem;font-size:.85em}
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector('[data-project-filter]');
+  if (!root) return;
+  const controls = root.querySelector('.project-filter__controls');
+  const cards = [...root.querySelectorAll('[data-project-card]')];
+  const status = root.querySelector('.project-filter__status');
+  const tags = [...new Set(cards.flatMap(card => (card.dataset.tags || '').split('|').filter(Boolean)))].sort((a, b) => a.localeCompare(b));
+  const selected = new Set();
+
+  const makeButton = tag => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'project-filter__tag';
+    button.dataset.filterTag = tag;
+    button.textContent = tag;
+    button.setAttribute('aria-pressed', 'false');
+    controls.append(button);
+  };
+  tags.forEach(makeButton);
+
+  const update = () => {
+    let visible = 0;
+    cards.forEach(card => {
+      const cardTags = (card.dataset.tags || '').split('|');
+      const show = selected.size === 0 || cardTags.some(tag => selected.has(tag));
+      card.hidden = !show;
+      if (show) visible += 1;
+    });
+    controls.querySelectorAll('button').forEach(button => {
+      const active = button.dataset.filterTag === 'all' ? selected.size === 0 : selected.has(button.dataset.filterTag);
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    status.textContent = `${visible} ${visible === 1 ? 'project' : 'projects'} shown`;
+  };
+
+  controls.addEventListener('click', event => {
+    const button = event.target.closest('button[data-filter-tag]');
+    if (!button) return;
+    if (button.dataset.filterTag === 'all') selected.clear();
+    else if (selected.has(button.dataset.filterTag)) selected.delete(button.dataset.filterTag);
+    else selected.add(button.dataset.filterTag);
+    update();
+  });
+  update();
+})();
+</script>

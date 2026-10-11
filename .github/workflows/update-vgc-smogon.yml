@@ -1,0 +1,62 @@
+name: Update VGC usage data from Smogon
+
+on:
+  schedule:
+    # Smogon publishes monthly usage files near the start of each month.
+    - cron: "17 10 3 * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_vgc_meta.py"
+      - "tests/test_update_vgc_meta.py"
+      - ".github/workflows/update-vgc-smogon.yml"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: vgc-smogon-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site repository
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Validate parser and comparison logic
+        run: python -m unittest discover -s tests
+
+      - name: Import published Champions VGC stats
+        run: python scripts/update_vgc_meta.py
+
+      - name: Commit changed monthly data
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain -- static/data/vgc-meta.json static/data/vgc-history)" ]; then
+            echo "Smogon data is already current."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add static/data/vgc-meta.json static/data/vgc-history
+          git commit -m "Update VGC usage ranks from Smogon"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy updated VGC data
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

@@ -11,7 +11,6 @@ draft: false
 pager: false
 ---
 
-{{< button text="Download Academic CV" url="/uploads/Mohammad_Alvi_Refat_CV.pdf" />}}
 {{< button text="Download Industry Résumé" url="/uploads/Mohammad_Alvi_Refat_Resume.pdf" />}}
 
 {{< pdf-viewer

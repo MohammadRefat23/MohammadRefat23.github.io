@@ -1,0 +1,17 @@
+{{- $sections := partial "hbx/sections.html" . -}}
+
+<main id="main-content" data-pagefind-body>
+  <h1 class="sr-only">
+    {{- if .IsHome -}}
+      Mohammad Alvi Refat
+    {{- else -}}
+      {{ .Title }}
+    {{- end -}}
+  </h1>
+
+  {{ range $index, $block := $sections }}
+    {{ if or (not $block.demo) ($block.demo | and (eq (os.Getenv "HUGO_BLOX_DEMO") "true")) }}
+      {{ partial "functions/parse_block_v3" (dict "page" $ "block" $block) }}
+    {{ end }}
+  {{ end }}
+</main>
