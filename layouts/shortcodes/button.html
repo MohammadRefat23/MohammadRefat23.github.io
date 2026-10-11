@@ -1,0 +1,3 @@
+{{- $text := .Get "text" | default "Learn more" -}}
+{{- $url := .Get "url" | default "#" -}}
+<a class="site-button" href="{{ $url | safeURL }}">{{ $text }}</a>
