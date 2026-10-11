@@ -1,4 +1,5 @@
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -101,6 +102,29 @@ class ComparisonTests(unittest.TestCase):
         self.assertAlmostEqual(result["spearman_rho_shared"], 0.5)
         self.assertEqual(result["top_n_overlap"], 2)
         self.assertEqual(result["earlier_battles"], 100)
+
+
+class RetiredSnapshotCleanupTests(unittest.TestCase):
+    def test_cleanup_is_scoped_to_retired_source_directory(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            snapshots_dir = Path(temporary_directory)
+            retired_file = snapshots_dir / "Doubles" / "Current" / "old.json"
+            smogon_file = snapshots_dir / "Doubles-Bo3" / "M-B" / "2026-09.json"
+            other_source_file = snapshots_dir / "Other" / "snapshot.json"
+            malformed_file = snapshots_dir / "Other" / "broken.json"
+            for path in (retired_file, smogon_file, other_source_file, malformed_file):
+                path.parent.mkdir(parents=True, exist_ok=True)
+            retired_file.write_text('{"source": "retired"}', encoding="utf-8")
+            smogon_file.write_text('{"source": "Smogon / Pokémon Showdown"}', encoding="utf-8")
+            other_source_file.write_text('{"source": "another provider"}', encoding="utf-8")
+            malformed_file.write_text("not json", encoding="utf-8")
+
+            updater.remove_retired_snapshots(snapshots_dir)
+
+            self.assertFalse(retired_file.exists())
+            self.assertTrue(smogon_file.exists())
+            self.assertTrue(other_source_file.exists())
+            self.assertTrue(malformed_file.exists())
 
 
 if __name__ == "__main__":

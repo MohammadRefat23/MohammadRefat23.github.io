@@ -325,6 +325,21 @@ def write_comparison_csv(path: Path, snapshots: list[dict]) -> None:
         writer.writerows(rows)
 
 
+def remove_retired_snapshots(snapshots_dir: Path) -> None:
+    """Remove files from the retired Champions Battle Data directory only.
+
+    Smogon snapshots live under ``Doubles-Bo3``. The older source used the
+    ``Doubles/Current`` directory, so scope cleanup to that legacy location and
+    leave unknown, malformed, or other-source snapshots elsewhere untouched.
+    """
+    retired_dir = snapshots_dir / "Doubles" / "Current"
+    if not retired_dir.exists():
+        return
+    for path in retired_dir.rglob("*.json"):
+        if path.is_file():
+            path.unlink()
+
+
 def main() -> None:
     fetched = load_monthly_snapshots()
     saved = load_saved_smogon_snapshots()
@@ -346,14 +361,7 @@ def main() -> None:
             }
         )
 
-    # Remove only snapshots from the retired Champions Battle Data source.
-    for path in SNAPSHOTS_DIR.rglob("*.json") if SNAPSHOTS_DIR.exists() else []:
-        try:
-            source = json.loads(path.read_text(encoding="utf-8")).get("source")
-        except (OSError, json.JSONDecodeError):
-            source = None
-        if source != SOURCE:
-            path.unlink()
+    remove_retired_snapshots(SNAPSHOTS_DIR)
 
     current = max(fetched, key=lambda row: (row["month"], row["regulation"]))
     write_json(
