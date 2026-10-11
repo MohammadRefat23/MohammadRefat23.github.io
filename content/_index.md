@@ -16,7 +16,7 @@ sections:
       text: |-
         {{< button text="View Research" url="/research/" />}}
         {{< button text="View Projects" url="/projects/" />}}
-        {{< button text="Download CV" url="/uploads/Mohammad_Alvi_Refat_CV.pdf" />}}
+        {{< button text="CV & Résumé" url="/cv/" />}}
       headings:
         about: ''
         education: ''

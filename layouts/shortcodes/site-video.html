@@ -1,0 +1,19 @@
+{{- $src := .Get "src" | relURL -}}
+<div class="site-video-embed">
+  <video autoplay muted loop playsinline controls preload="metadata">
+    <source src="{{ $src }}" type="video/mp4">
+    Your browser does not support embedded video.
+  </video>
+</div>
+<style>
+  .site-video-embed {
+    max-width: 56rem;
+    margin: 1.5rem auto;
+  }
+  .site-video-embed video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+  }
+</style>

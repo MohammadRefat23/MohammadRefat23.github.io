@@ -1,884 +1,402 @@
 from __future__ import annotations
 
+import csv
 import json
+import math
 import re
 import time
-from datetime import datetime, timezone
+from datetime import date
 from pathlib import Path
+from urllib.error import HTTPError
+from urllib.request import Request, urlopen
 
-import requests
 
 
-# ============================================================
-# Configuration
-# ============================================================
+ROOT = Path(__file__).resolve().parents[1]
+STATS_INDEX_URL = "https://www.smogon.com/stats/"
+STATS_BASE_URL = "https://www.smogon.com/stats"
+OUTPUT = ROOT / "static/data/vgc-meta.json"
+HISTORY_DIR = ROOT / "static/data/vgc-history"
+SNAPSHOTS_DIR = HISTORY_DIR / "snapshots"
+HISTORY_INDEX = HISTORY_DIR / "index.json"
+COMPARISON_CSV = HISTORY_DIR / "monthly_comparison.csv"
 
-BASE_URL = "https://championsbattledata.com"
-INDEX_URL = f"{BASE_URL}/api"
-
-FORMAT = "Doubles"
+# This project tracks the Pokémon Showdown Champions VGC best-of-three ladder.
+FORMAT_PREFIX = "gen9championsvgc2026reg"
+FORMAT_SUFFIX = "bo3"
+REGULATIONS = ("ma", "mb", "mc")
+RATING_CUTOFF = 1630
+MIN_MONTH = "2026-04"
 TOP_N = 15
+REQUEST_TIMEOUT = 45
+REQUEST_DELAY = 0.2
 
-OUTPUT = Path("static/data/vgc-meta.json")
-
-REQUEST_TIMEOUT = 30
-REQUEST_DELAY = 0.15
-
+SOURCE = "Smogon / Pokémon Showdown"
+ATTRIBUTION = "Usage statistics: Smogon / Pokémon Showdown"
 HEADERS = {
-    "User-Agent": (
-        "MohammadRefat23.github.io "
-        "monthly competitive-data visualization"
-    ),
-    "Accept": "application/json",
+    "User-Agent": "MohammadRefat23.github.io VGC usage-rank visualization",
+    "Accept": "text/html,text/plain,application/json",
 }
 
+def get_text(url: str) -> str:
+    request = Request(url, headers=HEADERS)
+    with urlopen(request, timeout=REQUEST_TIMEOUT) as response:
+        return response.read().decode("utf-8")
 
-# ============================================================
-# HTTP
-# ============================================================
 
-session = requests.Session()
-session.headers.update(HEADERS)
+def get_months() -> list[str]:
+    """Read Smogon's public stats directory and return available month folders."""
+    page = get_text(STATS_INDEX_URL)
+    months = sorted(set(re.findall(r'href="(\d{4}-\d{2})/"', page)))
+    return [month for month in months if month >= MIN_MONTH]
 
 
-
-
-def get_json(url: str) -> dict:
-    print(f"GET {url}")
-
-    response = session.get(
-        url,
-        timeout=REQUEST_TIMEOUT,
-    )
-
-    response.raise_for_status()
-
-    try:
-        return response.json()
-
-    except ValueError as exc:
-        raise RuntimeError(
-            f"Expected JSON from {url}."
-        ) from exc
-
-
-ITEM_NAME_FIXES = {
-    "Tyra nitarite": "Tyranitarite",
-}
-
-
-def clean_item_name(name):
-    name = " ".join(str(name).split())
-    return ITEM_NAME_FIXES.get(name, name)
-
-# ============================================================
-# Helpers
-# ============================================================
-
-def normalize_name(value: str) -> str:
-    return re.sub(
-        r"[^a-z0-9]",
-        "",
-        str(value).lower(),
-    )
-
-
-def numeric(value):
-    if value is None:
-        return None
-
-    if isinstance(value, (int, float)):
-        return value
-
-    text = (
-        str(value)
-        .strip()
-        .replace("%", "")
-        .replace(",", "")
-    )
-
-    if not text:
-        return None
-
-    try:
-        number = float(text)
-
-        if number.is_integer():
-            return int(number)
-
-        return number
-
-    except ValueError:
-        return None
-
-
-def get_current_doubles_summary(
-    entry: dict,
-) -> dict:
-
-    return (
-        entry
-        .get("summary", {})
-        .get("battleSummary", {})
-        .get("Current", {})
-        .get(FORMAT, {})
-    )
-
-
-def get_doubles_rank(
-    entry: dict,
-) -> int | None:
-    """
-    Get the overall current Doubles position.
-
-    The API stores this directly at:
-
-    summary
-      -> battleSummary
-      -> Current
-      -> Doubles
-      -> position
-    """
-
-    summary = get_current_doubles_summary(
-        entry
-    )
-
-    rank = numeric(
-        summary.get("position")
-    )
-
-    if rank is not None:
-        return int(rank)
-
-    # Fallback: each top row also carries the
-    # overall Pokémon position.
-    top = summary.get(
-        "top",
-        {},
-    )
-
-    if isinstance(top, dict):
-
-        for category in (
-            "move",
-            "held_item",
-            "ability",
-            "teammate",
-        ):
-
-            row = top.get(
-                category
-            )
-
-            if not isinstance(row, dict):
-                continue
-
-            rank = numeric(
-                row.get("position")
-            )
-
-            if rank is not None:
-                return int(rank)
-
-    return None
-
-
-def has_current_doubles_data(
-    entry: dict,
-) -> bool:
-
-    for record in entry.get(
-        "battleDataCsvs",
-        [],
-    ):
-
-        if (
-            record.get("season") == "Current"
-            and
-            record.get("format") == FORMAT
-        ):
-            return True
-
-    return False
-
-
-def get_display_name(
-    entry: dict,
-) -> str:
-
-    return str(
-        entry.get("name")
-        or entry.get("showdownName")
-        or entry.get("showdownId")
-        or "Unknown"
-    )
-
-
-def get_showdown_id(
-    entry: dict,
-) -> str:
-
-    showdown_id = entry.get(
-        "showdownId"
-    )
-
-    if not showdown_id:
-        raise RuntimeError(
-            f"No Showdown ID for "
-            f"{get_display_name(entry)}."
-        )
-
-    return str(showdown_id)
-
-
-def get_saved_name(
-    entry: dict,
-) -> str:
-
-    primary = (
-        entry
-        .get("summary", {})
-        .get("primary", {})
-    )
-
-    return str(
-        primary.get("saved_name")
-        or get_display_name(entry)
-    )
-
-
-def get_types(
-    entry: dict,
-) -> list[str]:
-
-    types = (
-        entry
-        .get("summary", {})
-        .get("types", [])
-    )
-
-    if not isinstance(types, list):
-        return []
-
-    return [
-        str(value)
-        for value in types
-    ]
-
-
-def get_base_stats(
-    entry: dict,
-) -> dict:
-
-    stats = (
-        entry
-        .get("summary", {})
-        .get("baseStats", {})
-    )
-
-    if not isinstance(stats, dict):
-        return {}
-
-    return stats
-
-
-# ============================================================
-# Find top Doubles Pokémon
-# ============================================================
-
-def get_top_doubles(
-    index_data: dict,
-) -> list[dict]:
-
-    entries = index_data.get(
-        "pokemon",
-        []
-    )
-
-    if not isinstance(entries, list):
-        raise RuntimeError(
-            "API index does not contain pokemon[]."
-        )
-
-    ranked = {}
-
-    for entry in entries:
-
-        if not isinstance(entry, dict):
-            continue
-
-        if not has_current_doubles_data(
-            entry
-        ):
-            continue
-
-        rank = get_doubles_rank(
-            entry
-        )
-
-        if rank is None:
-            continue
-
-        showdown_id = get_showdown_id(
-            entry
-        )
-
-        # Dedupe by Showdown ID.
-        existing = ranked.get(
-            showdown_id
-        )
-
-        if (
-            existing is None
-            or rank < existing["rank"]
-        ):
-
-            ranked[showdown_id] = {
-                "rank": rank,
-                "entry": entry,
-            }
-
-    result = list(
-        ranked.values()
-    )
-
-    result.sort(
-        key=lambda x: x["rank"]
-    )
-
-    if len(result) < TOP_N:
-
-        raise RuntimeError(
-            f"Only found {len(result)} "
-            f"current Doubles Pokémon."
-        )
-
-    return result[:TOP_N]
-
-
-# ============================================================
-# Battle data
-# ============================================================
-
-def rows_for_category(
-    rows: list[dict],
-    category: str,
-    limit: int,
-) -> list[dict]:
-
-    selected = []
-
-    for row in rows:
-
-        if (
-            str(
-                row.get(
-                    "category",
-                    ""
-                )
-            ).lower()
-            != category.lower()
-        ):
-            continue
-
-        name = row.get(
-            "name"
-        )
-
-        if not name:
-            continue
-
-        selected.append(
-            {
-                "rank": numeric(
-                    row.get("rank")
-                ),
-                "name": str(name),
-                "percentage": numeric(
-                    row.get(
-                        "percentage_value"
-                    )
-                ),
-            }
-        )
-
-    selected.sort(
-        key=lambda row:
-            row["rank"]
-            if row["rank"] is not None
-            else 9999
-    )
-
-    return selected[:limit]
-
-
-def fetch_battle_data(
-    showdown_id: str,
-) -> dict:
-
-    url = (
-        f"{BASE_URL}/api/battle/"
-        f"{FORMAT}/{showdown_id}"
-    )
-
-    data = get_json(
-        url
-    )
-
-    if not isinstance(data, dict):
-        raise RuntimeError(
-            f"Invalid battle response "
-            f"for {showdown_id}."
-        )
-
-    rows = data.get(
-        "rows",
-        []
-    )
-
-    if not isinstance(rows, list):
-        raise RuntimeError(
-            f"Battle response for "
-            f"{showdown_id} "
-            "does not contain rows[]."
-        )
-
-    # IMPORTANT:
-    # this return must remain inside this function.
-    return {
-        "season": data.get(
-            "season",
-            "Current"
-        ),
-        "source": data.get(
-            "source"
-        ),
-
-        "moves": rows_for_category(
-            rows,
-            "move",
-            5
-        ),
-
-"items": [
-    {
-        **item,
-        "name": clean_item_name(
-            item.get("name", "")
-        ),
-    }
-    for item in rows_for_category(
-        rows,
-        "held_item",
-        3
-    )
-],
-
-        "abilities": rows_for_category(
-            rows,
-            "ability",
-            2
-        ),
-
-        "teammates": rows_for_category(
-            rows,
-            "teammate",
-            8
-        ),
-    }
-
-
-# ============================================================
-# Network
-# ============================================================
-
-def build_links(
-    pokemon: list[dict],
-) -> list[dict]:
-    """
-    Build edges between top-N Pokémon.
-
-    The API currently ranks teammates but does not provide
-    a numeric teammate percentage, so network strength is
-    based on reciprocal teammate rank:
-
-        rank 1 -> 1.0
-        rank 2 -> 0.5
-        rank 3 -> 0.333...
-    """
-
-    lookup = {}
-
-    for mon in pokemon:
-
-        aliases = {
-            normalize_name(
-                mon["name"]
-            ),
-            normalize_name(
-                mon["showdown_id"]
-            ),
-            normalize_name(
-                mon["saved_name"]
-            ),
-        }
-
-        for alias in aliases:
-
-            if alias:
-                lookup[alias] = mon["id"]
-
-    pairs = {}
-
-    for mon in pokemon:
-
-        source = mon["id"]
-
-        for teammate in mon[
-            "teammates"
-        ]:
-
-            target = lookup.get(
-                normalize_name(
-                    teammate["name"]
-                )
-            )
-
-            if (
-                target is None
-                or target == source
-            ):
-                continue
-
-            rank = teammate.get(
-                "rank"
-            )
-
-            if rank is None:
-                continue
-
-            rank = int(rank)
-
-            key = tuple(
-                sorted(
-                    (source, target)
-                )
-            )
-
-            record = pairs.setdefault(
-                key,
-                {
-                    "source": key[0],
-                    "target": key[1],
-                    "scores": [],
-                    "directions": [],
-                }
-            )
-
-            record[
-                "scores"
-            ].append(
-                1.0 / rank
-            )
-
-            record[
-                "directions"
-            ].append(
-                {
-                    "from": source,
-                    "teammate_rank": rank,
-                }
-            )
-
-    links = []
-
-    for pair in pairs.values():
-
-        scores = pair[
-            "scores"
-        ]
-
-        strength = (
-            sum(scores)
-            /
-            len(scores)
-        )
-
-        links.append(
-            {
-                "source": pair[
-                    "source"
-                ],
-                "target": pair[
-                    "target"
-                ],
-                "strength": round(
-                    strength,
-                    4
-                ),
-                "mutual": (
-                    len(scores) > 1
-                ),
-                "directions": pair[
-                    "directions"
-                ],
-            }
-        )
-
-    links.sort(
-        key=lambda x: x[
-            "strength"
-        ],
-        reverse=True
-    )
-
-    return links
-
-
-# ============================================================
-# Main
-# ============================================================
-
-def main():
-
-    print(
-        "Fetching Pokémon Champions "
-        "Battle Data index..."
-    )
-
-    index = get_json(
-        INDEX_URL
-    )
-
-    ranked = get_top_doubles(
-        index
-    )
-
-    print()
-    print(
-        f"Found top {len(ranked)} "
-        f"{FORMAT} Pokémon."
-    )
-    print()
-
+def parse_usage_table(text: str) -> list[dict]:
+    """Parse the full rank, usage, and count columns from a Smogon report."""
     pokemon = []
-
-    season = "Current"
-
-    for item in ranked:
-
-        rank = item[
-            "rank"
-        ]
-
-        entry = item[
-            "entry"
-        ]
-
-        name = get_display_name(
-            entry
-        )
-
-        showdown_id = get_showdown_id(
-            entry
-        )
-
-        print(
-            f"#{rank:>2} "
-            f"{name} "
-            f"({showdown_id})"
-        )
-
-        battle = fetch_battle_data(
-            showdown_id
-        )
-
-        season = battle.get(
-            "season",
-            season
-        )
-
+    seen_names = set()
+    for line in text.splitlines():
+        if not line.lstrip().startswith("|"):
+            continue
+        columns = [part.strip() for part in line.strip().strip("|").split("|")]
+        if len(columns) < 7:
+            continue
+        try:
+            rank = int(columns[0])
+            usage = float(columns[2].replace("%", "").replace(",", ""))
+            raw = int(columns[3].replace(",", ""))
+            raw_pct = float(columns[4].replace("%", "").replace(",", ""))
+            real = int(columns[5].replace(",", ""))
+            real_pct = float(columns[6].replace("%", "").replace(",", ""))
+        except (ValueError, TypeError):
+            continue
+        name = columns[1]
+        if not name or name.lower() in {"pokemon", "pokémon"}:
+            continue
+        if name in seen_names:
+            raise ValueError(f"Duplicate Pokémon row in Smogon report: {name}")
+        if not all(math.isfinite(value) for value in (usage, raw_pct, real_pct)):
+            raise ValueError(f"Non-finite usage value for {name}")
+        if any(not 0 <= value <= 100 for value in (usage, raw_pct, real_pct)):
+            raise ValueError(f"Usage percentage outside [0, 100] for {name}")
+        seen_names.add(name)
         pokemon.append(
             {
-                "id": showdown_id,
-
+                "id": re.sub(r"[^a-z0-9]", "", name.casefold()),
                 "name": name,
-
-                "showdown_id":
-                    showdown_id,
-
-                "saved_name":
-                    get_saved_name(
-                        entry
-                    ),
-
                 "rank": rank,
-
-                "types":
-                    get_types(
-                        entry
-                    ),
-
-                "base_stats":
-                    get_base_stats(
-                        entry
-                    ),
-
-                "moves":
-                    battle[
-                        "moves"
-                    ],
-
-                "items":
-                    battle[
-                        "items"
-                    ],
-
-                "abilities":
-                    battle[
-                        "abilities"
-                    ],
-
-                "teammates":
-                    battle[
-                        "teammates"
-                    ],
+                "usage_pct": usage,
+                "raw": raw,
+                "raw_pct": raw_pct,
+                "real": real,
+                "real_pct": real_pct,
             }
         )
 
-        time.sleep(
-            REQUEST_DELAY
-        )
+    pokemon.sort(key=lambda row: row["rank"])
+    if not pokemon:
+        raise ValueError("No Pokémon rows found in the Smogon stats file")
+    expected_ranks = list(range(1, len(pokemon) + 1))
+    observed_ranks = [row["rank"] for row in pokemon]
+    if observed_ranks != expected_ranks:
+        raise ValueError("Smogon source ranks are not a continuous sequence starting at 1")
+    return pokemon
 
-    links = build_links(
-        pokemon
+
+def parse_report(text: str) -> tuple[int, float, list[dict]]:
+    """Parse report totals and species rows; reject incomplete source files."""
+    battles_match = re.search(r"Total battles:\s*([\d,]+)", text)
+    weight_match = re.search(r"Avg\. weight/team:\s*([\d.]+)", text)
+    if not battles_match or not weight_match:
+        raise ValueError("Smogon report is missing its battle or average-weight summary")
+    battles = int(battles_match.group(1).replace(",", ""))
+    weight = float(weight_match.group(1))
+    if battles <= 0 or not math.isfinite(weight) or weight <= 0:
+        raise ValueError("Smogon report has invalid battle totals or average weight")
+    return battles, weight, parse_usage_table(text)
+
+
+def regulation_label(code: str) -> str:
+    return f"M-{code[-1].upper()}"
+
+
+def snapshot_path(snapshot: dict) -> Path:
+    return (
+        Path("snapshots")
+        / "Doubles-Bo3"
+        / snapshot["regulation"]
+        / f"{snapshot['month']}.json"
     )
 
-    output = {
-        "source":
-            "Pokémon Champions Battle Data",
 
-        "source_url":
-            "https://championsbattledata.com/",
+def load_monthly_snapshots() -> list[dict]:
+    snapshots = []
+    months = get_months()
+    if not months:
+        raise RuntimeError("No Smogon monthly stats folders were found")
 
-        "api_guide":
-            "https://championsbattledata.com/api_guide",
-
-        "attribution":
-            (
-                "Battle data provided by "
-                "Pokémon Champions Battle Data."
-            ),
-
-        "format":
-            FORMAT,
-
-        "season":
-            season,
-
-        "updated":
-            datetime.now(
-                timezone.utc
-            ).strftime(
-                "%Y-%m-%d"
-            ),
-
-        "top_n":
-            TOP_N,
-
-        "pokemon":
-            pokemon,
-
-        "links":
-            links,
-    }
-
-    OUTPUT.parent.mkdir(
-        parents=True,
-        exist_ok=True
-    )
-
-    temporary = OUTPUT.with_suffix(
-        ".json.tmp"
-    )
-
-    temporary.write_text(
-        json.dumps(
-            output,
-            indent=2,
-            ensure_ascii=False
-        )
-        + "\n",
-        encoding="utf-8"
-    )
-
-    temporary.replace(
-        OUTPUT
-    )
-
-    print()
-    print(
-        f"Wrote {OUTPUT}"
-    )
-
-    print(
-        f"Pokémon nodes: "
-        f"{len(pokemon)}"
-    )
-
-    print(
-        f"Network links: "
-        f"{len(links)}"
-    )
-
-    print()
-    print(
-        "Top Doubles Pokémon:"
-    )
-
-    for mon in pokemon:
-
-        top_move = (
-            mon["moves"][0]["name"]
-            if mon["moves"]
-            else "—"
-        )
-
-        top_item = (
-            mon["items"][0]["name"]
-            if mon["items"]
-            else "—"
-        )
-
-        print(
-            f"  #{mon['rank']:>2} "
-            f"{mon['name']:<25} "
-            f"{top_move:<20} "
-            f"{top_item}"
-        )
-
-    if links:
-
-        names = {
-            mon["id"]: mon["name"]
-            for mon in pokemon
-        }
-
-        print()
-        print(
-            "Strongest teammate links:"
-        )
-
-        for link in links[:10]:
-
-            print(
-                f"  "
-                f"{names[link['source']]} "
-                f"↔ "
-                f"{names[link['target']]} "
-                f"({link['strength']:.3f})"
+    for month in months:
+        for regulation in REGULATIONS:
+            format_id = f"{FORMAT_PREFIX}{regulation}{FORMAT_SUFFIX}"
+            filename = f"{format_id}-{RATING_CUTOFF}.txt"
+            url = f"{STATS_BASE_URL}/{month}/{filename}"
+            try:
+                body = get_text(url)
+            except HTTPError as exc:
+                if exc.code == 404:
+                    continue
+                raise
+            total_battles, avg_weight, rows = parse_report(body)
+            snapshots.append(
+                {
+                    "schema_version": 2,
+                    "month": month,
+                    "format": "Doubles Bo3",
+                    "regulation": regulation_label(regulation),
+                    "format_id": format_id,
+                    "rating_cutoff": RATING_CUTOFF,
+                    "total_battles": total_battles,
+                    "avg_weight_per_team": avg_weight,
+                    "source": SOURCE,
+                    "source_url": url,
+                    "attribution": ATTRIBUTION,
+                    "pokemon": rows,
+                }
             )
+            print(
+                f"Imported {month} · Regulation {regulation_label(regulation)} "
+                f"({len(rows)} Pokémon; {total_battles:,} battles)"
+            )
+            time.sleep(REQUEST_DELAY)
+
+    if not snapshots:
+        raise RuntimeError("No Champions VGC Bo3 usage datasets were found")
+    snapshots.sort(key=lambda row: (row["month"], row["regulation"]))
+    return snapshots
+
+
+def write_json(path: Path, value: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(
+        json.dumps(value, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    temporary.replace(path)
+
+
+def load_saved_smogon_snapshots() -> list[dict]:
+    """Keep archived Smogon snapshots even if a source month is later removed."""
+    if not SNAPSHOTS_DIR.exists():
+        return []
+    saved = []
+    for path in SNAPSHOTS_DIR.rglob("*.json"):
+        try:
+            snapshot = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if (
+            snapshot.get("source") == SOURCE
+            and snapshot.get("format") == "Doubles Bo3"
+            and snapshot.get("rating_cutoff") == RATING_CUTOFF
+            and snapshot.get("month")
+            and snapshot.get("regulation")
+            and isinstance(snapshot.get("pokemon"), list)
+        ):
+            saved.append(snapshot)
+    return saved
+
+
+def build_comparison_rows(snapshots: list[dict]) -> list[dict]:
+    """Return union-roster comparisons for every adjacent pair per regulation."""
+    grouped: dict[str, list[dict]] = {}
+    for snapshot in snapshots:
+        grouped.setdefault(snapshot["regulation"], []).append(snapshot)
+
+    result = []
+    for regulation, reports in grouped.items():
+        reports.sort(key=lambda row: row["month"])
+        for previous, current in zip(reports, reports[1:]):
+            before = {row["name"]: row for row in previous["pokemon"]}
+            after = {row["name"]: row for row in current["pokemon"]}
+            for name in sorted(before.keys() | after.keys()):
+                old = before.get(name)
+                new = after.get(name)
+                result.append(
+                    {
+                        "regulation": regulation,
+                        "earlier_month": previous["month"],
+                        "later_month": current["month"],
+                        "pokemon": name,
+                        "earlier_rank": old["rank"] if old else None,
+                        "later_rank": new["rank"] if new else None,
+                        "earlier_usage_pct": old["usage_pct"] if old else None,
+                        "later_usage_pct": new["usage_pct"] if new else None,
+                        "usage_change_pp": round(new["usage_pct"] - old["usage_pct"], 5)
+                        if old and new
+                        else None,
+                        "rank_movement": old["rank"] - new["rank"] if old and new else None,
+                        "coverage": "both months" if old and new else ("later only" if new else "earlier only"),
+                    }
+                )
+    return result
+
+
+def summarize_adjacent_pairs(snapshots: list[dict], top_n: int = TOP_N) -> list[dict]:
+    """Calculate descriptive rank and usage summaries for each same-regulation pair."""
+    grouped: dict[str, list[dict]] = {}
+    for snapshot in snapshots:
+        grouped.setdefault(snapshot["regulation"], []).append(snapshot)
+
+    summaries = []
+    for regulation, reports in grouped.items():
+        reports.sort(key=lambda row: row["month"])
+        for earlier, later in zip(reports, reports[1:]):
+            old = {row["name"]: row for row in earlier["pokemon"]}
+            new = {row["name"]: row for row in later["pokemon"]}
+            common_names = old.keys() & new.keys()
+            common = sorted(common_names)
+            old_order = {name: rank for rank, name in enumerate(
+                sorted(common, key=lambda name: old[name]["rank"]), start=1
+            )}
+            new_order = {name: rank for rank, name in enumerate(
+                sorted(common, key=lambda name: new[name]["rank"]), start=1
+            )}
+            n_shared = len(common)
+            sum_d_squared = sum((old_order[name] - new_order[name]) ** 2 for name in common)
+            rho = 1 - (6 * sum_d_squared) / (n_shared * (n_shared**2 - 1)) if n_shared > 1 else None
+
+            old_top = {row["name"] for row in earlier["pokemon"][:top_n]}
+            new_top = {row["name"] for row in later["pokemon"][:top_n]}
+            shared_changes = [
+                {
+                    "pokemon": name,
+                    "usage_change_pp": round(new[name]["usage_pct"] - old[name]["usage_pct"], 5),
+                    "earlier_rank": old[name]["rank"],
+                    "later_rank": new[name]["rank"],
+                }
+                for name in common
+            ]
+            gains = sorted(shared_changes, key=lambda row: row["usage_change_pp"], reverse=True)[:5]
+            declines = sorted(shared_changes, key=lambda row: row["usage_change_pp"])[:5]
+            summaries.append(
+                {
+                    "regulation": regulation,
+                    "earlier_month": earlier["month"],
+                    "later_month": later["month"],
+                    "earlier_battles": earlier.get("total_battles"),
+                    "later_battles": later.get("total_battles"),
+                    "shared_roster": n_shared,
+                    "earlier_only": sorted(old.keys() - new.keys()),
+                    "later_only": sorted(new.keys() - old.keys()),
+                    "top_n": top_n,
+                    "top_n_overlap": len(old_top & new_top),
+                    "top_n_overlap_pct": round(100 * len(old_top & new_top) / top_n, 2),
+                    "top_n_entered": sorted(new_top - old_top),
+                    "top_n_exited": sorted(old_top - new_top),
+                    "spearman_rho_shared": rho,
+                    "sum_squared_rank_differences": sum_d_squared,
+                    "largest_usage_gains": gains,
+                    "largest_usage_declines": declines,
+                }
+            )
+    return summaries
+
+
+def write_comparison_csv(path: Path, snapshots: list[dict]) -> None:
+    rows = build_comparison_rows(snapshots)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fields = [
+        "regulation",
+        "earlier_month",
+        "later_month",
+        "pokemon",
+        "earlier_rank",
+        "later_rank",
+        "earlier_usage_pct",
+        "later_usage_pct",
+        "usage_change_pp",
+        "rank_movement",
+        "coverage",
+    ]
+    with path.open("w", newline="", encoding="utf-8") as output:
+        writer = csv.DictWriter(output, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def remove_retired_snapshots(snapshots_dir: Path) -> None:
+    """Remove files from the retired Champions Battle Data directory only.
+
+    Smogon snapshots live under ``Doubles-Bo3``. The older source used the
+    ``Doubles/Current`` directory, so scope cleanup to that legacy location and
+    leave unknown, malformed, or other-source snapshots elsewhere untouched.
+    """
+    retired_dir = snapshots_dir / "Doubles" / "Current"
+    if not retired_dir.exists():
+        return
+    for path in retired_dir.rglob("*.json"):
+        if path.is_file():
+            path.unlink()
+
+
+def main() -> None:
+    fetched = load_monthly_snapshots()
+    saved = load_saved_smogon_snapshots()
+    by_key = {(row["regulation"], row["month"]): row for row in saved}
+    by_key.update({(row["regulation"], row["month"]): row for row in fetched})
+    snapshots = sorted(by_key.values(), key=lambda row: (row["month"], row["regulation"]))
+
+    entries = []
+    for snapshot in snapshots:
+        relative_path = snapshot_path(snapshot)
+        write_json(HISTORY_DIR / relative_path, snapshot)
+        entries.append(
+            {
+                "month": snapshot["month"],
+                "format": snapshot["format"],
+                "regulation": snapshot["regulation"],
+                "path": relative_path.as_posix(),
+                "total_battles": snapshot["total_battles"],
+            }
+        )
+
+    remove_retired_snapshots(SNAPSHOTS_DIR)
+
+    current = max(fetched, key=lambda row: (row["month"], row["regulation"]))
+    write_json(
+        OUTPUT,
+        {
+            "schema_version": 2,
+            "source": current["source"],
+            "source_url": current["source_url"],
+            "attribution": current["attribution"],
+            "format": current["format"],
+            "regulation": current["regulation"],
+            "rating_cutoff": RATING_CUTOFF,
+            "month": current["month"],
+            "updated": date.today().isoformat(),
+            "total_battles": current["total_battles"],
+            "avg_weight_per_team": current["avg_weight_per_team"],
+            "top_n": TOP_N,
+            "roster_size": len(current["pokemon"]),
+            "pokemon": current["pokemon"][:TOP_N],
+        },
+    )
+    write_json(
+        HISTORY_INDEX,
+        {
+            "schema_version": 2,
+            "source": SOURCE,
+            "source_url": STATS_INDEX_URL,
+            "attribution": ATTRIBUTION,
+            "snapshots": entries,
+            "comparisons": summarize_adjacent_pairs(snapshots),
+        },
+    )
+    write_comparison_csv(COMPARISON_CSV, snapshots)
+    print(f"Current snapshot: {current['month']} · Regulation {current['regulation']}")
+    print(f"Saved {len(entries)} monthly snapshot(s) and comparison CSV.")
 
 
 if __name__ == "__main__":

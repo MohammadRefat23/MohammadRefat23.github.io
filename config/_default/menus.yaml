@@ -19,6 +19,6 @@ main:
     url: /events/
     weight: 40
 
-  - name: CV
+  - name: CV & Résumé
     url: /cv/
     weight: 50
