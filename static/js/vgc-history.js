@@ -225,9 +225,18 @@
       }, 1100);
     });
 
-    const initialRegulation = regulations.includes(current.regulation)
-      ? current.regulation
-      : regulations.at(-1);
+    // Prefer the newest regulation with at least two monthly snapshots so the
+    // timeline opens on data that can actually be compared and animated.
+    const initialRegulation = regulations
+      .map((regulation) => ({
+        regulation,
+        snapshots: (byRegulation.get(regulation) || [])
+          .slice()
+          .sort((a, b) => a.month.localeCompare(b.month)),
+      }))
+      .filter((item) => item.snapshots.length >= 2)
+      .sort((a, b) => b.snapshots.at(-1).month.localeCompare(a.snapshots.at(-1).month))[0]?.regulation
+      || (regulations.includes(current.regulation) ? current.regulation : regulations.at(-1));
     regulationSelect.value = initialRegulation;
     selectRegulation(initialRegulation).catch((error) => {
       status.textContent = error.message;

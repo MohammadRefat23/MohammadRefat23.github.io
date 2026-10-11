@@ -2,7 +2,7 @@
 title: Presentations
 type: landing
 cms_exclude: true
-summary: "Research talks, recorded presentations, and scientific posters by Mohammad Alvi Refat."
+summary: "Research talks and recorded presentations by Mohammad Alvi Refat."
 design:
   spacing: '5rem'
 
@@ -24,22 +24,4 @@ sections:
       show_date: true
       show_read_time: false
 
-  - block: collection
-    id: posters
-    content:
-      title: '<h2>Posters</h2>'
-      text: Selected research posters.
-      filters:
-        folders:
-          - posters
-      sort_by: date
-      sort_ascending: false
-    design:
-      view: card
-      columns: 3
-      fill_image: true
-      # Several older posters are known only by year, so avoid displaying
-      # artificial January 1 / December 1 placeholder dates on their cards.
-      show_date: false
-      show_read_time: false
 ---
