@@ -1,8 +1,0 @@
-{{- $inner := .Inner -}}
-{{- $text := .Get "text" -}}
-{{- if not $text -}}
-  {{- $text = $inner | plainify | strings.TrimSpace -}}
-{{- end -}}
-{{- $text = $text | default "Learn more" -}}
-{{- $url := .Get "url" | default "#" -}}
-<a class="site-button" href="{{ $url | safeURL }}">{{ $text }}</a>
