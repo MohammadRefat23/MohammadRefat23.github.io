@@ -8,9 +8,10 @@
     return response.json();
   }
 
-  function createRow(pokemon, maxUsage) {
+  function createRow(pokemon) {
     const row = document.createElement("div");
     row.className = "vgc-rank-row";
+    row.dataset.pokemon = pokemon.name;
 
     const rank = document.createElement("span");
     rank.className = "vgc-rank-number";
@@ -26,7 +27,7 @@
     const bar = document.createElement("span");
     bar.className = "vgc-bar";
     const usage = Number(pokemon.usage_pct) || 0;
-    bar.style.width = `${maxUsage ? (usage / maxUsage) * 100 : 0}%`;
+    bar.style.width = `${Math.max(0, Math.min(100, usage))}%`;
     track.append(bar);
 
     const percentage = document.createElement("span");
@@ -38,10 +39,29 @@
   }
 
   function renderRanks(container, rows, topN) {
-    container.replaceChildren();
     const visible = (rows || []).slice(0, topN);
-    const maxUsage = Math.max(0, ...visible.map((pokemon) => Number(pokemon.usage_pct) || 0));
-    visible.forEach((pokemon) => container.append(createRow(pokemon, maxUsage)));
+    const previousRows = new Map(
+      [...container.children]
+        .filter((row) => row.classList.contains("vgc-rank-row"))
+        .map((row) => [row.dataset.pokemon, row]),
+    );
+    const nextRows = visible.map((pokemon) => {
+      let row = previousRows.get(pokemon.name);
+      if (!row || row.children.length !== 4 || !row.children[2].firstElementChild) {
+        row = createRow(pokemon);
+      }
+      const [rank, name, track, percentage] = row.children;
+      const bar = track.firstElementChild;
+      const usage = Number(pokemon.usage_pct) || 0;
+      row.dataset.pokemon = pokemon.name;
+      rank.textContent = `#${pokemon.rank}`;
+      name.textContent = pokemon.name;
+      bar.style.width = `${Math.max(0, Math.min(100, usage))}%`;
+      percentage.textContent = `${usage.toFixed(2)}%`;
+      return row;
+    });
+
+    container.replaceChildren(...nextRows);
     if (!visible.length) {
       const empty = document.createElement("p");
       empty.textContent = "No rank data is available for this snapshot.";
@@ -108,7 +128,7 @@
       : "Waiting for first Smogon data import";
     currentMonth.textContent = hasCurrentData ? `Latest: ${current.month}` : "";
     summary.textContent = hasCurrentData
-      ? `Latest report: ${Number(current.total_battles || 0).toLocaleString()} battles. Showing the top ${topN}; bars scale to the most-used Pokémon in each snapshot.`
+      ? `Latest report: ${Number(current.total_battles || 0).toLocaleString()} battles. Showing the top ${topN}; bars use a fixed 0–100% usage scale.`
       : "The data importer will populate this view with Smogon's published monthly Champions VGC Bo3 statistics.";
     renderRanks(currentRanks, current.pokemon, topN);
 
