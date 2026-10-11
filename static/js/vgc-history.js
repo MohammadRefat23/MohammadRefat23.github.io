@@ -1,7 +1,4 @@
 (() => {
-  const CURRENT_DATA = "/data/vgc-meta.json";
-  const HISTORY_INDEX = "/data/vgc-history/index.json";
-
   async function fetchJson(path) {
     const response = await fetch(path, { cache: "no-cache" });
     if (!response.ok) throw new Error(`Could not load ${path} (${response.status})`);
@@ -121,6 +118,7 @@
     const historyRanks = root.querySelector("[data-history-ranks]");
     const status = root.querySelector("[data-history-status]");
     const playButton = root.querySelector("[data-play]");
+    const historyRoot = root.dataset.historyRoot;
 
     const hasCurrentData = Array.isArray(current.pokemon) && current.pokemon.length > 0;
     currentMeta.textContent = hasCurrentData
@@ -163,7 +161,7 @@
     async function loadSnapshot(meta) {
       let snapshot = cache.get(meta.path);
       if (!snapshot) {
-        snapshot = await fetchJson(`/data/vgc-history/${meta.path}`);
+        snapshot = await fetchJson(`${historyRoot}${meta.path}`);
         cache.set(meta.path, snapshot);
       }
       return snapshot;
@@ -240,9 +238,10 @@
     const roots = [...document.querySelectorAll("[data-vgc-ranks]")];
     if (!roots.length) return;
     try {
+      const dataRoot = roots[0];
       const [current, historyIndex] = await Promise.all([
-        fetchJson(CURRENT_DATA),
-        fetchJson(HISTORY_INDEX),
+        fetchJson(dataRoot.dataset.currentUrl),
+        fetchJson(dataRoot.dataset.historyIndexUrl),
       ]);
       roots.forEach((root) => setupWidget(root, current, historyIndex));
     } catch (error) {
