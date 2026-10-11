@@ -15,7 +15,7 @@ I am a computational physicist with a B.S. in Computational Astrophysics and an 
 
 Spherical harmonics describe patterns on a sphere. The video and interactive tool show how changing degree \(\ell\) and order \(m\) changes the surface pattern.
 
-{{< video src="media/spherical-harmonics.mp4" >}}
+{{< site-video src="media/spherical-harmonics.mp4" >}}
 
 {{< spherical-harmonics >}}
 
