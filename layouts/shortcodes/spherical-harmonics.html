@@ -1,0 +1,1055 @@
+{{ $id := printf "spherical-harmonics-%d" .Ordinal }}
+
+<div id="{{ $id }}" class="sph-widget">
+
+  <div class="sph-layout">
+
+    <div class="sph-visual">
+      <canvas
+        class="sph-canvas"
+        width="320"
+        height="320"
+        aria-label="Interactive visualization of a real spherical harmonic mapped onto the surface of a sphere">
+      </canvas>
+
+      <div class="sph-drag-hint">
+        Drag the sphere to rotate
+      </div>
+    </div>
+
+    <div class="sph-controls">
+
+      <div class="sph-current">
+        <span class="sph-equation">
+          Y<sub class="sph-l-sub">2</sub><sup class="sph-m-sup">2</sup>
+        </span>
+
+        <span class="sph-values">
+          ℓ = <span class="sph-l-value">2</span>,
+          m = <span class="sph-m-value">2</span>
+        </span>
+      </div>
+
+      <label class="sph-control">
+        <span>
+          Degree ℓ
+          <strong class="sph-l-display">2</strong>
+        </span>
+
+        <input
+          class="sph-l-slider"
+          type="range"
+          min="0"
+          max="10"
+          step="1"
+          value="2"
+        >
+      </label>
+
+      <label class="sph-control">
+        <span>
+          Order m
+          <strong class="sph-m-display">2</strong>
+        </span>
+
+        <input
+          class="sph-m-slider"
+          type="range"
+          min="-2"
+          max="2"
+          step="1"
+          value="2"
+        >
+      </label>
+
+      <div class="sph-presets" aria-label="Example spherical harmonic modes">
+        <button type="button" data-l="0" data-m="0">Y₀⁰</button>
+        <button type="button" data-l="1" data-m="0">Y₁⁰</button>
+        <button type="button" data-l="2" data-m="0">Y₂⁰</button>
+        <button type="button" data-l="2" data-m="2">Y₂²</button>
+        <button type="button" data-l="3" data-m="2">Y₃²</button>
+        <button type="button" data-l="5" data-m="2">Y₅²</button>
+      </div>
+
+      <div class="sph-explanation" aria-live="polite">
+        <p class="sph-description"></p>
+      </div>
+
+      <div class="sph-legend">
+        <span class="sph-negative"></span>
+        <span>negative</span>
+
+        <span class="sph-neutral"></span>
+        <span>node</span>
+
+        <span class="sph-positive"></span>
+        <span>positive</span>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="sph-caption">
+    This visualization maps a real spherical-harmonic basis function onto
+    <strong>surface brightness</strong>. The sphere itself is not being physically
+    deformed.
+  </p>
+
+</div>
+
+<style>
+
+#{{ $id }} {
+  --sph-border: rgba(113, 113, 122, 0.25);
+  --sph-muted: #71717a;
+  --sph-panel: rgba(250, 250, 250, 0.75);
+  --sph-text: #18181b;
+
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.dark #{{ $id }} {
+  --sph-border: rgba(161, 161, 170, 0.25);
+  --sph-muted: #a1a1aa;
+  --sph-panel: rgba(39, 39, 42, 0.65);
+  --sph-text: #f4f4f5;
+}
+
+#{{ $id }} .sph-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(260px, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+
+  padding: 1.5rem;
+
+  border: 1px solid var(--sph-border);
+  border-radius: 1rem;
+
+  background: var(--sph-panel);
+}
+
+#{{ $id }} .sph-visual {
+  text-align: center;
+}
+
+#{{ $id }} .sph-canvas {
+  display: block;
+
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+
+  margin: 0 auto;
+
+  cursor: grab;
+  touch-action: none;
+}
+
+#{{ $id }} .sph-canvas:active {
+  cursor: grabbing;
+}
+
+#{{ $id }} .sph-drag-hint {
+  margin-top: 0.4rem;
+
+  color: var(--sph-muted);
+  font-size: 0.82rem;
+}
+
+#{{ $id }} .sph-controls {
+  color: var(--sph-text);
+}
+
+#{{ $id }} .sph-current {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#{{ $id }} .sph-equation {
+  display: block;
+
+  margin-bottom: 0.25rem;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.3rem;
+}
+
+#{{ $id }} .sph-values {
+  color: var(--sph-muted);
+  font-size: 0.95rem;
+}
+
+#{{ $id }} .sph-control {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+#{{ $id }} .sph-control > span {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 0.4rem;
+
+  font-size: 0.95rem;
+}
+
+#{{ $id }} input[type="range"] {
+  width: 100%;
+  accent-color: #6366f1;
+}
+
+#{{ $id }} .sph-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+
+  margin: 1rem 0 1.3rem;
+}
+
+#{{ $id }} .sph-presets button {
+  padding: 0.38rem 0.65rem;
+
+  border: 1px solid var(--sph-border);
+  border-radius: 0.5rem;
+
+  background: transparent;
+  color: var(--sph-text);
+
+  cursor: pointer;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+#{{ $id }} .sph-presets button:hover,
+#{{ $id }} .sph-presets button.active {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.12);
+}
+
+#{{ $id }} .sph-explanation {
+  min-height: 4.5rem;
+
+  color: var(--sph-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+#{{ $id }} .sph-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+
+  margin-top: 1rem;
+
+  color: var(--sph-muted);
+  font-size: 0.75rem;
+}
+
+#{{ $id }} .sph-legend > span:nth-child(3) {
+  margin-left: 0.55rem;
+}
+
+#{{ $id }} .sph-legend > span:nth-child(5) {
+  margin-left: 0.55rem;
+}
+
+#{{ $id }} .sph-negative,
+#{{ $id }} .sph-neutral,
+#{{ $id }} .sph-positive {
+  display: inline-block;
+
+  width: 0.8rem;
+  height: 0.8rem;
+
+  border-radius: 50%;
+}
+
+#{{ $id }} .sph-negative {
+  background: rgb(79, 70, 229);
+}
+
+#{{ $id }} .sph-neutral {
+  background: rgb(212, 212, 216);
+}
+
+#{{ $id }} .sph-positive {
+  background: rgb(245, 158, 11);
+}
+
+#{{ $id }} .sph-caption {
+  max-width: 720px;
+
+  margin: 0.9rem auto 0;
+
+  color: var(--sph-muted);
+
+  text-align: center;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+
+  #{{ $id }} .sph-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #{{ $id }} .sph-canvas {
+    max-width: 360px;
+  }
+
+}
+
+</style>
+
+<script>
+(() => {
+
+  const root = document.getElementById("{{ $id }}");
+
+  if (!root) return;
+
+  const canvas = root.querySelector(".sph-canvas");
+  const ctx = canvas.getContext("2d");
+
+  const lSlider = root.querySelector(".sph-l-slider");
+  const mSlider = root.querySelector(".sph-m-slider");
+
+  const lDisplay = root.querySelector(".sph-l-display");
+  const mDisplay = root.querySelector(".sph-m-display");
+
+  const lValue = root.querySelector(".sph-l-value");
+  const mValue = root.querySelector(".sph-m-value");
+
+  const lSub = root.querySelector(".sph-l-sub");
+  const mSup = root.querySelector(".sph-m-sup");
+
+  const description = root.querySelector(".sph-description");
+
+  const presetButtons = root.querySelectorAll(
+    ".sph-presets button"
+  );
+
+  const SIZE = canvas.width;
+
+  let degree = 2;
+  let order = 2;
+
+  let yaw = -0.35;
+  let pitch = 0.25;
+
+  let dragging = false;
+  let previousX = 0;
+  let previousY = 0;
+
+  let scheduled = false;
+
+  const amplitudeCache = new Map();
+
+
+  // ---------------------------------------------------------
+  // Math
+  // ---------------------------------------------------------
+
+  function factorial(n) {
+
+    let result = 1;
+
+    for (let i = 2; i <= n; i++) {
+      result *= i;
+    }
+
+    return result;
+  }
+
+
+  function associatedLegendre(l, m, x) {
+
+    m = Math.abs(m);
+
+    let pmm = 1.0;
+
+    if (m > 0) {
+
+      const somx2 = Math.sqrt(
+        Math.max(0, 1 - x * x)
+      );
+
+      let fact = 1.0;
+
+      for (let i = 1; i <= m; i++) {
+
+        pmm *= -fact * somx2;
+
+        fact += 2.0;
+      }
+    }
+
+    if (l === m) {
+      return pmm;
+    }
+
+    let pmmp1 = x * (2 * m + 1) * pmm;
+
+    if (l === m + 1) {
+      return pmmp1;
+    }
+
+    let pll = 0;
+
+    for (let ll = m + 2; ll <= l; ll++) {
+
+      pll =
+        (
+          (2 * ll - 1) * x * pmmp1
+          -
+          (ll + m - 1) * pmm
+        )
+        /
+        (ll - m);
+
+      pmm = pmmp1;
+      pmmp1 = pll;
+    }
+
+    return pll;
+  }
+
+
+  function normalization(l, m) {
+
+    const a = Math.abs(m);
+
+    return Math.sqrt(
+      ((2 * l + 1) / (4 * Math.PI))
+      *
+      (factorial(l - a) / factorial(l + a))
+    );
+  }
+
+
+  function realSphericalHarmonic(l, m, theta, phi) {
+
+    const absM = Math.abs(m);
+
+    const P = associatedLegendre(
+      l,
+      absM,
+      Math.cos(theta)
+    );
+
+    const N = normalization(
+      l,
+      absM
+    );
+
+    if (m > 0) {
+
+      return (
+        Math.sqrt(2)
+        *
+        N
+        *
+        P
+        *
+        Math.cos(absM * phi)
+      );
+    }
+
+    if (m < 0) {
+
+      return (
+        Math.sqrt(2)
+        *
+        N
+        *
+        P
+        *
+        Math.sin(absM * phi)
+      );
+    }
+
+    return N * P;
+  }
+
+
+  function maximumAmplitude(l, m) {
+
+    const key = `${l},${m}`;
+
+    if (amplitudeCache.has(key)) {
+      return amplitudeCache.get(key);
+    }
+
+    let maximum = 0;
+
+    const thetaSteps = 48;
+    const phiSteps = 96;
+
+    for (let i = 0; i <= thetaSteps; i++) {
+
+      const theta =
+        Math.PI * i / thetaSteps;
+
+      for (let j = 0; j < phiSteps; j++) {
+
+        const phi =
+          2 * Math.PI * j / phiSteps;
+
+        const value = Math.abs(
+          realSphericalHarmonic(
+            l,
+            m,
+            theta,
+            phi
+          )
+        );
+
+        maximum = Math.max(
+          maximum,
+          value
+        );
+      }
+    }
+
+    maximum =
+      maximum > 0
+        ? maximum
+        : 1;
+
+    amplitudeCache.set(
+      key,
+      maximum
+    );
+
+    return maximum;
+  }
+
+
+  // ---------------------------------------------------------
+  // Color
+  // ---------------------------------------------------------
+
+  function mix(a, b, amount) {
+
+    return [
+      a[0] + (b[0] - a[0]) * amount,
+      a[1] + (b[1] - a[1]) * amount,
+      a[2] + (b[2] - a[2]) * amount
+    ];
+  }
+
+
+  function harmonicColor(value, shading, dark) {
+
+    const neutral =
+      dark
+        ? [63, 63, 70]
+        : [228, 228, 231];
+
+    const negative =
+      [79, 70, 229];
+
+    const positive =
+      [245, 158, 11];
+
+    const strength =
+      Math.min(
+        1,
+        Math.abs(value)
+      );
+
+    const target =
+      value >= 0
+        ? positive
+        : negative;
+
+    const rgb = mix(
+      neutral,
+      target,
+      Math.pow(strength, 0.72)
+    );
+
+    const lighting =
+      0.62 + 0.38 * shading;
+
+    return [
+      Math.min(255, rgb[0] * lighting),
+      Math.min(255, rgb[1] * lighting),
+      Math.min(255, rgb[2] * lighting)
+    ];
+  }
+
+
+  // ---------------------------------------------------------
+  // Rendering
+  // ---------------------------------------------------------
+
+  function render() {
+
+    scheduled = false;
+
+    const image = ctx.createImageData(
+      SIZE,
+      SIZE
+    );
+
+    const pixels = image.data;
+
+    const maxAmplitude =
+      maximumAmplitude(
+        degree,
+        order
+      );
+
+    const isDark =
+      document.documentElement.classList.contains("dark")
+      ||
+      document.body.classList.contains("dark");
+
+    const cosYaw = Math.cos(yaw);
+    const sinYaw = Math.sin(yaw);
+
+    const cosPitch = Math.cos(pitch);
+    const sinPitch = Math.sin(pitch);
+
+    const lightX = -0.35;
+    const lightY = -0.45;
+    const lightZ = 0.82;
+
+    for (let py = 0; py < SIZE; py++) {
+
+      const screenY =
+        1 - 2 * py / (SIZE - 1);
+
+      for (let px = 0; px < SIZE; px++) {
+
+        const screenX =
+          2 * px / (SIZE - 1) - 1;
+
+        const radiusSquared =
+          screenX * screenX
+          +
+          screenY * screenY;
+
+        if (radiusSquared > 1) {
+          continue;
+        }
+
+        const screenZ =
+          Math.sqrt(
+            1 - radiusSquared
+          );
+
+        // Rotate the sampling coordinates.
+        const x1 =
+          cosYaw * screenX
+          -
+          sinYaw * screenY;
+
+        const y1 =
+          sinYaw * screenX
+          +
+          cosYaw * screenY;
+
+        const z1 =
+          screenZ;
+
+        const worldX = x1;
+
+        const worldY =
+          cosPitch * y1
+          -
+          sinPitch * z1;
+
+        const worldZ =
+          sinPitch * y1
+          +
+          cosPitch * z1;
+
+        const theta =
+          Math.acos(
+            Math.max(
+              -1,
+              Math.min(1, worldZ)
+            )
+          );
+
+        const phi =
+          Math.atan2(
+            worldY,
+            worldX
+          );
+
+        const harmonic =
+          realSphericalHarmonic(
+            degree,
+            order,
+            theta,
+            phi
+          )
+          /
+          maxAmplitude;
+
+        const shading =
+          Math.max(
+            0,
+            screenX * lightX
+            +
+            screenY * lightY
+            +
+            screenZ * lightZ
+          );
+
+        const color =
+          harmonicColor(
+            harmonic,
+            shading,
+            isDark
+          );
+
+        const index =
+          4 * (
+            py * SIZE
+            +
+            px
+          );
+
+        pixels[index] =
+          Math.round(color[0]);
+
+        pixels[index + 1] =
+          Math.round(color[1]);
+
+        pixels[index + 2] =
+          Math.round(color[2]);
+
+        pixels[index + 3] = 255;
+      }
+    }
+
+    ctx.clearRect(
+      0,
+      0,
+      SIZE,
+      SIZE
+    );
+
+    ctx.putImageData(
+      image,
+      0,
+      0
+    );
+
+    // Sphere outline
+    ctx.beginPath();
+
+    ctx.arc(
+      SIZE / 2,
+      SIZE / 2,
+      SIZE / 2 - 1,
+      0,
+      2 * Math.PI
+    );
+
+    ctx.strokeStyle =
+      isDark
+        ? "rgba(244,244,245,0.35)"
+        : "rgba(24,24,27,0.25)";
+
+    ctx.lineWidth = 1.5;
+
+    ctx.stroke();
+  }
+
+
+  function scheduleRender() {
+
+    if (scheduled) return;
+
+    scheduled = true;
+
+    requestAnimationFrame(render);
+  }
+
+
+  // ---------------------------------------------------------
+  // Interface
+  // ---------------------------------------------------------
+
+  function updateDescription() {
+
+    let scaleDescription;
+
+    if (degree === 0) {
+
+      scaleDescription =
+        "ℓ = 0 is uniform across the entire sphere.";
+
+    } else if (degree <= 2) {
+
+      scaleDescription =
+        "Low degree describes broad, large-scale angular structure.";
+
+    } else if (degree <= 5) {
+
+      scaleDescription =
+        "Intermediate degree allows increasingly complex surface structure.";
+
+    } else {
+
+      scaleDescription =
+        "High degree introduces finer angular structure and smaller-scale features.";
+    }
+
+    let orderDescription;
+
+    if (order === 0) {
+
+      orderDescription =
+        " With m = 0, the pattern is symmetric around the polar axis.";
+
+    } else {
+
+      orderDescription =
+        ` |m| = ${Math.abs(order)} controls how many times the pattern varies around longitude.`;
+    }
+
+    description.textContent =
+      scaleDescription
+      +
+      orderDescription;
+  }
+
+
+  function updateInterface() {
+
+    lDisplay.textContent =
+      degree;
+
+    mDisplay.textContent =
+      order;
+
+    lValue.textContent =
+      degree;
+
+    mValue.textContent =
+      order;
+
+    lSub.textContent =
+      degree;
+
+    mSup.textContent =
+      order;
+
+    mSlider.min =
+      -degree;
+
+    mSlider.max =
+      degree;
+
+    mSlider.value =
+      order;
+
+    presetButtons.forEach(
+      button => {
+
+        const buttonL =
+          Number(
+            button.dataset.l
+          );
+
+        const buttonM =
+          Number(
+            button.dataset.m
+          );
+
+        button.classList.toggle(
+          "active",
+          buttonL === degree
+          &&
+          buttonM === order
+        );
+      }
+    );
+
+    updateDescription();
+
+    scheduleRender();
+  }
+
+
+  lSlider.addEventListener(
+    "input",
+    () => {
+
+      degree =
+        Number(
+          lSlider.value
+        );
+
+      if (order > degree) {
+        order = degree;
+      }
+
+      if (order < -degree) {
+        order = -degree;
+      }
+
+      updateInterface();
+    }
+  );
+
+
+  mSlider.addEventListener(
+    "input",
+    () => {
+
+      order =
+        Number(
+          mSlider.value
+        );
+
+      updateInterface();
+    }
+  );
+
+
+  presetButtons.forEach(
+    button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          degree =
+            Number(
+              button.dataset.l
+            );
+
+          order =
+            Number(
+              button.dataset.m
+            );
+
+          lSlider.value =
+            degree;
+
+          updateInterface();
+        }
+      );
+    }
+  );
+
+
+  // ---------------------------------------------------------
+  // Drag rotation
+  // ---------------------------------------------------------
+
+  canvas.addEventListener(
+    "pointerdown",
+    event => {
+
+      dragging = true;
+
+      previousX =
+        event.clientX;
+
+      previousY =
+        event.clientY;
+
+      canvas.setPointerCapture(
+        event.pointerId
+      );
+    }
+  );
+
+
+  canvas.addEventListener(
+    "pointermove",
+    event => {
+
+      if (!dragging) return;
+
+      const dx =
+        event.clientX
+        -
+        previousX;
+
+      const dy =
+        event.clientY
+        -
+        previousY;
+
+      previousX =
+        event.clientX;
+
+      previousY =
+        event.clientY;
+
+      yaw +=
+        dx * 0.012;
+
+      pitch +=
+        dy * 0.012;
+
+      pitch =
+        Math.max(
+          -1.2,
+          Math.min(
+            1.2,
+            pitch
+          )
+        );
+
+      scheduleRender();
+    }
+  );
+
+
+  function stopDragging() {
+    dragging = false;
+  }
+
+  canvas.addEventListener(
+    "pointerup",
+    stopDragging
+  );
+
+  canvas.addEventListener(
+    "pointercancel",
+    stopDragging
+  );
+
+
+  // ---------------------------------------------------------
+  // Re-render after theme changes
+  // ---------------------------------------------------------
+
+  const observer =
+    new MutationObserver(
+      () => scheduleRender()
+    );
+
+  observer.observe(
+    document.documentElement,
+    {
+      attributes: true,
+      attributeFilter: ["class"]
+    }
+  );
+
+
+  updateInterface();
+
+})();
+</script>
