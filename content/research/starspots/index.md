@@ -23,7 +23,7 @@ image:
 
 Most stars cannot be spatially resolved, so their surface features must be inferred indirectly from changes in brightness as the star rotates. This thesis investigated which physical properties can be recovered reliably from that one-dimensional signal.
 
-I generated synthetic, evolving starspot light curves with **butterpy** and analyzed them using two contrasting approaches: **starry**, which represents surface brightness with spherical harmonics, and **fleck**, which models discrete circular spots.
+I analyzed synthetic, evolving starspot light curves generated with **butterpy** using two contrasting approaches: **starry**, which represents surface brightness with spherical harmonics, and **fleck**, which models discrete circular spots.
 
 ## My Contributions
 
