@@ -1,6 +1,6 @@
 ---
 title: VGC Metagame Explorer
-summary: Comparing Pokémon Showdown Champions VGC usage ranks across monthly reports.
+summary: Comparing Pokémon usage and rank changes across monthly Smogon VGC reports.
 date: 2026-10-11
 hide_date: true
 project: true

@@ -1,6 +1,6 @@
 ---
 title: Two-Point Statistics in the Star-Forming Interstellar Medium
-summary: Used two-point spatial statistics on TIGRESS simulations to measure a metallicity half-correlation scale of 120 ± 25 pc.
+summary: Uses two-point spatial statistics on TIGRESS simulations to estimate a metallicity half-correlation scale of 120 ± 25 pc.
 date: 2018-06-01
 hide_date: true
 project: true
