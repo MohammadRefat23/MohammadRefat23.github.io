@@ -14,8 +14,10 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: |-
-        {{< button text="View Research" url="/research/" />}}
+        Across research and independent projects, I use computation to study physical systems, analyze data, and build interactive tools—from astrophysical inference to trends in competitive video-game data.
+
         {{< button text="View Projects" url="/projects/" />}}
+        {{< button text="View Research" url="/research/" />}}
         {{< button text="CV & Résumé" url="/cv/" />}}
       headings:
         about: ''
@@ -28,6 +30,24 @@ sections:
       avatar:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
+  - block: collection
+    id: selected-work
+    content:
+      title: '<h2>Selected Work</h2>'
+      text: 'A few examples of my computational research, data analysis, and interactive project work.'
+      filters:
+        folders:
+          - projects
+        featured_only: true
+      sort_by: weight
+      sort_ascending: true
+    design:
+      view: article-grid
+      fill_image: false
+      columns: 3
+      show_date: false
+      show_read_time: false
+      show_read_more: false
   - block: collection
     id: research
     content:
