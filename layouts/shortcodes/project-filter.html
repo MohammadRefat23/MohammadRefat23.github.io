@@ -37,11 +37,14 @@
   .project-filter__tag{border:1px solid currentColor;border-radius:999px;background:transparent;color:inherit;padding:.4rem .8rem;cursor:pointer}
   .project-filter__tag.is-active{background:#2563eb;border-color:#2563eb;color:#fff}
   .project-filter__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:1rem}
-  .project-filter__card{border:1px solid rgba(127,127,127,.3);border-radius:.75rem;overflow:hidden;background:#fff}
+  .project-filter__card{border:1px solid rgba(127,127,127,.3);border-radius:.75rem;overflow:hidden;background:#fff;color:#243043;color-scheme:light}
   .project-filter__image-link{display:block;aspect-ratio:16/9;overflow:hidden;background:#eef2f6}
   .project-filter__image{display:block;width:100%;height:100%;object-fit:cover}
+  .project-filter__image-link .project-filter__image{margin:0;max-width:none}
   .project-filter__body{padding:1.1rem}
   .project-filter__title{margin-top:0}
+  .project-filter__card .project-filter__title,.project-filter__card .project-filter__title a,.project-filter__card p,.project-filter__card .project-filter__badges li{color:#243043}
+  .project-filter__card a:focus-visible,.project-filter__tag:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
   .project-filter__badges li{border-radius:999px;background:rgba(127,127,127,.13);padding:.2rem .6rem;font-size:.85em}
 </style>
 
