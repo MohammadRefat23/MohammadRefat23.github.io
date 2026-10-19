@@ -30,7 +30,7 @@
 
 <div class="group bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-2xl ring-1 ring-zinc-900/5 dark:ring-white/10 shadow-lg overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-2 focus-within:ring-2 focus-within:ring-blue-500/50" role="article" aria-labelledby="card-title-{{ $item.File.UniqueID }}">
     <!-- Image Section -->
-    <div class="relative overflow-hidden aspect-[16/9] bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900">
+    <div class="relative overflow-hidden aspect-[16/9]{{ if $item.Params.card_image_mobile }} card-has-mobile-image{{ end }} bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900">
       {{ with $item.Params.content_meta }}
         {{ if .trending }}
           <div class="absolute top-3 right-3 z-10 inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-black/55 backdrop-blur-sm text-white shadow-sm">
@@ -39,6 +39,24 @@
           </div>
         {{ end }}
       {{ end }}
+      {{ with $item.Params.card_image }}
+        <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="block">
+          <picture>
+            {{ with $item.Params.card_image_mobile }}
+              <source media="(max-width: 640px)" srcset="{{ . | relURL }}">
+            {{ end }}
+            <img class="w-full h-full transition-transform duration-500 ease-out group-hover:scale-105 {{ if $fill_image }}object-fill{{ else }}object-contain{{ end }}"
+                 src="{{ . | relURL }}"
+                 width="1600"
+                 height="900"
+                 loading="lazy"
+                 decoding="async"
+                 {{ if eq $index 0 }}fetchpriority="high"{{ end }}
+                 style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                 alt="{{ $item.Params.card_image_alt | default (printf "%s featured image" ($item.Title | plainify)) }}">
+          </picture>
+        </a>
+      {{ else }}
       {{ with $resource }}
         {{ if ne .MediaType.SubType "gif" }}
           {{ $original_image := "" }}
@@ -90,6 +108,7 @@
           </div>
         </a>
       {{end}}
+      {{ end }}
       
       <!-- Subtle overlay for better text contrast (allow clicks to pass through) -->
       <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

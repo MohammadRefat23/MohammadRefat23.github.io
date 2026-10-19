@@ -59,6 +59,13 @@ p.powered-by:has([data-hbx="poweredby_brand"]) {
     margin: 1.5rem 0;
   }
 }
+
+@media (max-width: 640px) {
+  .card-has-mobile-image {
+    aspect-ratio: 3 / 2;
+  }
+}
+
 .site-button {
   display: inline-flex;
   align-items: center;

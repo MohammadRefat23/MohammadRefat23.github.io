@@ -10,6 +10,7 @@ tags:
   - Inverse Problems
   - Time-Series Analysis
 card_image: /media/brown-dwarf-atmospheres-card.png
+card_image_mobile: /media/brown-dwarf-atmospheres-card-mobile.png
 card_image_alt: "Observed and fitted brown-dwarf light curve beside its reconstructed atmospheric map."
 ---
 
