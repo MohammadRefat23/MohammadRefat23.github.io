@@ -9,6 +9,8 @@ tags:
   - Computational Astrophysics
   - Inverse Problems
   - Time-Series Analysis
+card_image: /media/brown-dwarf-atmospheres-card.png
+card_image_alt: "Observed and fitted brown-dwarf light curve beside its reconstructed atmospheric map."
 ---
 
 Rotating cloud structures produce brightness variations that can reveal information about otherwise unresolved atmospheres.

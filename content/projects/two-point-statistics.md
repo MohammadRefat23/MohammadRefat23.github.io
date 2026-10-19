@@ -13,6 +13,8 @@ tags:
   - Interstellar Medium
   - Spatial Statistics
   - Scientific Computing
+card_image: /media/two-point-statistics.png
+card_image_alt: "TIGRESS metallicity fluctuation map and spatial correlation curve at 48.9 Myr."
 ---
 
 Analyzed TIGRESS magnetohydrodynamic simulations and implemented two-point statistics to track the spatial coherence of metallicity fluctuations. The measured half-correlation scale was approximately **120 ± 25 pc**. See the [full project page](/research/star-forming-ism/) for the methods, visualizations, and research outputs.

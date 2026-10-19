@@ -12,6 +12,8 @@ tags:
   - Computational Astrophysics
   - Spectroscopy
   - Statistical Inference
+card_image: /media/stellar-spectroscopy-card.png
+card_image_alt: "Stellar spectrum with continuum normalization and selected iron and titanium lines."
 ---
 
 Spectral features contain information about a star that can be recovered by modeling the relationship between observations and stellar properties.

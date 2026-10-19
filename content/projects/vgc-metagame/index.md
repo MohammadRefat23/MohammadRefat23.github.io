@@ -12,6 +12,8 @@ tags:
   - Pokémon VGC
   - Data Visualization
   - Interactive Tools
+card_image: /media/vgc-usage-comparison.png
+card_image_alt: "Dumbbell chart comparing weighted Pokémon usage in August and September 2026."
 ---
 
 This project asks how stable Pokémon usage rankings are from one month to the next in Smogon's Champions VGC best-of-three ladder. I built a reproducible import and comparison workflow around Smogon's published monthly reports, then use the archived snapshots to inspect usage changes over time.
@@ -19,6 +21,8 @@ This project asks how stable Pokémon usage rankings are from one month to the n
 The first comparison uses Regulation M-B reports from August and September 2026 at the same 1630 rating cutoff. It compares weighted usage percentages, source ranks, top-15 overlap, and Spearman rank correlation across Pokémon present in both reports. The page also animates the monthly top 15 within a selected regulation and provides the full adjacent-month comparison table as a CSV download.
 
 ### August to September 2026
+
+![Chart comparing weighted Pokémon usage in the August and September 2026 reports, highlighting the five largest increases and decreases.](/media/vgc-usage-comparison.png)
 
 The two reports contain 307 Pokémon in common. Fourteen of the August top 15 remain in September's top 15 (93.3% overlap). Across the shared roster, the Spearman rank correlation is 0.9253, indicating that the overall rank ordering was similar between reports. Froslass-Mega moved from rank 21 to rank 14, entering the top 15 while already present in the earlier report.
 

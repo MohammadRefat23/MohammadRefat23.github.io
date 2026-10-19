@@ -9,6 +9,8 @@ tags:
   - Computational Astrophysics
   - Galactic Archaeology
   - Statistical Inference
+card_image: /media/jhelum-stellar-stream-card.png
+card_image_alt: "Jhelum stellar candidates in a magnesium-to-manganese versus aluminum-to-iron abundance plot."
 ---
 
 This project uses incomplete stellar measurements to study the membership and chemodynamical properties of the Jhelum stream.
