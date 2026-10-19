@@ -4,6 +4,9 @@ summary: Used two-point spatial statistics on TIGRESS simulations to measure a m
 date: 2018-06-01
 hide_date: true
 project: true
+featured: true
+weight: 20
+card_label: Simulation Analysis
 project_url: /research/star-forming-ism/
 tags:
   - Computational Astrophysics
