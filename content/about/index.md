@@ -7,7 +7,7 @@ show_date_updated: false
 reading_time: false
 ---
 
-I am a computational physicist with a B.S. in Computational Astrophysics and an M.S. in Astrophysics from CUNY. My research has used computational modeling, statistical inference, and scientific software to study stellar surfaces, atmospheres, and Galactic structure. My current interests include computational materials physics, molecular materials, atomistic simulation, and emergent behavior in complex systems.
+I am a computational physicist with a B.S. in Computational Astrophysics and an M.S. in Astrophysics from CUNY. My research has used computational modeling, statistical inference, and scientific software to study stellar surfaces, atmospheres, and Galactic structure. My current interests include computational materials physics, molecular and biomolecular systems, atomistic simulation, and computational biophysics, especially emergent behavior in interacting systems.
 
 ---
 

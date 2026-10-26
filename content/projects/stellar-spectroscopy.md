@@ -5,7 +5,7 @@ date: 2018-08-01
 hide_date: true
 project: true
 featured: true
-weight: 30
+weight: 20
 card_label: Scientific Data Analysis
 project_url: /research/stellar-spectroscopy/
 tags:

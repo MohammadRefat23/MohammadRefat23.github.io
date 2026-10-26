@@ -42,6 +42,8 @@ profiles:
 
 interests:
   - Computational Physics
+  - Materials Physics
+  - Computational Biophysics
   - Inverse Problems
   - Statistical Inference
   - Scientific Computing

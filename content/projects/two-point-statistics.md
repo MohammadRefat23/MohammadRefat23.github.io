@@ -5,7 +5,7 @@ date: 2018-06-01
 hide_date: true
 project: true
 featured: true
-weight: 20
+weight: 10
 card_label: Simulation Analysis
 project_url: /research/star-forming-ism/
 tags:

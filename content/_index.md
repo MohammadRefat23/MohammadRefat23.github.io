@@ -14,10 +14,10 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: |-
-        Across research and independent projects, I use computation to study physical systems, analyze data, and build interactive tools—from astrophysical inference to trends in competitive video-game data.
+        I am a computational physicist interested in computational biophysics and materials physics. My research experience in astrophysics has centered on modeling, inverse problems, and statistical inference.
 
-        {{< button text="View Projects" url="/projects/" />}}
         {{< button text="View Research" url="/research/" />}}
+        {{< button text="View Projects" url="/projects/" />}}
         {{< button text="CV & Résumé" url="/cv/" />}}
       headings:
         about: ''
@@ -31,13 +31,13 @@ sections:
         size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
   - block: collection
-    id: selected-work
+    id: research
     content:
-      title: '<h2>Selected Work</h2>'
-      text: 'A few examples of my computational research, data analysis, and interactive project work.'
+      title: '<h2>Featured Research</h2>'
+      text: 'Computational and statistical methods for studying physical systems.'
       filters:
         folders:
-          - projects
+          - research
         featured_only: true
       sort_by: weight
       sort_ascending: true
@@ -49,12 +49,13 @@ sections:
       show_read_time: false
       show_read_more: false
   - block: collection
-    id: research
+    id: selected-work
     content:
-      title: '<h2>Featured Research</h2>'
+      title: '<h2>Selected Projects</h2>'
+      text: 'Additional work in simulation analysis, spectroscopy, and interactive data exploration.'
       filters:
         folders:
-          - research
+          - projects
         featured_only: true
       sort_by: weight
       sort_ascending: true

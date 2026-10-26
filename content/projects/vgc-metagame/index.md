@@ -5,7 +5,7 @@ date: 2026-10-11
 hide_date: true
 project: true
 featured: true
-weight: 10
+weight: 30
 card_label: Interactive Data Tool
 project_url: /projects/vgc-metagame/
 tags:

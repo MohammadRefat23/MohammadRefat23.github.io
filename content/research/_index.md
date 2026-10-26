@@ -14,7 +14,7 @@ sections:
   - block: collection
     content:
       title: '<h2>Research Projects</h2>'
-      text: Selected research applying inverse methods, numerical modeling, statistical inference, spectroscopic analysis, and spatial statistics to astrophysical systems.
+      text: Ongoing and completed research applying inverse methods, numerical modeling, statistical inference, spectroscopy, and spatial statistics to physical systems.
       filters:
         folders:
           - research
