@@ -4,6 +4,12 @@ summary: Characterizing a stellar stream using chemical, spectroscopic, velocity
 date: 2020-05-01
 hide_date: true
 project: true
+stack:
+  - Python
+  - pandas
+  - Matplotlib
+  - SQL
+repo_url: https://github.com/MohammadRefat23/jhelum-stellar-stream
 project_url: /research/jhelum-stellar-stream/
 tags:
   - Computational Astrophysics

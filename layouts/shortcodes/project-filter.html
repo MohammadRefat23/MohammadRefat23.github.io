@@ -25,6 +25,12 @@
         <div class="project-filter__body">
           <h2 class="project-filter__title"><a href="{{ $href }}">{{ $project.Title }}</a></h2>
           {{- with $project.Params.summary }}<p>{{ . }}</p>{{ end }}
+          {{- with $project.Params.stack }}
+            <p class="project-filter__stack"><span class="project-filter__stack-label">Stack:</span> {{ delimit . " · " }}</p>
+          {{- end }}
+          {{- with $project.Params.repo_url }}
+            <p class="project-filter__code"><a href="{{ . }}" target="_blank" rel="noopener noreferrer">View code on GitHub<span class="sr-only"> for {{ $project.Title }}</span></a></p>
+          {{- end }}
           {{- with $tags }}
             <ul class="project-filter__badges" aria-label="Project tags">
               {{- range . }}<li>{{ . }}</li>{{ end -}}
@@ -52,6 +58,10 @@
   .project-filter__title{margin-top:0}
   .project-filter__card .project-filter__title,.project-filter__card .project-filter__title a,.project-filter__card p,.project-filter__card .project-filter__badges li{color:#243043}
   .project-filter__card a:focus-visible,.project-filter__tag:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+  .project-filter__card .project-filter__stack{font-size:.9em;margin:.4rem 0}
+  .project-filter__stack-label{font-weight:600}
+  .project-filter__card .project-filter__code{margin:.4rem 0}
+  .project-filter__card .project-filter__code a{color:#1d4ed8;text-decoration:underline}
   .project-filter__badges li{border-radius:999px;background:rgba(127,127,127,.13);padding:.2rem .6rem;font-size:.85em}
 </style>
 

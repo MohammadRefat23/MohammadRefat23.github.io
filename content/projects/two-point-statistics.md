@@ -4,6 +4,10 @@ summary: Uses two-point spatial statistics on TIGRESS simulations to estimate a 
 date: 2018-06-01
 hide_date: true
 project: true
+stack:
+  - Python
+  - NumPy
+repo_url: https://github.com/MohammadRefat23/tigress-metallicity-correlations
 featured: true
 weight: 10
 card_label: Simulation Analysis

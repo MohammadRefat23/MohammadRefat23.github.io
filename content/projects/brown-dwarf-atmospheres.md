@@ -4,6 +4,12 @@ summary: Studying atmospheric structure through the rotational variability of br
 date: 2021-05-01
 hide_date: true
 project: true
+stack:
+  - Python
+  - starry
+  - NumPy
+  - Matplotlib
+repo_url: https://github.com/MohammadRefat23/StarryAtmospheres
 project_url: /research/brown-dwarf-atmospheres/
 tags:
   - Computational Astrophysics
