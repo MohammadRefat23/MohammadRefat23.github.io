@@ -4,6 +4,12 @@ summary: Comparing Pokémon usage and rank changes across monthly Smogon VGC rep
 date: 2026-10-11
 hide_date: true
 project: true
+stack:
+  - Python
+  - SQLite
+  - SQL
+  - GitHub Actions
+repo_url: https://github.com/MohammadRefat23/MohammadRefat23.github.io/tree/main/analysis
 featured: true
 weight: 30
 card_label: Interactive Data Tool

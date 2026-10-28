@@ -71,6 +71,14 @@ education:
       Graduated cum laude with an interdisciplinary concentration combining physics, astronomy, mathematics, and scientific computing.
 
 work:
+  - position: Research Collaborator
+    company_name: University of North Carolina at Charlotte
+    company_url: https://qzhu2017.github.io/
+    icon: ''
+    date_start: 2026-10-01
+    summary: |
+      Literature-review phase of a computational materials project on water-responsive metal–peptide frameworks, with Dr. Qiang Zhu and graduate student Zarif Hossain Fahim. Reviewing molecular dynamics and grand-canonical Monte Carlo methods and separating measured results from model-based explanations. See the [literature notes](/research/water-responsive-peptide-frameworks/).
+
   - position: Adjunct Lecturer
     company_name: CUNY Baruch College
     company_url: https://www.baruch.cuny.edu/
@@ -78,7 +86,7 @@ work:
     date_start: 2025-08-01
     date_end: 2026-05-31
     summary: |
-      Taught undergraduate physics lecture and laboratory courses, developed instructional materials, and mentored students in quantitative problem-solving and experimental analysis.
+      Taught introductory physics lecture and laboratory courses across two semesters, with about 25–30 students per class. Sole instructor for the lecture course: wrote the lectures, exams, and quizzes and graded all assessments. Lead instructor for the laboratory sections, which followed provided lab manuals.
 
   - position: Graduate Researcher
     company_name: American Museum of Natural History

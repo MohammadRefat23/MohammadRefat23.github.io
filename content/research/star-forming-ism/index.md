@@ -25,7 +25,7 @@ Chemical tagging uses stellar abundances to identify stars that may have formed 
 
 In this project, I analyzed the spatial distribution of metals in **TIGRESS** simulations of the star-forming interstellar medium. These simulations include magnetohydrodynamics, self-gravity, Galactic shear, star formation, and supernova feedback, allowing me to study how localized enrichment and turbulent mixing shape chemical structure in the gas.
 
-<video controls playsinline muted loop style="width: 100%; border-radius: 0.5rem;">
+<video controls playsinline muted loop aria-label="Animation of the TIGRESS metallicity fluctuation map (left) and its spatial correlation curve (right) as the simulation evolves." style="width: 100%; border-radius: 0.5rem;">
   <source src="PlotFluct.mp4" type="video/mp4">
   Your browser does not support embedded video.
 </video>

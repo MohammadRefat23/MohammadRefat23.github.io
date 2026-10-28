@@ -12,6 +12,7 @@ sections:
     content:
       title: '<h2>Talks</h2>'
       text: Research talks and recorded presentations.
+      count: 0 # 0 = show every talk (the default cap is 5)
       filters:
         folders:
           - events

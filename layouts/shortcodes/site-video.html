@@ -1,6 +1,7 @@
 {{- $src := .Get "src" | relURL -}}
+{{- $label := .Get "label" | default "Embedded video" -}}
 <div class="site-video-embed">
-  <video autoplay muted loop playsinline controls preload="metadata">
+  <video autoplay muted loop playsinline controls preload="metadata" aria-label="{{ $label }}">
     <source src="{{ $src }}" type="video/mp4">
     Your browser does not support embedded video.
   </video>

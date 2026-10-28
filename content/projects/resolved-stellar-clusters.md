@@ -4,6 +4,8 @@ summary: Developing an error-aware probabilistic workflow to estimate cluster me
 date: 2026-09-01
 hide_date: true
 project: true
+stack:
+  - Python
 project_url: /research/resolved-stellar-clusters/
 tags:
   - Statistical Inference

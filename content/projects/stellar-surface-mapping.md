@@ -4,6 +4,10 @@ summary: Inferring starspot distributions from stellar rotational light curves.
 date: 2023-08-01
 hide_date: true
 project: true
+stack:
+  - Python
+  - starry
+  - fleck
 project_url: /research/starspots/
 tags:
   - Computational Astrophysics

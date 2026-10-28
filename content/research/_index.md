@@ -15,6 +15,7 @@ sections:
     content:
       title: '<h2>Research Projects</h2>'
       text: Ongoing and completed research applying inverse methods, numerical modeling, statistical inference, spectroscopy, and spatial statistics to physical systems.
+      count: 0 # 0 = show every project (the default cap is 5)
       filters:
         folders:
           - research
