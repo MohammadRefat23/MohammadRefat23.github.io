@@ -21,10 +21,6 @@ organizations:
     url: https://www.gc.cuny.edu/
 
 profiles:
-  - icon: at-symbol
-    url: mailto:moref17@gmail.com
-    label: Email
-
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=tXosG1EAAAAJ&hl=en
 

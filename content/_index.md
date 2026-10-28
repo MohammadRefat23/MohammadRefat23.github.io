@@ -19,6 +19,8 @@ sections:
         {{< button text="View Research" url="/research/" />}}
         {{< button text="View Projects" url="/projects/" />}}
         {{< button text="CV & Résumé" url="/cv/" />}}
+
+        Email: moref17 AT gmail DOT com
       headings:
         about: ''
         education: ''
