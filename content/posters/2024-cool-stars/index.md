@@ -10,6 +10,7 @@ event: "Cool Stars 22"
 location: "University of California San Diego, USA"
 summary: "Poster at the 22nd Cambridge Workshop on Cool Stars, Stellar Systems, and the Sun (2024)."
 card_label: "Cool Stars 22 · 2024"
+card_placeholder: "Poster · Cool Stars 22"
 
 links:
   - type: custom

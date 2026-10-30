@@ -10,6 +10,7 @@ event: "245th American Astronomical Society Meeting"
 location: "National Harbor, MD, USA"
 summary: "Poster at the 245th American Astronomical Society Meeting (2025)."
 card_label: "AAS 245 · 2025"
+card_placeholder: "Poster · AAS 245"
 
 links:
   - type: custom

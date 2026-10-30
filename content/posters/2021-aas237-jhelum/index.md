@@ -14,6 +14,7 @@ event: "237th American Astronomical Society Meeting"
 location: "Virtual"
 summary: "Poster at the 237th American Astronomical Society Meeting (2021)."
 card_label: "AAS 237 · 2021"
+card_placeholder: "Poster · AAS 237"
 
 links:
   - type: custom
