@@ -10,9 +10,9 @@ stack:
   - SQL
   - GitHub Actions
 repo_url: https://github.com/MohammadRefat23/MohammadRefat23.github.io/tree/main/analysis
-featured: true
+featured: false
 weight: 30
-card_label: Interactive Data Tool
+card_label: "Side Project: Interactive Data Tool"
 project_url: /projects/vgc-metagame/
 tags:
   - Pokémon VGC

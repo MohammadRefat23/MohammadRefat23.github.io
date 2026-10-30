@@ -11,6 +11,9 @@ publishDate: 2022-06-14
 
 authors:
   - admin
+  - "Johanna Vos"
+  - "Rodrigo Luger"
+  - "Xianyu Tan"
 
 tags:
   - Presentation

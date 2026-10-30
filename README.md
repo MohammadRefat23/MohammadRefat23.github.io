@@ -4,16 +4,16 @@ This repository contains the source for my academic and research portfolio:
 
 **[mohammadrefat23.github.io](https://mohammadrefat23.github.io/)**
 
-I am a computational physicist with research experience in astrophysics and current interests in computational biophysics and materials physics. The site brings together my background, research, publications, presentations, CV, and selected projects.
+My research interests are in computational physics and numerical methods: molecular dynamics and Monte Carlo simulation, inverse problems, and Bayesian inference (MCMC) for fitting and testing physical models against data, with applications in biological and materials physics. My research so far has been in astrophysics. The site brings together my background, research, publications, presentations, CV, and code.
 
 ## Site sections
 
-- **Bio** — background, research interests, and selected work.
-- **Research** — computational research in astrophysics and statistical modeling.
-- **Projects** — selected research and data projects, including Pokémon VGC metagame analysis.
+- **Bio** — research interests, training, current research, and teaching.
+- **Research** — research projects, each with my contributions, methods, results, and outputs.
+- **Projects** — code, interactive tools, a course project, and a data side project.
 - **Publications** — thesis and peer-reviewed work.
-- **Presentations** — recorded talks and presentations.
-- **CV** — current curriculum vitae.
+- **Presentations** — talks and posters.
+- **CV & Résumé** — current academic CV and industry résumé.
 
 ## Run locally
 

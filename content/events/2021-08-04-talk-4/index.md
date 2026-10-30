@@ -1,7 +1,7 @@
 ---
 title: "Towards Mapping Brown Dwarf and Giant Exoplanet Atmospheres"
 
-event: "CCA/CUNY/AMNH Symposium"
+event: "Center for Computational Astrophysics Symposium"
 summary: "An early presentation of the atmospheric-variability project and its use of time-series photometry to probe substellar weather."
 abstract: "An early presentation of the atmospheric-variability project and its use of time-series photometry to probe substellar weather."
 
@@ -18,7 +18,7 @@ tags:
 featured: false
 hide_featured: false
 
-location: "Flatiron Institute, Center for Computational Astrophysics, New York City, NY, USA"
+location: "Simons Foundation, New York, NY, USA"
 
 aliases:
   - /presentations/2021-08-04-talk-4/
@@ -33,6 +33,6 @@ projects:
 
 An early presentation of the atmospheric-variability project and its use of time-series photometry to probe substellar weather.
 
-**Venue:** Flatiron Institute, Center for Computational Astrophysics
+**Venue:** Center for Computational Astrophysics Symposium, Simons Foundation
 
-**Location:** New York City, NY, USA
+**Location:** New York, NY, USA

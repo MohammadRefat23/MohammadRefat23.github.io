@@ -65,6 +65,10 @@ links:
     url: https://iopscience.iop.org/article/10.3847/1538-4357/abee93/pdf
 
   - type: custom
+    label: arXiv
+    url: https://arxiv.org/abs/2103.07488
+
+  - type: custom
     label: Research Project
     url: /research/jhelum-stellar-stream/
 

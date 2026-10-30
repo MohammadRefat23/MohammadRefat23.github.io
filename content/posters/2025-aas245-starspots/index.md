@@ -2,17 +2,28 @@
 title: "Starspot Inference with Light Curve Inversion Techniques"
 hide_date: true
 show_date_updated: false
+weight: 10
 authors:
   - admin
-summary: "Poster presented at the 245th American Astronomical Society Meeting (2025)."
-card_label: "AAS 245"
+  - "Lucy Lu"
+event: "245th American Astronomical Society Meeting"
+location: "National Harbor, MD, USA"
+summary: "Poster at the 245th American Astronomical Society Meeting (2025)."
+card_label: "AAS 245 · 2025"
+
+links:
+  - type: custom
+    label: ADS Abstract
+    url: https://ui.adsabs.harvard.edu/abs/2025AAS...24540315R/abstract
+  - type: custom
+    label: Research Project
+    url: /research/starspots/
 
 image:
   preview_only: true
 ---
 
-## Interactive Poster
+Poster presented at the **245th American Astronomical Society Meeting** in National Harbor, MD (2025), with Lucy Lu.
 
-This presentation was created as an interactive AAS iPoster.
-
-{{< button text="View Interactive iPoster" url="https://aas242-aas.ipostersessions.com/?s=27-05-C1-EA-B8-F5-8C-D1-B0-43-1C-97-80-AA-75-6B" />}}
+{{< button text="View ADS Abstract" url="https://ui.adsabs.harvard.edu/abs/2025AAS...24540315R/abstract" />}}
+{{< button text="View Research Project" url="/research/starspots/" />}}

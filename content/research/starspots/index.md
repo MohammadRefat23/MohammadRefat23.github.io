@@ -19,6 +19,8 @@ image:
   preview_only: true
 ---
 
+**Project context:** M.S. thesis research · American Museum of Natural History and the CUNY Graduate Center · Advisor: Lucy Lu · Aug 2023 – Sep 2025
+
 ## Overview
 
 Most stars cannot be spatially resolved, so their surface features must be inferred indirectly from changes in brightness as the star rotates. This thesis investigated which physical properties can be recovered reliably from that one-dimensional signal.

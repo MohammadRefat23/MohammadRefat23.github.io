@@ -2,22 +2,28 @@
 title: "Star Spots with Starry"
 hide_date: true
 show_date_updated: false
+weight: 20
 authors:
   - admin
-summary: "Poster presented at the 22nd Cambridge Workshop on Cool Stars, Stellar Systems, and the Sun (2024)."
-card_label: "Cool Stars 22"
+  - "Lucy Lu"
+event: "Cool Stars 22"
+location: "University of California San Diego, USA"
+summary: "Poster at the 22nd Cambridge Workshop on Cool Stars, Stellar Systems, and the Sun (2024)."
+card_label: "Cool Stars 22 · 2024"
+
+links:
+  - type: custom
+    label: Poster (Zenodo)
+    url: https://zenodo.org/records/13224983
+  - type: custom
+    label: Research Project
+    url: /research/starspots/
 
 image:
   preview_only: true
 ---
 
-## Online Poster
+Poster presented at **Cool Stars 22**, the 22nd Cambridge Workshop on Cool Stars, Stellar Systems, and the Sun, at the University of California San Diego (2024), with Lucy Lu.
 
-The poster is hosted by the Cool Stars 22 conference.
-
-{{< button text="View Online Poster" url="https://zenodo.org/records/13224983" />}}
-
-## Poster Information
-
-**Poster presented at the 22nd Cambridge Workshop on Cool Stars, Stellar Systems, and the Sun (2024).**
-
+{{< button text="View Poster on Zenodo" url="https://zenodo.org/records/13224983" />}}
+{{< button text="View Research Project" url="/research/starspots/" />}}

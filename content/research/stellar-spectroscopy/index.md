@@ -3,7 +3,7 @@
 title: "Stellar Spectroscopy and Chemical Abundance Analysis"
 summary: "Validating a high-resolution spectroscopic workflow for measuring stellar parameters and chemical abundances in red giants."
 date: 2018-08-01
-featured: false
+featured: true
 weight: 40
 authors:
   - admin
@@ -18,6 +18,8 @@ tags:
 image:
   preview_only: true
 ---
+
+**Project context:** AstroCom NYC Scholar · American Museum of Natural History · Advisor: Allyson Sheffield · Aug 2018 – May 2020
 
 ## Overview
 

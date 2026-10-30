@@ -1,7 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
 title: ''
-date: 2022-10-24
+date: 2026-10-30
 type: landing
 
 design:
@@ -14,7 +14,9 @@ sections:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: |-
-        I am a computational physicist interested in computational biophysics and materials physics. My research experience in astrophysics has centered on modeling, inverse problems, and statistical inference.
+        My research interests are in computational physics and numerical methods: molecular dynamics and Monte Carlo simulation, inverse problems, and Bayesian inference (MCMC) for fitting and testing physical models against data, such as force-field parameterization. Applications in biological and materials physics, including how metal–peptide frameworks respond to water. My research so far has been in astrophysics, where I used light-curve inversion, spectroscopy, and statistical modeling to recover stellar surfaces, brown-dwarf atmospheres, and the chemistry of a stellar stream.
+
+        **Applying to physics PhD programs for Fall 2027.**
 
         {{< button text="View Research" url="/research/" />}}
         {{< button text="View Projects" url="/projects/" />}}
@@ -37,27 +39,10 @@ sections:
     content:
       title: '<h2>Featured Research</h2>'
       text: 'Computational and statistical methods for studying physical systems.'
+      count: 0 # 0 = show every featured project (the default cap is 5)
       filters:
         folders:
           - research
-        featured_only: true
-      sort_by: weight
-      sort_ascending: true
-    design:
-      view: article-grid
-      fill_image: false
-      columns: 3
-      show_date: false
-      show_read_time: false
-      show_read_more: false
-  - block: collection
-    id: selected-work
-    content:
-      title: '<h2>Selected Projects</h2>'
-      text: 'Additional work in simulation analysis, spectroscopy, and interactive data exploration.'
-      filters:
-        folders:
-          - projects
         featured_only: true
       sort_by: weight
       sort_ascending: true
@@ -94,44 +79,4 @@ sections:
       view: article-grid
       columns: 2
       show_read_time: false
-  #- block: collection
-  #  content:
-  #    title: Recent Publications
-  #    text: ''
-  #    filters:
-  #      folders:
-  #        - publications
-  #      exclude_featured: false
-  #  design:
-  #    view: citation
-  - block: collection
-    demo: true # Only display this section in the Hugo Blox Builder demo site (to hide it for now, maybe should delete it)
-    id: news
-    content:
-      title: Recent News
-      subtitle: ''
-      text: ''
-      # Page type to display. E.g. post, talk, publication...
-      page_type: blog
-      # Choose how many pages you would like to display (0 = all pages)
-      count: 5
-      # Filter on criteria
-      filters:
-        author: ''
-        category: ''
-        tag: ''
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-        publication_type: ''
-      # Choose how many pages you would like to offset by
-      offset: 0
-      # Page order: descending (desc) or ascending (asc) date.
-      order: desc
-    design:
-      # Choose a layout view
-      view: card
-      # Reduce spacing
-      spacing:
-        padding: [0, 0, 0, 0]
 ---

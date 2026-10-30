@@ -19,6 +19,8 @@ image:
   preview_only: true
 ---
 
+**Project context:** BDNYC Researcher · American Museum of Natural History · Advisor: Johanna Vos · May 2021 – Aug 2023
+
 ## Overview
 
 Brown dwarfs provide accessible analogs for directly imaged giant exoplanets because rotational brightness variations can reveal heterogeneous cloud structures in their atmospheres.
@@ -51,5 +53,5 @@ The project combined time-series photometry, spherical-harmonic surface represen
 ## Research Outputs
 
 {{< button text="View AAS Abstract" url="https://ui.adsabs.harvard.edu/abs/2022AAS...24021703R/abstract" />}}
-{{< button text="Watch AAS Presentation" url="/events/2022-06-14-talk-5/" />}}
+{{< button text="View AAS Presentation" url="/events/2022-06-14-talk-5/" />}}
 {{< button text="View Code" url="https://github.com/mohammadrefat23/StarryAtmospheres" />}}

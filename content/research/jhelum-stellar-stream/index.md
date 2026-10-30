@@ -19,25 +19,25 @@ image:
   preview_only: true
 ---
 
+**Project context:** SDSS FAST Student Researcher · Sloan Digital Sky Survey Faculty and Student Team · Advisor: Allyson Sheffield · May 2020 – May 2021
+
 ## Overview
 
 Stellar streams are remnants of disrupted globular clusters or dwarf galaxies and preserve information about the Milky Way’s assembly history.
 
-In this project, we combined high-resolution infrared spectroscopy from **APOGEE-2** with astrometry from **Gaia DR2** to identify candidate members of the Jhelum stellar stream and investigate the chemical and orbital properties of its disrupted progenitor.
+In this collaboration project, the team combined high-resolution infrared spectroscopy from **APOGEE-2** with astrometry from **Gaia DR2** to identify candidate members of the Jhelum stellar stream and investigate the chemical and orbital properties of its disrupted progenitor. My part was the chemical-abundance analysis.
 
 ## My Contributions
 
-- Contributed to the identification and evaluation of candidate Jhelum stream members using spectroscopic, photometric, and astrometric information.
-- Analyzed APOGEE stellar parameters and chemical-abundance measurements for candidate red giant members.
-- Contributed to computational comparisons of candidate kinematics and orbital properties.
-- Compared Jhelum chemical-abundance patterns with those of other Milky Way stellar populations and streams.
-- Contributed to the analysis presented in the resulting peer-reviewed publication in **The Astrophysical Journal**.
+- Performed the chemical-abundance analysis for APOGEE-2 spectra of stars in six Jhelum fields, comparing [Ca/Fe], [C/Fe], [Na/Fe], [Mg/Fe], and [Ni/Fe] against [Fe/H] with published high-resolution Jhelum members to place the stream among accreted halo populations.
+- Contributed to the collaboration's identification of a new metal-poor red-giant member ([Fe/H] ≈ −2.2) whose abundances favored an accreted dwarf-galaxy origin, with a globular-cluster origin not excluded.
+- In 2026, rebuilt the workflow as a documented, tested Python package using public SDSS DR17 and VizieR data.
 
 ## Methods
 
-The analysis combined high-resolution stellar spectroscopy, Gaia astrometry, chemical-abundance analysis, candidate selection, and Galactic-orbit comparisons to characterize the stream and constrain the nature of its progenitor.
+The collaboration's analysis combined high-resolution stellar spectroscopy, Gaia astrometry, chemical-abundance analysis, candidate selection, and Galactic-orbit comparisons to characterize the stream and constrain the nature of its progenitor.
 
-## Key Results
+## Key Results (from the published paper)
 
 - Seven stars from an initial sample of 289 APOGEE red giants had astrometric properties consistent with the Jhelum stellar stream.
 - One candidate was identified as a new Jhelum member near the tip of the red giant branch, with a metallicity of **[Fe/H] = −2.2**.
@@ -52,5 +52,5 @@ The analysis combined high-resolution stellar spectroscopy, Gaia astrometry, che
 ## Research Outputs
 
 {{< button text="Read Paper" url="https://doi.org/10.3847/1538-4357/abee93" />}}
-{{< button text="Watch Research Talk" url="/events/2020-08-07-talk-3/" />}}
-{{< button text="View Code" url="https://github.com/mohammadrefat23/jhelum-stellar-stream" />}}
+{{< button text="View Research Talk" url="/events/2020-08-07-talk-3/" />}}
+{{< button text="View Code (2026 rebuild with public DR17 data)" url="https://github.com/mohammadrefat23/jhelum-stellar-stream" />}}

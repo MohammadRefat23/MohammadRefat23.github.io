@@ -2,7 +2,7 @@
 
 title: "Two-Point Statistics in the Star-Forming Interstellar Medium"
 summary: "Using two-point statistics to measure the characteristic scale of metallicity homogeneity in simulated star-forming gas."
-featured: false
+featured: true
 weight: 50
 authors:
   - admin
@@ -19,6 +19,8 @@ image:
 date: 2018-06-01
 ---
 
+**Project context:** AstroCom NYC Scholar · Flatiron Institute, Center for Computational Astrophysics · Advisor: Chang-Goo Kim · Jun – Aug 2018
+
 ## Overview
 
 Chemical tagging uses stellar abundances to identify stars that may have formed together, but its effectiveness depends on the spatial scale over which star-forming gas is chemically homogeneous.
@@ -34,7 +36,7 @@ In this project, I analyzed the spatial distribution of metals in **TIGRESS** si
 
 ## My Contributions
 
-- Analyzed metallicity fields from **TIGRESS** simulations of the star-forming interstellar medium.
+- Developed Python routines to compute and visualize two-point metallicity correlations in **TIGRESS** magnetohydrodynamic simulations of the star-forming interstellar medium.
 - Implemented a **two-point correlation function** to quantify the spatial coherence of metallicity fluctuations.
 - Measured the characteristic scale over which chemical fluctuations remain correlated.
 - Tracked the evolution of the half-correlation scale over time.
@@ -51,6 +53,7 @@ For each simulation snapshot, I measured how the similarity between metallicity 
 
 - The metallicity correlation fell to one-half at an average separation of approximately **\(120 \pm 25\) pc**.
 - Correlations approached zero at separations of roughly **300 pc**.
+- The turbulent metal-mixing timescale was estimated at roughly **10 Myr**.
 - The characteristic half-correlation scale varied with time as enrichment and turbulent mixing altered the metallicity field.
 - The initial analysis did not reveal a clear direct relationship between the half-correlation scale, supernova rate, and velocity dispersion.
 - The results suggested that the competition between localized enrichment and turbulent mixing requires a more detailed time-dependent treatment.
@@ -61,5 +64,5 @@ For each simulation snapshot, I measured how the similarity between metallicity 
 
 ## Research Outputs
 
-{{< button text="Watch Research Talk" url="/events/2018-08-02-talk-1/" />}}
+{{< button text="View Research Talk" url="/events/2018-08-02-talk-1/" />}}
 {{< button text="View Project Repository" url="https://github.com/MohammadRefat23/tigress-metallicity-correlations" />}}
