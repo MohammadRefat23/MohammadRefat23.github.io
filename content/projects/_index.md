@@ -1,6 +1,9 @@
 ---
 title: Projects
 summary: Code, interactive tools, and side projects. Research projects are on the Research page.
+
+cascade:
+  share: false
 ---
 
 Code, interactive tools, course work, and side projects. My research projects are on the [Research](/research/) page. Use the tags to filter the list; selecting multiple tags shows projects matching **any** selected tag.

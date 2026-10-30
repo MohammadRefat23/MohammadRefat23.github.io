@@ -7,6 +7,9 @@ view: citation
 banner:
   caption: ""
   image: ""
+
+cascade:
+  share: false
 ---
 
 Peer-reviewed research and graduate thesis work applying computational methods to problems in astrophysics.

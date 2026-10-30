@@ -21,7 +21,7 @@ tags:
 
 links:
   - type: custom
-    label: Official Event Program
+    label: GothamFest 2019 Event Page
     url: https://indico.flatironinstitute.org/event/115/timetable/?view=standard_numbered_inline_minutes
   - type: custom
     label: Research Project
@@ -33,5 +33,5 @@ image:
 
 This poster presents a high-resolution spectroscopic workflow for determining the atmospheric parameters and chemical abundances of red giant stars. The methodology was validated using Arcturus before being applied to the broader problem of distinguishing stars formed within the Milky Way from stars accreted through disrupted satellite galaxies. It was presented at the **Center for Computational Astrophysics Gotham Fest** at New York University (2019).
 
-{{< button text="Official Event Program" url="https://indico.flatironinstitute.org/event/115/timetable/?view=standard_numbered_inline_minutes" />}}
+{{< button text="GothamFest 2019 Event Page" url="https://indico.flatironinstitute.org/event/115/timetable/?view=standard_numbered_inline_minutes" />}}
 {{< button text="View Research Project" url="/research/stellar-spectroscopy/" />}}

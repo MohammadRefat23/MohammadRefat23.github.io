@@ -93,3 +93,11 @@ p.powered-by:has([data-hbx="poweredby_brand"]) {
   outline: 3px solid var(--color-primary-300, #93c5fd);
   outline-offset: 3px;
 }
+
+/* Keep the home-page header text off the screen edges on phones. */
+@media (max-width: 767px) {
+  .resume-biography {
+    padding-inline: 1.25rem;
+    text-align: center;
+  }
+}

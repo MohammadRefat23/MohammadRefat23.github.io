@@ -3,6 +3,8 @@ title: Presentations
 type: landing
 cms_exclude: true
 summary: "Research talks and posters by Mohammad Alvi Refat."
+cascade:
+  share: false
 design:
   spacing: '5rem'
 
